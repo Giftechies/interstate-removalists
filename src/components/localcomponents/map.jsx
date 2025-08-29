@@ -36,7 +36,7 @@ export default function MapComponent() {
   ];
 
   return (
-<section className="sp60px bg-white-4" >
+<section className="sp60px bg-white-4  " >
   <div className="container" >
     <div className=" w-full place-items-center mb-10 " >
   
@@ -49,7 +49,7 @@ export default function MapComponent() {
         center={[-33.8688, 151.2093]} // Sydney by default
         zoom={12}
         scrollWheelZoom={false}
-        style={{ height: "100%", width: "100%" }}
+        style={{ height: "100%", width: "100%", zIndex:0 }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'

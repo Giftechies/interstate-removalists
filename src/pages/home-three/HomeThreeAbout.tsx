@@ -19,7 +19,7 @@ const HomeThreeAbout = () => {
               width={650}
               height={700}
               alt="about section image"
-              className="appear-down max-xl:mx-auto max-xl:block xxl:max-w-[unset]"
+              className="appear-down rounded-xl max-xl:mx-auto max-xl:block xxl:max-w-[unset]"
             />
           </div>
           <div className="col-start-1 col-end-13 xl:col-start-6 xxl:col-start-7">
@@ -52,22 +52,22 @@ const HomeThreeAbout = () => {
             </div>
           </div>
         </div>
-        <Image
+        {/* <Image
           src={serviceStars}
           width={125}
           height={120}
           alt="Service star"
           className="absolute right-5 top-0 animate-custom-pulse max-md:w-20 xxl:-right-15"
-        />
+        /> */}
       </div>
-      <Image
+      {/* <Image
         src={serviceStar}
         width={131}
         height={131}
         alt="Service star"
         className="absolute top-10 max-md:w-20 sm:left-18 sm:top-15"
-      />
-      <Lines />
+      /> */}
+      {/* <Lines /> */}
     </section>
   );
 };

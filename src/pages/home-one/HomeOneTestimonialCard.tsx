@@ -16,7 +16,7 @@ type Props = {
 
 const HomeOneTestimonialCard = ({ image, text, name, title }: Props) => {
   return (
-    <div className="appear-down flex items-center gap-20 max-md:flex-col max-md:gap-6 lg:gap-[115px]">
+    <div className="appear-down  w-[600px] flex items-center gap-20 flex-col gap-6 ">
       <div className="relative shrink-0">
         <Image
           src={image}
@@ -30,22 +30,26 @@ const HomeOneTestimonialCard = ({ image, text, name, title }: Props) => {
         </div>
       </div>
       <div className="w-full">
-        <div className="flex items-center gap-1">
-          <IconStarFilled className="text-accent-3" />
+        <div className="flex items-center justify-between ">
+         <div className=" flex items-center gap-1 " >
+           <IconStarFilled className="text-accent-3" />
           <IconStarFilled className="text-accent-3" />
           <IconStarFilled className="text-accent-3" />
           <IconStarFilled className="text-accent-3" />
           <IconStarHalfFilled className="text-accent-3" />
-        </div>
+         </div>
 
-        <p className="lead-text mt-5 shrink-0 text-black-1">{text}</p>
-        <BorderVerticalThree className="smt32px smb32px" />
-        <div className=" flex items-center justify-between gap-6">
-          <div>
+           <div>
             <p className="h4 font-medium">{name}</p>
             <p className="m-text mt-1 font-medium text-black-1">{title}</p>
           </div>
-          <ButtonSlider />
+        </div>
+
+        <BorderVerticalThree className="smt32px smb32px" />
+        <p className="h5 mt-5 shrink-0 text-black-1">{text}</p>
+        <div className=" flex items-center  justify-center gap-6">
+         
+          {/* <ButtonSlider /> */}
         </div>
       </div>
     </div>

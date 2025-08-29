@@ -20,6 +20,7 @@ import HomeThreeAbout from "@/pages/home-three/HomeThreeAbout";
 import OurWorks from "@/pages/home-three/OurWorks"
 import HomeService from "@/pages/home-three/HomeService";
 import HomeTwoServices from "@/pages/landing-two/HomeTwoServices";
+import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 
 export const metadata: Metadata = {
   title: "Interstate removalists",
@@ -40,7 +41,8 @@ export default function Home() {
       {/* <HomeOnePricingPlan /> */}
       <HomeOneTestimonials />
       {/* <HomeOneOurTeam /> */}
-      {/* <HomeOneFaq /> */}
+    
+      <HomeTwoFaq/>
       <HomeOneInfo />
       <HomeOneRecentBlog />
       <Animations />

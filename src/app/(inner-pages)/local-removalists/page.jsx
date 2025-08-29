@@ -1,4 +1,4 @@
-import Banner from "@/components/ui/Banner";
+import Banner from "@/components/ui/MainBanner";
 import Animations from "@/components/animations/Animations";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import AboutLocal from "@/pages/local/AboutPage";

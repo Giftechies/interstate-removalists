@@ -34,7 +34,7 @@ export default function RootLayout({
         rel="stylesheet"
       />
       <body className={`font-kanit ${kanit.variable} relative text-black-4`}>
-      <ReactLenis root options={{ SmoothScroll:true, smoothTouch:true,duration:3}} >
+      <ReactLenis root options={{ SmoothScroll:true, smoothTouch:true,duration:2.5}} >
           <Provider store={store}>
           <main>
             <NavbarContainerTwo />

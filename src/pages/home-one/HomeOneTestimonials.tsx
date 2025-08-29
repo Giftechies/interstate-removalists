@@ -10,6 +10,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HomeOneTestimonialCard from "./HomeOneTestimonialCard";
+import ButtonSlider from "@/components/buttons/ButtonSlider";
 
 export const sliderData = [
   {
@@ -46,11 +47,11 @@ export const sliderData = [
 
 const HomeOneTestimonials = () => {
   return (
-    <section className="spy120px relative overflow-hidden">
-      <div className="container">
+    <section className="spy120px relative overflow-hidden  ">
+      <div className="container relative ">
         <SectionSubTitle text="Testimonial" />
         <SectionTitle text="What people say" className="mt-3" />
-        <div className="spt60px">
+        <div className="spt60px  ">
           <Swiper
             // slidesPerView={1}
             spaceBetween={24}
@@ -63,8 +64,26 @@ const HomeOneTestimonials = () => {
               disableOnInteraction: false,
             }}
             navigation={{
-              nextEl: ".customerSliderNext",
-              prevEl: ".customerSliderPrev",
+              nextEl: ".customerSliderPrev",
+             prevEl: ".customerSliderNext",
+             
+            }}
+               breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 2,
+              },
+              1400: {
+                slidesPerView: 2,
+              },
             }}
           >
             {sliderData.map((item, index) => (
@@ -74,6 +93,7 @@ const HomeOneTestimonials = () => {
             ))}
           </Swiper>
         </div>
+        <ButtonSlider className="mt-4 mx-auto  flex  justify-end right-0 bottom-0 " />
       </div>
       {/* <Lines /> */}
     </section>
