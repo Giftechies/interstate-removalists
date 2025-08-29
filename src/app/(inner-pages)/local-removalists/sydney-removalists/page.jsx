@@ -1,6 +1,6 @@
 import Animations from "@/components/animations/Animations";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
-import Banner from "@/components/ui/banner";
+import Banner from "@/components/ui/Banner";
 import DetailAbout from "@/components/detailspage/DetailAbout"
 // import Map from "../../../../pages/local/map"
 import OurWorks from "@/pages/home-three/OurWorks";
