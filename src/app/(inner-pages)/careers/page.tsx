@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Careers() {
   return (
     <div>
-      <Breadcrumbs pageLink="/careers" pageName="careers" />
+      <Breadcrumbs />
       <NeedLoan />
       <OurCareers />
       <WhyJoinOurTeam />

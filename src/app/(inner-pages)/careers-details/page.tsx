@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function CareersDetails() {
   return (
     <div>
-      <Breadcrumbs pageLink="/careers-details" pageName="Careers Details" />
+      <Breadcrumbs  />
       <TechnicalAnalyst />
       <Animations />
     </div>

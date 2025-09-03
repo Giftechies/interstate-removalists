@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/privacy-policy" pageName="privacy policy" />
+      <Breadcrumbs  />
       <PrivacyPolicyContent />
       <Animations />
 

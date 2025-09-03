@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function BusinessLoanPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/business-loan" pageName="Business Loan" />
+      <Breadcrumbs  />
       <BusinessLoanGetLoan />
       <BusinessHowItWork />
       <DocumentRequired />

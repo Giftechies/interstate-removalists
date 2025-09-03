@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function OurTeam() {
   return (
     <div>
-      <Breadcrumbs pageLink="/our-team" pageName="Our Team" />
+      <Breadcrumbs  />
       <OurTeamContent />
       <Animations />
 

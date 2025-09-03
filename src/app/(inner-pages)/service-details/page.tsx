@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ServiceDetails() {
   return (
     <div>
-      <Breadcrumbs pageLink="/service-details" pageName="Service Details" />
+       <Breadcrumbs  />
       <ServiceDetailsContent />
       <Animations />
     </div>

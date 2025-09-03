@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function PersonalLoanPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/personal-loan" pageName="Personal Loan" />
+      <Breadcrumbs/>
       <GetPersonalLoan />
       <PersonalLoanResearch />
       <PersonalLoanEveryOne />

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PricingPlan() {
   return (
     <div>
-      <Breadcrumbs pageLink="/pricing-plan" pageName="Pricing Plan" />
+      <Breadcrumbs  />
       <HomeOnePricingPlan />
       <HomeThreeTestimonial />
       <Animations />

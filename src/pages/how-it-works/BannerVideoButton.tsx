@@ -12,7 +12,7 @@ const BannerVideoButton = ({ handleDropdown }: Props) => {
       <div className="absolute right-3 sm:right-6 max-xs:hidden  top-3 sm:top-6 z-30  rounded-full border-2 border-white-1 p-1 sm:p-2">
         <div className="relative">
           <Image
-            src={bannerRoundText}
+            src={''}
             width={180}
             height={180}
             alt="Rounded Text"

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/faq" pageName="Faq" />
+      <Breadcrumbs  />
       <FaqContent />
       <Animations />
     </div>

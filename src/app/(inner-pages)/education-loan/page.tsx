@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function EducationLoanPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/education-loan" pageName="Education Loan" />
+      <Breadcrumbs />
       <GetLoan />
       <EducationLoanResearch />
       <EducationLoanHowItWorks />

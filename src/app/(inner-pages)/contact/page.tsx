@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/contact-us" pageName="Contact Us" />
+      <Breadcrumbs />
       <ContactUsForm />
       <Animations />
     </div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function FeatureDetailsPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/feature-details" pageName="Feature Details" />
+       <Breadcrumbs  />
       <SendFunds />
       <WealthManagement />
       <UniFiedPlatform />

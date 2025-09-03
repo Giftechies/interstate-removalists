@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TermsConditionsPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/terms-conditions" pageName="terms & conditions" />
+      <Breadcrumbs />
       <TermsConditionsContent />
       <Animations />
     </div>

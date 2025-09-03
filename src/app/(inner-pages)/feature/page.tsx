@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function FeaturePage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/feature" pageName="Our Features" />
+      <Breadcrumbs/>
       <StartNewJourney />
       <HomeTwoServices />
       <FewInterestingNumbers />

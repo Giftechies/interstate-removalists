@@ -5,9 +5,10 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import Counter from "@/components/shared/scroll-top/Counter";
 import {
   IconArrowUpRight,
-  IconBuildingBank,
   IconLogout,
   IconShieldCheck,
+  IconCalendarCheck,
+  IconPackageExport
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,16 +23,24 @@ const HowItrWorksContent = () => {
     setOpen((prev) => !prev);
   };
 
+  const steps = [
+    {title: "Get a Qoute", description: "Start by contacting us for a free, personalized quote. Share your moving details.", Icon:IconLogout },
+    {title: "Plan your move", description: "Once signed up, you will need to verify your account.", Icon:IconCalendarCheck},
+    {title: "safe & secure moving", description: "Our expert movers handle your belongings with care, using high-quality packing materials.", Icon:IconShieldCheck},
+    {title: "unpack & settle in", description: "Once we've delivered your items, we'll help with unpacking and setting up, so you can enjoy.", Icon:IconPackageExport},
+      
+  ]
+
   return (
     <section className="spy120px fade-wrapper" id="scrollPosition">
       <div className="container">
         <div className="grid grid-cols-12 items-center gap-6 sm:gap-x-6 sm:max-xl:gap-y-10">
           <div className="col-start-1 col-end-13 sm:col-end-8 xl:col-end-6">
             <span className="h5 font-medium text-black-3">
-              Simplify Your Finances
+              How we work
             </span>
             <SectionTitle
-              text="How Does Money Transfer Work?"
+              text="simple and straightforward process"
               className="mt-3"
             />
           </div>
@@ -63,48 +72,24 @@ const HowItrWorksContent = () => {
           <div className="spt60px spl60px spb60px relative col-start-1 col-end-13 bg-primary text-white-1 xl:col-end-9">
             <SectionTitle text="How it Works" className="h1 font-bold" />
             <div className="smt40px">
-              <div className="spl40px spb32px relative flex max-w-[370px] gap-4 border-l-4 before:absolute before:-left-3 before:top-0 before:size-5 before:rounded-full before:bg-white-1">
-                <IconLogout stroke={1} className="size6 shrink-0 sm:size-12" />{" "}
+            {steps.map((step, index) => {
+              return(
+                  <div key={index} className="spl40px spb32px relative flex max-w-[370px] gap-4 border-l-4 before:absolute before:-left-3 before:top-0 before:size-5 before:rounded-full before:bg-white-1">
+                <step.Icon stroke={1} className="size6 shrink-0 sm:size-12" />{" "}
                 <div>
                   <h5 className="h4 title-animation font-medium">
-                    Create a free account
+                    {step.title}
                   </h5>
                   <p className="s-text fade-top mt-2">
-                    Begin by signing up for an account on our platform.
+                   {step.description}
                   </p>
                 </div>
               </div>
-              <div className="spb32px spl40px relative flex max-w-[370px] gap-4 border-l-4 before:absolute before:-left-3 before:top-0 before:size-5 before:rounded-full before:bg-white-1">
-                <IconShieldCheck
-                  stroke={1}
-                  className="size6 shrink-0 sm:size-12"
-                />{" "}
-                <div>
-                  <h5 className="h4 title-animation font-medium">
-                    Send your funds
-                  </h5>
-                  <p className="s-text fade-top mt-2">
-                    Once signed up, you will need to verify your account.
-                  </p>
-                </div>
-              </div>
-              <div className="spl40px relative flex max-w-[370px] gap-4 border-l-4 before:absolute before:-left-3 before:top-0 before:size-5 before:rounded-full before:bg-white-1">
-                <IconBuildingBank
-                  stroke={1}
-                  className="size6 shrink-0 sm:size-12"
-                />{" "}
-                <div>
-                  <h5 className="h4 title-animation font-medium">
-                    Track your transfer
-                  </h5>
-                  <p className="s-text fade-top mt-2">
-                    Select the investment plan you wish to proceed with and
-                    specify the amount you want to invest.
-                  </p>
-                </div>
-              </div>
+              )
+            })
+            }
             </div>
-            <BannerVideoButton handleDropdown={handleDropdown} />
+            {/* <BannerVideoButton handleDropdown={handleDropdown} /> */}
             <Image
               src={moneyTransfer}
               width={320}
@@ -113,23 +98,25 @@ const HowItrWorksContent = () => {
               className="absolute bottom-0 right-0 max-lg:w-40 max-sm:hidden"
             />
           </div>
-          <div className="xl:spt40px xl:spb40px col-start-1 col-end-13 border-2 border-black-3/60 text-center md:max-xl:flex xl:col-start-9">
-            <div className="max-xl:spt40px max-xl:spb40px mx-auto max-w-[334px]">
+          <div className=" col-start-1 col-end-13 border-2 border-black-3/60 text-center flex flex-col justify-between md:max-xl:flex-none items-center xl:col-start-9">
+            <div className="spt40px  h-[50%] flex flex-col itec justify-center spb40px mx-auto max-w-[334px]">
               <h5 className="h3 title-animation font-medium">10x Profits</h5>
               <SectionText
                 text="Experience the power of exponential growth with our exclusive 10x Profits feature. Through our innovative investment strategies and market expertise."
                 className="mt-6"
               />
             </div>
-            <div className="xl:smt60px xl:smb60px bg-black-3/60 max-md:h-0.5 max-md:w-full md:h-full md:w-0.5 xl:h-0.5 xl:w-full"></div>
-            <div className="max-xl:spt40px max-xl:spb40px mx-auto max-w-[334px]">
-              <h5 className="h3 title-animation font-medium">
+            {/* <div className="10x Profits bg-black-3/60 max-md:h-0.5 max-md:w-full md:h-full md:w-0.5 xl:h-0.5 xl:w-full"></div> */}
+            <div className=" h-[50%]  w-full object-cover object-right bg-prim ">
+<img src="https://plus.unsplash.com/premium_photo-1661409351559-4172ea985076?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdmVyc3xlbnwwfHwwfHx8MA%3D%3D" className=" size-full object-cover object-right " alt="" />
+
+              {/* <h5 className="h3 title-animation font-medium">
                 100% Capital Protection
               </h5>
               <SectionText
                 text="Rest easy knowing that your investments are 100% protected with our exclusive Capital Protection guarantee."
                 className="fade-top mt-6"
-              />
+              /> */}
             </div>
           </div>
         </div>

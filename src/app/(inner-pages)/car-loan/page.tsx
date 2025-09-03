@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function CarLoanPage() {
   return (
     <div>
-      <Breadcrumbs pageLink="/car-loan" pageName="Car Loan" />
+      <Breadcrumbs />
       <GetCarLoan />
       <CarDocumentRequired />
       <BusinessHowItWork className="bg-white-1" />

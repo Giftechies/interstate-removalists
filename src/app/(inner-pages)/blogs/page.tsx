@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function blog() {
   return (
     <div>
-      <Breadcrumbs pageLink="/blog" pageName="blog" />
+      <Breadcrumbs  />
       <AllBlogs />
       <Animations />
     </div>
