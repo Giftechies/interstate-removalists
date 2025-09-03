@@ -66,27 +66,15 @@ const sliderData = [
 
 const HomeThreeService = () => {
   return (
-    <section className="spy120px fade-wrapper relative z-10 bg-zinc-100 text-black">
-      <div className=" container  relative grid grid-cols-12 gap-12 items-center">
-        <div className="col-start-1 col-end-13 flex flex-col items-center justify-center border">
+    <section className="spy120px border fade-wrapper relative z-10 bg-zinc-100 text-black">
+      <div className=" container  relative grid grid-cols-12 gap-12 items-center border border-white-1">
+        <div className="col-start-1 col-end-13 flex flex-col items-center justify-center ">
           <SectionSubTitle text="Our Services" className="" />
           <SectionTitle text="Comprehensive Moving Solutions" className="h1 mt-3" />
           <SectionText
             text="We specialize in interstate relocations, offering packing, loading, transport, and unpacking services to make your move stress-free."
             className="fade-top mt-5 "
           />
-          {/* <SectionText
-            text="We use modern tools and real-time tracking, giving you complete visibility and peace of mind throughout your relocation journey."
-            className="fade-top mt-4 text-white-2"
-          /> */}
-          {/* <div className="spt40px flex border items-start justify-between">
-            <RoundedLink
-              buttonText="All Services"
-              link="/services"
-              className="bg-[var(--primary)] text-black-4 hover:border-[var(-primary)]"
-            />
-           
-          </div> */}
         </div>
         <div className="max-lg:spt40px   col-start-1 col-end-13 ">
           <Swiper

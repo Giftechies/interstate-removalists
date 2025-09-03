@@ -33,8 +33,8 @@ export default function Home() {
       {/* <BannerOne /> */}
       <HomeThreeBanner />
       <HomeThreeAbout/>
-      <HomeThreeService/>
-        {/* <HomeTwoServices /> */}
+      {/* <HomeThreeService/> */}
+        <HomeTwoServices />
       {/* <HomeOneService /> */}
       <OurWorks/>
       <HomeOneFinancialPlanning />

@@ -33,7 +33,7 @@ export default function RootLayout({
         href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
         rel="stylesheet"
       />
-      <body className={`font-kanit ${kanit.variable} relative text-black-4`}>
+      <body >
       <ReactLenis root options={{ SmoothScroll:true, smoothTouch:true,duration:2.5}} >
           <Provider store={store}>
           <main>

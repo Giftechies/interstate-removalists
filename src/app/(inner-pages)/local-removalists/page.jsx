@@ -24,7 +24,8 @@ export default function localRemovalists() {
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
-      <Breadcrumbs pageLink="/local-removalists" pageName="Local removalists" />
+      
+  
       <AboutLocal />
       <LocalType
         localCard={localCard}

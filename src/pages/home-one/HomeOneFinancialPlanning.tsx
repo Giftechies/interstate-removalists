@@ -72,7 +72,7 @@ const HomeOneFinancialPlanning = () => {
               className="pt-3"
             />
           </div>
-          <div className="col-start-10 flex  justify-end items-end ">
+          <div className="col-start-11 flex  justify-end items-end ">
             <LInkArrow
               linkText="KNOW MORE"
               link="/pick-details"

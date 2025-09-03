@@ -98,38 +98,29 @@ export const navbar =[
     {
         id:uuidv4(),
         menuTitle:'Service',
-        path:"#",
+        path:"/services",
         menuItems:[
           {
             id:uuidv4(),
-            title:' Moving OverSeas',
-            menuItemPath:"/moving-oversea"
+            title:'Home & Personal Moves',
+            menuItemPath:"/home-and-personal-moves"
           },
           {
             id:uuidv4(),
-            title:' Corporate Relocations',
-            menuItemPath:"/corporate-relocations"
+            title:' Business Moves',
+            menuItemPath:"/nusiness-moves"
           },
           {
             id:uuidv4(),
-            title:' Office Moves',
-            menuItemPath:"/office-moves"
+            title:' Packing & Protection',
+            menuItemPath:"/packing-protection"
           },
           {
             id:uuidv4(),
-            title:' Storage',
-            menuItemPath:"/storage"
+            title:' Additional Services',
+            menuItemPath:"/additional-ervices"
           },
-          {
-            id:uuidv4(),
-            title:'  Packing & Unpacking',
-            menuItemPath:"/packing-unpacking"
-          },
-          {
-            id:uuidv4(),
-            title:'Removal Protection',
-            menuItemPath:"/removal-protection"
-          },
+        
 
         ]
     },

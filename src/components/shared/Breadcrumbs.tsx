@@ -1,34 +1,41 @@
 "use client";
-import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
+
 import Link from "next/link";
-import Lines from "./Lines";
+import { usePathname } from "next/navigation";
+import { ChevronRight } from "lucide-react";
 
-type Props = {
-  pageName: string;
-  pageLink: string;
-};
+export default function Breadcrumb() {
+  const pathname = usePathname(); // get current path
+  const segments = pathname?.split("/").filter(Boolean); // split path into segments
 
-const Breadcrumbs = ({ pageName, pageLink }: Props) => {
+  // Build array of breadcrumb items with href
+  const crumbs = segments?.map((segment, index) => {
+    const href = "/" + segments?.slice(0, index + 1).join("/");
+    // Capitalize first letter
+    const label = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ");
+    return { label, href };
+  });
+
   return (
-    <section className=" relative overflow-hidden  ">
-      <div className="container pb-4">
-       
-         
-           
-            <div className="xl-text  flex items-center gap-2">
-              <span className= " text-[var(--primary)] xl-text ">Here you are: </span><Link href={`/`}>Home</Link>
-              <IconChevronsRight />
-              <Link href={`${pageLink}`} className="capitalize text-zinc-400">
-                {pageName}
-              </Link>
-            </div>
-         
-
-         
-       
-      </div>
-    </section>
+    <nav aria-label="breadcrumb" className="flex  smt60p items-center space-x-1 h5">
+      <Link href="/" className="text-white-1  hover:text-[var(--primary)]">
+        Home
+      </Link>
+      {crumbs?.map((crumb, index) => (
+        <div key={index} className="flex items-center  space-x-1">
+          <ChevronRight className="w-4 h-4  " />
+          {index === crumbs?.length - 1 ? (
+            <span className="text-white-3 font-medium">{crumb.label}</span>
+          ) : (
+            <Link
+              href={crumb.href}
+              className=" hover:text-[var(--primary)] transition-colors"
+            >
+              {crumb.label}
+            </Link>
+          )}
+        </div>
+      ))}
+    </nav>
   );
-};
-
-export default Breadcrumbs;
+}

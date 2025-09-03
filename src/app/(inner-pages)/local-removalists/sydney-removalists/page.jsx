@@ -1,5 +1,4 @@
 import Animations from "@/components/animations/Animations";
-import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import Banner from "@/components/ui/InnerBanner";
 import DetailAbout from "@/components/detailspage/DetailAbout"
 // import Map from "../../../../pages/local/map"

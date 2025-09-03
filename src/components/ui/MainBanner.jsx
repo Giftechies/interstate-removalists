@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
 import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
+import Breadcrumb from "../shared/Breadcrumbs";
 
 
 
@@ -20,9 +21,10 @@ export default function Banner({imgpath,pagename,pagepath,text}){
             <p className="xl-text smt24px    text-white-4  ">
              {text}
             </p>
+            <Breadcrumb/>
             <div className="smt40px flex items-center gap-5 max-xs:flex-wrap fade-top  justify-center">
-              <HomeThreeBannerLink href="/signup">Open Account</HomeThreeBannerLink>
-              <HomeThreeBannerLink href="/pick-details">Know Prices </HomeThreeBannerLink>
+              <HomeThreeBannerLink href="/signup" className=" bg-prim border-[var(--primary)] hover:bg-white-1 hover:text-[var(--primary)] " >Open Account</HomeThreeBannerLink>
+              <HomeThreeBannerLink href="/pick-details" className=" border-[var(--primary)] text-[var(--primary)] hover:bg-prim hover:text-white-1 " >Know Prices </HomeThreeBannerLink>
             </div>
           </div>
         </div>

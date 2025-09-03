@@ -30,7 +30,7 @@ const DeskTopNavbarTwo = () => {
           </Link>
         </div>
 
-        <ul className="flex items-center justify-between gap-10">
+        <ul className="flex items-center justify-between gap-10 ">
           {navbar.map(({ id, menuTitle, path, menuItems }) => {
             let isActive = menuItems?.some(
               (path) => pathName == path.menuItemPath,
@@ -99,10 +99,10 @@ const DeskTopNavbarTwo = () => {
           <Link
             href={`/pick-details`}
             className={cn(
-              "l-text spx24px group theme-transition-3 flex gap-3 bg-prim py-3",
+              "l-text spx24px group theme-transition-3 rounded-full flex gap-3 text-white-1 bg-prim py-3",
             )}
           >
-            <span>Get Started</span>
+            <span>Get Price</span>
             <IconArrowUpRight className="theme-transition-3 group-hover:rotate-45" />{" "}
           </Link>
         </div>

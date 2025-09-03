@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
 import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
-import Breadcrumb from "../shared/Breadcrumb";
+import Breadcrumb from "../shared/Breadcrumbs";
+import SectionText from "../shared/SectionText";
 
 
 
-export default function Banner({imgpath,pagename,pagepath,text}){
+export default function Banner({imgpath,pagename,}){
     return(
           <section
           style={{backgroundImage:`url(${imgpath})`}}
