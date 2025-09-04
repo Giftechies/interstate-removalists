@@ -98,8 +98,8 @@ const HowItrWorksContent = () => {
               className="absolute bottom-0 right-0 max-lg:w-40 max-sm:hidden"
             />
           </div>
-          <div className=" col-start-1 col-end-13 border-2 border-black-3/60 text-center flex flex-col justify-between md:max-xl:flex-none items-center xl:col-start-9">
-            <div className="spt40px  h-[50%] flex flex-col itec justify-center spb40px mx-auto max-w-[334px]">
+          <div className=" col-start-1 col-end-13  gap-8  text-center flex flex-col justify-between md:max-xl:flex-none items-center xl:col-start-9">
+            <div className="spt40px border-2 border-black-3/60 h-[50%] w-full flex flex-col itec justify-center spb40px mx-auto   ">
               <h5 className="h3 title-animation font-medium">10x Profits</h5>
               <SectionText
                 text="Experience the power of exponential growth with our exclusive 10x Profits feature. Through our innovative investment strategies and market expertise."
@@ -109,14 +109,6 @@ const HowItrWorksContent = () => {
             {/* <div className="10x Profits bg-black-3/60 max-md:h-0.5 max-md:w-full md:h-full md:w-0.5 xl:h-0.5 xl:w-full"></div> */}
             <div className=" h-[50%]  w-full object-cover object-right bg-prim ">
 <img src="https://plus.unsplash.com/premium_photo-1661409351559-4172ea985076?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdmVyc3xlbnwwfHwwfHx8MA%3D%3D" className=" size-full object-cover object-right " alt="" />
-
-              {/* <h5 className="h3 title-animation font-medium">
-                100% Capital Protection
-              </h5>
-              <SectionText
-                text="Rest easy knowing that your investments are 100% protected with our exclusive Capital Protection guarantee."
-                className="fade-top mt-6"
-              /> */}
             </div>
           </div>
         </div>

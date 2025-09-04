@@ -15,7 +15,7 @@ import HomeTwoServiceCard from "./HomeTwoServiceCard";
 
 const HomeTwoServices = () => {
   return (
-    <section className="fade-wrapper relative z-10 bg-primary text-white-1 after:bottom-0 after:right-0 after:-z-10 after:h-full after:w-1/2 after:bg-accent-4  lg:after:absolute">
+    <section className="fade-wrapper relative z-10 bg-sec text-white-1 after:bottom-0 after:right-0 after:-z-10 after:h-full after:w-1/2 after:bg-accent-4  lg:after:absolute">
       <div className="max-lg:spy120px container relative grid grid-cols-12 items-center">
         <div className="col-start-1 col-end-13 lg:col-end-6">
           <SectionSubTitle text="Services" className="text-white-1" />
