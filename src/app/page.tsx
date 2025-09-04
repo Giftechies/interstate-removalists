@@ -42,7 +42,7 @@ export default function Home() {
         }
         counterText={"Family choose us"}
         counterNumber={50}
-        title={"How we are."}
+        title={"Who we are."}
         text1={
           "Local moving refers to the process of relocating household goods or personal belongings within the same city or metropolitan area. ."
         }
