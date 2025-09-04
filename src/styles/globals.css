@@ -70,6 +70,12 @@ body {
   box-shadow:  0px 2px 20px rgba(0, 0, 0, 0.1);
 
 }
+.text-stroke {
+  -webkit-text-stroke: .3px white; /* stroke thickness + color */
+  color: transparent; /* fill color */
+  font-size: 26px;
+}
+
 
 @layer utilities {
   .container {
@@ -142,6 +148,9 @@ body {
   .spy120px {
     @apply py-15 md:py-20 xl:py-24 xxl:py-30;
   }
+  .spy80px {
+    @apply py-8 md:py-10 xl:py-16 xxl:py-20;
+  }
   .spt120px {
     @apply pt-15 md:pt-20 xl:pt-24 xxl:pt-30;
   }
@@ -186,6 +195,9 @@ body {
   }
   .spl40px {
     @apply ps-5 md:ps-6 xl:ps-8 xxl:ps-10;
+  }
+  .spl60px {
+    @apply ps-8 md:ps-10 xl:ps-15 xxl:ps-25;
   }
   .spr40px {
     @apply pr-5 md:pr-6 xl:pr-8 xxl:pr-10;

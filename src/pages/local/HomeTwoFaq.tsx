@@ -1,5 +1,4 @@
 "use client";
-import Lines from "@/components/shared/Lines";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { useState } from "react";
@@ -43,7 +42,6 @@ const HomeTwoFaq = () => {
           </div>
         </div>
       </div>
-      <Lines />
     </div>
   );
 };

@@ -21,7 +21,7 @@ const DeskTopNavbarTwo = () => {
       )}
     >
       <div
-        className="transition-primary spy24px theme-transition-3 mx-auto hidden
+        className="transition-primary py-4 theme-transition-3 mx-auto hidden
       w-full items-center justify-between max-4xl:container xl:flex 4xl:max-w-[1674px] min-[1920px]:max-w-[1774px]"
       >
         <div>

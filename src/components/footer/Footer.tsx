@@ -9,11 +9,11 @@ import FooterSideSection from "./FooterSideSection";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-accent-2 text-white-1">
+    <footer className="relative overflow-hidden bg-secondary text-white-1">
       <div className="max-xl:container xxl:ml-[calc((100%-1296px)/2)]">
-        <div className="flex justify-between max-xxl:flex-col-reverse ">
+        <div className="flex   justify-between max-xxl:flex-col-reverse ">
           <div>
-            <div className="spy120px flex flex-auto gap-6 max-md:flex-col max-md:gap-8">
+            <div className="spy120px  flex flex-auto gap-20 max-md:flex-col max-md:gap-8">
               <FooterLeftColumn />
               <FooterMiddleColumn />
               <FooterRight />

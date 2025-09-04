@@ -6,7 +6,7 @@ import HomeThreeBannerSideElement from "./HomeThreeBannerSideElement";
 
 const HomeThreeBanner = () => {
   return (
-    <section className="fade-wrapper homebanner relative overflow-hidden  bg-[url('/img/banner-img/main-banner.jpg')] bg-cover bg-center  object-cover pt-[108px] md:m-5  md:mt-25 md:rounded-3xl before:absolute before:inset-0 before:bg-[var(--blue)]  xxl:mx-6">
+    <section className="fade-wrapper homebanner relative overflow-hidden  bg-[url('/img/banner-img/main-banner.jpg')] bg-cover bg-center  object-cover pt-[108px] md:m-5  md:mt-20 md:rounded-3xl before:absolute before:inset-0 before:bg-[var(--blue)]  xxl:mx-6">
       <div className="container relative  p-20 text-white-1 sm:pt-25 ">
          
         <div className="grid grid-cols-12 place-items-center">

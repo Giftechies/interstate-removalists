@@ -32,9 +32,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      {/* <BannerOne /> */}
       <HomeThreeBanner />
-      {/* <HomeThreeAbout/> */}
       <AboutLocal
         imagepath1={"/img/innerimg/localimg.png"}
         imagepath2={
@@ -42,7 +40,7 @@ export default function Home() {
         }
         counterText={"Family choose us"}
         counterNumber={50}
-        title={"Who we are"}
+        title={"Few words about"}
         subheading={"Interstate Removalists"}
         text1={
           "Local moving refers to the process of relocating household goods or personal belongings within the same city or metropolitan area. ."
@@ -54,21 +52,22 @@ export default function Home() {
         stepText1={"Designing every move with precision and perfection."}
         stepText2={"Structured planning ensures smooth and reliable relocation."}
         stepText3={"Strong foundations make your moving journey stress-free."}
-      />
-      {/* <HomeThreeService/> */}
+        />
       <HomeTwoServices />
-      {/* <HomeOneService /> */}
-      {/* <OurWorks/> */}
       <HowItrWorksContent />
       <HomeOneFinancialPlanning />
-      {/* <HomeOnePricingPlan /> */}
-      <HomeOneTestimonials />
-      {/* <HomeOneOurTeam /> */}
-
+      <HomeOneTestimonials  />
       <HomeTwoFaq />
       <HomeOneInfo />
-      {/* <HomeOneRecentBlog /> */}
       <Animations />
+        {/* <BannerOne /> */}
+        {/* <HomeThreeAbout/> */}
+      {/* <HomeThreeService/> */}
+      {/* <HomeOneService /> */}
+      {/* <OurWorks/> */}
+      {/* <HomeOnePricingPlan /> */}
+      {/* <HomeOneOurTeam /> */}
+      {/* <HomeOneRecentBlog /> */}
     </div>
   );
 }

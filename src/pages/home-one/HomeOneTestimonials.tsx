@@ -47,10 +47,12 @@ export const sliderData = [
 
 const HomeOneTestimonials = () => {
   return (
-    <section className="spy120px relative overflow-hidden  ">
+    <section className=" spy80px relative overflow-hidden bg-zinc-100  ">
       <div className="container relative ">
-        <SectionSubTitle text="Testimonial" />
+      <div className="flex flex-col items-center" >
+          <SectionSubTitle text="Testimonial " className=" mx-auto " />
         <SectionTitle text="What people say" className="mt-3" />
+      </div>
         <div className="spt60px  ">
           <Swiper
             // slidesPerView={1}
@@ -93,7 +95,7 @@ const HomeOneTestimonials = () => {
             ))}
           </Swiper>
         </div>
-        <ButtonSlider className="mt-4 mx-auto  flex  justify-end right-0 bottom-0 " />
+        <ButtonSlider className="mt-12 mx-auto  flex  justify-center right-0 bottom-0 " />
       </div>
       {/* <Lines /> */}
     </section>
