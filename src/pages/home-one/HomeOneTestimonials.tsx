@@ -54,7 +54,7 @@ const HomeOneTestimonials = () => {
         <div className="spt60px  ">
           <Swiper
             // slidesPerView={1}
-            spaceBetween={24}
+            spaceBetween={30}
             speed={1400}
             loop={true}
             slidesPerView={1}
@@ -76,13 +76,13 @@ const HomeOneTestimonials = () => {
                 slidesPerView: 2,
               },
               992: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               1200: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               1400: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
             }}
           >

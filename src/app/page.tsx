@@ -42,7 +42,8 @@ export default function Home() {
         }
         counterText={"Family choose us"}
         counterNumber={50}
-        title={"Who we are."}
+        title={"Who we are"}
+        subheading={"Interstate Removalists"}
         text1={
           "Local moving refers to the process of relocating household goods or personal belongings within the same city or metropolitan area. ."
         }
@@ -66,7 +67,7 @@ export default function Home() {
 
       <HomeTwoFaq />
       <HomeOneInfo />
-      <HomeOneRecentBlog />
+      {/* <HomeOneRecentBlog /> */}
       <Animations />
     </div>
   );

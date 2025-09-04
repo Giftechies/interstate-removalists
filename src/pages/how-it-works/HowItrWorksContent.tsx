@@ -69,7 +69,7 @@ const HowItrWorksContent = () => {
           </div>
         </div>
         <div className="spt60px grid grid-cols-12 gap-6">
-          <div className="spt60px spl60px spb60px relative col-start-1 col-end-13 bg-primary text-white-1 xl:col-end-9">
+          <div className="spt60px spl60px spb60px relative col-start-1 col-end-13 bg-secondary text-white-1 xl:col-end-9">
             <SectionTitle text="How it Works" className="h1 font-bold" />
             <div className="smt40px">
             {steps.map((step, index) => {

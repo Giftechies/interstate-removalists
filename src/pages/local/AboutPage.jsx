@@ -6,9 +6,10 @@ import Counter from "@/components/shared/scroll-top/Counter";
 import { IconCheckbox } from "@tabler/icons-react";
 import Image from "next/image";
 import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink";
+import SectionSubTitle from "@/components/shared/SectionSubTitle";
 
 
-const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1,text2,buttonText,stepText1,stepText2,stepText3}) => {
+const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1,text2,buttonText,stepText1,stepText2,stepText3,subheading}) => {
   return (
     <section
       className="spt80px fade-wrapper spb120px relative overflow-hidden"
@@ -40,9 +41,10 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
           </div>
         </div>
         <div className="col-start-1 col-end-13 xl:col-start-8">
+          <SectionSubTitle text={title? title: "Who we are"} className="fade-top" />
           <SectionTitle
-            text={title}
-            className="h3 pt-3"
+            text={subheading?subheading:"Our Mission & Vision"}
+            className="h1 pt-3"
           />
           <SectionText
             className="fade-top pt-5"
@@ -63,7 +65,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
               <IconCheckbox /> <span>{stepText3? stepText3:"Strong foundations make your moving journey stress-free."}</span>
             </div>
           </div>
-           <HomeThreeBannerLink href="/pick-details" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-white-1  hover:border-white-1 w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
+           <HomeThreeBannerLink href="/pick-details" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
         </div>
       </div>
     </section>

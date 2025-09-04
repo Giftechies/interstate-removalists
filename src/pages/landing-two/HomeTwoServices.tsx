@@ -32,7 +32,7 @@ const HomeTwoServices = () => {
             <LInkArrowTwo linkText="All Services" link="/services" />
           </div>
         </div>
-        <div className="max-lg:spt40px col-start-1 col-end-13 grid max-lg:gap-3 rounded-sm overflow-hidden xs:grid-cols-2 lg:col-start-7">
+        <div className="max-lg:spt40px col-start-1  col-end-13 grid max-lg:gap-3 rounded-sm overflow-hidden xs:grid-cols-2 lg:col-start-7">
           <HomeTwoServiceCard
             icon={<IconPresentation className="size-10" />}
             title="Boost your Payments"
@@ -66,13 +66,7 @@ const HomeTwoServices = () => {
         alt="Service animal"
         className="absolute bottom-0 left-0 max-3xl:w-30 max-sm:hidden"
       />
-      <Image
-        src={serviceCoin}
-        width={208}
-        height={193}
-        alt="Service animal"
-        className="absolute bottom-0 right-0 max-3xl:w-30 max-sm:hidden"
-      />
+     
     </section>
   );
 };

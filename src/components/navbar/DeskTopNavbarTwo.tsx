@@ -40,7 +40,7 @@ const DeskTopNavbarTwo = () => {
                 <Link
                 href={`${path}`}
                   className={cn(
-                    "theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-primary hover:text-primary hover:before:w-full",
+                    " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-primary hover:text-primary hover:before:w-full",
                     isActive && "text-primary before:w-full before:bg-primary",
                   )}
                 >
@@ -57,7 +57,7 @@ const DeskTopNavbarTwo = () => {
                     <li key={id}>
                       <Link
                         href={`${menuItemPath}`}
-                        className={`l-text theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-1  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
+                        className={`l-text font-extralight  theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-1  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
                           pathName === menuItemPath &&
                           "tracking-wide text-accent-3 before:absolute before:bg-accent-3"
                         }`}
