@@ -79,7 +79,7 @@ body {
 
 @layer utilities {
   .container {
-    @apply mx-auto max-w-[540px] max-sm:px-2 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px];
+    @apply mx-auto max-w-[540px] max-sm:px-4 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px];
   }
   .bg-prim{
     @apply bg-[var(--primary)]

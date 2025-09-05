@@ -50,18 +50,19 @@ const HomeOneFinancialPlanning = () => {
   };
 
   return (
-    <section className="spt120px spb120px fade-wrapper relative overflow-hidden">
+    <section className="spt120px spb120px  bg-zinc-100 fade-wrapper relative overflow-hidden">
       <div className="container">
         {/* section header */}
-        <div className="grid grid-cols-12 justify-between items-center">
-          <div className=" col-start-1 col-end-9 ">
+        <div className="grid-cols-1 xl:grid-cols-12 justify-between items-center">
+          <div className=" col-span-1  xl:col-span-9 ">
             <SectionSubTitle text="THINKING TO MOVE" />
-            <SectionTitle
+            {/* <SectionTitle
               text="What's included when you book a removalist with Muval?"
-              className="pt-3"
-            />
+              className="pt-3 border border-white-1 "
+            /> */}
+            <p className=" d4 pt-3 title-animation font-semibold " >What's included when you book a removalist with Muval?"</p>
           </div>
-          <div className="col-start-10 flex  justify-end items-end ">
+          <div className=" col-span-1 xl:col-span-10 flex  justify-end items-end ">
             <LInkArrow
               linkText="KNOW MORE"
               link="/pick-details"

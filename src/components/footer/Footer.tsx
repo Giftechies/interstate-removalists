@@ -13,9 +13,9 @@ const Footer = () => {
       <div className="max-xl:container xxl:ml-[calc((100%-1296px)/2)]">
         <div className="flex   justify-between max-xxl:flex-col-reverse ">
           <div>
-            <div className="spy120px  flex flex-auto gap-20 max-md:flex-col max-md:gap-8">
+            <div className="spy120px flex flex-shrink-0 gap-20   max-md:flex-col max-md:gap-8">
               <FooterLeftColumn />
-              <FooterMiddleColumn />
+              <FooterMiddleColumn  />
               <FooterRight />
             </div>
             {/* <FooterBottom /> */}

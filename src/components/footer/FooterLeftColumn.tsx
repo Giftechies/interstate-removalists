@@ -24,27 +24,17 @@ const FooterLeftColumn = () => {
         <Link
           href={`/`}
           className="theme-transition-3 rounded-xl   bg-primary p-2 hover:bg-white-1 hover:text-primary"
-        >
-          <IconBrandTwitch />
-        </Link>
-        <Link
-          href={`/`}
-          className="theme-transition-3 rounded-xl   bg-primary p-2 hover:bg-white-1 hover:text-primary"
-        >
+          >
           <IconBrandInstagram />
         </Link>
         <Link
           href={`/`}
           className="theme-transition-3 rounded-xl   bg-primary p-2 hover:bg-white-1 hover:text-primary"
-        >
-          <IconBrandDiscord />
-        </Link>
-        <Link
-          href={`/`}
-          className="theme-transition-3 rounded-xl   bg-primary p-2 hover:bg-white-1 hover:text-primary"
-        >
+          >
           <IconBrandYoutube />
         </Link>
+      
+        
       </div>
     </div>
   );

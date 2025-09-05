@@ -1,4 +1,4 @@
-import Banner from "@/components/ui/MainBanner";
+import Banner from "@/components/ui/InnerBanner";
 import Animations from "@/components/animations/Animations";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import AboutLocal from "@/pages/local/AboutPage";
@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { localCard } from "@/data/localCard";
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
+import HowItWorksPage from "../how-it-work/page";
 const Map = dynamic(() => import("@/components/localcomponents/map"), {
   ssr: false,
 });
@@ -48,7 +49,7 @@ export default function localRemovalists() {
         buttonlink="/pick-details"
       />
       <Map />
-      <OurWorks />
+      <HowItWorksPage/>
       <HomeTwoFaq />
       <Animations />
     </>
