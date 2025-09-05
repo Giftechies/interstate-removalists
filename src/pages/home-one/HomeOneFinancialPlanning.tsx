@@ -38,18 +38,7 @@ const cardData = [
     cardText:
       "Your items will be protected with heavy blankets using moving industry best practices. These help prevent your items from damage.",
   },
-  { image:image1,
-    link:"#",
-    cardTitle: "Loading & unloading",
-    cardText:
-      "Full service loading and unloading of the removal truck is included with every move. Packing services are available at extra cost.",
-  },
-  { image:image1,
-    link:"#",
-    cardTitle: "Complimentary cover*",
-    cardText:
-      "Receive $5,000 of complimentary cover on named items for added peace of mind. *Only available for MuveXpress bookings.*",
-  },
+  
 ];
 
 
