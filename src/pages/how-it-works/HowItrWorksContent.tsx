@@ -9,12 +9,14 @@ import {
   IconShieldCheck,
   IconCalendarCheck,
   IconPackageExport,
+  IconPhoneCall,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import BannerVideoButton from "./BannerVideoButton";
 import VideoModal from "./VideoModal";
+import LinkAccentThree from "@/components/link/LinkAccentThree";
 
 const HowItrWorksContent = () => {
   const [isOpen, setOpen] = useState(false);
@@ -134,13 +136,24 @@ const HowItrWorksContent = () => {
             /> */}
           </div>
           <div className=" col-start-1 col-end-13  flex  flex-col items-center justify-between gap-8 text-center md:max-xl:flex-none xl:col-start-9">
-            <div className="spt40px itec spb40px mx-auto flex h-[50%] w-full flex-col justify-center border-2 border-black-3/60   ">
+            {/* <div className="spt40px itec spb40px mx-auto flex h-[50%] w-full flex-col justify-center border-2 border-black-3/60   ">
               <h5 className="h3 title-animation font-medium">10x Profits</h5>
               <SectionText
                 text="Experience the power of exponential growth with our exclusive 10x Profits feature. Through our innovative investment strategies and market expertise."
                 className="mt-6"
               />
-            </div>
+            </div> */}
+                 <div className="flex till-card flex-col items-center rounded-xl shadow-md bg-primary text-white-1 px-6 py-10 text-center sm:px-[90px]">
+        <div className="sp24px mx-auto w-fit rounded-full bg-accent-3">
+          <IconPhoneCall className="size-8" />
+          
+        </div>
+        <h6 className="h4 mt-5 font-medium  ">Send Us Your C.V.</h6>
+        <p className="l-text mt- mt-5 ">
+          Do you want to move hessle free? contact us
+        </p>
+        <LinkAccentThree link="/contact" linkText="Contact Us" className="smt32px" />
+      </div>
             {/* <div className="10x Profits bg-black-3/60 max-md:h-0.5 max-md:w-full md:h-full md:w-0.5 xl:h-0.5 xl:w-full"></div> */}
             <div className=" bg-prim  h-[50%] w-full object-cover object-right ">
               <img

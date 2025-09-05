@@ -19,6 +19,7 @@ const Footer = () => {
               <FooterRight />
             </div>
             {/* <FooterBottom /> */}
+              <FooterBottom/>
           </div>
           {/* side section start */}
           <FooterSideSection />

@@ -1,4 +1,5 @@
 import Counter from "@/components/shared/scroll-top/Counter";
+import SecondCounter from "@/components/shared/scroll-top/SecondCounter";
 
 const HomeOneInfo = () => {
   return (
@@ -20,7 +21,8 @@ const HomeOneInfo = () => {
         </div>
         <div className="info-card fade-top">
           <div className="text-outline d2 theme-transition-3 font-medium">
-            <Counter value={705} />
+            {/* <Counter value={705.37} /> */}
+            <SecondCounter value={745.37} />
             K+
           </div>
           <p className="xl-text  mt-4 text-black-3">Successful Projects</p>
