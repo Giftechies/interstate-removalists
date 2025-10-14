@@ -11,10 +11,13 @@ export default function AboutPlace({ register, errors, setValue, getValues }) {
     { value: "5+" },
   ];
 const [selected, setSelected] = useState("");
+const [place,setplace] = useState('')
 
 useEffect(() => {
     const current = getValues ? getValues("bedrooms") : "";
     if (current) setSelected(current);
+    const currentplace = getValues? getValues("property"): ""
+    if(currentplace) setplace(currentplace)
   }, [getValues]); 
 
   const handleBedroomClick = (value) => {
@@ -28,8 +31,9 @@ useEffect(() => {
       <h2 className="h2 ">Tell us a bit about your place</h2>
       <p className="h6 text-gray-400">This helps us estimate your move size.</p>
 
-      <p className="h5 mt-6">Number of bedrooms</p>
-      <div className="flex gap-4 mt-4">
+   <div>
+       <p className="h5 mt-6 block  ">Number of bedrooms</p>
+      <div className="flex  gap-4 mt-4">
         {bedrooms.map((bedroom, index) => {
          
 
@@ -45,6 +49,7 @@ useEffect(() => {
           );
         })}
       </div>
+   </div>
 
       {/* Hidden input to connect with react-hook-form */}
       <input type="hidden" {...register("bedrooms", { required: true })} />

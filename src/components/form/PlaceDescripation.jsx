@@ -1,23 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 
-export default function PlaceDescription({ register, errors, setValue, getValues, moving }) {
-  const place = [
-    { title: 'Ground floor' },
-    { title: "Stairs" },
-    { title: "Elevator" },
-  ];
+export default function PlaceDescription({ register, errors, setValue, getValues, moving,variantsData }) {
 
-  const street = [
-    { title: 'Narrow street' },
-    { title: "Height restrictions" },
-    { title: "No Parking" },
-    { title: "Steep Driveway" },
-    { title: "Overhanging trees" },
-    { title: "Low power lines" },
-  ];
+const place = Array.isArray(variantsData)
+  ? variantsData.filter(item => item.type.trim().toLowerCase() == "your place"
+    ).map(item=>({title:item.name}))
+  : [];
+const street = Array.isArray(variantsData)?  variantsData.filter(item =>item.type.trim().toLowerCase() =="your street").map(item=>({title:item.name}))  :[];
+
+
+
 
   const currentKey = moving === "pickup" ? "placeDescription" : "movingPlaceDescription";
   const defaultValues = getValues(currentKey) || {};
@@ -73,16 +68,16 @@ return (
       <section className="place mt-6">
         <span className=" h5" >Your place</span>
         <div className="flex gap-4 mt-4 flex-wrap">
-          {place.map((item, index) => (
+          {place?.map((item, index) => (
             <div
               key={index}
-              onClick={() => handlePlaceClick(item.title)}
+              onClick={() => handlePlaceClick(item?.title)}
               className={`flex items-center gap-2 border px-6 py-2 rounded-full duration-300 cursor-pointer 
-                ${selectedPlace.includes(item.title)
+                ${selectedPlace.includes(item?.title)
                   ? 'bg-gray-600 text-white-1'
                   : 'hover:bg-gray-300 hover:text-white'}`}
             >
-              <label className="text-sm">{item.title}</label>
+              <label className="text-sm">{item?.title}</label>
             </div>
           ))}
         </div>
@@ -121,11 +116,11 @@ return (
               key={index}
               onClick={() => handleStreetClick(item.title)}
               className={`px-4 py-2 border rounded-full flex items-center gap-2 cursor-pointer 
-                ${selectedStreet.includes(item.title)
+                ${selectedStreet.includes(item?.title)
                   ? 'bg-gray-600 text-white-1'
                   : 'hover:bg-gray-300 '}`}
             >
-              {item.title}
+              {item?.title}
             </div>
           ))}
         </div>
