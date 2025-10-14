@@ -1,22 +1,28 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Home, Building2, School, Warehouse } from "lucide-react";
+import { PropertyData } from "./Action/formdata";
 
-export default function Property({ register, errors, setValue, getValues }) {
-  const propertyOptions = [
-    { icon: <Home size={48} />, name: "Home" },
-    { icon: <Building2 size={48} />, name: "Apartment" },
-    { icon: <School size={48} />, name: "Townhouse" },
-    { icon: <Warehouse size={48} />, name: "Storage" },
-  ];
+export default function Property({ register, errors, setValue, getValues,propertyOptions  }) {
+  // const [propertyOptions,setpropertyOptions] = useState(propertyOption)
+  const [loading,setloading] = useState(false)
+  
 
   const [selected, setSelected] = useState("");
 
   // On mount, set selected from form value if present
   useEffect(() => {
+    // ;(async ()=>{
+    //   console.log("calling iife");
+      
+    //   const propertydata = await PropertyData()
+    //   setpropertyOptions(propertydata)
+    // })()
     const current = getValues ? getValues("property") : "";
     if (current) setSelected(current);
   }, [getValues]);
+  console.log("data property>>>>",propertyOptions);
+  
 
   const handleSelect = (name) => {
     setSelected(name);
@@ -30,7 +36,7 @@ export default function Property({ register, errors, setValue, getValues }) {
       <h2 className="h2 mb-4 col-span-4">Choose the property</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {propertyOptions.map((property, index) => (
+        {propertyOptions?.map((property, index) => (
           <label
             key={index}
             onClick={() => handleSelect(property.name)}
@@ -41,7 +47,8 @@ export default function Property({ register, errors, setValue, getValues }) {
                   : "hover:bg-gray-100 text-gray-700"
               }`}
           >
-            <div className="mb-2">{property.icon}</div>
+            {/* <div className="mb-2">{property.icon}</div> */}
+            <i className={`${property.icon} text-5xl `} size={80} ></i>
             <span className="text-lg font-medium">{property.name}</span>
             <input
               type="radio"
