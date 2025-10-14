@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Stepper from "../stepper/stepper";
 import Button from "../../link/Button";
 import Backbutton from "@/components/link/Backbutton";
+import { PropertyData } from "../Action/formdata";
 
 import {
   setAddress,
@@ -27,6 +28,18 @@ import Inventory from "../Inventory";
 export default function MultiStepForm() {
   const formData = useSelector((state) => state.form);
   const dispatch = useDispatch();
+  const [propertyOptions,setpropertyOptions] = useState()
+
+ 
+useEffect(()=>{
+  ;(async()=>{
+    const res = await PropertyData()
+    setpropertyOptions(res)
+
+  })()
+})
+
+
 
   const {
     register,
@@ -137,6 +150,7 @@ export default function MultiStepForm() {
                 errors={errors}
                 setValue={setValue}
                 getValues={getValues}
+                propertyOptions={propertyOptions}
               />
               <div className=" flex gap-8">
                 {currentStep > page.Address && (
