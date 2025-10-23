@@ -41,7 +41,7 @@ export default function OurWorks() {
         />
         <SectionTitle
         text="Reliable moving services built around you"
-        className="  w-[70%] text-center mt-3 text-[var(--secondary)]"
+        className="  w-[70%] text-center mt-3 text-secondary capitalize "
         />
       <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2  mt-8 space-y-8 items-center justify-center">
           {steps.map((item, index) => (

@@ -44,6 +44,12 @@ const EducationLoanTestimonial = () => {
               nextEl: ".customerSliderNext",
               prevEl: ".customerSliderPrev",
             }}
+              breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
           >
             {sliderData.map((item, index) => (
               <SwiperSlide key={`rtrtr${index}`}>

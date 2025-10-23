@@ -13,6 +13,7 @@ export default function AboutPlace({ register, errors, setValue, getValues }) {
 const [selected, setSelected] = useState("");
 const [place,setplace] = useState('')
 
+
 useEffect(() => {
     const current = getValues ? getValues("bedrooms") : "";
     if (current) setSelected(current);
@@ -30,8 +31,18 @@ useEffect(() => {
     <div className="place-form">
       <h2 className="h2 ">Tell us a bit about your place</h2>
       <p className="h6 text-gray-400">This helps us estimate your move size.</p>
+      {place.trim().toLowerCase() =="storage"  ?
+        <div className="   flex flex-col " >
+          <label className=" mt-4 h3 font-medium " > How big the storage unit? </label>
+        <div className="input_wrape relative w-[80%] ">
+            <input  type="number" {...register("bedrooms",{required:true})} placeholder=" Floor area in square meter " onChange={(e)=>{handleBedroomClick(e.target.value)}}  className=" placeholder:m-text  bg-white-4 mt-2 w-full px-5 py-3 placeholder:text-black-3 border "  />
 
-   <div>
+          <label className=" absolute right-5 top-1/2 ">m2</label>
+        </div>
+          {errors.bedrooms &&(<p className="text-red-500 text-sm mt-2">Please enter  distance.</p>)}
+        </div>
+      :
+       <div>
        <p className="h5 mt-6 block  ">Number of bedrooms</p>
       <div className="flex  gap-4 mt-4">
         {bedrooms.map((bedroom, index) => {
@@ -49,14 +60,16 @@ useEffect(() => {
           );
         })}
       </div>
-   </div>
 
       {/* Hidden input to connect with react-hook-form */}
       <input type="hidden" {...register("bedrooms", { required: true })} />
 
-      {errors.bedrooms && (
+      {errors.bedrooms &&  (
         <p className="text-red-500 text-sm mt-2">Please select number of bedrooms.</p>
       )}
+   </div> }
+
+  
     </div>
   );
 }

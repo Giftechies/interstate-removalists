@@ -16,9 +16,9 @@ const HomeThreeBanner = () => {
               className="capitalize h6  text-white-1"
             />
             <h1 className="d4 title-animation mt-3 font-medium   ">
-             Everything you need for your next move
+           Good movers aren’t hard to find anymore.
             </h1>
-            <p className=" mt-4  tracking-wider " >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, quos!</p>
+            <p className=" mt-4  tracking-wider " >Interstate Removalists bring trusted movers under one roof — so your next move is simple, sorted, and right on time.</p>
             
             <div className="smt40px  flex items-center gap-5 max-xs:flex-wrap fade-top  justify-center">
              <HomeThreeBannerLink href="/pick-details" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-white-1  hover:border-white-1 " >Get Instant Quote</HomeThreeBannerLink>

@@ -17,7 +17,7 @@ export default function Breadcrumb() {
   });
 
   return (
-    <nav aria-label="breadcrumb" className="flex  smt60p items-center space-x-1 h5">
+    <nav aria-label="breadcrumb" className="flex  smt60p items-center space-x-1 h6  ">
       <Link href="/" className="text-white-1  hover:text-[var(--primary)]">
         Home
       </Link>
@@ -25,11 +25,11 @@ export default function Breadcrumb() {
         <div key={index} className="flex items-center  space-x-1">
           <ChevronRight className="w-4 h-4  " />
           {index === crumbs?.length - 1 ? (
-            <span className="text-white-3 font-medium">{crumb.label}</span>
+            <span className="text-white-3 font-medium capitalize ">{crumb.label}</span>
           ) : (
             <Link
               href={crumb.href}
-              className=" hover:text-[var(--primary)] transition-colors"
+              className=" hover:text-[var(--primary)] transition-colors capitalize "
             >
               {crumb.label}
             </Link>

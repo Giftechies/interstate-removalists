@@ -13,7 +13,7 @@ import { useMemo } from "react";
 
 
 
-export default function MapComponent() {
+export default function MapComponent( {markers=[]} ) {
   const customIcon = useMemo(()=>{
   if(typeof window !==undefined){
     const L = require('leaflet')
@@ -26,21 +26,14 @@ export default function MapComponent() {
   }
   return null;
 },[])
-  const markers = [
-    { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
-    { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
-    { id: 3, position: [-27.4698, 153.0251], name: "Brisbane", color: "#2ecc71" },
-    { id: 4, position: [-27.7898, 153.0251], name: "Brisbane", color: "#2ecc71" },
-    { id: 5, position: [-27.5898, 153.0251], name: "Brisbane", color: "#2ecc71" },
-    { id: 6, position: [-27.4748, 153.0251], name: "Brisbane", color: "#2ecc71" },
-  ];
+
 
   return (
 <section className="sp60px bg-white-4  " >
   <div className="container" >
     <div className=" w-full place-items-center mb-10 " >
   
-      <SectionTitle text=" Interstate removalist helps you find the best removalists near you" className="  text-center" />
+      <p  className="d4 title-animation font-semibold  text-center capitalize ">Interstate removalist helps you find the best removalists near you</p>
       <SectionText className=" lg:w-[80%] text-center "  text="Find trusted local removalists to make your move simple and stress-free. Whether you’re relocating just a few streets away or shifting to a nearby suburb, moving always comes with its challenges. By booking your removalist through Interstate, you can be confident of receiving professional service and care, helping you settle into your new home faster and with peace of mind." />
       
     </div>

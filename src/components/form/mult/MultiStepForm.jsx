@@ -11,7 +11,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Stepper from "../stepper/stepper";
 import Button from "../../link/Button";
 import Backbutton from "@/components/link/Backbutton";
-import { fetchPropertyData, fetchVaritions ,fetchinventory } from "../Action/formdata";
+import {
+  fetchPropertyData,
+  fetchVaritions,
+  fetchinventory,
+} from "../Action/formdata";
 
 import {
   setAddress,
@@ -28,26 +32,21 @@ import Inventory from "../Inventory";
 export default function MultiStepForm() {
   const formData = useSelector((state) => state.form);
   const dispatch = useDispatch();
-  const [propertyOptions,setpropertyOptions] = useState()
-  const [variations,setvariations] = useState()
-  const [inventory,setInventory] = useState()
+  const [propertyOptions, setpropertyOptions] = useState();
+  const [variations, setvariations] = useState();
+  const [inventory, setInventory] = useState();
 
- 
-useEffect(()=>{
-  ;(async()=>{
-    const propertydata = await fetchPropertyData()
-    const variationdata = await fetchVaritions()
-    const inventorydata = await fetchinventory()
+  useEffect(() => {
+    (async () => {
+      const propertydata = await fetchPropertyData();
+      const variationdata = await fetchVaritions();
+      const inventorydata = await fetchinventory();
 
-
-    setvariations(variationdata)
-    setpropertyOptions(propertydata)
-    setInventory(inventorydata)
-
-  })()
-},[])
-
-
+      setvariations(variationdata);
+      setpropertyOptions(propertydata);
+      setInventory(inventorydata);
+    })();
+  }, []);
 
   const {
     register,
@@ -101,11 +100,11 @@ useEffect(()=>{
 
   const onSubmit = (data) => {
     if (currentStep === page.Address) {
-      dispatch(setAddress({ PickupAddress: data.pickupAddress }));
+      dispatch(setAddress({ Address: data.pickupAddress,discreetly:data.pickupAddress_discreetly }));
     } else if (currentStep === page.Property) {
-      dispatch(setProperty({ property: data.property }));
+      dispatch(setProperty( data.property ));
     } else if (currentStep === page.AboutPlace) {
-      dispatch(setAboutPlace({ AboutPlace: data.bedrooms }));
+      dispatch(setAboutPlace( data.bedrooms ));
     } else if (currentStep === page.PlaceDescription) {
       dispatch(
         setplaceDescription({ placeDescription: data.placeDescription }),
@@ -146,12 +145,12 @@ useEffect(()=>{
                 step={step}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
-                className=" hidden xl:flex transition-all duration-300 ease-linear "
+                className=" hidden transition-all duration-300 ease-linear xl:flex "
               />
             </header>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="lg:mt-20 space-y-6 "
+              className="space-y-6 lg:mt-20 "
             >
               <CurrentComponent
                 register={register}
@@ -160,7 +159,7 @@ useEffect(()=>{
                 getValues={getValues}
                 propertyOptions={propertyOptions}
                 variantsData={variations}
-                inventorydata ={inventory}
+                inventorydata={inventory}
               />
               <div className=" flex gap-8">
                 {currentStep > page.Address && (
@@ -172,7 +171,7 @@ useEffect(()=>{
             </form>
           </main>
 
-          <aside className=" hidden lg:block sticky top-30 h-fit self-start">
+          <aside className=" sticky top-30 hidden h-fit self-start lg:block">
             {formData?.address.PickupAddress ? (
               <div className=" innershadow  mx-auto w-[25rem] p-8 ">
                 <span className="h4">Your move</span>

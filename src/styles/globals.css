@@ -121,7 +121,7 @@ body {
     @apply text-[16px] leading-[130%] xl:text-[18px] xxl:text-[20px];
   }
   .h6 {
-    @apply text-[14px] leading-[130%] tracking-wider xxl:text-[16px];
+    @apply text-[14px] leading-[130%] tracking-widest xxl:text-[16px];
   }
   .lead-text {
     @apply text-[16px] leading-[150%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];

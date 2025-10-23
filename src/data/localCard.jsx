@@ -2,57 +2,52 @@
 
  export const localCard = [
   {
-    title:'text_test',
+    title:'Sydney Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
     path:"/local-removalists/sydney-removalists"
   },
   {
-    title:'text_test',
+    title:'Melbourne Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
   {
-    title:'text_test',
+    title:'Brisbane Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
     path:"#"
   },
   {
-    title:'text_test',
+    title:'Perth Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
   {
-    title:'text_test',
+    title:'Adelaide Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
   {
-    title:'text_test',
+    title:'Canberra Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
   {
-    title:'text_test',
+    title:'Darwin Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
   {
-    title:'text_test',
+    title:'Hobart Removalists',
     imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
     content:'testld lkdjfls ldkjflskf kldsjfsl',
      path:"#"
   },
-  {
-    title:'text_test',
-    imagepath:'https://images.unsplash.com/photo-1587325889132-2c9e393e7d70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG93bnxlbnwwfHwwfHx8MA%3D%3D',
-    content:'testld lkdjfls ldkjflskf kldsjfsl fdgg fddddddddd fddddddddd fdfg',
-     path:"#"
-  },
+
 ]

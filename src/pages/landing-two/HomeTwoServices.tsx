@@ -18,16 +18,16 @@ const HomeTwoServices = () => {
     <section className="fade-wrapper relative z-10 bg-sec text-white-1 after:bottom-0 after:right-0 after:-z-10 after:h-full after:w-1/2 after:bg-accent-4  lg:after:absolute">
       <div className="max-lg:spy120px container relative grid grid-cols-12 items-center">
         <div className="col-start-1 col-end-13 lg:col-end-6">
-          <SectionSubTitle text="Services" className="text-white-1" />
-          <SectionTitle text="Our Featured Services." className="h2 mt-3" />
+          <SectionSubTitle text="Why Choose Us" className="text-white-1 capitalize " />
+          <SectionTitle text="Why Plan Your Move With Interstate Removalists " className="h2 mt-3  capitalize " />
           <SectionText
-            text="Integrate Babuz on your web-site to offer fast, secure and seamless online bank transfer payment method."
+            text="You can find capable movers here for every need — from residential and commercial moves to office relocations, warehouse shifts, and furniture transport, including piano and dining table removals. Here’s why you should choose us:"
             className="fade-top mt-5 text-white-2"
           />
-          <SectionText
+          {/* <SectionText
             text="You could receive payments straight into your company bank account or open a Babuz merchant account and collect funds there."
             className="fade-top fade-top mt-4 text-white-2"
-          />
+          /> */}
           <div className="spt40px">
             <LInkArrowTwo linkText="All Services" link="/services" />
           </div>
@@ -35,26 +35,26 @@ const HomeTwoServices = () => {
         <div className="max-lg:spt40px col-start-1  col-end-13 grid max-lg:gap-3 rounded-sm overflow-hidden xs:grid-cols-2 lg:col-start-7">
           <HomeTwoServiceCard
             icon={<IconPresentation className="size-10" />}
-            title="Boost your Payments"
-            text="Reduced Payments maintenance and processing fees. No hidden fees."
+            title="Professional Removalists"
+            text="Vetted movers who show up on time and handle your things with care from start to finish."
             className="max-lg:bg-accent-4"
           />
           <HomeTwoServiceCard
             icon={<IconUsers className="size-10" />}
-            title="Agent Banking"
-            text="Stay updated. check your bank account to manage funds and track transactions securely."
+            title="24/7 Service"
+            text="We’re here whenever you need us — day, night, or weekend, making sure your move stays on track."
             className="bg-accent-4 lg:bg-primary/20"
           />
           <HomeTwoServiceCard
             icon={<IconDiscountCheck className="size-10" />}
-            title="Savings Account"
-            text="Reduced Payments maintenance and processing fees. No hidden fees."
+            title="Protective Covering"
+            text="Your furniture and valuables are wrapped, padded, and secured for safe transport."
             className="bg-accent-4 lg:bg-primary/20"
           />
           <HomeTwoServiceCard
             icon={<IconRoute className="size-10" />}
-            title="Pay Out & Refund"
-            text="Execute pay outs and refunds straight to your customer’s bank account via BabuZ."
+            title="Online Booking"
+            text="Compare quotes, pick your mover, and confirm your booking quickly, all in one place."
             className="max-lg:bg-accent-4 "
           />
         </div>

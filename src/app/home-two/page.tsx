@@ -9,7 +9,7 @@ import HomeTwoBanner from "@/pages/landing-two/HomeTwoBanner";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HomeTwoFingertips from "@/pages/landing-two/HomeTwoFingertips";
 import HomeTwoPersonalized from "@/pages/landing-two/HomeTwoPersonalized";
-import HomeTwoServices from "@/pages/landing-two/HomeTwoServices";
+// import {HomeTwoServices} from "@/pages/landing-two/HomeTwoServices";
 import HomeTwoTestimonial from "@/pages/landing-two/HomeTwoTestimonial";
 import { Metadata } from "next";
 
@@ -24,7 +24,7 @@ export default function LandingTwo() {
       <NavbarContainer />
       <HomeTwoBanner />
       <HomeTwoAboutUs />
-      <HomeTwoServices />
+      {/* <HomeTwoServices /> */}
       <HomeTwoFingertips />
       <HomeOnePricingPlan />
       <HomeOneFinancialPlanning />

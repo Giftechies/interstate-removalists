@@ -11,31 +11,47 @@ import SingleFaq from "./SingleFaq";
 
 export const faqData = [
   {
-    question: "How do I report fraudulent activity on my account?",
+    question: "How much do removalists cost?",
     answer:
-      "If you notice any suspicious or unauthorized activity on your account, follow these steps:\n1. Contact your bank or credit card issuer immediately.\n2. Report the fraudulent transactions and provide details of the unauthorized activity.\n3. Request to block or deactivate the affected card or account.\n4. Follow any additional instructions provided by your bank to resolve the issue.",
+      "Moving costs vary depending on your location, the stuff you’re moving, and the type of service you choose. With Interstate Removalists, you can compare different movers and prices side by side to find the best fit for your move and budget.",
   },
   {
-    question: "Can I set up account alerts for unusual transactions?",
+    question: "How long will it take for the movers to arrive or finish the job?",
     answer:
-      "Yes, many banks offer account alert services. You can set up alerts for unusual transactions, large withdrawals, or any other specific activity. Check with your bank to explore the available alert options and customize them according to your preferences.",
+      "Once your booking’s confirmed, we’ll share your mover’s schedule and arrival window. Most local moves are wrapped up within a few hours. Larger or interstate jobs can take longer, but you’ll stay updated the whole way through.",
   },
   {
-    question: "What should I do if my card is damaged?",
+    question: "Are my belongings insured during the move?",
     answer:
-      "If your debit/credit card is damaged, follow these steps:\n1. Contact your bank or credit card issuer.\n2. Report the damage and request a replacement card.\n3. Destroy the damaged card securely by cutting it into multiple pieces.\n4. Activate the new card once you receive it.",
+      "Yes. Every mover in our network carries proper cover for transit and handling. You can add extra protection for long-haul or high-value moves. From loading to delivery, your belongings are looked after properly.",
   },
   {
-    question: "Is there a way to dispute a transaction on my account?",
+    question: "How early should I book my move?",
     answer:
-      "Yes, if you believe a transaction on your account is incorrect or unauthorized, you can dispute it. Contact your bank or credit card issuer, provide details of the disputed transaction, and follow their dispute resolution process. Be sure to report the issue promptly for a quicker resolution.",
+      "It’s best to book at least a week or two ahead, especially if you’re moving on a weekend or at the end of the month. Early bookings mean better choices, better rates, and zero last-minute stress.",
   },
   {
-    question: "What steps should I take if I forget my card PIN?",
+    question: "Do you offer packing and unpacking services?",
     answer:
-      "If you forget your card PIN, follow these steps:\n1. Contact your bank or credit card issuer.\n2. Request a PIN reset or reissue.\n3. Authenticate your identity through the bank's security measures.\n4. Choose a new PIN and update it securely. Avoid using easily guessable PINs for your security.",
+      "We sure do. Many movers on our platform can handle full packing and unpacking, so you don’t have to lift a thing. Just fill in the details when booking — easy as that.",
+  },
+  {
+    question: "How long does a move usually take?",
+    answer:
+      "A small local move can take three to four hours. Interstate trips take longer depending on access and distance. Your mover will give you a solid time estimate upfront, so you know what to expect.",
+  },
+  {
+    question: "Do you move large or specialty items, like pianos, pool tables, or antiques?",
+    answer:
+      "Yep. Our movers handle heavy and delicate pieces all the time. They’ve got the right gear and know-how to shift anything safely — from pianos and wardrobes to pool tables, dining tables, and antique furniture. Everything’s wrapped, lifted, and moved with proper care.",
+  },
+  {
+    question: "What makes Interstate Removalist different from others?",
+    answer:
+      "We’ve built a network of movers who get that it’s not just stuff — it’s your home. They’re steady on the job, careful with every piece, and keep things running smoothly so your move feels easy, not chaotic.",
   },
 ];
+
 
 const HomeOneFaq = () => {
   const [dropDown, setDropDown] = useState("");

@@ -13,7 +13,7 @@ const HomeTwoFaq = () => {
         <SectionSubTitle text="FAQ" className="text-center" />
         <SectionTitle
           text="Frequently ASked Questions"
-          className="mt-3 text-center"
+          className="mt-3 text-center capitalize "
         />
         <div className="spt60px grid gap-6 lg:grid-cols-2">
           <div className="flex flex-col justify-between gap-5">

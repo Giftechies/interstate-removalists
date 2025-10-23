@@ -1,7 +1,8 @@
 import Banner from "@/components/ui/InnerBanner";
 import Animations from "@/components/animations/Animations";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
-import AboutLocal from "@/pages/local/AboutPage";
+import InnerAboutLocal from "@/pages/local/InnerAboutPage";
+import Separator from "@/pages/local/Separater";
 import LocalType from "@/components/localcomponents/LocalTypes";
 import dynamic from "next/dynamic";
 import { localCard } from "@/data/localCard";
@@ -13,16 +14,24 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
 });
 
 export default function localRemovalists() {
+    const markers = [
+    { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
+    { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
+    { id: 3, position: [-27.4698, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 4, position: [-27.7898, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 5, position: [-27.5898, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 6, position: [-27.4748, 153.0251], name: "Brisbane", color: "#2ecc71" },
+  ];
   return (
     <>
       <Banner
         imgpath={"/img/banner-img/local.webp"}
-        pagename="Local removalists"
+        pagename="Local Removalists"
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
 
-      <AboutLocal
+      <InnerAboutLocal
         imagepath1={"/img/innerimg/localimg.png"}
         imagepath2={
           "https://media.istockphoto.com/id/487175846/photo/delivery-man-unloading-truck.webp?a=1&b=1&s=612x612&w=0&k=20&c=OkcEhNbpV0w9JPTgNqCkJ_IZx5fXnqktOdbOsffF3Es="
@@ -48,8 +57,10 @@ export default function localRemovalists() {
         buttontext="Get start Moving"
         buttonlink="/pick-details"
       />
-      <Map />
-      <HowItWorksPage/>
+      <Separator title="Ready to Get Your Move Sorted?" content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby." />
+      <Map  markers={markers} />
+      <OurWorks/>
+      {/* <HowItWorksPage/> */}
       <HomeTwoFaq />
       <Animations />
     </>

@@ -7,46 +7,70 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import Image from "next/image";
 import SectionText from "@/components/shared/SectionText";
 import Card from './Card'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay,Navigation } from "swiper/modules";
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+
+
+
 const LocalType = ({localCard,title,subtitle,text,buttontext,buttonlink}) => {
 
   return (
-    <section className="spy120px relative overflow-clip bg-white-4">
-      <div className="container flex justify-between gap-5 max-sm:flex-col sm:items-center sm:gap-6">
+    <section className="spy80px relative overflow-clip bg-accent-4">
+      <div className="container ">
         <div>
           <SectionSubTitle text={`${subtitle}`}/>
           <SectionTitle
             text={`${title}`}
             
-            className="mt-3 max-w-[703px]"
+            className="mt-3 "
           />
-          <SectionText text={`${text}`}/>
+          <SectionText className=" text-left mt-2 " text={`${text}`}/>
         </div>
-        <RoundedLink buttonText={`${buttontext}`} link={buttonlink} />
-      </div>
-      <div className="container py-20 overflow-hidden " >
+      <div className=" py-20 overflow-hidden " >
 
-        <div className=" grid grid-cols-1  items-center justify-center  md:grid-cols-2 lg:grid-cols-3 gap-6  " >
-          { localCard.map((item,id)=>{
-            return(
+          <Swiper 
+         spaceBetween={24}
+            speed={1400}
+            loop={true}
+         
+            modules={[Navigation, Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              nextEl: ".customerSliderNext",
+              prevEl: ".customerSliderPrev",
+            }}
+              breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+           >
+
+           { localCard.map((item,id)=>{
+             return(
+              <SwiperSlide>
               <Card key={id} {...item} />
+       </SwiperSlide>
             )
           })}
+          </Swiper>
+            <div className={"smt60px z-10 mx-auto flex w-fit items-center gap-4"}>
+                      <button className="customerSliderPrev theme-transition-3 flex items-center justify-center rounded-full border border-primary bg-transparent p-3 font-semibold text-primary hover:bg-primary hover:text-white-1">
+                        <IconArrowLeft size={24} />
+                      </button>
+                      <button className="customerSliderNext theme-transition-3 flex items-center justify-center rounded-full border border-primary bg-transparent p-3 font-semibold text-primary hover:bg-primary hover:text-white-1">
+                        <IconArrowRight size={24} />
+                      </button>
+                    </div>
 
-        </div>
 
       </div>
-
-    
-      <div>
       </div>
-      <Image
-        src={teamVector}
-        width={146}
-        height={154}
-        alt="Team Vector"
-        className=" max-3xl:size-20  max-md:hidden m"
-      />
-      <CircleBottomLeft />
     </section>
   );
 };

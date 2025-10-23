@@ -27,26 +27,26 @@ const HowItrWorksContent = () => {
 
   const steps = [
     {
-      title: "Get a Quote",
+      title: "Tell Us What You’re Moving",
       description:
-        "Start by contacting us for a free, personalized quote. Share your moving details.",
+        "Pop in your pickup and drop-off details, and let us know what needs shifting. We’ll line up removalists who are right for your move.",
       Icon: IconLogout,
     },
     {
-      title: "Plan Your Move",
-      description: "Once signed up, you will need to verify your account.",
+      title: " Compare and Choose",
+      description: "You’ll get a few clear quotes from trusted movers near you. Check what’s included, compare prices, and pick the one that fits your plan.",
       Icon: IconCalendarCheck,
     },
     {
-      title: "Safe & Secure Moving",
+      title: " Book and Relax",
       description:
-        "Our expert movers handle your belongings with care, using high-quality packing materials.",
+        "Once you book, your mover takes over. They’ll confirm times, handle the loading, and keep you in the loop along the way.",
       Icon: IconShieldCheck,
     },
     {
-      title: "Unpack & Settle In",
+      title: "Delivery Done Properly",
       description:
-        "Once we've delivered your items, we'll help with unpacking and setting up, so you can enjoy.",
+        "Every item arrives safely at your new place. The team unloads, puts things where you need them, and checks you’re happy before they roll out.",
       Icon: IconPackageExport,
     },
   ];
@@ -61,16 +61,10 @@ const HowItrWorksContent = () => {
           </div>
           <div className="col-start-1 col-end-13 lg:col-start-6  ">
             <SectionText
-              text="We aim to provide you with a transparent and straightforward understanding of our investment process. We follow a simple three-step approach to ensure your investment journey is smooth and hassle-free."
+              text="Need dependable local or interstate removalists in Australia? Here’s how the whole process works from start to finish."
               className="fade-top"
             />
-            {/* <Link
-              href={``}
-              className="h5 smt40px group theme-transition-3 flex items-center gap-2 font-medium hover:text-primary"
-            >
-              Read More{" "}
-              <IconArrowUpRight className="theme-transition-3 group-hover:rotate-45" />
-            </Link> */}
+        
           </div>
         </div>
         <div className="spt60px grid grid-cols-12 gap-6">
@@ -86,13 +80,12 @@ const HowItrWorksContent = () => {
                       <div className=" h6 fade-top absolute -left-[23px] top-0  flex size-10 items-center   justify-center rounded-full border border-white-1 bg-secondary font-semibold  text-white-1 ">
                         {index + 1}
                       </div>
-                      {/* <div className=" absolute  text-stroke -top-1 -left-30  size-10 text-white-1 flex items-center justify-center text-[60px] font-semibold  rounded-full " >{index+1}</div> */}
                       <step.Icon
                         stroke={1}
                         className="size6 shrink-0 sm:size-12"
                       />{" "}
                       <div>
-                        <h5 className="h3 font-light title-animation  ">
+                        <h5 className="h4 font-light title-animation  ">
                           {step.title}
                         </h5>
                         <p className="s-text tracking-wider fade-top mt-2">

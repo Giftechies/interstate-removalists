@@ -15,28 +15,28 @@ const cardData = [
     image:image1,
     link:"#",
 
-    cardTitle: "Expert removalists",
+    cardTitle: "Local Removalists",
     cardText:
-      "A removalist truck and two men (depending on the size of your move) will come to collect and deliver your items.",
+      "Local move? Too easy. Your furniture’s wrapped, loaded, and dropped off at your new residence. Expect a reliable move to be done on time.",
   },
   {
      image:image2,
     link:"#",
-    cardTitle: "Online booking",
+    cardTitle: "Interstate Removalists",
     cardText:
-      "Save time calling other removalists for quotes. Find, compare and book your removalist online.",
+      "Moving across states? Your stuff’s loaded, tracked, and delivered anywhere in Oz — no mucking about, no hold-ups, just an easy move",
   },
   { image:image1,
     link:"#",
-    cardTitle: "Dedicated service",
+    cardTitle: "Dining Table Removalists",
     cardText:
-      "Our experienced customer service team is available to assist you at every step of your move.",
+      "Your dining table is carefully wrapped and moved to your new home, scratch-free, ready to sit around for your next meal.",
   },
   { image:image1,
     link:"#",
-    cardTitle: "Protective covering",
+    cardTitle: "Pool Table Removalists",
     cardText:
-      "Your items will be protected with heavy blankets using moving industry best practices. These help prevent your items from damage.",
+      "Moving a pool table? It’s carefully pulled apart, padded, shifted, and levelled again perfectly, so it’s game-ready straight away.",
   },
   
 ];
@@ -55,12 +55,10 @@ const HomeOneFinancialPlanning = () => {
         {/* section header */}
         <div className="grid-cols-1 xl:grid-cols-12 justify-between items-center">
           <div className=" col-span-1  xl:col-span-9 ">
-            <SectionSubTitle text="THINKING TO MOVE" />
-            {/* <SectionTitle
-              text="What's included when you book a removalist with Muval?"
-              className="pt-3 border border-white-1 "
-            /> */}
-            <p className=" d4 pt-3 title-animation font-semibold " >What's included when you book a removalist with Muval?"</p>
+            <SectionSubTitle text="Our Services " />
+           
+            <p className=" d4 mt-3 title-animation font-semibold capitalize " >Every move, one platform.</p>
+            <p className="m-text text-black-3 lg:w-[60%] mt-3 " > Browse trusted movers for any service, compare prices, and lock in your removalists online in just a few clicks.</p>
           </div>
           <div className=" col-span-1 xl:col-span-10 flex  justify-end items-end ">
             <LInkArrow

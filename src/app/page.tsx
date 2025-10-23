@@ -19,7 +19,7 @@ import HomeThreeService from "@/pages/home-three/HomeThreeService";
 import HomeThreeAbout from "@/pages/home-three/HomeThreeAbout";
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeService from "@/pages/home-three/HomeService";
-import HomeTwoServices from "@/pages/landing-two/HomeTwoServices";
+import WhyChooseUs from "@/pages/landing-two/HomeTwoServices";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HowItrWorksContent from "@/pages/how-it-works/HowItrWorksContent";
 import AboutLocal from "@/pages/local/AboutPage";
@@ -43,17 +43,17 @@ export default function Home() {
         title={"Few words about"}
         subheading={"Interstate Removalists"}
         text1={
-          "Local moving refers to the process of relocating household goods or personal belongings within the same city or metropolitan area. ."
+          "Moving’s tough, but finding a good mover shouldn’t be. That’s why we built Interstate Removalists: a one-stop place to find verified, experienced, and safe removalists in Australia, who handle your relocation with trust and care."
         }
         text2={
-          "With our expert team, your local move becomes stress-free. From careful packing to quick transport, we handle everything smoothly so you can settle into your new place with ease and peace of mind. 🚛✨"
+          "Got a move coming up? You can find your interstate or local removalist in Sydney, Brisbane, Canberra, or nearby areas, right here on Interstate Removalists. Here’s what to expect:"
         }
         buttonText={"Know More"}
-        stepText1={"Designing every move with precision and perfection."}
-        stepText2={"Structured planning ensures smooth and reliable relocation."}
+        stepText1={"National coverage — find trusted movers across Australia."}
+        stepText2={"Straightforward quotes — no hidden costs, ever."}
         stepText3={"Strong foundations make your moving journey stress-free."}
         />
-      <HomeTwoServices />
+      <WhyChooseUs />
       <HowItrWorksContent />
       <HomeOneFinancialPlanning />
       <HomeOneTestimonials  />
