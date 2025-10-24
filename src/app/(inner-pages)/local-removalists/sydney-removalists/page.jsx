@@ -44,7 +44,7 @@ export default  function SydneyRemovalists(  ){
         stepText2={"Structured planning ensures smooth and reliable relocation."}
         stepText3={"Strong foundations make your moving journey stress-free."}
       />
-      <Separater />
+      {/* <Separater /> */}
       <Sababs/>
       <Map markers={markers}  />
       <OurWorks/>
