@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import InnerAboutPage from "@/pages/local/InnerAboutPage";
 import Separater from "@/pages/local/Separater";
+import Sababs from  "@/pages/local/sababs"
 
 const Map = dynamic(()=>import("@/components/localcomponents/map"),{ssr:false,})
 export default  function SydneyRemovalists(  ){
@@ -44,6 +45,7 @@ export default  function SydneyRemovalists(  ){
         stepText3={"Strong foundations make your moving journey stress-free."}
       />
       <Separater />
+      <Sababs/>
       <Map markers={markers}  />
       <OurWorks/>
       <HomeTwoFaq/>

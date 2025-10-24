@@ -53,8 +53,8 @@ const LocalType = ({localCard,title,subtitle,text,buttontext,buttonlink}) => {
 
            { localCard.map((item,id)=>{
              return(
-              <SwiperSlide>
-              <Card key={id} {...item} />
+              <SwiperSlide key={id}>
+              <Card  {...item} />
        </SwiperSlide>
             )
           })}
