@@ -57,8 +57,8 @@ export default function localRemovalists() {
         buttontext="Get start Moving"
         buttonlink="/pick-details"
       />
-      <Separator title="Ready to Get Your Move Sorted?" content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby." />
       <Map  markers={markers} />
+      <Separator title="Ready to Get Your Move Sorted?" content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby." />
       <OurWorks/>
       {/* <HowItWorksPage/> */}
       <HomeTwoFaq />
