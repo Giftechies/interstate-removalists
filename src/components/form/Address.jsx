@@ -32,7 +32,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
         {errors[Feildname] && (
           <p className="text-red-500">{errors[Feildname].message}</p>
         )}
-          { moving=== 'pickup' && 
+          { moving.trim().toLowerCase() === 'from' && 
         <div>
           <input type="hidden" {...register(Togglename)} />
           <input
@@ -46,14 +46,14 @@ export default function Address({ register, errors, moving,setValue,getValues })
         <label htmlFor="toggle_check">
             <span
               className={cn(
-                `  theme-transition-3 relative mr-3 rounded-full bg-gray-400 px-8 py-1 `,
+                `  theme-transition-3 relative mr-3 rounded-full bg-gray-400 px-6 py-[.08rem] `,
                 istoggle ? "bg-primary" : "",
               )}
             >
               <span
                 className={cn(
-                  `theme-transition-3  absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white-1 p-[.8rem] `,
-                  istoggle && "translate-x-8",
+                  `theme-transition-3  absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white-1 p-[.5rem] `,
+                  istoggle && "translate-x-[1.3rem]",
                 )}
               ></span>
             </span>
@@ -63,7 +63,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
             I require this move to be handled discreetly.
             <span className="group relative cursor-pointer text-primary ">
               What does this mean?
-              <p className=" absolute -right-[180%] top-1/2  mt-2 hidden w-[16rem] -translate-y-1/2 bg-gray-200 p-4 text-black-3 group-hover:block ">
+              <p className=" absolute -right-[180%] text-[12px] top-1/2  mt-2 hidden w-[16rem] -translate-y-1/2 bg-gray-200 p-4 text-black-3 group-hover:block ">
                 Please enable this option if your move involves a domestic
                 violence situation and you need contact with you to be handled
                 in a sensitive manner.
@@ -72,7 +72,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
           </span>
 
           {istoggle &&  (
-            <p className=" mt-2 text-red-500 ">
+            <p className=" mt-2 text-red-500 text-[12px] ">
             Please only enable this option if your move involves a domestic
             violence situation and you need contact to be handled in a
             sensitive manner.

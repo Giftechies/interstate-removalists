@@ -9,7 +9,7 @@ import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 
 
-const AboutLocal = ({title,text1,text2,buttonText,subheading}) => {
+const AboutLocal = ({title,text1,buttonText,subheading}) => {
   return (
     <section
       className="spy80px fade-wrapper  relative overflow-hidden"
@@ -27,10 +27,10 @@ const AboutLocal = ({title,text1,text2,buttonText,subheading}) => {
             className="fade-top pt-5"
             text={text1}
           />
-          <SectionText
+          {/* <SectionText
             className="fade-top pt-5"
             text={text2}
-          />
+          /> */}
         
            <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
         </div>

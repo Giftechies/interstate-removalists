@@ -52,21 +52,41 @@ export default function PlaceDescription({
     setValue(currentKey, formData, { shouldValidate: true });
   };
 
-  const handlePlaceClick = (title) => {
-    let newSelected;
-    if (title === "Ground floor") {
-      newSelected = ["Ground floor"];
-    } else {
-      const withoutGround = selectedPlace.filter(
-        (item) => item !== "Ground floor",
-      );
-      newSelected = withoutGround.includes(title)
-        ? withoutGround.filter((item) => item !== title)
-        : [...withoutGround, title];
+const handlePlaceClick = (title) => {
+    let newSelected = [...selectedPlace]; // Start with a copy of the current state
+
+    if (title === "Ground Floor") {
+        // Case 1: Ground Floor toggle
+        if (newSelected.includes("Ground Floor")) {
+            // Deselect Ground Floor
+            newSelected = newSelected.filter((item) => item !== "Ground Floor");
+        } else {
+            // Select Ground Floor, and deselect Stairs/Elevator
+            newSelected = newSelected.filter(
+                (item) => item !== "Stairs" && item !== "Elevator"
+            );
+            newSelected.push("Ground Floor");
+        }
+    } else if (title === "Stairs" || title === "Elevator") {
+        // Case 2: Stairs or Elevator toggle
+        if (newSelected.includes(title)) {
+            // Deselect the item
+            newSelected = newSelected.filter((item) => item !== title);
+        } else {
+            // Select the item, and deselect Ground Floor
+            newSelected = newSelected.filter((item) => item !== "Ground Floor");
+            newSelected.push(title);
+        }
     }
+    
+    // The previous logic for toggling should handle other potential options,
+    // but for the visible items (Ground Floor, Stairs, Elevator), the above
+    // covers the desired mutual exclusivity.
+    
     setSelectedPlace(newSelected);
+    // Use the newSelected array to update the form state immediately
     updateForm(newSelected, selectedStreet, stairsFlights, streetDistance);
-  };
+};
 
   const handleStreetClick = (title) => {
     const newSelected = selectedStreet.includes(title)
@@ -110,6 +130,7 @@ export default function PlaceDescription({
               <input
                 type="number"
                 value={stairsFlights}
+                placeholder="Number of flights"
                 onChange={(e) => {
                   const val = e.target.value;
                   setStairsFlights(val);
@@ -161,9 +182,10 @@ export default function PlaceDescription({
           ))}
         </div>
         {selectedStreet?.length > 0 && (
-          <div className="relative w-full">
+          <div className="relative w-full max-w-xs mt-4">
             <input
               type="number"
+              placeholder="In meters"
               onChange={(e) => {
                 const val = e.target.value;
                 setStreetDistance(val);
@@ -179,9 +201,17 @@ export default function PlaceDescription({
               value={streetDistance}
               className="border-black border-b pb-1 outline-0"
             />
-            <label className="absolute right-0  top-1/2 -translate-y-1/2 ">
-              m2
-            </label>
+            
+
+            {/* <label className="absolute right-0 text-black-3  top-1/2 -translate-y-1/2 ">
+              meter
+            </label> */}
+              <span className="group relative inline-block size-6 cursor-pointer rounded-full bg-gray-400 text-center text-[14px] text-white-1">
+                i
+                <span className="absolute left-full top-1/2 ml-2  hidden w-96 -translate-y-1/2 whitespace-nowrap text-wrap rounded border bg-white-1 p-1 text-black-1 shadow group-hover:block">
+                  Distance from your street to the moving truck (in meters)
+                </span>
+              </span>
           </div>
         )}
       </section>

@@ -19,11 +19,20 @@ import {
 
 import {
   setAddress,
+  setDiscreetly,
   setProperty,
   setAboutPlace,
   setplaceDescription,
+  setpick_flights,
+  setpick_variation,
+  setpick_variation_meter,
   setmovingAddress,
+  setdrop_flights,
+  setdrop_variation,
+  setdrop_variation_meter,
   setmovingPlaceDescription,
+  setCalendar,
+  setInventory,
 } from "../../../app/store/reducers/formSlice";
 import PlaceDescription from "../PlaceDescripation";
 import Calendar from "../Calendar";
@@ -100,23 +109,26 @@ export default function MultiStepForm() {
 
   const onSubmit = (data) => {
     if (currentStep === page.Address) {
-      dispatch(setAddress({ Address: data.pickupAddress,discreetly:data.pickupAddress_discreetly }));
+      dispatch(setAddress(data.pickupAddress));
+      dispatch(setDiscreetly(data.pickupAddress_discreetly));
     } else if (currentStep === page.Property) {
-      dispatch(setProperty( data.property ));
+      dispatch(setProperty(data.property));
     } else if (currentStep === page.AboutPlace) {
-      dispatch(setAboutPlace( data.bedrooms ));
+      dispatch(setAboutPlace(data.bedrooms));
     } else if (currentStep === page.PlaceDescription) {
-      dispatch(
-        setplaceDescription({ placeDescription: data.placeDescription }),
-      );
+      console.log(data.placeDescription, "dfsdf>>>>>>>>>>");
+
+      dispatch(setplaceDescription(data.placeDescription.place));
+      dispatch(setpick_flights(data.placeDescription.stairs));
+      dispatch(setpick_variation(data.placeDescription.street));
+      dispatch(setpick_variation_meter(data.placeDescription.street_distance));
     } else if (currentStep === page.movingAddress) {
-      dispatch(setmovingAddress({ movingAddress: data.deliveryAddress }));
+      dispatch(setmovingAddress(data.deliveryAddress));
     } else if (currentStep === page.movingPlaceDescription) {
-      dispatch(
-        setmovingPlaceDescription({
-          movingPlaceDescription: data.movingPlaceDescription,
-        }),
-      );
+      dispatch(setmovingPlaceDescription(data.movingPlaceDescription.place));
+      dispatch(setdrop_flights(data.movingPlaceDescription.stairs));
+      dispatch(setdrop_variation(data.movingPlaceDescription.street));
+      dispatch(setdrop_variation_meter(data.movingPlaceDescription.street_distance));
     } else if (currentStep === page.Inventory) {
     }
 
@@ -171,43 +183,50 @@ export default function MultiStepForm() {
             </form>
           </main>
 
-          <aside className=" sticky top-30 hidden h-fit self-start lg:block">
-            {formData?.address.PickupAddress ? (
-              <div className=" innershadow  mx-auto w-[25rem] p-8 ">
-                <span className="h4">Your move</span>
-                <h3 className="h5">Pickup & delivery</h3>
+          <aside className=" sticky top-30 hidden h-fit  overflow-y-auto  self-start lg:block">
+            {formData?.pickup_address? (
+              <div className=" innershadow  mx-auto w-full p-8 ">
+                <span className="h4">Your Move</span>
+                <h5 className="h5 font-medium mt-2 ">Pickup & delivery</h5>
                 <div className="pick mt-3">
-                  {formData?.address?.PickupAddress && (
+                  {formData?.pickup_address && (
                     <h3 className=" address h5 ">
-                      {formData.address.PickupAddress}
+                      {formData?.pickup_address}
                     </h3>
                   )}
-                  <div className=" mx-4">
-                    {formData?.property?.property && (
+              
+                    <div className="  mx-4">
+                    {formData?.property_type && (
                       <span className="  mr-4">
-                        {formData.property.property}
+                        {formData?.property_type}
                       </span>
                     )}{" "}
-                    {formData?.aboutPlace?.AboutPlace && (
+                    {formData?.bed_room && (
                       <span className=" ">
-                        {formData?.aboutPlace?.AboutPlace} Bedroom
+                        {formData?.bed_room} Bedroom
                       </span>
                     )}
-                    <h4 className="place">
-                      {formData?.placeDescription?.placeDescription?.place?.map(
+                 
+                  </div>
+                  <div className="w-full" >
+                       <h4 className="place">
+                      {formData?.place_type?.map(
                         (p, index) => (
                           <span
                             key={index}
                             className="mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5 py-0.5"
                           >
                             {p === "Stairs"
-                              ? `Stairs-${formData?.placeDescription?.placeDescription?.stairs} Flights`
+                              ? `Stairs-${formData?.pick_flights} Flights`
                               : p}
                           </span>
                         ),
                       )}
 
-                      {formData?.placeDescription?.placeDescription?.street.map(
+                  
+                    </h4>
+                    <h4 className="street" >   
+                       {formData?.pick_variation.map(
                         (p, index) => (
                           <span
                             key={index}
@@ -216,35 +235,39 @@ export default function MultiStepForm() {
                             {p}
                           </span>
                         ),
+                      )}</h4>
+                      {formData?.pick_variation_meter && (
+                        <span className=" py-.5 mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5  ">
+                          {formData?.pick_variation_meter} m
+                        </span>
                       )}
-                    </h4>
                   </div>
+             
                 </div>
-
-                {formData?.movingAddress?.movingAddress && (
+                {formData?.drop_address && (
                   <div className="delivery mt-6   border-b-2 border-black-1 pb-4">
-                    {formData?.movingAddress?.movingAddress && (
+                    {formData?.drop_address && (
                       <h3 className=" address text-[18px] ">
-                        {formData.movingAddress.movingAddress}
+                        {formData?.drop_address}
                       </h3>
                     )}
 
                     <div className=" mx-4">
                       <h4 className="place">
-                        {formData?.movingPlaceDescription?.movingPlaceDescription?.place?.map(
+                        {formData?.drop_place_type?.map(
                           (p, index) => (
                             <span
                               key={index}
                               className="mr-4 mt-3 inline-block rounded-[3px] bg-zinc-300 px-5 py-0.5"
                             >
                               {p === "Stairs"
-                                ? `Stairs-${formData?.movingPlaceDescription?.movingPlaceDescription?.stairs} Flights `
+                                ? `Stairs-${formData?.drop_flights} Flights `
                                 : p}
                             </span>
                           ),
                         )}
 
-                        {formData?.movingPlaceDescription?.movingPlaceDescription?.street.map(
+                        {formData?.drop_variation?.map(
                           (p, index) => (
                             <span
                               key={index}
@@ -259,7 +282,7 @@ export default function MultiStepForm() {
                   </div>
                 )}
 
-                {formData?.calendar?.dates && (
+                {/* {formData?.calendar?.dates && (
                   <div className="date">
                     {formData?.calendar?.dates && (
                       <div className="flex justify-between">
@@ -268,7 +291,7 @@ export default function MultiStepForm() {
                       </div>
                     )}
                   </div>
-                )}
+                )} */}
               </div>
             ) : (
               ""

@@ -32,28 +32,22 @@ export default function localRemovalists() {
       />
 
       <InnerAboutLocal
-        imagepath1={"/img/innerimg/localimg.png"}
-        imagepath2={
-          "https://media.istockphoto.com/id/487175846/photo/delivery-man-unloading-truck.webp?a=1&b=1&s=612x612&w=0&k=20&c=OkcEhNbpV0w9JPTgNqCkJ_IZx5fXnqktOdbOsffF3Es="
-        }
-        counterText={"Family choose us"}
-        counterNumber={80}
+      
+       
+      
         title={"What is Local Move?"}
+        subheading={"Move Better With Movers Who Care"}
         text1={
-          "Local moving refers to the process of relocating household goods or personal belongings within the same city or metropolitan area.  "
+          "A good move starts with the right people. That’s why we only work with removalists who’ve earned their reputation through safe delivery, consistency, honesty, and hard work. On Interstate Removalists, you can check and compare movers near you, their rates, and what other locals say about them- all before you book. When you’re ready, pick your mover, lock in your date, and let the professionals handle your relocation.  "
         }
-        text2={
-          "With our expert team, your local move becomes stress-free. From careful packing to quick transport, we handle everything smoothly so you can settle into your new place with ease and peace of mind. 🚛✨"
-        }
-         stepText1={"Designing every move with precision and perfection."}
-        stepText2={"Structured planning ensures smooth and reliable relocation."}
-        stepText3={"Strong foundations make your moving journey stress-free."}
+        
+    
       />
       <LocalType
         localCard={localCard}
         subtitle="Local Move"
-        title="Interstate Relocation Made Simple"
-        text="Moving across states? Our interstate removalists ensure safe, timely, and affordable delivery of your belongings anywhere in Australia."
+        title="Every Move Matters — Especially Yours"
+        text="Interstate Removalists helps you find the right movers anywhere across Australia —fair, fast and no fuss. Just pick your city, and get your move sorted today."
         buttontext="Get start Moving"
         buttonlink="/pick-details"
       />
