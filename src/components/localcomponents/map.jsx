@@ -33,11 +33,11 @@ export default function MapComponent( {markers=[]} ) {
   <div className="container" >
     <div className=" w-full place-items-center mb-10 " >
   
-      <p  className="d4 title-animation font-semibold  text-center capitalize ">Interstate removalist helps you find the best removalists near you</p>
+      <p  className="d4  font-semibold  text-center capitalize ">Interstate removalist helps you find the best removalists near you</p>
       <SectionText className=" lg:w-[80%] text-center "  text="Find trusted local removalists to make your move simple and stress-free. Whether you’re relocating just a few streets away or shifting to a nearby suburb, moving always comes with its challenges. By booking your removalist through Interstate, you can be confident of receiving professional service and care, helping you settle into your new home faster and with peace of mind." />
       
     </div>
-      <div className="  lg:w-[70%]  h-[70vh]  mx-auto " >
+      <div className="  lg:w-[90%]  h-[80vh]  mx-auto " >
       <MapContainer
         center={[-33.8688, 151.2093]} // Sydney by default
         zoom={12}

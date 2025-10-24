@@ -129,7 +129,8 @@ export default function MultiStepForm() {
       dispatch(setdrop_flights(data.movingPlaceDescription.stairs));
       dispatch(setdrop_variation(data.movingPlaceDescription.street));
       dispatch(setdrop_variation_meter(data.movingPlaceDescription.street_distance));
-    } else if (currentStep === page.Inventory) {
+    } else if (currentStep === page.Calendar) {
+      console.log("Form Data in Redux:", formData);
     }
 
     if (currentStep < totalSteps) {

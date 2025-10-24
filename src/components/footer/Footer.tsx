@@ -27,13 +27,13 @@ const Footer = () => {
         </div>
       </div>
      
-      <Image
+      {/* <Image
         src={animal}
         width={222}
         height={214}
         alt="footer animale"
         className="absolute bottom-0 left-0 block max-3xl:size-30 max-[1500px]:hidden   "
-      />
+      /> */}
     </footer>
   );
 };

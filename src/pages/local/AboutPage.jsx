@@ -65,7 +65,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
               <IconCheckbox /> <span>{stepText3? stepText3:"Strong foundations make your moving journey stress-free."}</span>
             </div>
           </div>
-           <HomeThreeBannerLink href="/pick-details" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
+           <HomeThreeBannerLink href="/#" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
         </div>
       </div>
     </section>

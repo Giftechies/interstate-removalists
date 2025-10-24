@@ -29,7 +29,7 @@ const HomeTwoServices = () => {
             className="fade-top fade-top mt-4 text-white-2"
           /> */}
           <div className="spt40px">
-            <LInkArrowTwo linkText="All Services" link="/services" />
+            <LInkArrowTwo linkText="All Services" link="/#" />
           </div>
         </div>
         <div className="max-lg:spt40px col-start-1  col-end-13 grid max-lg:gap-3 rounded-sm overflow-hidden xs:grid-cols-2 lg:col-start-7">
