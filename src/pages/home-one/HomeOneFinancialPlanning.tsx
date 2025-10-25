@@ -57,7 +57,7 @@ const HomeOneFinancialPlanning = () => {
           <div className=" col-span-1  xl:col-span-9 ">
             <SectionSubTitle text="Our Services " />
            
-            <p className=" d4 mt-3 title-animation font-semibold capitalize " >Every move, one platform.</p>
+            <span className=" d4 mt-3  font-semibold capitalize " >Every move, one platform.</span>
             <p className="m-text text-black-3 lg:w-[60%] mt-3 " > Browse trusted movers for any service, compare prices, and lock in your removalists online in just a few clicks.</p>
           </div>
           <div className=" col-span-1 xl:col-span-10 flex  justify-end items-end ">

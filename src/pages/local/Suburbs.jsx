@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
-export default function Suburbs({suburbs = ["Abbotsbury","Bondi","Parramatta","Chatswood","Manly NSW","Acacia Ridge","Amberley","Aspley"]}) {
+export default function Suburbs({suburbs = [],removalist="",city=""}) {
   const list = [
     "Moving from Brisbane to Bundaberg",
     "Moving from Brisbane to Cairns",
@@ -80,6 +81,7 @@ export default function Suburbs({suburbs = ["Abbotsbury","Bondi","Parramatta","C
           "
         >
           {suburbs?.map((item, idx) => (
+            <Link href={`/${removalist}/${city}/${item.slug}`} >
             <span
               key={idx}
               className="
@@ -100,8 +102,10 @@ export default function Suburbs({suburbs = ["Abbotsbury","Bondi","Parramatta","C
                md:w-[80%]
               "
             >
-              {item}
+              {item.title}
             </span>
+            
+            </Link>
           ))}
         </div>
       </main>

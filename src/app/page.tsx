@@ -21,7 +21,7 @@ import OurWorks from "@/pages/home-three/OurWorks";
 import HomeService from "@/pages/home-three/HomeService";
 import WhyChooseUs from "@/pages/landing-two/HomeTwoServices";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
-import HowItrWorksContent from "@/pages/how-it-works/HowItrWorksContent";
+import HowWeWork from "@/pages/how-it-works/HowItrWorksContent";
 import AboutLocal from "@/pages/local/AboutPage";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function Home() {
         stepText3={"Strong foundations make your moving journey stress-free."}
         />
       <WhyChooseUs />
-      <HowItrWorksContent />
+      <HowWeWork />
       <HomeOneFinancialPlanning />
       <HomeOneTestimonials  />
       <HomeTwoFaq />

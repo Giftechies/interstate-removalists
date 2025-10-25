@@ -40,8 +40,8 @@ export default function MapComponent( {markers=[
   <div className="container" >
     <div className=" w-full place-items-center mb-10 " >
   
-      <p  className="d4  font-semibold  text-center capitalize ">Interstate removalist helps you find the best removalists near you</p>
-      <SectionText className=" lg:w-[80%] text-center "  text="Find trusted local removalists to make your move simple and stress-free. Whether you’re relocating just a few streets away or shifting to a nearby suburb, moving always comes with its challenges. By booking your removalist through Interstate, you can be confident of receiving professional service and care, helping you settle into your new home faster and with peace of mind." />
+      <p  className="d4  font-semibold  text-center capitalize ">Your Move, Matched With the Right Team</p>
+      <SectionText className=" lg:w-[80%] text-center "  text="Customers across Australia trust Interstate Removalists to find reliable and safe removalists nearby. You’ll get proper service and care from the first box packed to the last box unpacked at your place. Whether you’re relocating within your suburb, across the city, or interstate, you can book the right mover to make relocation simple and hassle-free." />
       
     </div>
       <div className="  lg:w-[90%]  h-[80vh]  mx-auto " >

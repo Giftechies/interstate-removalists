@@ -27,7 +27,7 @@ useEffect(()=>{
       <div className="container">
         <SectionSubTitle text="FAQ" className="text-center" />
         <SectionTitle
-          text="Frequently ASked Questions"
+          text="Frequently Asked Questions"
           className="mt-3 text-center capitalize "
         />
         <div className="spt60px grid gap-6 lg:grid-cols-2">
