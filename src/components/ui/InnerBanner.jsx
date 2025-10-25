@@ -3,6 +3,8 @@ import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
 import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
 import Breadcrumb from "../shared/Breadcrumbs";
 import SectionText from "../shared/SectionText";
+import SubTitleAnimations from "../animations/SubTitleAnimations";
+import SectionSubTitle from "../shared/SectionSubTitle";
 
 
 
@@ -16,11 +18,11 @@ export default function Banner({imgpath,pagename,}){
          
         <div className=" place-items-center  ">
           <div className="max-md:spt60px  flex-center  flex-col text-center   ">
-            <h1 className="h2 title-animation mt-3 font-medium upperercase  ">
-            {pagename}
-            </h1>
+            <h1 className="h2  mt-3 font-medium capitalize ">
+           {pagename}
+            </h1> 
+      
           
-           
               <Breadcrumb/>
            
             

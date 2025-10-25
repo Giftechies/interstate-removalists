@@ -49,3 +49,15 @@ export async function  fetchinventory(){
         
     }
 }
+
+export async function faqsData(){
+    try {
+        const res = await fetch(`${base_url}/api/faqs`,{
+            method:'GET', cache:"no-cache"
+        })
+        const data = await res.json()
+        return data 
+    } catch(error){
+        alert( "faq", error)
+    }
+}

@@ -8,7 +8,7 @@ const SectionTitle = ({
   className?: string;
 }) => {
   return (
-    <h3 className={cn("d4 title-animation font-semibold", className)}>
+    <h3 className={cn("d4 capitalize font-semibold", className)}>
       {text}
     </h3>
   );

@@ -1,7 +1,6 @@
 import Animations from "@/components/animations/Animations";
 import Banner from "@/components/ui/InnerBanner";
 import DetailAbout from "@/components/detailspage/DetailAbout"
-// import Map from "../../../../pages/local/map"
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeOneTestimonials from "@/pages/home-one/HomeOneTestimonials";
 import dynamic from "next/dynamic";

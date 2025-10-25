@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function Suburbs() {
+export default function Suburbs({suburbs = ["Abbotsbury","Bondi","Parramatta","Chatswood","Manly NSW","Acacia Ridge","Amberley","Aspley"]}) {
   const list = [
     "Moving from Brisbane to Bundaberg",
     "Moving from Brisbane to Cairns",
@@ -29,7 +29,7 @@ export default function Suburbs() {
   const [isSelected, setIsSelected] = useState(0);
 
   // let selectedList = isSelected === 0 ? list : list2;
-  const suburbs = ["Abbotsbury","Bondi","Parramatta","Chatswood","Manly NSW","Acacia Ridge","Amberley","Aspley"]
+ 
   return (
     <section className="spy80px bg-accent-4">
       <main className="container">

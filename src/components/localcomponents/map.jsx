@@ -13,7 +13,14 @@ import { useMemo } from "react";
 
 
 
-export default function MapComponent( {markers=[]} ) {
+export default function MapComponent( {markers=[
+    { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
+    { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
+    { id: 3, position: [-27.4698, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 4, position: [-27.7898, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 5, position: [-27.5898, 153.0251], name: "Brisbane", color: "#2ecc71" },
+    { id: 6, position: [-27.4748, 153.0251], name: "Brisbane", color: "#2ecc71" },
+  ]} ) {
   const customIcon = useMemo(()=>{
   if(typeof window !==undefined){
     const L = require('leaflet')

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Home, Building2, School, Warehouse } from "lucide-react";
-import { PropertyData } from "./Action/formdata";
+import { PropertyData } from "../../data/formdata";
 
 export default function Property({
   register,

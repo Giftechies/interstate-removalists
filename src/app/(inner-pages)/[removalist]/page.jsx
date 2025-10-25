@@ -9,6 +9,7 @@ import { localCard } from "@/data/localCard";
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HowItWorksPage from "../how-it-work/page";
+import EditorData from "@/components/ui/EditorData";
 const Map = dynamic(() => import("@/components/localcomponents/map"), {
   ssr: false,
 });
@@ -30,8 +31,9 @@ export default function localRemovalists() {
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
+      <EditorData  />
 
-      <InnerAboutLocal
+      {/* <InnerAboutLocal
       
        
       
@@ -42,7 +44,8 @@ export default function localRemovalists() {
         }
         
     
-      />
+      /> */}
+      <EditorData/>
       <LocalType
         localCard={localCard}
         subtitle="Local Move"
