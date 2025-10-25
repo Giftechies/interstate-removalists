@@ -47,17 +47,17 @@ export const navbar =[
     {
         id:uuidv4(),
         menuTitle:"Interstate removalists",
-        path:"#",
+        path:"/interstate-removalists",
         menuItems:[
               {
     id: uuidv4(),
     title: "Sydney Interstate Removalists",
-    menuItemPath: "/interstate-removalists/sydney",
+    menuItemPath: "/interstate-removalists/sydney-removalists",
   },
   {
     id: uuidv4(),
     title: "Melbourne Interstate Removalists",
-    menuItemPath: "/interstate-removalists/melbourne",
+    menuItemPath: "/interstate-removalists/melbourne-removalists",
   },
   {
     id: uuidv4(),
