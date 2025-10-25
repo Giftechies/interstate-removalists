@@ -15,7 +15,7 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
 });
 
 export default function localRemovalists({params}) {
-  const {city} = params;
+  const {removalist} = params;
   
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
@@ -29,7 +29,7 @@ export default function localRemovalists({params}) {
     <>
       <Banner
         imgpath={"/img/banner-img/local.webp"}
-        pagename="Local Removalists"
+        pagename={removalist}
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
