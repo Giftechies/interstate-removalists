@@ -14,7 +14,9 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
   ssr: false,
 });
 
-export default function localRemovalists() {
+export default function localRemovalists({params}) {
+  const {city} = params;
+  
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
     { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },

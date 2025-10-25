@@ -10,7 +10,7 @@ import Separater from "@/pages/local/Separater";
 import Suburbs from  "@/pages/local/Suburbs"
 
 const Map = dynamic(()=>import("@/components/localcomponents/map"),{ssr:false,})
-export default  function SydneyRemovalists(  ){
+export default  function SydneyRemovalists( {params} ){
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
     { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
@@ -19,10 +19,12 @@ export default  function SydneyRemovalists(  ){
     { id: 5, position: [-27.5898, 153.0251], name: "Brisbane", color: "#2ecc71" },
     { id: 6, position: [-27.4748, 153.0251], name: "Brisbane", color: "#2ecc71" },
   ];
+
+  const {removalist, city} = params
     return(
       <>
       <Banner imgpath="https://media.istockphoto.com/id/1596022033/photo/unloading-boxes-and-furniture-from-a-pickup-truck-to-a-new-house-with-service-cargo-two-men.webp?a=1&b=1&s=612x612&w=0&k=20&c=4oDat2FWwQNbcy5rhZ0EEWaWvwbXfYOn-Gncd1PQ-K0=" 
-      pagename={'Sydney Removalists'}
+      pagename={city}
       
       text={'Move anywhere in Sydney with our reliable removalists, ensuring safety, efficiency, and complete customer satisfaction.'}
       />

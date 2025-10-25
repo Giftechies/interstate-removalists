@@ -1,5 +1,3 @@
-import { Award } from "lucide-react";
-
 
 const base_url ="https://checkdemo.live/movers/public"
 
@@ -16,7 +14,7 @@ export  async function fetchPropertyData(){
         
         
     } catch (error) {
-        alert(error)
+         console.log(error)
         
     }
 
@@ -30,7 +28,7 @@ export async function fetchVaritions(){
         const data = res.json()
         return data
     } catch (error) {
-        alert(error)
+         console.log(error)
         
     }
 }
@@ -45,7 +43,7 @@ export async function  fetchinventory(){
         
         
     } catch (error) {
-        alert(error)
+         console.log(error)
         
     }
 }
@@ -58,6 +56,24 @@ export async function faqsData(){
         const data = await res.json()
         return data 
     } catch(error){
-        alert( "faq", error)
+         console.log( "faq", error)
     }
+}
+
+
+export async function pagesData(id) {
+    try {
+        const res = await fetch(` ${base_url}/api/pages/${id} `,{
+            method:"GET",cache:"no-cache"
+        })
+        const data = await res.json()
+        const 
+        return data
+    } catch (error) {
+        console.log(error);
+        
+        return data ={data:"Something went wrong!! Please try again later.",success:false}
+        
+    }
+    
 }
