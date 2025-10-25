@@ -67,7 +67,7 @@ export async function pagesData(id) {
             method:"GET",cache:"no-cache"
         })
         const data = await res.json()
-        const 
+        // const 
         return data
     } catch (error) {
         console.log(error);
