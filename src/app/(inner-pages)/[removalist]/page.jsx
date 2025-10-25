@@ -10,13 +10,19 @@ import OurWorks from "@/pages/home-three/OurWorks";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HowItWorksPage from "../how-it-work/page";
 import EditorData from "@/components/ui/EditorData";
+import { pagesData } from "@/data/formdata";
 const Map = dynamic(() => import("@/components/localcomponents/map"), {
   ssr: false,
 });
 
-export default function localRemovalists({params}) {
+export default async function localRemovalists({params}) {
   const {removalist} = params;
-  // const
+  console.log(removalist);
+  
+  const res = await  pagesData(removalist)
+  const data = res.data
+  console.log(data);
+  
   
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
@@ -30,25 +36,25 @@ export default function localRemovalists({params}) {
     <>
       <Banner
         imgpath={"/img/banner-img/local.webp"}
-        pagename={removalist}
+        pagename={data.title}
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
-      <EditorData  />
+      {/* <EditorData  /> */}
 
-      {/* <InnerAboutLocal
+      <InnerAboutLocal
       
        
       
         title={"What is Local Move?"}
-        subheading={"Move Better With Movers Who Care"}
+        subheading={data.summary}
         text1={
-          "A good move starts with the right people. That’s why we only work with removalists who’ve earned their reputation through safe delivery, consistency, honesty, and hard work. On Interstate Removalists, you can check and compare movers near you, their rates, and what other locals say about them- all before you book. When you’re ready, pick your mover, lock in your date, and let the professionals handle your relocation.  "
+         data.description
         }
         
     
-      /> */}
-      <EditorData/>
+      />
+      {/* <EditorData/> */}
       <LocalType
         localCard={localCard}
         subtitle="Local Move"
@@ -57,11 +63,11 @@ export default function localRemovalists({params}) {
         buttontext="Get start Moving"
         buttonlink="/pick-details"
       />
-      <Map  markers={markers} />
+      { data.show_map && <Map  markers={markers} />}
       <Separator title="Ready to Get Your Move Sorted?" content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby." />
-      <OurWorks/>
+     {data.show_process && <OurWorks/>}
       {/* <HowItWorksPage/> */}
-      <HomeTwoFaq />
+     {data.show_faq && <HomeTwoFaq />}
       <Animations />
     </>
   );

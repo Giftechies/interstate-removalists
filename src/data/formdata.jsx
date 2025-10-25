@@ -67,11 +67,11 @@ export async function pagesData(id) {
             method:"GET",cache:"no-cache"
         })
         const result = await res.json()
-        return data
+        return result
     } catch (error) {
         console.log(error);
-        
-        return data ={data:"Something went wrong!! Please try again later.",success:false}
+       const data={data:"Something went wrong!! Please try again later.",success:false}
+        return data 
         
     }
     
