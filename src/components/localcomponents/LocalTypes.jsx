@@ -13,19 +13,20 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 
 
-const LocalType = ({localCard,title,subtitle,text,buttontext,buttonlink}) => {
+const LocalType = ({localCard, path, title,subtitle,text,buttontext,buttonlink}) => {
 
   return (
     <section className="spy80px relative overflow-clip bg-accent-4">
       <div className="container ">
         <div>
-          <SectionSubTitle text={`${subtitle}`}/>
+          <SectionSubTitle className=" text-center" text={`${subtitle}`}/>
           <SectionTitle
+          
             text={`${title}`}
             
-            className="mt-3 "
+            className="mt-3 text-center "
           />
-          <SectionText className=" text-left mt-2 " text={`${text}`}/>
+          <SectionText className="  mt-2 " text={`${text}`}/>
         </div>
       <div className=" py-20 overflow-hidden " >
 
@@ -54,7 +55,7 @@ const LocalType = ({localCard,title,subtitle,text,buttontext,buttonlink}) => {
            { localCard.map((item,id)=>{
              return(
               <SwiperSlide key={id}>
-              <Card  {...item} />
+              <Card  {...item} path={path} />
        </SwiperSlide>
             )
           })}

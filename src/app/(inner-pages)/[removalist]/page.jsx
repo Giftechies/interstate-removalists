@@ -5,7 +5,7 @@ import InnerAboutLocal from "@/pages/local/InnerAboutPage";
 import Separator from "@/pages/local/Separater";
 import LocalType from "@/components/localcomponents/LocalTypes";
 import dynamic from "next/dynamic";
-import { localCard } from "@/data/localCard";
+// import { localCard } from "@/data/localCard";
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HowItWorksPage from "../how-it-work/page";
@@ -21,6 +21,7 @@ export default async function localRemovalists({params}) {
   
   const res = await  pagesData(removalist)
   const data = res.data
+  const localCard = data.children
   console.log(data);
   
   
@@ -57,6 +58,7 @@ export default async function localRemovalists({params}) {
       {/* <EditorData/> */}
       <LocalType
         localCard={localCard}
+        path={removalist}
         subtitle="Local Move"
         title="Every Move Matters — Especially Yours"
         text="Interstate Removalists helps you find the right movers anywhere across Australia —fair, fast and no fuss. Just pick your city, and get your move sorted today."
