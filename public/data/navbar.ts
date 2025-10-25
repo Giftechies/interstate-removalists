@@ -13,38 +13,34 @@ export const navbar =[
   {
     id: uuidv4(),
     title: "Melbourne Removalists",
-    menuItemPath: "/removalists/melbourne",
+    menuItemPath: "/local-removalists/melbourne-removalists",
   },
   {
     id: uuidv4(),
     title: "Brisbane Removalists",
-    menuItemPath: "/removalists/brisbane",
+    menuItemPath: "/local-removalists/brisbane-removalists",
   },
   {
     id: uuidv4(),
     title: "Perth Removalists",
-    menuItemPath: "/removalists/perth",
+    menuItemPath: "/local-removalists/perth-removalists",
   },
   {
     id: uuidv4(),
     title: "Adelaide Removalists",
-    menuItemPath: "/removalists/adelaide",
+    menuItemPath: "/local-removalists/adelaide-removalists",
   },
   {
     id: uuidv4(),
     title: "Canberra Removalists",
-    menuItemPath: "/removalists/canberra",
+    menuItemPath: "/local-removalists/canberra-removalists",
   },
   {
     id: uuidv4(),
     title: "Darwin Removalists",
-    menuItemPath: "/removalists/darwin",
+    menuItemPath: "/local-removalists/darwin-removalists",
   },
-  {
-    id: uuidv4(),
-    title: "Hobart Removalists",
-    menuItemPath: "/removalists/hobart",
-  },
+ 
 ]
 
     },
@@ -66,33 +62,29 @@ export const navbar =[
   {
     id: uuidv4(),
     title: "Brisbane Interstate Removalists",
-    menuItemPath: "/interstate-removalists/brisbane",
+    menuItemPath: "/interstate-removalists/brisbane-removalists",
   },
   {
     id: uuidv4(),
     title: "Perth Interstate Removalists",
-    menuItemPath: "/interstate-removalists/perth",
+    menuItemPath: "/interstate-removalists/perth-removalists",
   },
   {
     id: uuidv4(),
     title: "Adelaide Interstate Removalists",
-    menuItemPath: "/interstate-removalists/adelaide",
+    menuItemPath: "/interstate-removalists/adelaide-removalists",
   },
   {
     id: uuidv4(),
     title: "Canberra Interstate Removalists",
-    menuItemPath: "/interstate-removalists/canberra",
+    menuItemPath: "/interstate-removalists/canberra-removalists",
   },
   {
     id: uuidv4(),
     title: "Darwin Interstate Removalists",
-    menuItemPath: "/interstate-removalists/darwin",
+    menuItemPath: "/interstate-removalists/darwin-removalists",
   },
-  {
-    id: uuidv4(),
-    title: "Hobart Interstate Removalists",
-    menuItemPath: "/interstate-removalists/hobart",
-  },
+ 
         ]
     },
     {

@@ -66,8 +66,7 @@ export async function pagesData(id) {
         const res = await fetch(` ${base_url}/api/pages/${id} `,{
             method:"GET",cache:"no-cache"
         })
-        const data = await res.json()
-        // const 
+        const result = await res.json()
         return data
     } catch (error) {
         console.log(error);
