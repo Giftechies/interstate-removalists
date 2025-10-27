@@ -118,7 +118,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                       onClick={() => handleDropDown(id)}
                       className={cn(
                         "theme-transition-3 my-1 flex cursor-pointer items-center justify-between rounded-md border-b bg-sec/20 px-8 py-5",
-                        { " font-medium text-primary": isActive },
+                        { " font-medium text-[var(--primary-hex)]": isActive },
                       )}
                     >
                       <span className="l-text">{menuTitle}</span>{" "}
@@ -134,9 +134,9 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                           <li
                             key={id}
                             className={cn(
-                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-sec/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-prim hover:text-primary hover:before:absolute`,
+                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-sec/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-prim hover:text-[var(--primary-hex)] hover:before:absolute`,
                               {
-                                "text-primary before:absolute":
+                                "text-[var(--primary-hex)] before:absolute":
                                   pathName === menuItemPath,
                               },
                             )}
@@ -165,7 +165,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                       className={cn(
                         "theme-transition-3 my-1 block w-full rounded-md border-b bg-sec/20 px-8 py-5 ",
                         {
-                          "text-primary": pathName === path,
+                          "text-[var(--primary-hex)]": pathName === path,
                         },
                       )}
                     >

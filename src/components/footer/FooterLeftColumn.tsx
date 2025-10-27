@@ -19,19 +19,19 @@ const FooterLeftColumn = () => {
       <div className="smt40px flex items-center gap-3">
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl bg-prim p-2 hover:bg-white-1 hover:text-primary"
+          className="theme-transition-3 rounded-xl bg-prim p-2 hover:bg-white-1 hover:text-[var(--primary-hex)]"
         >
           <IconBrandFacebook />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl   bg-prim p-2 hover:bg-white-1 hover:text-primary"
+          className="theme-transition-3 rounded-xl   bg-prim p-2 hover:bg-white-1 hover:text-[var(--primary-hex)]"
           >
           <IconBrandInstagram />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl   bg-prim p-2 hover:bg-white-1 hover:text-primary"
+          className="theme-transition-3 rounded-xl   bg-prim p-2 hover:bg-white-1 hover:text-[var(--primary-hex)]"
           >
           <IconBrandYoutube />
         </Link>

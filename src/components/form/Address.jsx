@@ -61,7 +61,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
 
           <span>
             I require this move to be handled discreetly.
-            <span className="group relative cursor-pointer text-primary ">
+            <span className="group relative cursor-pointer text-[var(--primary-hex)] ">
               What does this mean?
               <p className=" absolute -right-[180%] text-[12px] top-1/2  mt-2 hidden w-[16rem] -translate-y-1/2 bg-gray-200 p-4 text-black-3 group-hover:block ">
                 Please enable this option if your move involves a domestic

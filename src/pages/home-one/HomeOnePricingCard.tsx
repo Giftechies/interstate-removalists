@@ -44,7 +44,7 @@ const HomeOnePricingCard = ({
           )}
         </div>
         <div className="mt-3 flex items-end">
-          <p className="d4 leading-0 text-primaryColor theme-transition-4 font-semibold">
+          <p className="d4 leading-0 text-[var(--primary-hex)]Color theme-transition-4 font-semibold">
             ${price}
           </p>
           <p className="h6 theme-transition-4 mb-2 font-medium">/yr</p>

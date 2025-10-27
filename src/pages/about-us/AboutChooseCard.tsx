@@ -22,7 +22,7 @@ const AboutChooseCard: React.FC<AboutChooseCardProps> = ({
         className,
       )}
     >
-      <div className="theme-transition-3 w-fit rounded-full border border-black-4 bg-transparent p-[14px] text-black-4 group-hover:border-white-1 group-hover:bg-white-1 group-hover:text-primary">
+      <div className="theme-transition-3 w-fit rounded-full border border-black-4 bg-transparent p-[14px] text-black-4 group-hover:border-white-1 group-hover:bg-white-1 group-hover:text-[var(--primary-hex)]">
         {icon}
       </div>
       <h5 className="h5 smt24px font-medium">{title}</h5>

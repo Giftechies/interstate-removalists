@@ -37,20 +37,20 @@ const SingleFaq = ({
       >
         <h6
           className={`l-text font-medium ${
-            dropDown === id ? "text-primary" : ""
+            dropDown === id ? "text-[var(--primary-hex)]" : ""
           }`}
         >
           {question}
         </h6>
         <div
-          className={`bg-bgColorOne text-primaryColor theme-transition-4 rounded-full border-2  p-1 ${
-            dropDown === id ? "rotate-180 border-primary" : "border-black-4"
+          className={`bg-bgColorOne text-[var(--primary-hex)]Color theme-transition-4 rounded-full border-2  p-1 ${
+            dropDown === id ? "rotate-180 border-[var(--primary-hex)]" : "border-black-4"
           }`}
         >
           {dropDown === id ? (
             <IconMinus
               size={20}
-              className={`${dropDown === id ? "text-primary" : "text-black-4"}`}
+              className={`${dropDown === id ? "text-[var(--primary-hex)]" : "text-black-4"}`}
             />
           ) : (
             <IconPlus size={20} />

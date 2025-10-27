@@ -31,7 +31,7 @@ const HomeTwoBanner = () => {
               </p>
               <h1 className="d1 title-animation font-semibold">
                 Explore{" "}
-                <span className="text-primary underline underline-offset-8">
+                <span className="text-[var(--primary-hex)] underline underline-offset-8">
                   Next-Gen
                 </span>{" "}
                 Banking

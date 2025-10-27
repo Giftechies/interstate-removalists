@@ -40,19 +40,19 @@ function HomeOneTeamCard({ image, name, title }: Props) {
           >
             <Link
               href="/"
-              className="hover:text-primaryColor theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
+              className="hover:text-[var(--primary-hex)]Color theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
             >
               <IconBrandFacebookFilled stroke={1} />
             </Link>
             <Link
               href="/"
-              className="hover:text-primaryColor theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
+              className="hover:text-[var(--primary-hex)]Color theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
             >
               <IconBrandTwitterFilled stroke={1} />
             </Link>
             <Link
               href="/"
-              className="hover:text-primaryColor theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
+              className="hover:text-[var(--primary-hex)]Color theme-transition-3 rounded-full border border-accent-3 bg-accent-3 p-3 hover:bg-transparent"
             >
               <IconBrandInstagram stroke={2} />
             </Link>

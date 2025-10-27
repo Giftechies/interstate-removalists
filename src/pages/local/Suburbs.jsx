@@ -57,7 +57,7 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
           before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0
           before:bg-prim before:transition-all before:duration-300
           before:content-[''] hover:before:w-full
-          ${isActive ? "font-semibold text-primary before:w-full" : "hover:text-primary"}
+          ${isActive ? "font-semibold text-[var(--primary-hex)] before:w-full" : "hover:text-[var(--primary-hex)]"}
         `}
               >
                 {item}

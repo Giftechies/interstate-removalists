@@ -19,7 +19,7 @@ const CareersDetailsRight = () => {
             key={`applyList${index}`}
             className="l-text appear-down flex items-center gap-2 text-black-1"
           >
-            <IconCheckbox className="text-primary" /> <span>{item}</span>
+            <IconCheckbox className="text-[var(--primary-hex)]" /> <span>{item}</span>
           </div>
         ))}
       </div>

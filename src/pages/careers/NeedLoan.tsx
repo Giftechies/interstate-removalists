@@ -35,7 +35,7 @@ const NeedLoan = () => {
               alt="Mission image two"
               className="appear-down xl:-ms-25 xl:max-w-[unset]"
             />
-            <div className="d1 font-semibold text-primary">
+            <div className="d1 font-semibold text-[var(--primary-hex)]">
               <Counter value={25} />+
             </div>
             <p className="xl-text text-black-1">Loans Approved</p>

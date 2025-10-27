@@ -34,7 +34,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
               alt="Mission image two"
               className="appear-down xl:-ms-25 max-lg:w-full h-[350px] object-cover xl:max-w-[unset] "
             />
-            <div className="d3 max-md:hidden font-semibold text-primary">
+            <div className="d3 max-md:hidden font-semibold text-[var(--primary-hex)]">
               <Counter value={counterNumber} />+
             <p className="xl-text text-black-1">{counterText}</p>
             </div>
@@ -65,7 +65,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
               <IconCheckbox /> <span>{stepText3? stepText3:"Strong foundations make your moving journey stress-free."}</span>
             </div>
           </div>
-           <HomeThreeBannerLink href="/#" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
+           <HomeThreeBannerLink href="/#" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-[var(--primary-hex)]  hover:border-[var(--primary-hex)] w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ const HomeOneSingleBlog = ({
         <p className="s-text text-black-3">{date}</p>
         <Link
           href={`/blog-details`}
-          className="h4 theme-transition-3 mt-3 block font-medium hover:text-primary"
+          className="h4 theme-transition-3 mt-3 block font-medium hover:text-[var(--primary-hex)]"
         >
           {title}
         </Link>
@@ -45,7 +45,7 @@ const HomeOneSingleBlog = ({
         <BorderVerticalThree className="mt-3" />
         <Link
           href={`${link}`}
-          className="group theme-transition-3 mt-3 flex items-center gap-6 hover:text-primary"
+          className="group theme-transition-3 mt-3 flex items-center gap-6 hover:text-[var(--primary-hex)]"
         >
           <span className="xl-text font-medium">Read More</span>{" "}
           <span
@@ -54,7 +54,7 @@ const HomeOneSingleBlog = ({
               linkClass,
             )}
           >
-            <IconArrowUpRight className="theme-transition-3 group-hover:text-primary" />
+            <IconArrowUpRight className="theme-transition-3 group-hover:text-[var(--primary-hex)]" />
           </span>
         </Link>
       </div>

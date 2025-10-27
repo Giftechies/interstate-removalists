@@ -56,7 +56,7 @@ const HowItrWorksContent = () => {
       <div className="container">
         <div className="grid grid-cols-12 items-center space-y-4 ">
           <div className="col-start-1 col-end-13 lg:col-end-6 xl:col-end-6 space-y-4 ">
-            <span className="h5 title-animation font-medium uppercase text-primary">Our Process</span>
+            <span className="h5 title-animation font-medium uppercase text-[var(--primary-hex)]">Our Process</span>
             <SectionTitle text="How We Work" className="" />
           </div>
           <div className="col-start-1 col-end-13 lg:col-start-6  ">
@@ -96,7 +96,7 @@ const HowItrWorksContent = () => {
                   );
                 })}
 
-                <div className=" max-lg:hidden absolute animate-spin-slow text-primary -top-4 -right-12 ">
+                <div className=" max-lg:hidden absolute animate-spin-slow text-[var(--primary-hex)] -top-4 -right-12 ">
                   <svg viewBox="0 0 200 200" width="200" height="200">
                     <defs>
                       <path

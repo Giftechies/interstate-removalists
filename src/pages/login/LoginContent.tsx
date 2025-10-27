@@ -73,7 +73,7 @@ const LoginContent = () => {
           </div>
           <p className="s-text smt40px text-center text-black-1">
             Don’t have an account?{" "}
-            <Link href={"/signup"} className="!text-primary">
+            <Link href={"/signup"} className="!text-[var(--primary-hex)]">
               {" "}
               Register Here
             </Link>

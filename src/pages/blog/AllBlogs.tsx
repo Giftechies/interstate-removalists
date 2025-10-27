@@ -19,8 +19,8 @@ const AllBlogs = () => {
         </div>
         <div className="smt60px mx-auto flex w-fit items-center gap-3 rounded-xl px-3 py-3 shadow-custom3 xs:gap-8 xs:px-5">
           <button className="flex items-center gap-2">
-            <IconChevronLeft size={20} className="text-primary" />{" "}
-            <span className="h6 theme-transition-3 font-medium hover:text-primary">
+            <IconChevronLeft size={20} className="text-[var(--primary-hex)]" />{" "}
+            <span className="h6 theme-transition-3 font-medium hover:text-[var(--primary-hex)]">
               Prev
             </span>
           </button>
@@ -39,10 +39,10 @@ const AllBlogs = () => {
             </button>
           </div>
           <button className="flex items-center gap-2">
-            <span className="h6 theme-transition-3 font-medium hover:text-primary">
+            <span className="h6 theme-transition-3 font-medium hover:text-[var(--primary-hex)]">
               Next
             </span>
-            <IconChevronRight size={20} className="text-primary" />
+            <IconChevronRight size={20} className="text-[var(--primary-hex)]" />
           </button>
         </div>
       </div>
