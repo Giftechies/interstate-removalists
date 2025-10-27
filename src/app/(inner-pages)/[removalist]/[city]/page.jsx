@@ -9,6 +9,7 @@ import InnerAboutPage from "@/pages/local/InnerAboutPage";
 import Separater from "@/pages/local/Separater";
 import Suburbs from  "@/pages/local/Suburbs"
 import { pagesData } from "@/data/formdata";
+import EditorData from "@/components/ui/EditorData";
 
 const Map = dynamic(()=>import("@/components/localcomponents/map"),{ssr:false,})
 export default async  function city( {params} ){
@@ -36,7 +37,7 @@ export default async  function city( {params} ){
       
       text={'Move anywhere in Sydney with our reliable removalists, ensuring safety, efficiency, and complete customer satisfaction.'}
       />
-      <InnerAboutPage 
+      {/* <InnerAboutPage 
       
   
      
@@ -47,7 +48,8 @@ export default async  function city( {params} ){
           data.description
         }
   
-      />
+      /> */}
+      <EditorData content={data.description} />
       {/* <Separater /> */}
       <Suburbs suburbs={data.children} removalist={removalist} city={city} />
    { data.show_map &&  <Map markers={markers}  />}

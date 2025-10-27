@@ -10,7 +10,10 @@ import SectionText from "@/components/shared/SectionText";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { useState } from "react";
 import HomeOneFinancialCard from "./HomeOneFinancialCard";
-const cardData = [
+
+
+
+const HomeOneFinancialPlanning = ({cardData= [
   { 
     image:image1,
     link:"#",
@@ -39,10 +42,7 @@ const cardData = [
       "Moving a pool table? It’s carefully pulled apart, padded, shifted, and levelled again perfectly, so it’s game-ready straight away.",
   },
   
-];
-
-
-const HomeOneFinancialPlanning = () => {
+]}) => {
   const [isHover, setIsHover] = useState(0);
 
   const handleHover = (index: number) => {

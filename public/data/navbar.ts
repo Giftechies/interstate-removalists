@@ -1,6 +1,6 @@
 import  { v4 as uuidv4} from "uuid"
 
-export const navbar =[
+ const navv =[
     {id:uuidv4(),
      menuTitle:"Local removalists ",
      path:"/local-removalists", 
@@ -91,29 +91,87 @@ export const navbar =[
         id:uuidv4(),
         menuTitle:'Service',
         path:"/services",
-        menuItems:[
+     menuItems:[
           {
             id:uuidv4(),
-            title:'Home & Personal Moves',
-            menuItemPath:"/home-and-personal-moves"
+            title:'Dining Table Removalists',
+            menuItemPath:"/services/dining-table-removalists"
           },
           {
             id:uuidv4(),
-            title:' Business Moves',
-            menuItemPath:"/nusiness-moves"
+            title:'Pool Table Removalists',
+            menuItemPath:"/services/pool-table-removalists"
           },
           {
             id:uuidv4(),
-            title:' Packing & Protection',
-            menuItemPath:"/packing-protection"
+            title:'Wardrobe Removalists',
+            menuItemPath:"/wardrobe-removalists"
           },
           {
             id:uuidv4(),
-            title:' Additional Services',
-            menuItemPath:"/additional-ervices"
+            title:'Piano Removalists',
+            menuItemPath:"/services/piano-removalists"
           },
-        
-
+             {
+            id:uuidv4(),
+            title:'Packing & Unpacking Services',
+            menuItemPath:"/services/packing-unpacking-services"
+          },
+             {
+            id:uuidv4(),
+            title:'Corporate Relocations',
+            menuItemPath:"/services/corporate-relocations"
+          },
+             {
+            id:uuidv4(),
+            title:'Car Transport Services',
+            menuItemPath:"/services/car-transport-services"
+          },
+             {
+            id:uuidv4(),
+            title:'Pet Transport',
+            menuItemPath:"/services/pet-transport"
+          },
+             {
+            id:uuidv4(),
+            title:'Commercial Freight',
+            menuItemPath:"/services/commercial-freight"
+          },
+             {
+            id:uuidv4(),
+            title:'Self-Pack Containers',
+            menuItemPath:"/services/self-pack-containers"
+          },
+             {
+            id:uuidv4(),
+            title:'Moving Boxes',
+            menuItemPath:"/services/moving-boxes"
+          },
+             {
+            id:uuidv4(),
+            title:'Backloading Services',
+            menuItemPath:"/services/backloading-services"
+          },
+             {
+            id:uuidv4(),
+            title:'Electricity, Gas & Internet',
+            menuItemPath:"/services/electricity-gas-internet"
+          },
+             {
+            id:uuidv4(),
+            title:'Warehouse Moves',
+            menuItemPath:"/services/warehouse-moves"
+          },
+             {
+            id:uuidv4(),
+            title:'rubbish removal',
+            menuItemPath:"/services/rubbish-removal"
+          },
+             {
+            id:uuidv4(),
+            title:'Office Moves',
+            menuItemPath:"/services/office-moves"
+          },
         ]
     },
     {
@@ -127,3 +185,4 @@ export const navbar =[
       path:'/contact',
     }
 ]
+export const navbar = navv;

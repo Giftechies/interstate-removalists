@@ -43,7 +43,7 @@ export default async function localRemovalists({params}) {
       />
       {/* <EditorData  /> */}
 
-      <InnerAboutLocal
+      {/* <InnerAboutLocal
       
        
       
@@ -54,8 +54,8 @@ export default async function localRemovalists({params}) {
         }
         
     
-      />
-      {/* <EditorData/> */}
+      /> */}
+      <EditorData content={data.summary} />
       <LocalType
         localCard={localCard}
         path={removalist}

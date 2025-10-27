@@ -76,3 +76,16 @@ export async function pagesData(id) {
     }
     
 }
+
+export async function serviceData(){
+    try {
+        const res = await fetch(`${base_url}/api/services`,{
+            method:"GET", cache:"no-cache"
+        })
+        const data = await res.json()
+        return data
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
