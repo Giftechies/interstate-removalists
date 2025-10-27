@@ -124,7 +124,7 @@ const EducationApplyForLoan = ({ className }: { className?: string }) => {
                     />
                   </div>
                 </div>
-                <button className="theme-transition-3 border bg-primary px-8 py-4 text-white-1 hover:bg-accent-3 hover:text-black-4">
+                <button className="theme-transition-3 border bg-prim px-8 py-4 text-white-1 hover:bg-accent-3 hover:text-black-4">
                   Submit Now
                 </button>
               </form>

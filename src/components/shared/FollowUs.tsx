@@ -14,31 +14,31 @@ const FollowUs = () => {
       <div className="flex items-center gap-2 sm:gap-3">
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-prim hover:text-white-1"
         >
           <IconBrandFacebook />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-prim hover:text-white-1"
         >
           <IconBrandTwitch />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-prim hover:text-white-1"
         >
           <IconBrandInstagram />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-prim hover:text-white-1"
         >
           <IconBrandDiscord />
         </Link>
         <Link
           href={`/`}
-          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 rounded-xl border border-primary p-2 text-primary hover:bg-prim hover:text-white-1"
         >
           <IconBrandYoutube />
         </Link>

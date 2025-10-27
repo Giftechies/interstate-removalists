@@ -55,7 +55,7 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
                 className={` relative
           w-full cursor-pointer  text-center text-gray-700 transition-colors duration-200
           before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0
-          before:bg-primary before:transition-all before:duration-300
+          before:bg-prim before:transition-all before:duration-300
           before:content-[''] hover:before:w-full
           ${isActive ? "font-semibold text-primary before:w-full" : "hover:text-primary"}
         `}

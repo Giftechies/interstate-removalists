@@ -25,7 +25,7 @@ const EducationLoanTestimonial = () => {
           Partners & Customers"
           className="h2 mx-auto mt-3 max-w-[636px] text-center font-semibold"
         />
-        <div className="smt60px mx-auto w-fit rounded-full bg-primary/10 p-[18px]">
+        <div className="smt60px mx-auto w-fit rounded-full bg-prim/10 p-[18px]">
           <IconQuote className="text-primary" />
         </div>
         <div className="spt60px mx-auto max-w-[600px]">

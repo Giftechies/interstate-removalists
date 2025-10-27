@@ -40,8 +40,8 @@ const DeskTopNavbarTwo = () => {
                 <Link
                 href={`${path}`}
                   className={cn(
-                    " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-primary hover:text-primary hover:before:w-full",
-                    isActive && "text-primary before:w-full before:bg-primary",
+                    " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-prim hover:text-primary hover:before:w-full",
+                    isActive && "text-primary before:w-full before:bg-prim",
                   )}
                 >
                   {" "}
@@ -73,7 +73,7 @@ const DeskTopNavbarTwo = () => {
                 <Link
                   href={`${path}`}
                   className={cn(
-                    "l-text navbar-hover-text font-l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-primary hover:text-primary hover:before:w-full",
+                    "l-text navbar-hover-text font-l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-prim hover:text-primary hover:before:w-full",
                     { "text-primary before:w-full": pathName === path },
                   )}
                 >

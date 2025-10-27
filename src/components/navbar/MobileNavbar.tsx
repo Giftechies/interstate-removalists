@@ -81,7 +81,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
       <div className="theme-transition-3 block xl:hidden">
         <div
           className={cn(
-            "fixed left-0 top-0 z-20 h-[100vh] w-[100vw] bg-primary/20 transition-all duration-500",
+            "fixed left-0 top-0 z-20 h-[100vh] w-[100vw] bg-prim/20 transition-all duration-500",
 
             { "translate-y-0": sidebarToggle },
             { "-translate-y-full": !sidebarToggle },
@@ -134,7 +134,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                           <li
                             key={id}
                             className={cn(
-                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-sec/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-primary hover:text-primary hover:before:absolute`,
+                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-sec/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-prim hover:text-primary hover:before:absolute`,
                               {
                                 "text-primary before:absolute":
                                   pathName === menuItemPath,

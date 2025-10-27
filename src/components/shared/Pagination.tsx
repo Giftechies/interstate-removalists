@@ -11,16 +11,16 @@ const Pagination = () => {
             </span>
           </button>
           <div className="flex items-center gap-1">
-            <button className="h6 rounded-xl bg-primary px-3 py-1 font-medium text-white-1">
+            <button className="h6 rounded-xl bg-prim px-3 py-1 font-medium text-white-1">
               1
             </button>
-            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-primary hover:text-white-1">
+            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-prim hover:text-white-1">
               2
             </button>
-            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-primary hover:text-white-1">
+            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-prim hover:text-white-1">
               3
             </button>
-            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-primary hover:text-white-1">
+            <button className="h6 theme-transition-3 rounded-xl  px-3 py-1 font-medium text-black-4 hover:bg-prim hover:text-white-1">
               ...
             </button>
           </div>

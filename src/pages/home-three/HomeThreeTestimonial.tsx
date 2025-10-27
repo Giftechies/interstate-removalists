@@ -18,7 +18,7 @@ const HomeThreeTestimonial = () => {
           text="What people say"
           className="h2 mt-3 text-center font-semibold"
         />
-        <div className="smt60px mx-auto w-fit rounded-full bg-primary/10 p-[18px]">
+        <div className="smt60px mx-auto w-fit rounded-full bg-prim/10 p-[18px]">
           <IconQuote className="text-primary" />
         </div>
         <div className="spt60px">

@@ -50,7 +50,7 @@ const HomeOneSingleBlog = ({
           <span className="xl-text font-medium">Read More</span>{" "}
           <span
             className={cn(
-              "theme-transition-3 bg-primary p-2 text-white-1 group-hover:bg-accent-3 md:p-3",
+              "theme-transition-3 bg-prim p-2 text-white-1 group-hover:bg-accent-3 md:p-3",
               linkClass,
             )}
           >

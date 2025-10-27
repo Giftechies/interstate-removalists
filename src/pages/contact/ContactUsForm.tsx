@@ -17,7 +17,7 @@ const ContactUsForm = () => {
         <div className="spt60px grid grid-cols-12 gap-6">
           <div className="col-start-1 col-end-13 md:col-end-6 xl:col-end-4">
             <div className="flex gap-6">
-              <div className="w-fit rounded-full bg-primary/5 p-5">
+              <div className="w-fit rounded-full bg-prim/5 p-5">
                 <IconHeadset stroke={1} className="size-10" />{" "}
               </div>
               <div>
@@ -32,7 +32,7 @@ const ContactUsForm = () => {
               </div>
             </div>
             <div className="spt60px spb60px flex gap-6">
-              <div className="w-fit rounded-full bg-primary/5 p-5">
+              <div className="w-fit rounded-full bg-prim/5 p-5">
                 <IconMessage stroke={1} className="size-10" />{" "}
               </div>
               <div>
@@ -46,7 +46,7 @@ const ContactUsForm = () => {
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="w-fit rounded-full bg-primary/5 p-5">
+              <div className="w-fit rounded-full bg-prim/5 p-5">
                 <IconAddressBook stroke={1} className="size-10" />{" "}
               </div>
               <div>

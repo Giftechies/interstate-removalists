@@ -25,7 +25,7 @@ const UserComponent = ({
         </div>
       </div>
       <div className="flex items-center gap-3">
-        <div className="size-[10px] rounded-full bg-primary"></div>
+        <div className="size-[10px] rounded-full bg-prim"></div>
         <p className="lead-text font-medium">World active user</p>
       </div>
     </div>

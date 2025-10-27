@@ -25,7 +25,7 @@ const HomeThreeFinancialCard = ({ title, text, className, icon }: Props) => {
       <div className="rounded-16px theme-transition-4 flex w-full items-center justify-center opacity-0 group-hover:visible group-hover:opacity-100">
         <Link
           href={`/service-details`}
-          className="absolute right-5 top-5 z-10  cursor-pointer rounded-full bg-primary p-3"
+          className="absolute right-5 top-5 z-10  cursor-pointer rounded-full bg-prim p-3"
         >
           <IconArrowUpRight stroke={1} className="size-10 text-white-1" />
         </Link>

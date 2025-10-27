@@ -13,7 +13,7 @@ const StartJourneySingleItem = ({ title, text, buttonLInk }: Props) => {
     <div className="hover-image appear-down group/card relative flex justify-between gap-6 overflow-hidden max-sm:flex-col sm:items-center ">
       <div className="flex justify-between gap-4 max-md:flex-col sm:gap-6 md:items-center md:gap-10 xxl:gap-25 ">
         <div className="flex flex-col gap-7">
-          <div className="w-fit rounded-full bg-primary p-[14px] text-white-1">
+          <div className="w-fit rounded-full bg-prim p-[14px] text-white-1">
             <IconSend size={32} />
           </div>
           <h5 className="h3 font-semibold text-black-2 md:w-44 3xl:w-[257px]">

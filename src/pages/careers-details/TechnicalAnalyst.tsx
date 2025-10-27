@@ -38,7 +38,7 @@ const TechnicalAnalyst = () => {
                 <button
                   onClick={() => handleTab("description")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-primary/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
                     { "border-primary": tabText === "description" },
                   )}
                 >
@@ -47,7 +47,7 @@ const TechnicalAnalyst = () => {
                 <button
                   onClick={() => handleTab("overview")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-primary/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
                     { "border-primary": tabText === "overview" },
                   )}
                 >
@@ -56,7 +56,7 @@ const TechnicalAnalyst = () => {
                 <button
                   onClick={() => handleTab("requirements")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-primary/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-primary hover:text-primary max-sm:mb-2 max-sm:after:absolute",
                     { "border-primary": tabText === "requirements" },
                   )}
                 >

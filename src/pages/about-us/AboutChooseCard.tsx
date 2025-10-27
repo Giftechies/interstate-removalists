@@ -18,7 +18,7 @@ const AboutChooseCard: React.FC<AboutChooseCardProps> = ({
   return (
     <div
       className={cn(
-        "sp32px till-card group theme-transition-3 rounded-xl bg-white-1 text-black-4 shadow-custom1 hover:bg-primary hover:text-white-1  ",
+        "sp32px till-card group theme-transition-3 rounded-xl bg-white-1 text-black-4 shadow-custom1 hover:bg-prim hover:text-white-1  ",
         className,
       )}
     >

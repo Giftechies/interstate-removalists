@@ -9,37 +9,37 @@ const PopularTags = () => {
       <div className="smt32px flex flex-wrap gap-3">
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Trading
         </Link>
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Analysis
         </Link>
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Research
         </Link>
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Mentoring
         </Link>
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Strategy
         </Link>
         <Link
           href={`/blogs`}
-          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-primary hover:text-white-1"
+          className="theme-transition-3 bg-white-1 px-4 py-2 hover:bg-prim hover:text-white-1"
         >
           Planning
         </Link>

@@ -138,7 +138,7 @@ const HowItrWorksContent = () => {
             </div> */}
 
             {/* contact section */}
-            <div className="flex till-card flex-col items-center rounded-xl shadow-md bg-primary w-full text-white-1 px-6 py-10 text-center ">
+            <div className="flex till-card flex-col items-center rounded-xl shadow-md bg-prim w-full text-white-1 px-6 py-10 text-center ">
               <div className="sp24px mx-auto w-fit rounded-full bg-white-1 p-4 text-black-4">
                 <IconPhoneCall className="size-8" />
 

@@ -54,7 +54,7 @@ const SignUp = () => {
                 <span>Rember me</span>
               </div>
             </div>
-            <button className="h6 smb32px smt32px w-full bg-primary py-3 text-center text-white-1">
+            <button className="h6 smb32px smt32px w-full bg-prim py-3 text-center text-white-1">
               Sign Up
             </button>
           </form>

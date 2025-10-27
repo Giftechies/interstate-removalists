@@ -71,7 +71,7 @@ const HomeTwoAboutUs = () => {
                 <RoundedLink
                   buttonText="About More"
                   link="/about-us"
-                  className="bg-primary text-white-1 hover:bg-transparent hover:text-black-4 lg:size-[180px]"
+                  className="bg-prim text-white-1 hover:bg-transparent hover:text-black-4 lg:size-[180px]"
                 />
               </div>
               <div>

@@ -167,7 +167,7 @@ const BlogDetailsContent = () => {
             <div className="sp24px bg-white-4">
               <div className="flex items-center gap-6 bg-white-1 p-3">
                 <input type="text" placeholder="Search" className="w-full" />{" "}
-                <div className="bg-primary p-1.5">
+                <div className="bg-prim p-1.5">
                   <IconSearch size={20} className="text-white-1" />
                 </div>
               </div>

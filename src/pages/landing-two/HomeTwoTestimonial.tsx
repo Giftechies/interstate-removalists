@@ -8,7 +8,7 @@ import { sliderData } from "../home-one/HomeOneTestimonials";
 
 const HomeTwoTestimonial = () => {
   return (
-    <section className="fade-wrapper bg-primary text-white-1">
+    <section className="fade-wrapper bg-prim text-white-1">
       <div className="container sm:border-e">
         <div className="spt120px flex justify-between rounded-br-[150px] border-b border-e pb-10 pr-20 max-xs:flex-col max-xs:gap-4 xs:items-center">
           <h3 className="h2 font-semibold">Testimonials</h3>{" "}

@@ -8,7 +8,7 @@ const TeamDetailsContent = () => {
     <section className="spy120px fade-wrapper relative" id="scrollPosition">
       <div className="container">
         <div className="grid grid-cols-12 items-center gap-6">
-          <div className="spr60px spt60px spl60px col-start-1 col-end-13 bg-primary md:col-end-7">
+          <div className="spr60px spt60px spl60px col-start-1 col-end-13 bg-prim md:col-end-7">
             <Image
               src={teamDetails}
               width={516}

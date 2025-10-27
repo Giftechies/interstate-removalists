@@ -54,7 +54,7 @@ const LoginContent = () => {
               </div>
               <Link href={`/signup`}>Forgot Password?</Link>
             </div>
-            <button className="h6 smb32px smt32px w-full bg-primary py-3 text-center text-white-1">
+            <button className="h6 smb32px smt32px w-full bg-prim py-3 text-center text-white-1">
               Login
             </button>
           </form>

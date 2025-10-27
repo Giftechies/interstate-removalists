@@ -20,7 +20,7 @@ function HomeOneTeamCard({ image, name, title }: Props) {
   const [socialButtonOpen, setSocialButtonOpen] = useState(false);
   return (
     <div>
-      <div className="group relative bg-primary">
+      <div className="group relative bg-prim">
         <Image
           src={image}
           width={100}
@@ -57,7 +57,7 @@ function HomeOneTeamCard({ image, name, title }: Props) {
               <IconBrandInstagram stroke={2} />
             </Link>
           </div>
-          <div className="bg-primaryColor rounded-full p-2">
+          <div className="bg-primColor rounded-full p-2">
             <button
               onClick={() => setSocialButtonOpen(!socialButtonOpen)}
               className={`w-fit bg-accent-3 p-3 `}

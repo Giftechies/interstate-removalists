@@ -23,7 +23,7 @@ const CareersDetailsRight = () => {
           </div>
         ))}
       </div>
-      <div className="flex till-card flex-col items-center rounded-xl bg-primary px-6 py-10 text-center sm:px-[90px]">
+      <div className="flex till-card flex-col items-center rounded-xl bg-prim px-6 py-10 text-center sm:px-[90px]">
         <div className="sp24px mx-auto w-fit rounded-full bg-accent-3">
           <IconPhoneCall className="size-8" />
         </div>

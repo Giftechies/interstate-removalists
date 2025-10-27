@@ -47,7 +47,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
             <span
               className={cn(
                 `  theme-transition-3 relative mr-3 rounded-full bg-gray-400 px-6 py-[.08rem] `,
-                istoggle ? "bg-primary" : "",
+                istoggle ? "bg-prim" : "",
               )}
             >
               <span

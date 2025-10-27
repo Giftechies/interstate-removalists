@@ -47,7 +47,7 @@ const HomeTwoBanner = () => {
                 className="w-full bg-inherit outline-none placeholder:font-medium placeholder:text-black-4"
                 placeholder="Get The App"
               />
-              <div className="bg-primary p-3">
+              <div className="bg-prim p-3">
                 <IconArrowUpRight className="text-white-1" />
               </div>
             </div>
