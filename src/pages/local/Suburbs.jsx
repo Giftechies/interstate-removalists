@@ -107,7 +107,7 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
               
               "
             >
-              <span className=" bg-black-3 text-white-1  p-[.15rem] rounded-full " ><Check className=" size-5 " /></span>
+              <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " ><Check className=" size-4 " /></span>
               {item.title}
             </span>
             
