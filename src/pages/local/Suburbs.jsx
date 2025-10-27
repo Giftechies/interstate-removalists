@@ -1,4 +1,5 @@
 "use client";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -76,7 +77,7 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
             justify-center
             gap-8 
             sm:grid-cols-2 
-            lg:grid-cols-4
+            lg:grid-cols-5
         
           "
         >
@@ -98,10 +99,15 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
                 transition-colors
                 duration-200
                hover:bg-white-3/30
-               sm:w-[90%]
-               md:w-[80%]
+               flex 
+               items-center 
+               justify-center 
+               gap-2
+               group
+              
               "
             >
+              <span className=" bg-black-3 text-white-1  p-[.15rem] rounded-full " ><Check className=" size-5 " /></span>
               {item.title}
             </span>
             
