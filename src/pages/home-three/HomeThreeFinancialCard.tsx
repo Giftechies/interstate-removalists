@@ -15,7 +15,7 @@ const HomeThreeFinancialCard = ({ title, text, className, icon }: Props) => {
   return (
     <div
       className={cn(
-        "spx40px group theme-transition-3 relative bg-secondary/20 py-10 text-black-4 hover:bg-accent-3 sm:py-15 xxl:pb-[105px] xxl:pt-15",
+        "spx40px group theme-transition-3 relative bg-sec/20 py-10 text-black-4 hover:bg-accent-3 sm:py-15 xxl:pb-[105px] xxl:pt-15",
         className,
       )}
     >

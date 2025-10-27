@@ -10,7 +10,7 @@ export default function Card({title,summary,imagepath='' ,slug,path}){
        <Link 
        href={` ${path}/${slug} `} >
        
-        <div className="w-full   overflow-hidden rounded-xl border shadow-md p-6 hover:bg-secondary text-white-1 group theme-transition-3 bg-white-1 ">
+        <div className="w-full   overflow-hidden rounded-xl border shadow-md p-6 hover:bg-sec text-white-1 group theme-transition-3 bg-white-1 ">
            
          <div className=" size-18 rounded-full overflow-hidden mx-auto " >
                 <Image

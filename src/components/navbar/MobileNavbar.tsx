@@ -65,7 +65,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
           <div className="space-y-2">
             <span
               className={cn(
-                "block h-1 w-10 origin-center rounded-full bg-secondary transition-transform ease-in-out group-hover:translate-y-1.5 group-hover:rotate-45",
+                "block h-1 w-10 origin-center rounded-full bg-sec transition-transform ease-in-out group-hover:translate-y-1.5 group-hover:rotate-45",
                 { "translate-y-1.5 rotate-45": sidebarToggle },
               )}
             ></span>
@@ -117,7 +117,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                     <p
                       onClick={() => handleDropDown(id)}
                       className={cn(
-                        "theme-transition-3 my-1 flex cursor-pointer items-center justify-between rounded-md border-b bg-secondary/20 px-8 py-5",
+                        "theme-transition-3 my-1 flex cursor-pointer items-center justify-between rounded-md border-b bg-sec/20 px-8 py-5",
                         { " font-medium text-primary": isActive },
                       )}
                     >
@@ -134,7 +134,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                           <li
                             key={id}
                             className={cn(
-                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-secondary/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-primary hover:text-primary hover:before:absolute`,
+                              `theme-transition-3 relative my-0.5 w-full rounded-md bg-sec/20 py-2 ps-10 before:left-5 before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full before:bg-primary hover:text-primary hover:before:absolute`,
                               {
                                 "text-primary before:absolute":
                                   pathName === menuItemPath,
@@ -163,7 +163,7 @@ const MobileNavbar = ({ scrollHight }: Props) => {
                       }}
                       href={`${path}`}
                       className={cn(
-                        "theme-transition-3 my-1 block w-full rounded-md border-b bg-secondary/20 px-8 py-5 ",
+                        "theme-transition-3 my-1 block w-full rounded-md border-b bg-sec/20 px-8 py-5 ",
                         {
                           "text-primary": pathName === path,
                         },

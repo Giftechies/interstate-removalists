@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const HomeTwoPersonalized = () => {
   return (
-    <section className="max-lg:spy120px fade-wrapper relative bg-secondary">
+    <section className="max-lg:spy120px fade-wrapper relative bg-sec">
       <div className="container">
         <div className="grid grid-cols-12 items-center gap-6">
           <div className="col-start-1 col-end-13 justify-end lg:col-end-7 4xl:flex 4xl:place-self-end">

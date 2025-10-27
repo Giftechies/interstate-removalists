@@ -19,7 +19,7 @@ const HomeThreeBannerSideElement = () => {
       <div className="rounded-full bg-white-1 p-[14px]">
         <IconHeartFilled size={32} className="text-secondary" />
       </div>
-      <div className="flex items-center gap-1 rounded-full bg-secondary p-[9px]">
+      <div className="flex items-center gap-1 rounded-full bg-sec p-[9px]">
         <span className="l-text font-medium">4.7</span>
         <IconStarFilled size={16} className="text-white-1" />
       </div>

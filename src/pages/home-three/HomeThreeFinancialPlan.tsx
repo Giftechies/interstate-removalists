@@ -47,7 +47,7 @@ const HomeThreeFinancialPlan = () => {
   }, []);
 
   return (
-    <section className="banner relative z-10 overflow-hidden bg-secondary/5 text-white-1 after:bottom-0 after:right-0 after:-z-10 after:h-full after:w-1/2 after:bg-secondary lg:after:absolute">
+    <section className="banner relative z-10 overflow-hidden bg-sec/5 text-white-1 after:bottom-0 after:right-0 after:-z-10 after:h-full after:w-1/2 after:bg-sec lg:after:absolute">
       <div className="max-lg:spy120px container relative grid grid-cols-12 items-center">
         <div className="col-start-1 col-end-13 grid max-lg:gap-3 xs:grid-cols-2 lg:col-end-7">
           <HomeThreeFinancialCard

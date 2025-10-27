@@ -68,7 +68,7 @@ const HowItrWorksContent = () => {
           </div>
         </div>
         <div className="spt60px grid grid-cols-12 gap-6">
-          <div className="spt60px spl60px spb60px relative  col-start-1 col-end-13 bg-secondary text-white-1 xl:col-end-9">
+          <div className="spt60px spl60px spb60px relative  col-start-1 col-end-13 bg-sec text-white-1 xl:col-end-9">
             <div className="smt40px  grid grid-cols-12">
               <div className="  col-start-2 lg:col-start-1 col-end-12 relative  ">
                 {steps.map((step, index) => {
@@ -77,7 +77,7 @@ const HowItrWorksContent = () => {
                       key={index}
                       className=" spl60px lg:spl40px spb60px relative flex max-w-[500px]  gap-4 border-l-4    "
                     >
-                      <div className=" h6 fade-top absolute -left-[23px] top-0  flex size-10 items-center   justify-center rounded-full border border-white-1 bg-secondary font-semibold  text-white-1 ">
+                      <div className=" h6 fade-top absolute -left-[23px] top-0  flex size-10 items-center   justify-center rounded-full border border-white-1 bg-sec font-semibold  text-white-1 ">
                         {index + 1}
                       </div>
                       <step.Icon

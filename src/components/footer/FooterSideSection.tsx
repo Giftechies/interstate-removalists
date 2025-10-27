@@ -6,7 +6,7 @@ const FooterSideSection = () => {
       <h5 className="h3 font-semibold">Your Next Chapter Starts with a Smooth Move.</h5>
       <RoundedLink
         buttonText="Contact Us"
-        className="text-white-1 border-white-1  hover:bg-secondary lg:max-xxl:order-3 xxl:size-[180px]"
+        className="text-white-1 border-white-1  hover:bg-sec lg:max-xxl:order-3 xxl:size-[180px]"
         link="/contact"
       />
       <div className="flex flex-col items-center">

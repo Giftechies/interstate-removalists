@@ -49,7 +49,7 @@ const AboutMission = () => {
               </div>
             </div>
           </div>
-          <div className="max-xl:spt60px max-xl:spb60px flex h-full bg-secondary  px-10">
+          <div className="max-xl:spt60px max-xl:spb60px flex h-full bg-sec  px-10">
             <div className="my-auto">
               <SectionTitle
                 text="A Great Mission Statement"

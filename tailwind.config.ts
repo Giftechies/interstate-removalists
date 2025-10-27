@@ -34,17 +34,56 @@ const config: Config = {
         "4xl": "1800px",
       },
 
+      // *** START: SHADCN COLOR INTEGRATION ***
+      // We must define these keys using HSL variables for Shadcn components to work.
       colors: {
-        primary: "#F39740",
-        secondary: "#09307B",
-        secondaryLight: "#8eafed",
+        // Core Shadcn Required Colors (fixes `border-border` error)
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+
+        // Your Primary/Secondary colors now use the HSL variables defined in globals.css
+        primary: {
+          DEFAULT: "hsl(var(--primary-shadcn))", // References HSL of #F39740
+          foreground: "hsl(var(--primary-foreground))", // White text on primary
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary-shadcn))", // References a light background color
+          foreground: "hsl(var(--secondary-foreground))", // Dark text on secondary
+          light: "#8eafed", // Kept your existing custom secondaryLight hex
+        },
+        
+        // Other necessary Shadcn colors
+        destructive: {
+            DEFAULT: "hsl(var(--destructive))",
+            foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+            DEFAULT: "hsl(var(--muted))",
+            foreground: "hsl(var(--muted-foreground))",
+        },
         accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          // Retaining your custom accent shades
           1: "#1D1D1D",
           2: "#121212",
           3: "#FFCE32",
           4: "#FFEFD7",
           5: "#CDFF00",
         },
+        card: {
+            DEFAULT: "hsl(var(--card))",
+            foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+            DEFAULT: "hsl(var(--popover))",
+            foreground: "hsl(var(--popover-foreground))",
+        },
+        
+        // Retaining your original custom color shades
         white: {
           1: "#FFFFFF",
           2: "#F2F6F6",
@@ -58,6 +97,7 @@ const config: Config = {
           4: "#121212",
         },
       },
+      // *** END: SHADCN COLOR INTEGRATION ***
 
       backgroundImage: {
         "hero-pattern":

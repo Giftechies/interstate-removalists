@@ -9,7 +9,7 @@ import FooterSideSection from "./FooterSideSection";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-secondary text-white-1">
+    <footer className="relative overflow-hidden bg-sec text-white-1">
       <div className="max-xl:container xxl:ml-[calc((100%-1296px)/2)]">
         <div className="flex   justify-between max-xxl:flex-col-reverse ">
           <div>
