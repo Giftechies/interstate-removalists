@@ -82,7 +82,7 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
           "
         >
           {suburbs?.map((item, idx) => (
-            <Link href={`/${removalist}/${city}/${item.slug}`} >
+            <Link key={idx} href={`/${removalist}/${city}/${item.slug}`} >
             <span
               key={idx}
               className="
