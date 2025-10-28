@@ -18,7 +18,11 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
 export default async function localRemovalists({params}) {
   const {removalist} = params;
   const res = await  pagesData(removalist)
+  const data = res.data
+  const localCard = data.children
 
+  
+  
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
     { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
@@ -35,20 +39,7 @@ export default async function localRemovalists({params}) {
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
-      {/* <EditorData  /> */}
-
-      {/* <InnerAboutLocal
-      
-       
-      
-        title={"What is Local Move?"}
-        subheading={data.summary}
-        text1={
-         data.description
-        }
-        
-    
-      /> */}
+     
       <EditorData content={data.description} />
       <LocalType
         localCard={localCard}
