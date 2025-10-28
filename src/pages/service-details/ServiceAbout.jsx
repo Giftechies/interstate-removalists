@@ -7,7 +7,7 @@ export default function ServiceAbout() {
         <section className="spy80px " >
             <div className="container grid grid-cols-12 gap-6 items-stretch ">
                 {/* image */}
-                <div className="img-container col-span-12 md:col-span-6 rounded-lg overflow-hidden h-full group cursor-pointer " >
+                <div className="img-container col-span-12 md:col-span-6 shadow-lg rounded-lg overflow-hidden h-full group cursor-pointer " >
                     <Image src={serviceImage} width={250} height={250} alt="service image" className="w-full h-full object-cover object-center group-hover:scale-1.1 " />
 
                 </div>
@@ -21,7 +21,7 @@ export default function ServiceAbout() {
                     <p className=" text-black-3 " >
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{"Get Instant Quote"}</HomeThreeBannerLink>  
+                    <HomeThreeBannerLink href="/pick-details" className="   bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >{"Get Instant Quote"}</HomeThreeBannerLink>  
                 </div>
                 
 
