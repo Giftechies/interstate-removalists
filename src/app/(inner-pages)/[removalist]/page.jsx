@@ -55,14 +55,14 @@ export default async function localRemovalists({params}) {
         
     
       /> */}
-      <EditorData content={data.summary} />
+      <EditorData content={data.description} />
       <LocalType
         localCard={localCard}
         path={removalist}
         subtitle="Local Move"
         title="Every Move Matters — Especially Yours"
         text="Interstate Removalists helps you find the right movers anywhere across Australia —fair, fast and no fuss. Just pick your city, and get your move sorted today."
-        buttontext="Get start Moving"
+        buttontext="Get start Moving" 
         buttonlink="/pick-details"
       />
       { data.show_map && <Map  markers={markers} />}

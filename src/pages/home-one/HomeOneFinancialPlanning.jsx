@@ -13,7 +13,7 @@ import HomeOneFinancialCard from "./HomeOneFinancialCard";
 
 
 
-const HomeOneFinancialPlanning = ({cardData= [
+const HomeOneFinancialPlanning = ({ data, cardData= [
   { 
     image:image1,
     link:"#",
@@ -24,19 +24,19 @@ const HomeOneFinancialPlanning = ({cardData= [
   },
   {
      image:image2,
-    link:"#",
+    link:"/#",
     cardTitle: "Interstate Removalists",
     cardText:
       "Moving across states? Your stuff’s loaded, tracked, and delivered anywhere in Oz — no mucking about, no hold-ups, just an easy move",
   },
   { image:image1,
-    link:"#",
+    link:"/#",
     cardTitle: "Dining Table Removalists",
     cardText:
       "Your dining table is carefully wrapped and moved to your new home, scratch-free, ready to sit around for your next meal.",
   },
   { image:image1,
-    link:"#",
+    link:"/#",
     cardTitle: "Pool Table Removalists",
     cardText:
       "Moving a pool table? It’s carefully pulled apart, padded, shifted, and levelled again perfectly, so it’s game-ready straight away.",
@@ -44,8 +44,10 @@ const HomeOneFinancialPlanning = ({cardData= [
   
 ]}) => {
   const [isHover, setIsHover] = useState(0);
+  console.log(data);
+  
 
-  const handleHover = (index: number) => {
+  const handleHover = (index) => {
     setIsHover(index);
   };
 
