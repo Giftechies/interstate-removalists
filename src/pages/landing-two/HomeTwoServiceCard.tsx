@@ -21,8 +21,8 @@ const HomeTwoServiceCard = ({ title, text, className, icon }: Props) => {
     >
       {icon}
       <h5 className="h5 spt24px font-medium">{title}</h5>
-      <SectionText text={text} className="mt-3 text-balance" />
-      <div className="rounded-16px theme-transition-4 absolute bottom-0 left-0 flex h-0 w-full items-center justify-center  bg-sec bg-opacity-60 opacity-0 group-hover:visible  group-hover:h-full group-hover:opacity-100">
+      <SectionText text={text} className="mt-3 text-left" />
+      <div className="rounded-16px theme-transition-4 absolute bottom-0 left-0 flex h-0 w-full items-center justify-center  bg-sec bg-opacity-60 opacity-0 group-hover:visible  group-hover:h-full group-hover:opacity-95">
         <Link href={`/#`} className="bg-prim p-3 ">
           <IconArrowUpRight stroke={1} className="size-10 text-white-1" />
         </Link>

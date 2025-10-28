@@ -7,27 +7,28 @@ import SectionSubTitle from "@/components/shared/SectionSubTitle";
 const steps = [
   {
     step: "01",
-    heading: "get a quote",
+    heading: "Tell Us What You’re Moving",
     iconname: '/img/svg/quote.png',
-    text: "Start by contacting us for a free, personalized quote. Share your moving details."
+    text: "Pop in your pickup and drop-off details, and let us know what needs shifting. We’ll line up removalists who are right for your move."
   },
   {
     step: "02",
-    heading: "plan your move",
+    heading: "Compare and Choose",
     iconname: "/img/svg/customer.png",
-    text: "Our team works with you to create a customized moving plan. From packing to logistics."
+    text: "You’ll get a few clear quotes from trusted movers near you. Check what’s included, compare prices, and pick the one that fits your plan."
+
   },
   {
     step: "03",
-    heading: "safe & secure moving",
+    heading: "Book and Relax",
     iconname: "/img/svg/box-carring.png",
-    text: "Our expert movers handle your belongings with care, using high-quality packing materials."
+    text: "Once you book, your mover takes over. They’ll confirm times, handle the loading, and keep you in the loop along the way."
   },
   {
     step: "04",
-    heading: "unpack & settle in",
+    heading: "Delivery Done Properly",
     iconname: "/img/svg/setting.png",
-    text: "Once we've delivered your items, we'll help with unpacking and setting up, so you can enjoy."
+    text: "Every item arrives safely at your new place. The team unloads, puts things where you need them, and checks you’re happy before they roll out."
   },
 ];
 
@@ -41,7 +42,7 @@ export default function OurWorks() {
         />
         <SectionTitle
         text="Reliable moving services built around you"
-        className="  w-[70%] text-center mt-3 text-[var(--secondary-hex)] capitalize "
+        className="  w-[70%] text-center mt-3 text-black capitalize "
         />
       <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2   space-y-8 items-center justify-center">
           {steps.map((item, index) => (
@@ -52,7 +53,7 @@ export default function OurWorks() {
             heading={item.heading}
             iconname={item.iconname}
             text={item.text}
-            className={`  ${index % 2 === 0? "":"lg:mt-20"} ` }
+            className={`  ${index % 2 === 0? "":"lg:mt-15"} ` }
           />
          </div>
         ))}

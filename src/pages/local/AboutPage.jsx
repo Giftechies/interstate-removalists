@@ -47,11 +47,11 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
             className="h1 pt-3"
           />
           <SectionText
-            className="fade-top pt-5"
+            className="fade-top text-left pt-5"
             text={text1}
           />
           <SectionText
-            className="fade-top pt-5"
+            className="fade-top text-left pt-5"
             text={text2}
           />
           <div className="spt32px flex flex-col gap-3">

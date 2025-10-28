@@ -28,7 +28,7 @@ export default async function subursPage({params}){
     </div>`;
     return(
        <>
-       <Banner pagename={surburs} />
+       <Banner pagename={data.title} />
        {/* <InnerAboutPage text1={data.description} /> */}
       <EditorData content={data.description} />
          { sdata.children && <Surburs suburbs={sdata.children} removalist={removalist} city={city} />}

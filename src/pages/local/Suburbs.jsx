@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Suburbs({suburbs = [],removalist="",city=""}) {
+export default function Suburbs({suburbs = [],removalist="",city="",}) {
   const list = [
     "Moving from Brisbane to Bundaberg",
     "Moving from Brisbane to Cairns",
@@ -31,17 +31,18 @@ export default function Suburbs({suburbs = [],removalist="",city=""}) {
   const [isSelected, setIsSelected] = useState(0);
 
   // let selectedList = isSelected === 0 ? list : list2;
- 
+const firstWord = city.split("-")[0];
+
   return (
     <section className="spy80px bg-accent-4">
       <main className="container">
         <h3 className="h2 text-center font-semibold capitalize">
-          Lorem ipsum dolor sit amet consectetur.
+        { ` Find Professional Removalists in ${firstWord}’s Suburbs`}
         </h3>
-        <p className="h6 mt-4 text-center text-black-3">
+        {/* <p className="h6 mt-4 text-center text-black-3">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore,
           beatae. Unde temporibus porro illo nostrum!
-        </p>
+        </p> */}
 
         {/* <div className="mx-auto mt-6 flex w-full max-w-4xl justify-center gap-12 ">
           {cat.map((item, id) => {

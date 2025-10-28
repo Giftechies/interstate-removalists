@@ -62,7 +62,7 @@ const HowItrWorksContent = () => {
           <div className="col-start-1 col-end-13 lg:col-start-6  ">
             <SectionText
               text="Need dependable local or interstate removalists in Australia? Here’s how the whole process works from start to finish."
-              className="fade-top"
+              className="fade-top text-left"
             />
         
           </div>

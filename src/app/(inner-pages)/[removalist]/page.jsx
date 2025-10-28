@@ -17,9 +17,17 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
 
 export default async function localRemovalists({params}) {
   const {removalist} = params;
+  console.log(removalist);
+
+  
   const res = await  pagesData(removalist)
   const data = res.data
   const localCard = data.children
+  const localText = removalist =="local-removalists"?"Interstate Removalists helps you find the right movers anywhere across Australia — fair, fast, and no fuss. Just pick your city, and get your move sorted today.":"We’re committed to being Australia's best interstate removalists platform — where customers can compare, choose, and book with confidence. Here’s why you can rely on us:"
+  const localtitle = removalist =="local-removalists"? "Every Move Matters — Especially Yours":"Moving Interstate? We’ll Point You to the Right Removalists"
+  const SeparateTitle = removalist =="local-removalists"? "Ready to Get Your Move Sorted?":"Ready to Start Your Interstate Move?"
+    const SeparateText = removalist =="local-removalists"? "Choose your state, city, suburb, services, and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby.":"Add your move details and dates, and we’ll arrange for insured interstate movers to handle your stuff properly every kilometre of the way."
+
 
   
   
@@ -45,13 +53,13 @@ export default async function localRemovalists({params}) {
         localCard={localCard}
         path={removalist}
         subtitle="Local Move"
-        title="Every Move Matters — Especially Yours"
-        text="Interstate Removalists helps you find the right movers anywhere across Australia —fair, fast and no fuss. Just pick your city, and get your move sorted today."
+        title={localtitle}
+        text={localText}
         buttontext="Get start Moving" 
         buttonlink="/pick-details"
       />
       { data.show_map && <Map  markers={markers} />}
-      <Separator title="Ready to Get Your Move Sorted?" content="Add your move details and dates, and we’ll arrange for insured interstate movers to handle your stuff properly every kilometre of the way." />
+      <Separator title={SeparateTitle}content={SeparateText} />
      {data.show_process && <OurWorks/>}
       {/* <HowItWorksPage/> */}
      {data.show_faq && <HomeTwoFaq />}

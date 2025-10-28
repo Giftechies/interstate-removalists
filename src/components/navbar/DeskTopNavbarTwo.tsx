@@ -37,7 +37,7 @@ const DeskTopNavbarTwo = () => {
             );
             return menuItems ? (
               <li key={`${id}`} className="group relative">
-                <Link
+                <Link 
                 href={`${path}`}
                   className={cn(
                     " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-prim hover:text-[var(--primary-hex)] hover:before:w-full",
