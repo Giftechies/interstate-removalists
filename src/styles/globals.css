@@ -148,7 +148,7 @@ body {
     @apply h5;
   }
   .editor p {
-    @apply h6;
+    @apply  !tracking-wider ;
   }
   .editor ul {
     @apply list-disc list-inside mb-4 pl-4;
