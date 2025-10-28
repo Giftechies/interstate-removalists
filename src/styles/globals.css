@@ -123,11 +123,9 @@ body {
 }
 
 @layer utilities {
-  .editor {
-    @apply h6 text-center leading-relaxed flex flex-col gap-4;
-  }
+ 
   .editor p:not(:first-child) {
-    @apply mb-4;
+    @apply  mb-4;
   }
 
   .editor p:last-child {
@@ -148,6 +146,9 @@ body {
   }
   .editor h5 {
     @apply h5;
+  }
+  .editor p {
+    @apply h6;
   }
   .editor ul {
     @apply list-disc list-inside mb-4 pl-4;

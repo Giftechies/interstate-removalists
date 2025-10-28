@@ -47,6 +47,7 @@ const HomeOneFinancialCard = ({
       )}
     >
       {/* ✅ Image with safe fallback */}
+    <Link  href={`/services/${slug}`} >
       <div className="theme-transition-3 size-20 rounded-full overflow-hidden group-hover:bg-white-1 bg-gray-300">
         <Image
           src={validImage}
@@ -55,7 +56,7 @@ const HomeOneFinancialCard = ({
           height={250}
           className="object-contain object-center size-full"
         />
-      </div>
+      </div></Link>
 
       {/* ✅ Title */}
       <Link
