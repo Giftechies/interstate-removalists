@@ -4,7 +4,7 @@ import HomeThreeBannerLink from '../home-three/HomeThreeBannerLink';
 
 
 
-export default async function ServiceEditor({params,res=[],services={}}) {
+export default  function ServiceEditor({params,res=[],services={}}) {
     return(
            <section className="spy80px  " >
         <div className="container grid grid-cols-12 gap-6" >

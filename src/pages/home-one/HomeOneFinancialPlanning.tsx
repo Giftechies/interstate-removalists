@@ -1,49 +1,18 @@
 "use client";
 import image1 from "@/../public/images/home-one/finance-planning-1.png";
 import image2 from "@/../public/images/home-one/finance-planning-2.png";
-import image3 from "@/../public/images/home-one/finance-planning-3.png";
-import image4 from "@/../public/images/home-one/finance-planning-4.png";
+
 import LInkArrow from "@/components/link/LInkArrow";
-import Lines from "@/components/shared/Lines"; 
+
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
-import SectionText from "@/components/shared/SectionText";
-import SectionTitle from "@/components/shared/SectionTitle";
+
 import { useState } from "react";
 import ServiceCard from "@/pages/service/ServiceCard"
-import HomeOneFinancialCard from "./HomeOneFinancialCard";
 
 
 
-const HomeOneFinancialPlanning = ({ data=[], cardData= [ 
-  { 
-    image:image1,
-    link:"#",
 
-    cardTitle: "Local Removalists",
-    cardText:
-      "Local move? Too easy. Your furniture’s wrapped, loaded, and dropped off at your new residence. Expect a reliable move to be done on time.",
-  },
-  {
-     image:image2,
-    link:"/#",
-    cardTitle: "Interstate Removalists",
-    cardText:
-      "Moving across states? Your stuff’s loaded, tracked, and delivered anywhere in Oz — no mucking about, no hold-ups, just an easy move",
-  },
-  { image:image1,
-    link:"/#",
-    cardTitle: "Dining Table Removalists",
-    cardText:
-      "Your dining table is carefully wrapped and moved to your new home, scratch-free, ready to sit around for your next meal.",
-  },
-  { image:image1,
-    link:"/#",
-    cardTitle: "Pool Table Removalists",
-    cardText:
-      "Moving a pool table? It’s carefully pulled apart, padded, shifted, and levelled again perfectly, so it’s game-ready straight away.",
-  },
-  
-]}) => {
+const HomeOneFinancialPlanning = ({ data=[] }) => {
   const [isHover, setIsHover] = useState(0);
   console.log(" in card data>>>>>>>>>>>>>>>>>>>>",data);
   
