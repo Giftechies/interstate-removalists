@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default async function Services() {
   const res = await serviceData()
-  console.log(res);
+  // console.log("service page>>>>>>>>>>>>>",res);
   
   return (
     <div>

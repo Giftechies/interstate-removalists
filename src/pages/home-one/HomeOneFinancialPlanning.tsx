@@ -4,7 +4,7 @@ import image2 from "@/../public/images/home-one/finance-planning-2.png";
 import image3 from "@/../public/images/home-one/finance-planning-3.png";
 import image4 from "@/../public/images/home-one/finance-planning-4.png";
 import LInkArrow from "@/components/link/LInkArrow";
-import Lines from "@/components/shared/Lines";
+import Lines from "@/components/shared/Lines"; 
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionText from "@/components/shared/SectionText";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -13,7 +13,7 @@ import HomeOneFinancialCard from "./HomeOneFinancialCard";
 
 
 
-const HomeOneFinancialPlanning = ({ data={}, cardData= [
+const HomeOneFinancialPlanning = ({ data=[], cardData= [ 
   { 
     image:image1,
     link:"#",
@@ -44,7 +44,7 @@ const HomeOneFinancialPlanning = ({ data={}, cardData= [
   
 ]}) => {
   const [isHover, setIsHover] = useState(0);
-  console.log(data);
+  console.log(" in card data>>>>>>>>>>>>>>>>>>>>",data);
   
 
   const handleHover = (index: number) => {
@@ -74,7 +74,7 @@ const HomeOneFinancialPlanning = ({ data={}, cardData= [
         </div>
         {/* section body */}
         <div className="spt60px grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {cardData.map((data, index) => (
+          {/* {data.map((data, index) => (
             <HomeOneFinancialCard
               key={index}
               {...data}
@@ -82,7 +82,7 @@ const HomeOneFinancialPlanning = ({ data={}, cardData= [
               isHover={isHover}
               index={index}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
