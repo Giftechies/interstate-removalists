@@ -13,7 +13,7 @@ import HomeOneFinancialCard from "./HomeOneFinancialCard";
 
 
 
-const HomeOneFinancialPlanning = ({ data, cardData= [
+const HomeOneFinancialPlanning = ({ data={}, cardData= [
   { 
     image:image1,
     link:"#",
@@ -47,7 +47,7 @@ const HomeOneFinancialPlanning = ({ data, cardData= [
   console.log(data);
   
 
-  const handleHover = (index) => {
+  const handleHover = (index: number) => {
     setIsHover(index);
   };
 
