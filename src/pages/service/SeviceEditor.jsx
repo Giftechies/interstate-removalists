@@ -14,14 +14,14 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
         </div>
         {/* sidebar */}
         <div className="  relative col-span-3  ">
-          
-          <div className="  sticky top-20 h-fit w-full rounded-lg border bg-gray-100 p-6 py-2 shadow-lg ">
-            <h3 className=" mb-4 text-center text-xl font-semibold text-[var(--primary-hex)] ">
+
+          <div className="  h-fit w-full rounded-lg border bg-gray-100 p-6 py-2 shadow-lg ">
+            <h3 className=" mb-4  h3 font-semibold text-[var(--primary-hex)] ">
               Other Services
             </h3>
             <div
               data-lenis-prevent
-              className=" navbar-dropdown-scrollbar flex h-80 flex-col items-center gap-3  overflow-auto  "
+              className=" flex flex-col  gap-3   "
             >
               {res?.data?.map((item) => {
                 const IsActive = item?.slug === params?.page;

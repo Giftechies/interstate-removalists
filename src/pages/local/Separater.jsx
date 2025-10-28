@@ -1,6 +1,6 @@
 import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink"
 
-export default function Separater({title="Ready to Get Your Move Sorted?",content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby.",buttonText=''}) {
+export default function Separater({title="Ready to Get Your Move Sorted?",content="Add your move details and dates, and we’ll arrange for insured interstate movers to handle your stuff properly every kilometre of the way.",buttonText=''}) {
     return <>
 <section className=" spy40px bg-sec text-white-1 " >
 <div className="container spy32px text-center  " >

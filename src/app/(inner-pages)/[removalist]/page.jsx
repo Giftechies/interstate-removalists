@@ -17,14 +17,8 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
 
 export default async function localRemovalists({params}) {
   const {removalist} = params;
-  console.log(removalist);
-  
   const res = await  pagesData(removalist)
-  const data = res.data
-  const localCard = data.children
-  console.log(data);
-  
-  
+
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 
     { id: 2, position: [-37.8136, 144.9631], name: "Melbourne", color: "#3498db" },
@@ -66,7 +60,7 @@ export default async function localRemovalists({params}) {
         buttonlink="/pick-details"
       />
       { data.show_map && <Map  markers={markers} />}
-      <Separator title="Ready to Get Your Move Sorted?" content="Enter your suburb and moving date — we’ll do the rest by matching you with insured, dependable removalists nearby." />
+      <Separator title="Ready to Get Your Move Sorted?" content="Add your move details and dates, and we’ll arrange for insured interstate movers to handle your stuff properly every kilometre of the way." />
      {data.show_process && <OurWorks/>}
       {/* <HowItWorksPage/> */}
      {data.show_faq && <HomeTwoFaq />}

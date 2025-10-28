@@ -105,7 +105,7 @@ import  { v4 as uuidv4} from "uuid"
           {
             id:uuidv4(),
             title:'Wardrobe Removalists',
-            menuItemPath:"/wardrobe-removalists"
+            menuItemPath:"/services/wardrobe-removalists"
           },
           {
             id:uuidv4(),

@@ -1,5 +1,6 @@
 import SectionText from "@/components/shared/SectionText";
 import { cn } from "@/utils/cn";
+import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,7 +48,7 @@ const HomeOneFinancialCard = ({
       )}
     >
       {/* ✅ Image with safe fallback */}
-    <Link  href={`/services/${slug}`} >
+    {/* <Link  href={`/services/${slug}`} >
       <div className="theme-transition-3 size-20 rounded-full overflow-hidden group-hover:bg-white-1 bg-gray-300">
         <Image
           src={validImage}
@@ -56,7 +57,7 @@ const HomeOneFinancialCard = ({
           height={250}
           className="object-contain object-center size-full"
         />
-      </div></Link>
+      </div></Link> */}
 
       {/* ✅ Title */}
       <Link
@@ -68,9 +69,11 @@ const HomeOneFinancialCard = ({
 
       {/* ✅ Truncated + sanitized text */}
       <SectionText
-        className="theme-transition-3 mt-3 group-hover:text-white-1"
+        className="theme-transition-3 my-3 text-justify group-hover:text-white-1"
         text={shortDescription}
       />
+      <hr  />
+      <Link    href={`/services/${slug}`} className=" flex items-center gap-2 group-hover:text-white-1  " >Read More  <MoveRight className="mt-1" /> </Link>
     </div>
   );
 };
