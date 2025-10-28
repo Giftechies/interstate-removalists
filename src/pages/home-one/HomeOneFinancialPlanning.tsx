@@ -9,6 +9,7 @@ import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionText from "@/components/shared/SectionText";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { useState } from "react";
+import ServiceCard from "@/pages/service/ServiceCard"
 import HomeOneFinancialCard from "./HomeOneFinancialCard";
 
 
@@ -74,15 +75,27 @@ const HomeOneFinancialPlanning = ({ data=[], cardData= [
         </div>
         {/* section body */}
         <div className="spt60px grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {/* {data.map((data, index) => (
-            <HomeOneFinancialCard
+          {data.map((item, index) => {  
+              const {
+    image = null,
+    description = "Nothing",
+    title = "",
+    slug = "",
+  } = item;
+            return(
+
+              <ServiceCard
               key={index}
-              {...data}
-              handleHover={handleHover}
-              isHover={isHover}
-              index={index}
-            />
-          ))} */}
+      handleHover={handleHover}
+      isHover={isHover}
+      index={index}
+      image={image}
+      description={description}
+      title={title}
+      slug={slug}
+              />
+            )
+})}
         </div>
       </div>
     </section>

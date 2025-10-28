@@ -23,13 +23,15 @@ import WhyChooseUs from "@/pages/landing-two/HomeTwoServices";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
 import HowWeWork from "@/pages/how-it-works/HowItrWorksContent";
 import AboutLocal from "@/pages/local/AboutPage";
+import { serviceData } from "@/data/formdata";
 
 export const metadata: Metadata = {
   title: "Interstate removalists",
   description: "Providing the solution for relocations.",
 };
 
-export default function Home() {
+export default async function Home() {
+  const res = await serviceData()
   return (
     <div>
       <HomeThreeBanner />
@@ -55,7 +57,7 @@ export default function Home() {
         />
       <WhyChooseUs />
       <HowWeWork />
-      <HomeOneFinancialPlanning />
+       <HomeOneFinancialPlanning data={res.data.slice(0,4)} />
       <HomeOneTestimonials  />
       <HomeTwoFaq />
       <HomeOneInfo />
