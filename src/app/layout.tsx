@@ -15,6 +15,10 @@ import { NavbarData } from "@/data/formdata";
 export const metadata = {
   title: "Interstate Removalist",
   description: "",
+  icons:{
+    icon:"/favicon.png"
+  }
+  
 };
 
 export default async function RootLayout({

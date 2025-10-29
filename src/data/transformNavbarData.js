@@ -7,6 +7,9 @@ export function transformNavbarData(apiResponse) {
 
   const data = apiResponse.data;
   const navbar = [];
+ 
+ 
+  
 
   // Helper: Convert a single section to navbar format
   const mapSection = (section) => ({

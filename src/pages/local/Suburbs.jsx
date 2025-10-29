@@ -15,17 +15,23 @@ export default function Suburbs({suburbs = [],removalist="",city="",}) {
     "Moving from Brisbane to Rockhampton",
     "Moving from Brisbane to Sunshine Coast",
     "Moving from Brisbane to Toowoomba",
-    "Moving from Brisbane to Townsville",
+    "Moving from  Townsville",
   ];
   const list2 = [
-    "Moving from Bundaberg to Brisbane",
-    "Moving from Cairns to Brisbane",
-    "Moving from Gladstone to Brisbane",
-    "Moving from Mackay to Brisbane",
-    "Moving from Maryborough to Brisbane",
-    "Moving from Rockhampton to Brisbane",
-    "Moving from Toowoomba to Brisbane",
-    "Moving from Townsville to Brisbane",
+    " Bundaberg ",
+    " Cairns ",
+    " Gladstone ",
+    " Gladstone ",
+    " Gladstone ",
+    " Mackay ",
+    " Maryborough ",
+    " Rockhampton ",
+    " Toowoomba ",
+    " Townsville ",
+    " Townsville ",
+    " Townsville ",
+    " Townsville ",
+    " Townsville ",
   ];
   const cat = ["From Brisbane", "To Brisbane"];
   const [isSelected, setIsSelected] = useState(0);
@@ -70,15 +76,16 @@ const firstWord = city.split("-")[0];
         <div
           className="
             mx-auto 
-            mt-8 
+            mt-8
             grid 
             w-full
             max-w-6xl 
             place-items-center
             justify-center
-            gap-8 
+            gap-4 
             sm:grid-cols-2 
             lg:grid-cols-5
+            
         
           "
         >
@@ -87,23 +94,24 @@ const firstWord = city.split("-")[0];
             <span
               key={idx}
               className="
-                w-full 
+              
+                w-full
+                mx-auto
                 rounded-full
                 bg-white-1 
-                px-4 
+                px-12
                 py-2 
                 text-center 
                 text-sm 
                 tracking-wider 
                 text-black-2 
-                shadow-md
                 transition-colors
                 duration-200
                hover:bg-white-3/30
                flex 
                items-center 
                justify-center 
-               gap-2
+               gap-4
                group
               
               "

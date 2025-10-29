@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 const DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
 
+
   return (
     <div
       className={cn(" fixed  top-0 z-50 w-full theme-transition- bg-white-1 shadow-sm"
@@ -57,7 +58,7 @@ const DeskTopNavbarTwo = ({navbar}) => {
                     <li key={id}>
                       <Link
                         href={`${menuItemPath}`}
-                        className={`l-text font-extralight  theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-1  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
+                        className={`l-text font-extralight   theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-1  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
                           pathName === menuItemPath &&
                           "tracking-wide text-accent-3 before:absolute before:bg-accent-3"
                         }`}

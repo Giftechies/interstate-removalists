@@ -1,6 +1,4 @@
-"use client";
-import { useEffect, useState } from "react";
-import DeskTopNavbar from "./DeskTopNavbar";
+
 import MobileNavbar from "./MobileNavbar";
 import DeskTopNavbarTwo from "./DeskTopNavbarTwo";
 
