@@ -11,7 +11,7 @@ import AnimateHeight from "react-animate-height";
 // import { navbarData } from "../../../public/data/navbarData";
 
 
-const MobileNavbar = ({ navbarData }) => {
+const MobileNavbar = ({ navbarData,scrollHight='' }) => {
   const [dropDown, setDropDown] = useState("");
   const [sidebarToggle, setSidebarToggle] = useState(false);
   const handleDropDown = (id) => {
