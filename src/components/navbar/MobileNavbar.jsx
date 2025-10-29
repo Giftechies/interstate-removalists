@@ -8,16 +8,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import AnimateHeight from "react-animate-height";
-import { navbarData } from "../../../public/data/navbarData";
+// import { navbarData } from "../../../public/data/navbarData";
 
-type Props = {
-  scrollHight: number;
-};
 
-const MobileNavbar = ({ scrollHight }: Props) => {
+const MobileNavbar = ({ navbarData }) => {
   const [dropDown, setDropDown] = useState("");
   const [sidebarToggle, setSidebarToggle] = useState(false);
-  const handleDropDown = (id: string) => {
+  const handleDropDown = (id) => {
     if (dropDown === id) {
       setDropDown("");
     } else {

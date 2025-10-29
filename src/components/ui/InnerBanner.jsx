@@ -8,7 +8,7 @@ import SectionSubTitle from "../shared/SectionSubTitle";
 
 
 
-export default function Banner({imgpath,pagename,}){
+export default function Banner({imgpath="/img/banner-img/movers-inside-banner.jpg",pagename,}){
     return(
           <section
           style={{backgroundImage:`url(${imgpath})`}}

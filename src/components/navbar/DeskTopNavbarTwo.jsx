@@ -10,9 +10,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 // import { navbarData } from "../../../public/data/navbarData";
-import { navbar } from "../../../public/data/navbar";
+// import { navbar } from "../../../public/data/navbar";
 
-const DeskTopNavbarTwo = () => {
+const DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
 
   return (

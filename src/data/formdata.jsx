@@ -1,4 +1,5 @@
 
+import {transformNavbarData} from "./transformNavbarData"
 const base_url ="https://checkdemo.live/movers/public"
 
 export  async function fetchPropertyData(){
@@ -87,5 +88,17 @@ export async function serviceData(){
         
     } catch (error) {
         console.log(error);
+    }
+}
+export async function NavbarData(){
+    try {
+        const res = await fetch(`${base_url}/api/top-bar`,{method:"GET",cache:"no-cache"})
+        const data = await res.json()
+        return transformNavbarData(data)
+
+        
+    } catch (error) {
+        console.log(error);
+        
     }
 }
