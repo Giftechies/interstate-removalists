@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function LandingTwo() {
   return (
     <div >
-      <NavbarContainerTwo />
+      {/* <NavbarContainerTwo me /> */}
       <HomeThreeBanner />
       <HomeThreeAbout />
       <HomeThreeService />
