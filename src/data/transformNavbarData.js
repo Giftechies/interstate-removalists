@@ -3,15 +3,10 @@ import { v4 as uuidv4 } from "uuid";
 export function transformNavbarData(apiResponse) {
   if (!apiResponse?.data) return [];
 
-  
-
   const data = apiResponse.data;
   const navbar = [];
- 
- 
-  
 
-  // Helper: Convert a single section to navbar format
+  // --- Helper: map any parent section (like Local, Interstate, etc.)
   const mapSection = (section) => ({
     id: uuidv4(),
     menuTitle: section.title,
@@ -24,32 +19,34 @@ export function transformNavbarData(apiResponse) {
       })) || [],
   });
 
-  // Handle dynamic sections (interstate, local, services)
-  Object.values(data).forEach((section) => {
-    // Skip any malformed entries
+  // --- Handle top-level keys like 0, 1, 2
+  Object.entries(data).forEach(([key, section]) => {
+    // skip Services key, handled separately below
+    if (key === "Services") return;
     if (!section?.slug || !section?.title) return;
-    if (section.slug === "home-page") return; // skip home
+    if (section.slug === "home-page") return; // Skip home
 
-    // Handle 'Services' differently (since API is structured differently)
-    if (section.type === "service" || section.slug === "services") {
+    navbar.push(mapSection(section));
+  });
+
+  // --- Handle Services section
+  if (data.Services && typeof data.Services === "object") {
+    const services = Object.values(data.Services);
+    if (services.length > 0) {
       navbar.push({
         id: uuidv4(),
         menuTitle: "Services",
         path: "/services",
-        menuItems: [
-          {
-            id: uuidv4(),
-            title: section.title,
-            menuItemPath: `/services/${section.slug}`,
-          },
-        ],
+        menuItems: services.map((srv) => ({
+          id: uuidv4(),
+          title: srv.title,
+          menuItemPath: `/services/${srv.slug}`,
+        })),
       });
-    } else {
-      navbar.push(mapSection(section));
     }
-  });
+  }
 
-  // Add static routes
+  // --- Add static menu items
   navbar.push(
     { id: uuidv4(), menuTitle: "Blogs", path: "/blogs" },
     { id: uuidv4(), menuTitle: "Contact Us", path: "/contact" }

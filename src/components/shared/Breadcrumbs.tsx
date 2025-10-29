@@ -17,7 +17,7 @@ export default function Breadcrumb() {
   });
 
   return (
-    <nav aria-label="breadcrumb" className="flex  smt60p items-center space-x-1 h6  ">
+    <nav aria-label="breadcrumb" className="flex  mt-1 items-center space-x-1 h6  ">
       <Link href="/" className="text-white-1  hover:text-[var(--primary)]">
         Home
       </Link>
