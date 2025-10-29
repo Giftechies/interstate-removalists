@@ -165,7 +165,7 @@ const Inventory = ({ inventorydata = [] }) => {
 
           {/* 💰 Total Price Summary */}
           <div className="mt-4 text-right font-semibold border-t pt-3">
-            Total Price: ₹{totalInventoryPrice.toFixed(2)}
+            {/* Total Price: ₹{totalInventoryPrice.toFixed(2)} */}
           </div>
         </div>
       </div>

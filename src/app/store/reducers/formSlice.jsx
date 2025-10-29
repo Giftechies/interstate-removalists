@@ -22,6 +22,11 @@ const initialState = {
     range: "Exact date",
   },
   Inventory: [],
+  ElectricityFitting:'',
+  name:"",
+  email:"",
+  phone:"",
+  additional_note:""
 };
 
 const formSlice = createSlice({
@@ -73,6 +78,21 @@ const formSlice = createSlice({
     setInventory(state, action) {
       state.Inventory = action.payload;
     },
+    setElectricity(state,action){
+      state.ElectricityFitting = action.payload
+    },
+    setName(state,action){
+      state.name = action.payload
+    },
+    setEmail(state,action){
+      state.email = action.payload
+    },
+    setPhone(state,action){
+      state.phone = action.payload
+    },
+    setNote(state,action){
+      state.additional_note = action.payload
+    }
   },
 });
 
@@ -92,5 +112,10 @@ export const {
   setmovingPlaceDescription,
   setCalendar,
   setInventory,
+  setElectricity,
+  setPhone,
+  setEmail,
+  setName,
+  setNote,
 } = formSlice.actions;
 export default formSlice.reducer;

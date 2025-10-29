@@ -21,7 +21,7 @@ export default function stepper({ step, currentStep, setCurrentStep,className=''
             >
               <div className="step-label relative text-center">
                 <span onClick={()=>Moveto(index+1)}
-                  className={`step-number ${isActive ? "active" : "" || isCompleted ? "completed text-white-1 " : ""}  flex size-[40px]  items-center justify-center rounded-full bg-zinc-300  `}
+                  className={`step-number ${isActive ? "bg-prim text-white-1" : "" || isCompleted ? "completed text-white-1 " : ""}  flex size-[40px]  items-center justify-center rounded-full bg-zinc-300  `}
                 >
                   {isCompleted ? <i className="ri-check-line "></i> : index + 1}
                 </span>

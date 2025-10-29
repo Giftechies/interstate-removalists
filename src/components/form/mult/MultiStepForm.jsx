@@ -1,9 +1,6 @@
 "use client";
 import "./multi.css";
 import FormSidebar from "./FormSidebar"
-import Property from "../Property";
-import Address from "../Address";
-import AboutPlace from "../AboutPlace";
 import { useForm } from "react-hook-form";
 // import { button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -16,7 +13,6 @@ import {
   fetchVaritions,
   fetchinventory,
 } from "../../../data/formdata";
-
 import {
   setAddress,
   setDiscreetly,
@@ -33,10 +29,20 @@ import {
   setmovingPlaceDescription,
   setCalendar,
   setInventory,
+  setElectricity,
+   setPhone,
+    setEmail,
+    setName,
+    setNote,
 } from "../../../app/store/reducers/formSlice";
+import Property from "../Property";
+import Address from "../Address";
+import AboutPlace from "../AboutPlace";
 import PlaceDescription from "../PlaceDescripation";
 import Calendar from "../Calendar";
 import Inventory from "../Inventory";
+import Electricity from "../Electricity"
+import UserData from "../UserData"
 
 export default function MultiStepForm() {
   const formData = useSelector((state) => state.form);
@@ -74,6 +80,8 @@ export default function MultiStepForm() {
     movingPlaceDescription: 6,
     Calendar: 7,
     Inventory: 8,
+    Electricity: 9,
+    UserData: 10,
   };
   const step = [
     "Pickup Address",
@@ -84,9 +92,11 @@ export default function MultiStepForm() {
     "Moving Place Description",
     "Moving Date",
     "Inventory",
+    "Electricity",
+    "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.Calendar);
+  const [currentStep, setCurrentStep] = useState(page.Address);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -101,6 +111,8 @@ export default function MultiStepForm() {
     ),
     [page.Calendar]: (prop) => <Calendar {...prop} />,
     [page.Inventory]: Inventory,
+    [page.Electricity]: Electricity,
+    [page.UserData]: UserData,
   };
 
   const CurrentComponent = componentMap[currentStep];
