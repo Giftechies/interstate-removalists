@@ -22,8 +22,8 @@ const NavbarContainerThree = () => {
 
   return (
     <div className="relative ">
-      <DeskTopNavbarThree scrollHight={scrollHight} />
-      <MobileNavbar scrollHight={scrollHight} />
+      {/* <DeskTopNavbarThree scrollHight={scrollHight} />
+      <MobileNavbar scrollHight={scrollHight} /> */}
     </div>
   );
 };

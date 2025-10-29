@@ -20,8 +20,8 @@ const NavbarContainer = () => {
 
   return (
     <div className="relative ">
-      <DeskTopNavbar scrollHight={scrollHight} />
-      <MobileNavbar navbarData={[]} />
+      {/* <DeskTopNavbar scrollHight={scrollHight} />
+      <MobileNavbar navbarData={[]} /> */}
     </div>
   );
 };
