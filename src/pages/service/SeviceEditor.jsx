@@ -3,7 +3,7 @@ import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink";
 
 export default function ServiceEditor({ params, res = [], services = {} }) {
   return (
-    <section className="spy80px  ">
+    <section className="spy40px  ">
       <div className="container grid grid-cols-12 gap-6">
         <div className=" col-span-9 ">
           <div
@@ -15,7 +15,7 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
         {/* sidebar */}
         <div className="  relative col-span-3  ">
 
-          <div className="  h-fit w-full rounded-lg  bg-gray-100 p-6  shadow-lg ">
+          <div className="  h-fit w-full rounded-lg  bg-gray-100 p-6  ">
             <h3 className=" mb-4  h4 font-medium text-[var(--primary-hex)] ">
               Other Services
             </h3>
