@@ -96,7 +96,7 @@ export default function MultiStepForm() {
     "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.Address);
+  const [currentStep, setCurrentStep] = useState(page.UserData);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -143,6 +143,13 @@ export default function MultiStepForm() {
       dispatch(setdrop_variation_meter(data.movingPlaceDescription.street_distance));
     } else if (currentStep === page.Calendar) {
       console.log("Form Data in Redux:", formData);
+    }else if(currentStep === page.UserData){
+      dispatch(setName(data.name))
+      dispatch(setEmail(data.email))
+      dispatch(setPhone(data.ph_no))
+      const dd = {...data}
+      console.log(data);
+      
     }
 
     if (currentStep < totalSteps) {

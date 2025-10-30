@@ -83,7 +83,8 @@ const firstWord = city.split("-")[0];
             place-items-center
             justify-center
             gap-4 
-            sm:grid-cols-2 
+            grid-cols-2
+            md:grid-cols-3 
             lg:grid-cols-5
             
         
@@ -97,7 +98,6 @@ const firstWord = city.split("-")[0];
                 mx-auto
                 rounded-full
                 bg-white-1 
-                px-10
                 py-2 
                 text-center 
                 text-sm 

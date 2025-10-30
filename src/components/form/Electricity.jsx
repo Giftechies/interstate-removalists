@@ -34,7 +34,6 @@ export default function Electricity({getValues,setValue}){
     },[electricityBox])
 
     const handleElectricityData = (data)=>{
-         console.log(data);
          setElectricityBox(data)
          setValue("electricity",data)
          dispatch(setElectricity(data))
@@ -43,7 +42,7 @@ export default function Electricity({getValues,setValue}){
      <div>
               <p className=" h2 font-semibold text-center " >Connect electricity, gas or internet in your new home</p>
               <span className="text-black-3 h6 " >When would you like to be contacted to organise connection of your electricity, gas and/or internet at your new address?</span>
-              <div className=" w-full  flex gap-6 mt-8 " >
+              <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6 mt-8 " >
                 {data.map((item,id)=>{
                   const  IsActive = electricityBox === item.lable
                     return(
