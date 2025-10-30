@@ -90,16 +90,14 @@ const firstWord = city.split("-")[0];
           "
         >
           {suburbs?.map((item, idx) => (
-            <Link key={idx} href={`/${removalist}/${city}/${item.slug}`} >
-            <span
-              key={idx}
-              className="
-              
+            <Link key={idx} href={`/${removalist}/${city}/${item.slug}`} 
+            
+            className="
                 w-full
                 mx-auto
                 rounded-full
                 bg-white-1 
-                px-12
+                px-10
                 py-2 
                 text-center 
                 text-sm 
@@ -114,13 +112,14 @@ const firstWord = city.split("-")[0];
                gap-4
                group
               
-              "
-            >
+              " >
+         
+         
               {/* <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " > */}
                 <MapPin className=" size-4 text-[var(--primary-hex)] " />
                 {/* </span> */}
               {item.title}
-            </span>
+        
             
             </Link>
           ))}
