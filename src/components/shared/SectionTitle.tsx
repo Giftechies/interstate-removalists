@@ -8,7 +8,7 @@ const SectionTitle = ({
   className?: string;
 }) => {
   return (
-    <h3 className={cn("d4 capitalize font-semibold", className)}>
+    <h3 className={cn("h2 capitalize mt-3 ", className)}>
       {text}
     </h3>
   );

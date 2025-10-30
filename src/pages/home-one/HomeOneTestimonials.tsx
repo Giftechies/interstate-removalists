@@ -40,7 +40,7 @@ const HomeOneTestimonials = () => {
       <div className="container relative ">
       <div className="flex flex-col items-center" >
           <SectionSubTitle text="Testimonial " className=" mx-auto " />
-        <SectionTitle text="What people say" className="mt-3" />
+        <SectionTitle text="What people say"  />
       </div>
         <div className="spt60px  ">
           <Swiper

@@ -44,7 +44,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
           <SectionSubTitle text={title? title: "Who we are"} className="fade-top" />
           <SectionTitle
             text={subheading?subheading:"Our Mission & Vision"}
-            className="h1 pt-3"
+           
           />
           <SectionText
             className="fade-top text-left pt-5"

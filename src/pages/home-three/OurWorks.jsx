@@ -38,13 +38,13 @@ export default function OurWorks() {
       <div className="container  flex flex-col items-center justify-center ">
         <SectionSubTitle
         text="OUR WORK PROCESS"
-        className=" text-black-2"
+        className=" "
         />
         <SectionTitle
         text="Reliable moving services built around you"
-        className="  w-[70%] text-center mt-3 text-black capitalize "
+        className=" text-center mt-3 text-black capitalize "
         />
-      <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2   space-y-8 items-center justify-center">
+      <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2    items-center justify-center">
           {steps.map((item, index) => (
          <div key={index} className={` `}>
              <OurWorkCard
@@ -53,7 +53,7 @@ export default function OurWorks() {
             heading={item.heading}
             iconname={item.iconname}
             text={item.text}
-            className={`  ${index % 2 === 0? "":"lg:mt-15"} ` }
+            className={` ${index%2===0 ? "":"mt-20"} ` }
           />
          </div>
         ))}

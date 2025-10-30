@@ -10,7 +10,7 @@ const SectionSubTitle = ({
   return (
     <h5
       className={cn(
-        " title-animation font-medium capitalize text-[var(--primary-hex)]",
+        "subtitle title-animation font-medium capitalize text-[var(--primary-hex)]",
         className,
       )}
     >

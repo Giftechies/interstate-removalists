@@ -7,7 +7,7 @@ const SectionText = ({
   text: string;
   className?: string;
 }) => {
-  return <p className={cn("m-text text-black-3 text-center ", className)}>{text}</p>;
+  return <p className={cn("m-text text-black-3  ", className)}>{text}</p>;
 };
 
 export default SectionText;

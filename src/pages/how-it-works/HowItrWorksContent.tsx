@@ -75,9 +75,9 @@ const HowItrWorksContent = () => {
                   return (
                     <div
                       key={index}
-                      className=" spl60px lg:spl40px spb60px relative flex max-w-[500px]  gap-4 border-l-4    "
+                      className=" spl60px lg:spl40px spb60px relative flex max-w-[500px]  gap-4 border-l    "
                     >
-                      <div className=" h6 fade-top absolute -left-[23px] top-0  flex size-10 items-center   justify-center rounded-full border border-white-1 bg-sec font-semibold  text-white-1 ">
+                      <div className=" h6 fade-top absolute -left-[21px] top-0  flex size-10 items-center   justify-center rounded-full border border-white-1 bg-sec font-semibold  text-white-1 ">
                         {index + 1}
                       </div>
                       <step.Icon
@@ -85,10 +85,10 @@ const HowItrWorksContent = () => {
                         className="size6 shrink-0 sm:size-12"
                       />{" "}
                       <div>
-                        <h5 className="h4 font-light title-animation  ">
+                        <h5 className="h5 font-light  ">
                           {step.title}
                         </h5>
-                        <p className="s-text tracking-wider fade-top mt-2">
+                        <p className="s-text tracking-wider fade-top mt-1">
                           {step.description}
                         </p>
                       </div>
@@ -119,23 +119,10 @@ const HowItrWorksContent = () => {
               </div>
             </div>
 
-            {/* <BannerVideoButton handleDropdown={handleDropdown} /> */}
-            {/* <Image
-              src={moneyTransfer}
-              width={320}
-              height={257}
-              alt="Money Transfer"
-              className="absolute bottom-0 right-0 max-lg:w-40 max-sm:hidden"
-            /> */}
+          
           </div>
           <div className="  border col-start-1 col-end-13   flex max-md:flex-col xl:flex-col  items-center justify-between gap-8 text-center  xl:col-start-9">
-            {/* <div className="spt40px itec spb40px mx-auto flex h-[50%] w-full flex-col justify-center border-2 border-black-3/60   ">
-              <h5 className="h3 title-animation font-medium">10x Profits</h5>
-              <SectionText
-                text="Experience the power of exponential growth with our exclusive 10x Profits feature. Through our innovative investment strategies and market expertise."
-                className="mt-6"
-              />
-            </div> */}
+           
 
             {/* contact section */}
             <div className="flex till-card flex-col items-center rounded-xl shadow-md bg-prim w-full text-white-1 px-6 py-10 text-center ">

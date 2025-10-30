@@ -13,12 +13,9 @@ export default function OurWorkCard({iconname:path,step,text,heading,className})
             </div>
             <div className=" content mt-8 text-center ">
             
-                <SectionSubTitle
-                text={heading}
-                className="h5 font-medium text-black-2"
-                
-                />
-                <SectionText className="h5"
+              
+                <h4 className=" h5 font-medium text-black-2" >{heading}</h4>
+                <SectionText 
                 text={text}
                 />
             </div>

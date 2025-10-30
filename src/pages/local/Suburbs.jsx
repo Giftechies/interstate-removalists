@@ -1,5 +1,5 @@
 "use client";
-import { Check } from "lucide-react";
+import {  MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -42,7 +42,7 @@ const firstWord = city.split("-")[0];
   return (
     <section className="spy80px bg-accent-4">
       <main className="container">
-        <h3 className="h2 text-center font-semibold capitalize">
+        <h3 className="h2 text-center  capitalize">
         { ` Find Professional Removalists in ${firstWord}’s Suburbs`}
         </h3>
         {/* <p className="h6 mt-4 text-center text-black-3">
@@ -116,7 +116,9 @@ const firstWord = city.split("-")[0];
               
               "
             >
-              <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " ><Check className=" size-4 " /></span>
+              {/* <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " > */}
+                <MapPin className=" size-4 text-[var(--primary-hex)] " />
+                {/* </span> */}
               {item.title}
             </span>
             

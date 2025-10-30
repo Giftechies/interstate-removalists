@@ -19,7 +19,7 @@ const HomeTwoServices = () => {
       <div className="max-lg:spy120px container relative grid grid-cols-12 items-center">
         <div className="col-start-1 col-end-13 lg:col-end-6">
           <SectionSubTitle text="Why Choose Us" className="text-white-1 capitalize " />
-          <SectionTitle text="Why Plan Your Move With Interstate Removalists " className="h2 mt-3  capitalize " />
+          <SectionTitle text="Why Plan Your Move With Interstate Removalists " className=" capitalize " />
           <SectionText
             text="You can find capable movers here for every need — from residential and commercial moves to office relocations, warehouse shifts, and furniture transport, including piano and dining table removals. Here’s why you should choose us:"
             className="fade-top mt-5 text-white-2"

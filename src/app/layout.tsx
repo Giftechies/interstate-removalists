@@ -1,6 +1,6 @@
 import "@/../node_modules/react-modal-video/scss/modal-video.scss";
 import "@/styles/globals.css";
-import { kanit } from "@/utils/fonts";
+import { pop } from "@/utils/fonts";
 
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
@@ -11,6 +11,9 @@ import NavbarContainerTwo from "@/components/navbar/NavbarContainerTwo";
 import Footer from "@/components/footer/Footer";
 import ClientWrapper from "@/components/shared/ClientWrapper"; 
 import { NavbarData } from "@/data/formdata";
+
+
+
 
 export const metadata = {
   title: "Interstate Removalist",
@@ -45,7 +48,7 @@ const navBarData = await NavbarData()
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={kanit.className}>
+      <body className={pop.className}>
         <NavbarContainerTwo menu={navBarData} />
         <ClientWrapper>
           <main className="relative">{children}</main>

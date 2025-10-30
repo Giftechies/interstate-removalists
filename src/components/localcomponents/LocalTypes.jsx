@@ -28,7 +28,7 @@ const LocalType = ({localCard, path, title,subtitle,text,buttontext,buttonlink})
           />
           <SectionText className="  mt-2 " text={`${text}`}/>
         </div>
-      <div className=" py-20 overflow-hidden " >
+      <div className=" pt-20 overflow-hidden " >
 
           <Swiper 
          spaceBetween={24}
@@ -52,7 +52,7 @@ const LocalType = ({localCard, path, title,subtitle,text,buttontext,buttonlink})
           }}
            >
 
-           { localCard.map((item,id)=>{
+           { localCard?.map((item,id)=>{
              return(
               <SwiperSlide key={id}>
               <Card  {...item} path={path} />
