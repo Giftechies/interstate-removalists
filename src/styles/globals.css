@@ -124,12 +124,11 @@ body {
 
 @layer utilities {
  
-  .editor p:not(:first-child) {
-    @apply  mb-4;
-  }
 
-  .editor p:last-child {
-    @apply mb-0;
+
+
+  .Editorspy80px {
+    @apply py-8 md:py-10 xl:py-16 xxl:pt-[2rem] xxl:pb-[4rem] ;
   }
 
   .editor h1 {
@@ -148,7 +147,7 @@ body {
     @apply h5;
   }
   .editor p {
-    @apply  !tracking-wider ;
+    @apply h6  text-black-1 !tracking-wider max-sm:text-justify ;
   }
   .editor ul {
     @apply list-disc list-inside mb-4 pl-4;
@@ -157,7 +156,7 @@ body {
     @apply list-decimal list-inside mb-4 pl-4;
   }
   .editor li {
-    @apply mb-2 last:mb-0;
+    @apply mb-2;
   }
 
   /* Tables */
