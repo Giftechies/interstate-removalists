@@ -149,6 +149,12 @@ body {
   .editor p {
     @apply h6  text-black-1 !tracking-wider max-sm:text-justify ;
   }
+  .service-editor p {
+    @apply h6  text-black-1 !tracking-wider !text-justify ;
+  }
+  .service-editor li {
+    @apply !text-justify  text-black-1 mb-2;
+  }
   .editor ul {
     @apply list-disc list-inside mb-4  pl-4;
   }
@@ -156,7 +162,7 @@ body {
     @apply list-decimal list-inside mb-4 pl-4;
   }
   .editor li {
-    @apply  text-black-1 mb-2;
+    @apply !text-justify  text-black-1 mb-2 max-sm:text-justify ;
   }
 
   /* Tables */
@@ -170,6 +176,7 @@ body {
   .editor th {
     @apply bg-gray-100 font-semibold;
   }
+
 
   .container {
     @apply mx-auto max-w-[540px] max-sm:px-4 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px];

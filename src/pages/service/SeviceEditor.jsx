@@ -7,7 +7,7 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
       <div className="container grid grid-cols-12 gap-6">
         <div className=" col-span-9 ">
           <div
-            className="editor "
+            className="editor service-editor "
             dangerouslySetInnerHTML={{ __html: services?.description }}
           />
           {/* <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >Get Instant Quote</HomeThreeBannerLink> */}
