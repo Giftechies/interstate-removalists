@@ -105,7 +105,7 @@ const MobileNavbar = ({ navbarData, }) => {
           </div>
           <div className="min-h-screen rounded-xl bg-white-1 p-2 pt-10">
             <ul data-lenis-prevent className="flex flex-col">
-              {navbarData.map(({ id, menuTitle, path, menuItems }) => {
+              {navbarData?.map(({ id, menuTitle, path, menuItems }) => {
                 let isActive = menuItems?.some(
                   (path) => pathName == path.menuItemPath,
                 );

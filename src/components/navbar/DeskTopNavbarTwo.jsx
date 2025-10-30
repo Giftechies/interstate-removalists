@@ -32,7 +32,7 @@ const DeskTopNavbarTwo = ({navbar}) => {
         </div>
 
         <ul className="flex items-center justify-between gap-10 ">
-          {navbar.map(({ id, menuTitle, path, menuItems }) => {
+          {navbar?.map(({ id, menuTitle, path, menuItems }) => {
             let isActive = menuItems?.some(
               (path) => pathName == path.menuItemPath,
             );
