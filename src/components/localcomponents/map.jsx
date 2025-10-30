@@ -41,10 +41,10 @@ export default function MapComponent( {markers=[
     <div className=" w-full place-items-center mb-10 " >
   
       <p  className="h2    text-center capitalize ">Your Move, Matched With the Right Team</p>
-      <SectionText className="  text-center mt-2 "  text="From one end of Australia to the other, you can book your move through Interstate Removalists for dependable, trustworthy, and properly verified movers. You’ll get genuine care and reliable service from the first box packed to the last one unpacked. Whether you’re moving within your suburb, across the city, or interstate, just add your details and choose a mover to make relocation simple and stress-free." />
+      <SectionText className="  text-center mt-2 "  text="From one end of Australia to the other, you can book your move through Interstate Removalists for dependable, trustworthy, and properly verified movers. You’ll get genuine care and reliable service from the first box packed to the last one unpacked." />
       
     </div>
-      <div className="  lg:w-[90%]  h-[80vh]  mx-auto " >
+      <div className="  lg:w-[90%]  h-[60vh]  mx-auto " >
       <MapContainer
         center={[-33.8688, 151.2093]} // Sydney by default
         zoom={12}

@@ -16,6 +16,7 @@ export default function OurWorkCard({iconname:path,step,text,heading,className})
               
                 <h4 className=" h5 font-medium text-black-2" >{heading}</h4>
                 <SectionText 
+                className=""
                 text={text}
                 />
             </div>

@@ -26,7 +26,7 @@ const LocalType = ({localCard, path, title,subtitle,text,buttontext,buttonlink})
             
             className="mt-3 text-center "
           />
-          <SectionText className="  mt-2 " text={`${text}`}/>
+          <SectionText className=" text-center mt-2 " text={`${text}`}/>
         </div>
       <div className=" pt-20 overflow-hidden " >
 

@@ -15,8 +15,8 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
         {/* sidebar */}
         <div className="  relative col-span-3  ">
 
-          <div className="  h-fit w-full rounded-lg border bg-gray-100 p-6 py-2 shadow-lg ">
-            <h3 className=" mb-4  h3 font-semibold text-[var(--primary-hex)] ">
+          <div className="  h-fit w-full rounded-lg  bg-gray-100 p-6  shadow-lg ">
+            <h3 className=" mb-4  h4 font-medium text-[var(--primary-hex)] ">
               Other Services
             </h3>
             <div
