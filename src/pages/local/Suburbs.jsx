@@ -1,9 +1,9 @@
 "use client";
-import {  MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Suburbs({suburbs = [],removalist="",city="",}) {
+export default function Suburbs({ suburbs = [], removalist = "", city = "" }) {
   const list = [
     "Moving from Brisbane to Bundaberg",
     "Moving from Brisbane to Cairns",
@@ -22,28 +22,26 @@ export default function Suburbs({suburbs = [],removalist="",city="",}) {
     " Cairns ",
     " Gladstone ",
     " Gladstone ",
+     "Moving from Brisbane to Rockhampton",
+    "Moving from Brisbane to Sunshine Coast",
+     " Gladstone ",
     " Gladstone ",
-    " Mackay ",
-    " Maryborough ",
-    " Rockhampton ",
-    " Toowoomba ",
-    " Townsville ",
-    " Townsville ",
-    " Townsville ",
-    " Townsville ",
-    " Townsville ",
+    "Moving from Brisbane to Toowoomba",
+    "Moving from  Townsville",
+    
+
   ];
   const cat = ["From Brisbane", "To Brisbane"];
   const [isSelected, setIsSelected] = useState(0);
 
   // let selectedList = isSelected === 0 ? list : list2;
-const firstWord = city.split("-")[0];
+  const firstWord = city.split("-")[0];
 
   return (
     <section className="spy80px bg-accent-4">
       <main className="container">
         <h3 className="h2 text-center  capitalize">
-        { ` Find Professional Removalists in ${firstWord}’s Suburbs`}
+          {` Find Professional Removalists in ${firstWord}’s Suburbs`}
         </h3>
         {/* <p className="h6 mt-4 text-center text-black-3">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore,
@@ -77,49 +75,44 @@ const firstWord = city.split("-")[0];
           className="
             mx-auto 
             mt-8
-            grid 
-            w-full
-            max-w-6xl 
-            place-items-center
+        flex 
+        w-full
+            flex-wrap 
+            gap-4
             justify-center
-            gap-4 
-            grid-cols-2
-            md:grid-cols-3 
-            lg:grid-cols-5
-            
-        
           "
         >
           {suburbs?.map((item, idx) => (
-            <Link key={idx} href={`/${removalist}/${city}/${item.slug}`} 
-            
-            className="
-                w-full
-                mx-auto
-                rounded-full
+            <Link
+              key={idx}
+              href={`/${removalist}/${city}/${item.slug}`}
+              className="
+                group
+                
+                flex
+                w-fit 
+                items-center 
+                justify-center
+                gap-4 
+                rounded-full 
                 bg-white-1 
-                py-2 
-                text-center 
-                text-sm 
-                tracking-wider 
-                text-black-2 
-                transition-colors
-                duration-200
+                px-6 
+                py-2
+                text-center
+               text-sm
+               tracking-wider 
+               text-black-2 
+               transition-colors 
+               duration-200
                hover:bg-white-3/30
-               flex 
-               items-center 
-               justify-center 
-               gap-4
-               group
               
-              " >
-         
-         
+              "
+            >
               {/* <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " > */}
-                <MapPin className=" size-4 text-[var(--primary-hex)] " />
-                {/* </span> */}
+              <MapPin className=" size-4 text-[var(--primary-hex)] " />
+              {/* </span> */}
               {item.title}
-        
+         
             
             </Link>
           ))}

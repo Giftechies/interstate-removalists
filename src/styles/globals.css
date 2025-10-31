@@ -178,7 +178,7 @@ body {
   }
 
   .formInput{
-    @apply w-full border-[var(--primary-hex)] rounded-md border px-3 py-2
+    @apply w-full border-[var(--primary-hex)] rounded-md border px-3 py-2 placeholder:m-text  mt-6  bg-white-4  placeholder:text-black-3
   }
 
   .container {

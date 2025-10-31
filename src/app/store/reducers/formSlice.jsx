@@ -18,7 +18,7 @@ const initialState = {
   drop_place_type: [],
   calendar: {
     mode: "On",
-    dates: [],
+    dates: '',
     range: "Exact date",
   },
   Inventory: [],
@@ -26,7 +26,8 @@ const initialState = {
   name:"",
   email:"",
   phone:"",
-  additional_note:""
+  additional_note:"",
+  additional_msg:""
 };
 
 const formSlice = createSlice({
@@ -92,7 +93,10 @@ const formSlice = createSlice({
     },
     setNote(state,action){
       state.additional_note = action.payload
-    }
+    },
+    setMsg(state,action){
+      state.additional_msg = action.payload
+    },
   },
 });
 
@@ -117,5 +121,6 @@ export const {
   setEmail,
   setName,
   setNote,
+  setMsg
 } = formSlice.actions;
 export default formSlice.reducer;

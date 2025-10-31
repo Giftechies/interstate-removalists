@@ -34,6 +34,7 @@ import {
     setEmail,
     setName,
     setNote,
+    setMsg
 } from "../../../app/store/reducers/formSlice";
 import Property from "../Property";
 import Address from "../Address";
@@ -96,7 +97,7 @@ export default function MultiStepForm() {
     "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.UserData);
+  const [currentStep, setCurrentStep] = useState(page.Address);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -147,6 +148,8 @@ export default function MultiStepForm() {
       dispatch(setName(data.name))
       dispatch(setEmail(data.email))
       dispatch(setPhone(data.ph_no))
+      dispatch(setMsg(data.adidition_message|| ''))
+      dispatch(setNote(data.additional_note  || ""))
       const dd = {...data}
       console.log(data);
       

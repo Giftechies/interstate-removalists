@@ -25,7 +25,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
         <input
           {...register(Feildname, { required: "Pickup address is required" })}
           defaultValue={currentAddress?.Feildname || ""}
-          className="placeholder:m-text  mt-6 w-[70%] bg-white-4 px-5 py-3 placeholder:text-black-3"
+          className="formInput"
           placeholder="Pickup address"
         />
         <input type="" />
