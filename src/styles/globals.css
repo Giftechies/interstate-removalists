@@ -162,7 +162,7 @@ body {
     @apply list-decimal list-inside mb-4 pl-4;
   }
   .editor li {
-    @apply !text-justify  text-black-1 mb-2 max-sm:text-justify ;
+    @apply !text-justify  !tracking-wider  text-black-1 mb-2 max-sm:text-justify ;
   }
 
   /* Tables */

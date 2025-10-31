@@ -33,7 +33,7 @@ export default async  function city( {params} ){
     return(
       <>
       <Banner 
-      pagename={data.title}
+      pagename={data?.title}
       
       text={'Move anywhere in Sydney with our reliable removalists, ensuring safety, efficiency, and complete customer satisfaction.'}
       />
@@ -49,12 +49,12 @@ export default async  function city( {params} ){
         }
   
       /> */}
-      <EditorData content={data.description} />
+      <EditorData content={data?.description} />
       {/* <Separater /> */}
-      <Suburbs suburbs={data.children} removalist={removalist} city={city} />
-   { data.show_map &&  <Map markers={markers}  />}
-      { data.show_process && <OurWorks/>}
-      { data.show_faq && <HomeTwoFaq/>}
+      <Suburbs suburbs={data?.children} removalist={removalist} city={city} />
+   { data?.show_map &&  <Map markers={markers}  />}
+      { data?.show_process && <OurWorks/>}
+      { data?.show_faq && <HomeTwoFaq/>}
       
       <Animations/>
       </>

@@ -43,12 +43,12 @@ export default async function localRemovalists({params}) {
     <>
       <Banner
         imgpath={"/img/banner-img/local.webp"}
-        pagename={data.title}
+        pagename={data?.title}
         text=" Banking is the practice of accepting and safeguarding money owned
               and then to earn a profit."
       />
      
-      <EditorData content={data.description} />
+      <EditorData content={data?.description} />
       <LocalType
         localCard={localCard}
         path={removalist}
@@ -58,11 +58,11 @@ export default async function localRemovalists({params}) {
         buttontext="Get start Moving" 
         buttonlink="/pick-details"
       />
-      { data.show_map && <Map  markers={markers} />}
+      { data?.show_map && <Map  markers={markers} />}
       <Separator title={SeparateTitle}content={SeparateText} />
-     {data.show_process && <OurWorks/>}
+     {data?.show_process && <OurWorks/>}
       {/* <HowItWorksPage/> */}
-     {data.show_faq && <HomeTwoFaq />}
+     {data?.show_faq && <HomeTwoFaq />}
       <Animations />
     </>
   );
