@@ -55,7 +55,7 @@ const HomeOneFinancialCard = ({
           alt={title || "Service Image"}
           width={400}
           height={250}
-          className="object-contain object-center size-full"
+          className="object-cover  object-center w-full h-full"
         />
       </div></Link>
 
