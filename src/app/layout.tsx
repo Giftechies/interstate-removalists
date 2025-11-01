@@ -49,8 +49,8 @@ const navBarData = await NavbarData()
         />
       </head>
       <body className={pop.className}>
-        <NavbarContainerTwo menu={navBarData} />
         <ClientWrapper>
+        <NavbarContainerTwo menu={navBarData} />
           <main className="relative">{children}</main>
           <Footer />
         </ClientWrapper>

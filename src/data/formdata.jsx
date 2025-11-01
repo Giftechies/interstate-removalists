@@ -102,3 +102,24 @@ export async function NavbarData(){
         
     }
 }
+export async function BusinessRegister(data) {
+  try {
+    const res = await fetch(`${base_url}/api/register-business`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error(`Server responded with ${res.status}`);
+    }
+
+    const result = await res.json();
+    return result;
+  } catch (error) {
+    console.error("Error registering business:", error);
+    throw error;
+  }
+}

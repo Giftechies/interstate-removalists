@@ -35,7 +35,7 @@ const HomeOneFinancialCard = ({
   // ✅ Strip HTML + truncate
   const cleanText = stripHtml(description);
   const shortDescription =
-    cleanText.length > 180 ? cleanText.slice(0, 180) + "..." : cleanText;
+    cleanText.length > 180 ? cleanText.slice(0, 120) + "..." : cleanText;
 
   return (
     <div
@@ -48,8 +48,8 @@ const HomeOneFinancialCard = ({
       )}
     >
       {/* ✅ Image with safe fallback */}
-    {/* <Link  href={`/services/${slug}`} >
-      <div className="theme-transition-3 size-20 rounded-full overflow-hidden group-hover:bg-white-1 bg-gray-300">
+    <Link  href={`/services/${slug}`} >
+      <div className="theme-transition-3 w-full h-[6rem] rounded-md overflow-hidden group-hover:bg-white-1 bg-gray-300">
         <Image
           src={validImage}
           alt={title || "Service Image"}
@@ -57,7 +57,7 @@ const HomeOneFinancialCard = ({
           height={250}
           className="object-contain object-center size-full"
         />
-      </div></Link> */}
+      </div></Link>
 
       {/* ✅ Title */}
       <Link

@@ -44,8 +44,6 @@ export default async function localRemovalists({params}) {
       <Banner
         imgpath={"/img/banner-img/local.webp"}
         pagename={data?.title}
-        text=" Banking is the practice of accepting and safeguarding money owned
-              and then to earn a profit."
       />
      
       <EditorData content={data?.description} />

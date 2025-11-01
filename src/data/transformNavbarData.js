@@ -48,8 +48,8 @@ export function transformNavbarData(apiResponse) {
 
   // --- Add static menu items
   navbar.push(
-    { id: uuidv4(), menuTitle: "Blogs", path: "/blogs" },
-    { id: uuidv4(), menuTitle: "Contact Us", path: "/contact" }
+    { id: uuidv4(), menuTitle: "Contact", path: "/contact" },
+    { id: uuidv4(), menuTitle: "Registration", path: "/register-moving-company" },
   );
 
   return navbar;
