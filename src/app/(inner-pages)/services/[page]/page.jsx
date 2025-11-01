@@ -12,7 +12,7 @@ export default async function page({params}) {
     
     return(
         <>
-            <InnerBanner  pagename={services.title} imgpath={'https://plus.unsplash.com/premium_photo-1661407783160-b6f950068f2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdmVycyUyMHNlcnZpY2VzfGVufDB8fDB8fHww'}  />
+            <InnerBanner  pagename={services.title} imgpath={services.image}  />
             <ServiceEditor params={params} res={res} services={services} />
         </>
     )
