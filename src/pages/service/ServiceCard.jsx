@@ -41,7 +41,7 @@ const HomeOneFinancialCard = ({
     <div
       onMouseEnter={() => handleHover(index)}
       className={cn(
-        "sp32px till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-sec",
+        "p-8 till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-sec  ",
         {
           "shadow-[0px_4px_53px_0px_rgba(103,103,103,0.25)]": isHover === index,
         },
@@ -72,8 +72,9 @@ const HomeOneFinancialCard = ({
         className="theme-transition-3 my-3 text-justify group-hover:text-white-1"
         text={shortDescription}
       />
-      <hr  />
-      <Link    href={`/services/${slug}`} className=" flex items-center gap-2 group-hover:text-white-1  " >Read More  <MoveRight className="mt-1" /> </Link>
+      
+      <div className=" bg-black-3/50 group-hover:bg-white-1 h-[.5px] w-full "></div>
+      <Link    href={`/services/${slug}`} className=" flex items-center gap-2 group-hover:text-white-1 mt-[12px] " >Read More  <MoveRight className="mt-1" /> </Link>
     </div>
   );
 };

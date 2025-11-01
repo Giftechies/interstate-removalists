@@ -12,7 +12,8 @@ import { usePathname } from "next/navigation";
 // import { navbarData } from "../../../public/data/navbarData";
 // import { navbar } from "../../../public/data/navbar";
 
-const DeskTopNavbarTwo = ({navbar}) => {
+const 
+DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
 
 
@@ -52,13 +53,13 @@ const DeskTopNavbarTwo = ({navbar}) => {
 
                 <ul
                   data-lenis-prevent
-                  className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30 mt-1 flex max-h-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[400px] group-hover:overflow-auto group-hover:opacity-100"
+                  className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30 mt-1 flex max-h-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[450px] group-hover:overflow-auto group-hover:opacity-100  "
                 >
                   {menuItems.map(({ id, title, menuItemPath }) => (
                     <li key={id}>
                       <Link
                         href={`${menuItemPath}`}
-                        className={`l-text font-extralight   theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-1  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
+                        className={`l-text font-extralight   theme-transition-3 relative block w-full border-b border-accent-3/20 bg-black-4 px-6 py-[0.7rem]  before:theme-transition-3 hover:before:theme-transition-3 before:left-2  before:top-1/2 before:size-2 before:-translate-y-1/2 before:rounded-full hover:tracking-wide  hover:text-accent-3 hover:before:absolute hover:before:bg-accent-3 ${
                           pathName === menuItemPath &&
                           "tracking-wide text-accent-3 before:absolute before:bg-accent-3"
                         }`}

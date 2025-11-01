@@ -53,7 +53,7 @@ export default function OurWorks() {
             heading={item.heading}
             iconname={item.iconname}
             text={item.text}
-            className={` ${index%2===0 ? "":"mt-20"} ` }
+            className={` mt-12` }
           />
          </div>
         ))}

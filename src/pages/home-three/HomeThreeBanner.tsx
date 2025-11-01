@@ -15,7 +15,7 @@ const HomeThreeBanner = () => {
               text="Interstate Removalists"
               className="capitalize h6  text-white-1"
             />
-            <h1 className="h1 fade-top   mt-3 font-medium   ">
+            <h1 className="h1 fade-top   mt-3 font-medium capitalize  ">
            Good movers aren’t hard to find anymore.
             </h1>
             <p className=" mt-4  tracking-wider " >Interstate Removalists bring trusted movers under one roof — so your next move is simple, sorted, and right on time.</p>

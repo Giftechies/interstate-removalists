@@ -135,7 +135,7 @@ body {
     @apply h1;
   }
   .editor h2 {
-    @apply h2;
+    @apply   text-[20px] leading-[120%] sm:text-[24px] md:text-[28px] 
   }
   .editor h3 {
     @apply h3;
@@ -147,13 +147,13 @@ body {
     @apply h5;
   }
   .editor p {
-    @apply h6  text-black-1 !tracking-wider max-sm:text-justify ;
+    @apply text-[14px]  text-black-1 !tracking-wider max-sm:text-justify ;
   }
   .service-editor p {
-    @apply h6  text-black-1 !tracking-wider !text-justify ;
+    @apply text-[14px] text-black-1 !tracking-wider !text-justify ;
   }
   .service-editor li {
-    @apply !text-justify  text-black-1 mb-2;
+    @apply text-[14px] !text-justify  text-black-1 mb-2;
   }
   .editor ul {
     @apply list-disc list-inside mb-4  pl-4;
@@ -162,7 +162,7 @@ body {
     @apply list-decimal list-inside mb-4 pl-4;
   }
   .editor li {
-    @apply !text-justify  !tracking-wider  text-black-1 mb-2 max-sm:text-justify ;
+    @apply text-[14px] !text-justify  !tracking-wider  text-black-1 mb-2 max-sm:text-justify ;
   }
 
   /* Tables */
@@ -227,7 +227,7 @@ body {
     @apply  text-[14px]  xl:text-[16px] ;
   }
   .h6 {
-    @apply text-[14px] leading-[130%] tracking-widest xxl:text-[16px];
+    @apply text-[14px] leading-[130%] tracking-wider xxl:text-[16px];
   }
   .lead-text {
     @apply text-[16px] leading-[150%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];
@@ -236,7 +236,7 @@ body {
     @apply text-[16px] leading-[150%] lg:text-[18px] xxl:text-[20px];
   }
   .l-text {
-    @apply text-[15px] leading-[160%] tracking-wider capitalize xxl:text-[16px];
+    @apply text-[12px] leading-[200%] tracking-widest capitalize xxl:text-[14px];
   }
   .m-text {
     @apply text-[16px] leading-[150%];

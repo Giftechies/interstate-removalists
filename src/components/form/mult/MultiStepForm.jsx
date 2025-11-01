@@ -97,7 +97,7 @@ export default function MultiStepForm() {
     "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.Address);
+  const [currentStep, setCurrentStep] = useState(page.Inventory);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -173,8 +173,8 @@ export default function MultiStepForm() {
   return (
     <>
       <div className=" w-full  p-4 lg:p-20 ">
-        <div className="container mt-20  grid grid-cols-1  gap-10 lg:grid-cols-[4fr_2fr]">
-          <main className="multi-step-form innershadow relative  rounded-md p-6 ">
+        <div className="container mt-20  grid grid-cols-1  gap-10 md:grid-cols-[600px_1fr] lg:grid-cols-[900px_400px]">
+          <main className="multi-step-form innershadow relative  rounded-md p-6  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}

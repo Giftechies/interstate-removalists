@@ -7,15 +7,16 @@ import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import { useState } from "react";
 import ServiceCard from "@/pages/service/ServiceCard";
 import SectionTitle from "@/components/shared/SectionTitle";
+import { cn } from "@/lib/utils";
 
-const HomeOneFinancialPlanning = ({ data = [] }) => {
+const HomeOneFinancialPlanning = ({ data = [],className='spt120px ' }) => {
   const [isHover, setIsHover] = useState(0);
   const handleHover = (index: number) => {
     setIsHover(index);
   };
 
   return (
-    <section className="spt120px spb120px  fade-wrapper relative overflow-hidden bg-zinc-100">
+    <section className={cn("spb120px  fade-wrapper relative overflow-hidden bg-zinc-100",className)}>
       <div className="container">
         {/* section header */}
         <div className=" grid grid-cols-1 items-center justify-between xl:grid-cols-12  ">

@@ -12,7 +12,7 @@ export default function ClientWrapper({
 }) {
   return (
     <Provider store={store}>
-      <SmoothScroll />
+      {/* <SmoothScroll /> */}
       {children}
       <ScrollProgressButton />
     </Provider>

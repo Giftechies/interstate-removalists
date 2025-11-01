@@ -146,6 +146,7 @@ const Inventory = ({ inventorydata = [] }) => {
 
                 <div className="flex items-center gap-2">
                   <button
+                   type="button"
                     onClick={() => updateQuantity(item.id, -1)}
                     className="rounded border px-2 py-1 hover:bg-gray-200"
                   >
@@ -153,6 +154,7 @@ const Inventory = ({ inventorydata = [] }) => {
                   </button>
                   <span>{item.quantity}</span>
                   <button
+                  type="button"
                     onClick={() => updateQuantity(item.id, 1)}
                     className="rounded border px-2 py-1 hover:bg-gray-200"
                   >

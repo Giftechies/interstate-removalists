@@ -28,8 +28,8 @@ export default async function Services() {
     <div>
       <InnerBanner pagename="Our Services" imgpath={'https://plus.unsplash.com/premium_photo-1661407783160-b6f950068f2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdmVycyUyMHNlcnZpY2VzfGVufDB8fDB8fHww'}  />
  {/* <HomeOneService /> */}
- <ServiceAbout/>
- <HomeOneFinancialPlanning data={res.data} />
+ {/* <ServiceAbout/> */}
+ <HomeOneFinancialPlanning data={res.data} className=" pt-10" />
 
       {/* <OurServices/> */}
     <Map/>
