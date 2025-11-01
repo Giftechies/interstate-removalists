@@ -130,7 +130,6 @@ const HowItrWorksContent = () => {
                 <IconPhoneCall className="size-8" />
 
               </div>
-              <h6 className="h4 mt-5 font-medium  "></h6>Contact us for a free quote
               <p className="l-text mt- mt-5 ">
                 Do you want to move hessle free? contact us
               </p>
@@ -138,9 +137,11 @@ const HowItrWorksContent = () => {
             </div>
 
             {/* contact section end */}
-            {/* <div className="10x Profits bg-black-3/60 max-md:h-0.5 max-md:w-full md:h-full md:w-0.5 xl:h-0.5 xl:w-full"></div> */}
+      
             <div className=" bg-prim h-full w-full object-cover object-right ">
-              <img
+              <Image
+              width={250}
+              height={250}
                 src="https://plus.unsplash.com/premium_photo-1661409351559-4172ea985076?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdmVyc3xlbnwwfHwwfHx8MA%3D%3D"
                 className=" size-full object-cover object-right "
                 alt=""
@@ -149,7 +150,7 @@ const HowItrWorksContent = () => {
           </div>
         </div>
       </div>
-      {/* <VideoModal isOpen={isOpen} setOpen={setOpen} videoId="4DCTTrGjGU4" /> */}
+     
     </section>
   );
 };

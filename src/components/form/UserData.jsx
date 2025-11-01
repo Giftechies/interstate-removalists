@@ -105,7 +105,7 @@ setValue("additional_note",data)
             {additionalNote.map((item,idx)=>{
               const IsActive = currentNote ==item.label
               return (
-                   <span className={`px-4 py-2  cursor-pointer w-fit   rounded-full s-text text-center ${IsActive?"bg-gray-400 text-white-1 ":"bg-gray-200"}  `} onClick={()=>notehandler(item.label)} >
+                   <span key={idx} className={`px-4 py-2  cursor-pointer w-fit   rounded-full s-text text-center ${IsActive?"bg-gray-400 text-white-1 ":"bg-gray-200"}  `} onClick={()=>notehandler(item.label)} >
 
                     {item.label}
                 </span>
