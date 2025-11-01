@@ -97,7 +97,7 @@ export default function MultiStepForm() {
     "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.Inventory);
+  const [currentStep, setCurrentStep] = useState(page.Address);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -129,7 +129,6 @@ export default function MultiStepForm() {
     } else if (currentStep === page.AboutPlace) {
       dispatch(setAboutPlace(data.bedrooms));
     } else if (currentStep === page.PlaceDescription) {
-      console.log(data.placeDescription, "dfsdf>>>>>>>>>>");
 
       dispatch(setplaceDescription(data.placeDescription.place));
       dispatch(setpick_flights(data.placeDescription.stairs));
@@ -185,7 +184,7 @@ export default function MultiStepForm() {
             </header>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="space-y-6 lg:mt-20 "
+              className="space-y-6 lg:mt-[6rem]  "
             >
               <CurrentComponent
                 register={register}

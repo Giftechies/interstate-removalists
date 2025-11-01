@@ -30,7 +30,7 @@ setValue("additional_note",data)
 
   return (
     <div className="w-full py-6 ">
-      <h2 className=" h2 font-medium  ">Discover your 5+ instant prices</h2>
+      <h2 className=" formHeading  ">Discover your 5+ instant prices</h2>
       <span className=" h6 text-black-3 ">
         We do not share your personal information with removalists until you
         book.

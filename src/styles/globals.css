@@ -126,7 +126,9 @@ body {
  
 
 
-
+.formHeading{
+  @apply text-[16px] leading-[120%] xs:text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[30px] mb-2;
+}
   .Editorspy80px {
     @apply py-8 md:py-10 xl:py-16 xxl:pt-[2rem] xxl:pb-[4rem] ;
   }
@@ -178,7 +180,7 @@ body {
   }
 
   .formInput{
-    @apply w-full border-[var(--primary-hex)] rounded-md border px-3 py-2 placeholder:m-text  mt-6  bg-white-4  placeholder:text-black-3
+    @apply w-full border-[var(--primary-hex)] rounded-md border px-3 py-2 placeholder:m-text   bg-white-4  placeholder:text-black-3
   }
 
   .container {
@@ -227,7 +229,7 @@ body {
     @apply  text-[14px]  xl:text-[16px] ;
   }
   .h6 {
-    @apply text-[14px] leading-[130%] tracking-wider xxl:text-[16px];
+    @apply text-[14px] leading-[130%] tracking-[1px] xxl:text-[15px];
   }
   .lead-text {
     @apply text-[16px] leading-[150%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];

@@ -17,23 +17,22 @@ export default function Address({ register, errors, moving,setValue,getValues })
 
   return (
     <div className="address-form w-full">
-      <h2 className="h2 ">Where are you moving {moving} ?</h2>
-      <p className=" text-zinc-500">
+      <h2 className="formHeading ">Where are you moving {moving} ?</h2>
+      <p className=" h6 text-zinc-500">
         Please tell us the exact address you&apos;re moving {moving}
       </p>
-      <div className="flex flex-col items-start gap-2">
+      <div className="flex flex-col items-start gap-2 mt-6 ">
         <input
           {...register(Feildname, { required: "Pickup address is required" })}
           defaultValue={currentAddress?.Feildname || ""}
-          className="formInput"
+          className="formInput  "
           placeholder="Pickup address"
         />
-        <input type="" />
         {errors[Feildname] && (
           <p className="text-red-500">{errors[Feildname].message}</p>
         )}
           { moving.trim().toLowerCase() === 'from' && 
-        <div>
+        <div className="mt-4" >
           <input type="hidden" {...register(Togglename)} />
           <input
             type="checkbox"

@@ -117,7 +117,7 @@ export default function Calendar({ setValue }) {
       ];
     }
 
-    const payload = { mode, range, dates: formatted };
+    const payload = { mode, range, dates: formatted  };
 
     const isSame =
       stored?.mode === payload.mode &&
@@ -145,9 +145,9 @@ export default function Calendar({ setValue }) {
 
   return (
     <div className="w-full">
-         <h2 className="mb-1 text-xl font-semibold">When is your move?</h2>
+         <h2 className=" formHeading ">When is your move?</h2>
        
-      <p className="mb-4 text-gray-500">
+      <p className="h6 mb-4 text-gray-500">
             Select all that apply and give details where possible.   
       </p>
          {/* Mode Buttons */}  

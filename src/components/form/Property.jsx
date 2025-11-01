@@ -27,7 +27,7 @@ export default function Property({
 
   return (
     <div className="property-form w-full">
-      <h2 className="h2 col-span-4 mb-4">Choose the property</h2>
+      <h2 className="formHeading col-span-4 mb-4">Choose the property</h2>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {propertyOptions?.map((property, index) => (

@@ -98,8 +98,8 @@ const handlePlaceClick = (title) => {
 
   return (
     <div className="place-description-form">
-      <h2 className="h2">Describe the access to your {moving} property</h2>
-      <p className=" text-zinc-400">
+      <h2 className="formHeading">Describe the access to your {moving} property</h2>
+      <p className="h6 text-zinc-400">
         Select all that apply and give details where possible.
       </p>
 

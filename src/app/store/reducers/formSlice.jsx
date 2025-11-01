@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { set } from "react-hook-form";
+
 
 const initialState = {
   pickup_address: '',
@@ -18,7 +18,7 @@ const initialState = {
   drop_place_type: [],
   calendar: {
     mode: "On",
-    dates: '',
+    dates: [],
     range: "Exact date",
   },
   Inventory: [],
