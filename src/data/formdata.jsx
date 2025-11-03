@@ -136,18 +136,40 @@ export async function BusinessRegister(data) {
     return { success: false, message: error.message }; 
   }
 }
+export async function Userlogin(data) {
+  try {
+    const response = await fetch(`${base_url}/api/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-export   async  function login(data){
+    const res = await response.json();
 
-    try {
-        const response  = await fetch(`${base_url}/api/login`,{
-            method:"GET",
-            body:JSON.stringify(data)
-        })
-        
-    } catch (error) {
-        console.log(error)
-        return{success:false,message: error.message}
-        
+    // Handle HTTP status errors
+    if (!response.ok) {
+      return {
+        success: false,
+        message: res.message || "Invalid credentials",
+        status: response.status,
+      };
     }
+
+    // Normalize structure
+    return {
+      success: true,
+      access_token: res.access_token,
+      token_type: res.token_type,
+      message: res.message || "Login successful",
+    };
+  } catch (error) {
+    console.error("Login error:", error);
+    return {
+      success: false,
+      message: error.message || "Unexpected error occurred",
+    };
+  }
 }
+
