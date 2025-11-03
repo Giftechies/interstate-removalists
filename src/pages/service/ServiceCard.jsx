@@ -41,7 +41,7 @@ const HomeOneFinancialCard = ({
     <div
       onMouseEnter={() => handleHover(index)}
       className={cn(
-        "p-8 till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-sec  ",
+        "p-4 rounded-md till-card group theme-transition-3 bg-white-1 shadow-custom1 hover:bg-sec  ",
         {
           "shadow-[0px_4px_53px_0px_rgba(103,103,103,0.25)]": isHover === index,
         },
@@ -49,7 +49,7 @@ const HomeOneFinancialCard = ({
     >
       {/* ✅ Image with safe fallback */}
     <Link  href={`/services/${slug}`} >
-      <div className="theme-transition-3 w-full h-[6rem] rounded-md overflow-hidden group-hover:bg-white-1 bg-gray-300">
+      <div className="theme-transition-3 w-full h-[10rem] rounded-md overflow-hidden group-hover:bg-white-1 bg-gray-300">
         <Image
           src={validImage}
           alt={title || "Service Image"}
@@ -68,10 +68,7 @@ const HomeOneFinancialCard = ({
       </Link>
 
       {/* ✅ Truncated + sanitized text */}
-      <SectionText
-        className="theme-transition-3 my-3 text-justify group-hover:text-white-1"
-        text={shortDescription}
-      />
+     <p    className="h6 theme-transition-3 my-3 text-justify group-hover:text-white-1" >{shortDescription.trim()}</p>
       
       <div className=" bg-black-3/50 group-hover:bg-white-1 h-[.5px] w-full "></div>
       <Link    href={`/services/${slug}`} className=" flex items-center gap-2 group-hover:text-white-1 mt-[12px] " >Read More  <MoveRight className="mt-1" /> </Link>

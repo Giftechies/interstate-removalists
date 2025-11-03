@@ -13,7 +13,7 @@ export default function ClientWrapper({
 }) {
   return (
     <Provider store={store}>
-      {/* <SmoothScroll /> */}
+      <SmoothScroll />
       {children}
       <Toaster position="top-right" reverseOrder={false} />
       <ScrollProgressButton />

@@ -5,7 +5,7 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
   return (
     <section className="spy40px  ">
       <div className="container grid grid-cols-12 gap-6">
-        <div className=" col-span-9 ">
+        <div className=" col-span-full  md:col-span-8 lg:col-span-9 ">
           <div
             className="editor service-editor "
             dangerouslySetInnerHTML={{ __html: services?.description }}
@@ -13,7 +13,7 @@ export default function ServiceEditor({ params, res = [], services = {} }) {
           {/* <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-primary  hover:border-primary w-fit mt-6 " >Get Instant Quote</HomeThreeBannerLink> */}
         </div>
         {/* sidebar */}
-        <div className="  relative col-span-3  ">
+        <div className=" max-md:hidden relative md:col-span-4 lg:col-span-3 md:sticky top-20 md:h-fit ">
 
           <div className="  h-fit w-full rounded-lg  bg-gray-100 p-6  ">
             <h3 className=" mb-4  h4 font-medium text-[var(--primary-hex)] ">

@@ -1,11 +1,12 @@
 "use client";
 
 import { BusinessRegister } from "@/data/formdata";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-export default function RegisterComponent() {
+export default function RegisterForm() {
   const {
     register,
     handleSubmit,
@@ -28,6 +29,8 @@ export default function RegisterComponent() {
     setLoading(true);
 
     try {
+      console.log(data);
+      
       const response = await BusinessRegister(data);
 
       if (response?.success) {
@@ -46,10 +49,10 @@ export default function RegisterComponent() {
 
   return (
     <section className="sp32px">
-      <main className="container grid grid-cols-12">
+      <main className="container grid grid-cols-12 justify-between  ">
         <form
           onSubmit={handleSubmit(formHandler)}
-          className="col-span-7 space-y-6"
+          className="col-span-6 space-y-6  "
         >
           <h3 className="h4">Register Your Company</h3>
           <p className="h6 text-black-3 mt-2">
@@ -63,13 +66,13 @@ export default function RegisterComponent() {
               <input
                 type="text"
                 className="formInput"
-                {...register("Company_name", {
+                {...register("business_name", {
                   required: "Please enter company name",
                 })}
               />
-              {errors.Company_name && (
+              {errors.business_name && (
                 <p className="text-red-500 text-sm">
-                  {errors.Company_name.message}
+                  {errors.business_name.message}
                 </p>
               )}
             </div>
@@ -79,7 +82,7 @@ export default function RegisterComponent() {
               <input
                 type="text"
                 className="formInput"
-                {...register("ABN", { required: "Please enter ABN" })}
+                {...register("abn", { required: "Please enter ABN" })}
               />
               {errors.ABN && (
                 <p className="text-red-500 text-sm">{errors.ABN.message}</p>
@@ -110,13 +113,13 @@ export default function RegisterComponent() {
               <input
                 type="tel"
                 className="formInput"
-                {...register("company_phone", {
+                {...register("mobile", {
                   required: "Please enter phone number",
                 })}
               />
-              {errors.company_phone && (
+              {errors.mobile && (
                 <p className="text-red-500 text-sm">
-                  {errors.company_phone.message}
+                  {errors.mobile.message}
                 </p>
               )}
             </div>
@@ -163,11 +166,11 @@ export default function RegisterComponent() {
                 <input
                   type="text"
                   className="formInput"
-                  {...register("fullName", { required: "Please enter name" })}
+                  {...register("user_name", { required: "Please enter name" })}
                 />
                 {errors.fullName && (
                   <p className="text-red-500 text-sm">
-                    {errors.fullName.message}
+                    {errors.user_name.message}
                   </p>
                 )}
               </div>
@@ -177,11 +180,11 @@ export default function RegisterComponent() {
                 <input
                   type="email"
                   className="formInput"
-                  {...register("email", { required: "Please enter email" })}
+                  {...register("user_email", { required: "Please enter email" })}
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm">
-                    {errors.email.message}
+                    {errors.user_email.message}
                   </p>
                 )}
               </div>
@@ -192,7 +195,7 @@ export default function RegisterComponent() {
                   <input
                     type="password"
                     className="formInput"
-                    {...register("password", {
+                    {...register("user_password", {
                       required: "Please enter password",
                     })}
                     onChange={(e) => setPassword(e.target.value)}
@@ -227,6 +230,11 @@ export default function RegisterComponent() {
             {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
+
+        {/* image */}
+        <div className=" h-full sticky top-9 col-span-5 col-start-8 rounded-lg overflow-hidden  " >
+          <Image width={250} height={250} className="rounded-lg overflow-hidden w-full h-[80%] object-cover sticky top-30 mx-auto " src='https://plus.unsplash.com/premium_photo-1661772661721-b16346fe5b0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzc2luZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600' alt="Registeration image" />
+        </div>
       </main>
     </section>
   );

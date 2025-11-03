@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["plus.unsplash.com", "media.istockphoto.com","images.unsplash.com","checkdemo.live"],
+    domains: ["plus.unsplash.com", "media.istockphoto.com","images.unsplash.com","checkdemo.live","unsplash.com"],
   },
    webpack(config) {
     config.module.rules.push({

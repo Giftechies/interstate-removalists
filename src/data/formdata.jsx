@@ -102,24 +102,52 @@ export async function NavbarData(){
         
     }
 }
+// formdata.jsx
+
+// Assuming base_url is defined elsewhere (e.g., const base_url = "https://checkdemo.live/movers/public";)
+
 export async function BusinessRegister(data) {
+  const url = `${base_url}/api/register-business`;
+  
+  // 1. Create a FormData object for multipart/form-data encoding
+  const formData = new FormData();
+  
+  // 2. Append form fields from the data object
+  for (const key in data) {
+    // Exclude the 'confirmPassword' field as the API typically doesn't need it.
+    if (key !== "confirmPassword") {
+      formData.append(key, data[key]);
+    }
+  }
+
   try {
-    const res = await fetch(`${base_url}/api/register-business`, {
+    const response = await fetch(url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+      body: formData, // 🔑 Pass the FormData object here
     });
 
-    if (!res.ok) {
-      throw new Error(`Server responded with ${res.status}`);
-    }
 
-    const result = await res.json();
-    return result;
+    const result = await response.json();
+    return { success: true, ...result }; // Ensure it returns a success flag or structure
+
   } catch (error) {
     console.error("Error registering business:", error);
-    throw error;
+    // Return a structured object for the form handler to process
+    return { success: false, message: error.message }; 
   }
+}
+
+export   async  function login(data){
+
+    try {
+        const response  = await fetch(`${base_url}/api/login`,{
+            method:"GET",
+            body:JSON.stringify(data)
+        })
+        
+    } catch (error) {
+        console.log(error)
+        return{success:false,message: error.message}
+        
+    }
 }

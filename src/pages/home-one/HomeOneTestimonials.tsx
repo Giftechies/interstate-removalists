@@ -36,7 +36,7 @@ export const sliderData = [
 
 const HomeOneTestimonials = () => {
   return (
-    <section className=" spy80px relative overflow-hidden bg-zinc-100  ">
+    <section className="spy32px relative overflow-hidden bg-zinc-100  ">
       <div className="container relative ">
       <div className="flex flex-col items-center" >
           <SectionSubTitle text="Testimonial " className=" mx-auto " />
