@@ -32,6 +32,8 @@ export function transformNavbarData(apiResponse) {
   // --- Handle Services section
   if (data.Services && typeof data.Services === "object") {
     const services = Object.values(data.Services);
+
+       services.sort((a, b) => a.title.localeCompare(b.title));
     if (services.length > 0) {
       navbar.push({
         id: uuidv4(),

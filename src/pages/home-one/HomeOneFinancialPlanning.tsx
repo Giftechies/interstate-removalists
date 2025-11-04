@@ -8,18 +8,21 @@ import { useState } from "react";
 import ServiceCard from "@/pages/service/ServiceCard";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { cn } from "@/lib/utils";
+import { useParams } from "next/navigation";
 
-const HomeOneFinancialPlanning = ({ data = [],className='spt120px ' }) => {
+const HomeOneFinancialPlanning = ({ data = [],className='spt120px ', show=true }) => {
   const [isHover, setIsHover] = useState(0);
   const handleHover = (index: number) => {
     setIsHover(index);
   };
 
+  
+
   return (
-    <section className={cn("spb120px  fade-wrapper relative overflow-hidden bg-zinc-100",className)}>
+    <section className={cn(`spb120px  fade-wrapper relative overflow-hidden bg-zinc-100 ${show?"":""} `,className)}>
       <div className="container">
         {/* section header */}
-        <div className=" grid grid-cols-1 items-center justify-between xl:grid-cols-12  ">
+     {show &&    <div className=" grid grid-cols-1 items-center justify-between xl:grid-cols-12  ">
           <div className=" col-span-1  xl:col-span-6  ">
             <SectionSubTitle text="Our Services " />
             <SectionTitle text="Every move, one platform." />
@@ -37,9 +40,9 @@ const HomeOneFinancialPlanning = ({ data = [],className='spt120px ' }) => {
               roundClassName="max-md:size-10"
             />
           </div>
-        </div>
+        </div>}
         {/* section body */}
-        <div className="spt60px grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={ ` ${show?"spt60px":""}  grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4`}>
           {data?.map((item, index) => {
             const {
               image = null,

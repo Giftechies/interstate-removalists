@@ -173,3 +173,74 @@ export async function Userlogin(data) {
   }
 }
 
+
+export async function Orders() {
+  try {
+    const res = await fetch(`${base_url}/api/orders`,{method:'GET'})
+
+    const response = res.json()
+
+    return response
+    
+  } catch (error) {
+    return {seccuess:false,message:error.message || "something went wrong!!!"}
+    
+  }
+  
+}
+
+
+export async function OrderCancel(orderId,reason,token){
+  try {
+    const res = await fetch(`${base_url}/${orderId}/cancel`,{method:"POST",
+   headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body:JSON.stringify(reason)
+    })
+    
+  } catch (error) {
+        return {seccuess:false,message:error.message || "something went wrong!!!"}
+    
+  }
+}
+
+export async function OrderReschedule(orderId, reason, new_date, token) {
+  try {
+    const res = await fetch(`${base_url}/api/orders/${orderId}/reschedule`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        reason,
+        new_date,
+      }),
+    });
+
+    const data = await res.json();
+
+    // Handle both success & validation errors (422)
+    if (!res.ok) {
+      return {
+        success: false,
+        message: data?.message || "Failed to reschedule order",
+        errors: data?.errors || null,
+      };
+    }
+
+    return {
+      success: true,
+      message: data?.message || "Order rescheduled successfully",
+      data,
+    };
+  } catch (error) {
+    console.error("Reschedule error:", error);
+    return {
+      success: false,
+      message: error.message || "Something went wrong!",
+    };
+  }
+}

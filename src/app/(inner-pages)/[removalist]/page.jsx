@@ -1,14 +1,11 @@
 import Banner from "@/components/ui/InnerBanner";
 import Animations from "@/components/animations/Animations";
-import Breadcrumbs from "@/components/shared/Breadcrumbs";
-import InnerAboutLocal from "@/pages/local/InnerAboutPage";
 import Separator from "@/pages/local/Separater";
 import LocalType from "@/components/localcomponents/LocalTypes";
 import dynamic from "next/dynamic";
-// import { localCard } from "@/data/localCard";
 import OurWorks from "@/pages/home-three/OurWorks";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
-import HowItWorksPage from "../how-it-work/page";
+
 import EditorData from "@/components/ui/EditorData";
 import { pagesData } from "@/data/formdata";
 const Map = dynamic(() => import("@/components/localcomponents/map"), {
@@ -59,7 +56,6 @@ export default async function localRemovalists({params}) {
       { data?.show_map && <Map  markers={markers} />}
       <Separator title={SeparateTitle}content={SeparateText} />
      {data?.show_process && <OurWorks/>}
-      {/* <HowItWorksPage/> */}
      {data?.show_faq && <HomeTwoFaq />}
       <Animations />
     </>
