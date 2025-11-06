@@ -34,7 +34,7 @@ export default function FormSidebar({ formData }) {
       <h2 className="text-xl font-semibold text-zinc-800">Your Move</h2>
 
       {/* Timeline */}
-      <section className="relative mt-6" aria-label="Move timeline">
+      <section className="relative mt-4" aria-label="Move timeline">
         <TimelinePoint label="Pickup" showLine={hasDelivery}>
           <LocationBlock
             address={pickup_address}
@@ -85,7 +85,7 @@ export default function FormSidebar({ formData }) {
 
 const TimelinePoint = memo(({ label, children, showLine = false }) => {
   return (
-    <div className="relative mb-6 pl-6">
+    <div className="relative mb-4 pl-6">
       {/* Circle */}
       <div className="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-zinc-700 bg-white z-10" />
 
@@ -97,7 +97,7 @@ const TimelinePoint = memo(({ label, children, showLine = false }) => {
       {/* Content */}
       <div className="relative z-10">
         <h4 className="text-md mb-2 font-semibold text-zinc-700">{label}</h4>
-        <div className="rounded-lg bg-zinc-50 p-3 shadow-sm border border-zinc-100">
+        <div className="rounded-lg bg-zinc-50 px-3 shadow-sm border border-zinc-100">
           {children}
         </div>
       </div>
