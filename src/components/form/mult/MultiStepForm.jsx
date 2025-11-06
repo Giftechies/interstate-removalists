@@ -172,8 +172,8 @@ export default function MultiStepForm() {
   return (
     <>
       <div className=" w-full  p-4 lg:p-20 ">
-        <div className="container mt-20  grid grid-cols-1  gap-10 md:grid-cols-[600px_1fr] lg:grid-cols-[900px_400px]">
-          <main className="multi-step-form innershadow relative  rounded-md p-6  ">
+        <div className="container  mt-20  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between">
+          <main className="multi-step-form shadow-lg  relative  rounded-md p-6 col-span-8  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}
@@ -203,7 +203,10 @@ export default function MultiStepForm() {
               </div>
             </form>
           </main>
+          <div className=" col-span-4  " >
+
           <FormSidebar formData = {formData}/>
+          </div>
 
         
         </div>

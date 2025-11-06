@@ -9,7 +9,7 @@ export default function stepper({ step, currentStep, setCurrentStep,className=''
 
   }
   return (
-    <div className={`stepper mb-8 flex items-center justify-between gap-[3rem] ${className}`}>
+    <div className={`stepper mb-8 flex items-center justify-between gap-[2rem] ${className}`}>
       {step.map((item, index) => {
         const isActive = currentStep === index + 1;
         const isCompleted = currentStep > index + 1;
