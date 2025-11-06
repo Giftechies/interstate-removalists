@@ -73,7 +73,11 @@ export default function FormSidebar({ formData }) {
       {hasInventory && (
         <Section title="Inventory" scrollable>
           {Inventory.items.map((item) => (
-            <InventoryRow key={item.name} name={item.name} quantity={item.quantity} />
+            <InventoryRow
+              key={item.name}
+              name={item.name}
+              quantity={item.quantity}
+            />
           ))}
         </Section>
       )}
@@ -83,7 +87,7 @@ export default function FormSidebar({ formData }) {
 
 /* ------------------------ SUBCOMPONENTS ------------------------ */
 
-const TimelinePoint = memo(({ label, children, showLine = false }) => {
+const TimelinePoint = memo(function TimelinePoint({ label, children, showLine = false }) {
   return (
     <div className="relative mb-4 pl-6">
       {/* Circle */}
@@ -105,69 +109,73 @@ const TimelinePoint = memo(({ label, children, showLine = false }) => {
   );
 });
 
-const LocationBlock = memo(
-  ({
-    address,
-    property_type,
-    bed_room,
-    place_type = [],
-    variation = [],
-    variation_meter,
-    flights,
-  }) => {
-    const tags = [
-      ...place_type.map((p) =>
-        p === "Stairs" ? `Stairs - ${flights || 0} Flights` : p
-      ),
-      ...variation,
-      variation_meter ? `${variation_meter} m` : null,
-    ].filter(Boolean);
+const LocationBlock = memo(function LocationBlock({
+  address,
+  property_type,
+  bed_room,
+  place_type = [],
+  variation = [],
+  variation_meter,
+  flights,
+}) {
+  const tags = [
+    ...place_type.map((p) =>
+      p === "Stairs" ? `Stairs - ${flights || 0} Flights` : p
+    ),
+    ...variation,
+    variation_meter ? `${variation_meter} m` : null,
+  ].filter(Boolean);
 
-    return (
-      <div>
-        <p className="font-medium capitalize text-zinc-800">{address}</p>
+  return (
+    <div>
+      <p className="font-medium capitalize text-zinc-800">{address}</p>
 
-        {(property_type || bed_room) && (
-          <p className="mt-1 text-sm text-zinc-600">
-            {[property_type, bed_room && `${bed_room} Bedroom`]
-              .filter(Boolean)
-              .join(" • ")}
-          </p>
-        )}
+      {(property_type || bed_room) && (
+        <p className="mt-1 text-sm text-zinc-600">
+          {[property_type, bed_room && `${bed_room} Bedroom`]
+            .filter(Boolean)
+            .join(" • ")}
+        </p>
+      )}
 
-        {tags.length > 0 && (
-          <div className="mt-3 flex flex-wrap gap-2 border-t border-dashed border-zinc-200 pt-2">
-            {tags.map((t) => (
-              <Tag key={t}>{t}</Tag>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  }
-);
+      {tags.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2 border-t border-dashed border-zinc-200 pt-2">
+          {tags.map((t) => (
+            <Tag key={t}>{t}</Tag>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+});
 
-const Tag = memo(({ children }) => (
-  <span className="inline-block rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700">
-    {children}
-  </span>
-));
+const Tag = memo(function Tag({ children }) {
+  return (
+    <span className="inline-block rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700">
+      {children}
+    </span>
+  );
+});
 
-const Section = memo(({ title, children, scrollable = false }) => (
-  <section
-    className={`mt-6 border-t border-zinc-200 pt-4 ${
-      scrollable ? "max-h-96 overflow-y-auto formsidebar-scrollbar px-4" : ""
-    }`}
-    data-lenis-prevent={scrollable || undefined}
-  >
-    <h3 className="mb-2 text-lg font-medium text-zinc-700">{title}</h3>
-    <div className="space-y-1">{children}</div>
-  </section>
-));
+const Section = memo(function Section({ title, children, scrollable = false }) {
+  return (
+    <section
+      className={`mt-6 border-t border-zinc-200 pt-4 ${
+        scrollable ? "max-h-96 overflow-y-auto formsidebar-scrollbar px-4" : ""
+      }`}
+      data-lenis-prevent={scrollable || undefined}
+    >
+      <h3 className="mb-2 text-lg font-medium text-zinc-700">{title}</h3>
+      <div className="space-y-1">{children}</div>
+    </section>
+  );
+});
 
-const InventoryRow = memo(({ name, quantity }) => (
-  <div className="flex justify-between border-b border-dashed border-zinc-200 py-1 text-sm text-zinc-600">
-    <span>{name}</span>
-    <span>{quantity}</span>
-  </div>
-));
+const InventoryRow = memo(function InventoryRow({ name, quantity }) {
+  return (
+    <div className="flex justify-between border-b border-dashed border-zinc-200 py-1 text-sm text-zinc-600">
+      <span>{name}</span>
+      <span>{quantity}</span>
+    </div>
+  );
+});
