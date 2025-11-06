@@ -44,16 +44,16 @@ export default function OurWorks() {
         text="Reliable moving services built around you"
         className=" text-center mt-3 text-black capitalize "
         />
-      <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2    items-center justify-center">
+      <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2  gap-4   items-center justify-center">
           {steps.map((item, index) => (
-         <div key={index} className={` `}>
+         <div key={index} className={`  mt-12`}>
              <OurWorkCard
             key={index}
             step={item.step}
             heading={item.heading}
             iconname={item.iconname}
             text={item.text}
-            className={` mt-12` }
+            className={`` }
           />
          </div>
         ))}

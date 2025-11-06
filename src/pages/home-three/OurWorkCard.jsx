@@ -5,18 +5,19 @@ import Image from "next/image";
 
 export default function OurWorkCard({iconname:path,step,text,heading,className}){
     return(
-        <div className={cn("work   w-[350px] spx24px spy24px  place-items-center group  ",className)}>
+        <div className={cn("work    w-full spx24px spy24px  flex flex-col items-center justify-center group  ",className)}>
             <div className="icon-box    rounded-full w-[50%] aspect-square  bg-prim flex items-center justify-center  relative ">
              <Image width={250} height={250} src={path} alt="" className="object-contain object-center  w-[60%] " /> 
             
             <h6 className="h4  bg-white-1 text-[var(--primary)] w-[30%] aspect-square  flex items-center  justify-center rounded-full  absolute -bottom-8 " >{step}</h6>
             </div>
             <div className=" content mt-8 text-center ">
-                <h4 className=" h5 font-medium text-black-2" >{heading}</h4>
-                <SectionText
+                <h4 className=" w-full h6 font-medium text-black-2" >{heading}</h4>
+                {/* <SectionText
                 className=""
                 text={text}
-                />
+                /> */}
+                <p className=" text-[14px] text-center "  >{text}</p>
             </div>
 
            
