@@ -26,7 +26,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
           {...register(Feildname, { required: "Pickup address is required" })}
           defaultValue={currentAddress?.Feildname || ""}
           className="formInput  "
-          placeholder="Pickup address"
+          placeholder={moving ==="from" ? 'Enter pickup address' : 'Enter delivery address'}
         />
         {errors[Feildname] && (
           <p className="text-red-500">{errors[Feildname].message}</p>

@@ -485,6 +485,12 @@ body {
   border-radius: 10px;
   width: 1px;
 }
+
+.formsidebar-scrollbar::-webkit-scrollbar-thumb{
+  background-color: #ffcf32b9;
+  border-radius: 15px;
+  width: 1px;
+}
 .navbar-dropdown-scrollbar::-webkit-scrollbar {
   width: 3px;
   background-color: #005655;

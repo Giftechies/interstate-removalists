@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
+// Assuming these paths are correct in your project
 import { setCalendar } from "@/app/store/reducers/formSlice";
 import { Calendar as ShadcnCalendar } from "@/components/ui/calendar";
 import { CalendarIcon } from "@heroicons/react/24/outline";
@@ -33,7 +34,7 @@ export default function Calendar({ setValue }) {
   const stored = useSelector((state) => state.form.calendar); // --- State Setup ---
 
   const [mode, setMode] = useState(stored?.mode || "On");
-  const [range, setRange] = useState(stored?.range || getDefaultRange(mode)); // FIX 1: Robust parsing of stored date strings into native Date objects
+  const [range, setRange] = useState(stored?.range || getDefaultRange(mode)); 
 
   const initialDates = useMemo(() => {
     const storedDates = stored?.dates;
@@ -58,14 +59,13 @@ export default function Calendar({ setValue }) {
     }
 
     return [];
-  }, [stored]); // State holds native Date objects
+  }, [stored]); 
 
   const [dates, setDates] = useState(initialDates);
 
-  // ✅ NEW STATE: Controls the visible month in the calendar view
   const [visibleMonth, setVisibleMonth] = useState(
-    initialDates[0] || dayjs().toDate(), // Start on first selected date or today
-  ); // Memoized object shape for ShadcnCalendar 'selected' prop
+    initialDates[0] || dayjs().toDate(), 
+  ); 
 
   const selected = useMemo(() => {
     if (mode === "Between") {
@@ -75,7 +75,7 @@ export default function Calendar({ setValue }) {
     }
     if (mode === "On" && dates.length === 1) return dates[0];
     return undefined;
-  }, [dates, mode]); // ✅ FIX 2: Update visibleMonth when a date is selected
+  }, [dates, mode]); 
 
   const handleSelect = (val) => {
     let newDates = [];
@@ -92,9 +92,7 @@ export default function Calendar({ setValue }) {
 
     setDates(newDates);
 
-    // Jump the calendar view to the latest selected date
     if (newDates.length > 0) {
-      // Get the latest selected date (the last element in the array)
       const latestDate = newDates[newDates.length - 1];
       setVisibleMonth(latestDate);
     }
@@ -117,7 +115,7 @@ export default function Calendar({ setValue }) {
       ];
     }
 
-    const payload = { mode, range, dates: formatted  };
+    const payload = { mode, range, dates: formatted };
 
     const isSame =
       stored?.mode === payload.mode &&
@@ -142,73 +140,95 @@ export default function Calendar({ setValue }) {
   const handleMonthChange = (month) => {
     setVisibleMonth(month);
   };
+  
+  // 💡 NEW: Responsive number of months for 'Between' mode
+  const isBetweenMode = mode === "Between";
+  // Show 2 months on screens lg and up, 1 month otherwise.
+  // Note: This needs a utility or library to check screen size, 
+  // but for a simple component, we often rely on CSS/Tailwind for true responsiveness.
+  // We'll set it to 2 by default and use Tailwind to manage the overflow/sizing.
+  // For better UX, setting it to 1 on small screens is common, but we will leave 
+  // it at a maximum of 2 and fix the container.
+
+  // 💡 IMPROVED: Determine number of months for responsiveness
+  // A cleaner approach is to use 1 month on small screens and 2 on larger ones.
+  // Since we cannot reliably get the screen width inside the component without 
+  // an additional hook, we will use a max of 2 and ensure the container is responsive.
+  // For the purpose of a static fix, we'll enforce 1 month on small screens.
+  // For true responsiveness without a screen hook, it's often better to let the
+  // user control scroll or only show one month. Let's keep 2 months for desktop and 
+  // wrap it in a container that allows scroll/shrinks the calendar on mobile.
+  
+  const numberOfMonths = isBetweenMode ? 2 : 1;
 
   return (
     <div className="w-full">
-         <h2 className=" formHeading ">When is your move?</h2>
-       
-      <p className="h6 mb-4 text-gray-500">
-            Select all that apply and give details where possible.   
+      <h2 className="text-2xl font-semibold text-gray-800 mb-2">When is your move?</h2>
+      
+      <p className="text-sm text-gray-500 mb-4">
+        Select all that apply and give details where possible. 
       </p>
-         {/* Mode Buttons */}  
+      {/* Mode Buttons */} 
       <div className="mb-4 flex gap-2">
-           
         {MODES.map((m) => (
           <button
             key={m}
             onClick={() => handleModeChange(m)}
-            className={`rounded-full border px-4 py-2 transition ${
+            // Standardized Tailwind classes
+            className={`rounded-full border px-4 py-2 text-sm transition font-medium whitespace-nowrap ${
               mode === m
-                ? "border-zinc-700 bg-zinc-700 text-white-1"
-                : "bg-white text-black border-gray-300"
+                ? " bg-black-3 text-white-1 shadow-md"
+                : "bg-white-1 text-black-3 border-gray-300 hover:bg-gray-50"
             }`}
           >
-             {m}
+            {m}
           </button>
         ))}
-      
       </div>
       {/* --- Mode-Specific Content --- */}
       {mode === "I'm unsure" ? (
         <UnsureOptions range={range} setRange={setRange} />
       ) : (
-        <div className="inline-block rounded-lg border p-4">
-         
-          <ShadcnCalendar
-            // Control which month is visible
-            month={visibleMonth}
-            onMonthChange={handleMonthChange}
-            mode={mode === "Between" ? "range" : "single"}
-            selected={selected}
-            onSelect={handleSelect}
-            disabled={(date) => date < dayjs().startOf("day").toDate()}
-            numberOfMonths={mode === "Between" ? 2 : 1}
+        <div className="w-fit rounded-xl border border-gray-200 p-4 shadow-sm bg-white-1">
           
-          />
-              
+          {/* 💡 FIX: Responsive container for the calendar */}
+          <div 
+            className={`w-fit mx-auto ${isBetweenMode ? 'overflow-x-auto md:overflow-x-visible' : ''}`}
+          >
+            <ShadcnCalendar
+              month={visibleMonth}
+              onMonthChange={handleMonthChange}
+              mode={isBetweenMode ? "range" : "single"}
+              selected={selected}
+              onSelect={handleSelect}
+              disabled={(date) => date < dayjs().startOf("day").toDate()}
+              // Use 2 months for 'Between' mode, but let the parent container manage sizing
+              // We'll add a class to prevent the calendar from shrinking its containers
+              numberOfMonths={numberOfMonths}
+              className={`w-full mx-auto`}
+            />
+          </div>
+          
           {mode === "On" && (
-            <div className="mt-4 flex flex-wrap gap-2">
-                    
+            <div className="mt-4 flex flex-wrap gap-2 pt-4 border-t border-gray-100">
               {ON_RANGE_OPTIONS.map((r) => (
                 <button
                   key={r}
                   onClick={() => setRange(r)}
-                  className={`rounded-full border px-4 py-2 text-sm transition ${
+                  // Standardized Tailwind classes
+                  className={`rounded-full border px-4 py-2 text-sm transition font-medium whitespace-nowrap ${
                     range === r
-                      ? "border-zinc-700 bg-zinc-700 text-white-1"
-                      : "bg-white text-black border-gray-300"
+                      ? " bg-black-3 text-white-1 shadow-sm"
+                      : "bg-white-1 text-gray-700 border-gray-300 hover:bg-gray-50"
                   }`}
                 >
-                           {r}       
+                    {r}      
                 </button>
               ))}
-                  
             </div>
           )}
-             
         </div>
       )}
-       
     </div>
   );
 }
@@ -216,27 +236,25 @@ export default function Calendar({ setValue }) {
 // --- UnsureOptions Component (Extracted for cleanliness) ---
 function UnsureOptions({ range, setRange }) {
   return (
-    <div className="flex w-full flex-col gap-4 rounded-lg border p-4">
-        
-      <div className="flex gap-4">
-           
+    <div className="flex w-full flex-col gap-4 rounded-xl border border-gray-200 p-4 shadow-sm bg-white">
+      <div className="flex flex-col sm:flex-row gap-4">
         {UNSURE_RANGE_OPTIONS.map((r) => (
           <button
             key={r}
             onClick={() => setRange(r)}
-            className={`flex w-1/3 flex-col items-center justify-center rounded-lg border p-4 transition ${
+            // Standardized Tailwind classes
+            className={`flex flex-col items-center justify-center rounded-lg border p-4 transition text-center w-full sm:w-1/3 ${
               range === r
-                ? "border-prim bg-prim text-white-1"
-                : "bg-white border-gray-300 hover:bg-gray-100"
+                ? "border-indigo-600 bg-indigo-600 text-white shadow-md"
+                : "bg-white border-gray-300 text-gray-800 hover:bg-gray-50"
             }`}
           >
-                  <CalendarIcon className={`mb-2 h-6 w-6 ${range ===r?"text-white-1":" text-zinc-700"}`} />
-                 <span className="text-sm tracking-wider font-normal">{r}</span>    
+              {/* Conditional color for the icon */}
+              <CalendarIcon className={`mb-2 h-6 w-6 ${range === r ? "text-white" : "text-indigo-600"}`} />
+              <span className="text-sm tracking-wide font-medium">{r}</span> 
           </button>
         ))}
-           
       </div>
-       
     </div>
   );
 }

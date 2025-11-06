@@ -1,4 +1,5 @@
 "use client";
+import { memo } from "react";
 
 export default function FormSidebar({ formData }) {
   if (!formData?.pickup_address) return null;
@@ -20,17 +21,21 @@ export default function FormSidebar({ formData }) {
     Inventory,
   } = formData;
 
+  const hasDelivery = !!drop_address;
+  const hasDates = calendar?.dates?.length > 0;
+  const hasInventory = Inventory?.items?.length > 0;
+
   return (
-    <aside className="sticky top-30 hidden h-fit navbar-dropdown-scrollbar w-full overflow-y-auto self-start rounded-xl border bg-white p-8 shadow-md lg:block">
+    <aside
+      className="sticky top-30 hidden h-fit w-full overflow-y-auto self-start 
+                 rounded-xl border bg-white p-8 shadow-md lg:block navbar-dropdown-scrollbar"
+      aria-label="Move summary"
+    >
       <h2 className="text-xl font-semibold text-zinc-800">Your Move</h2>
 
-      {/* Timeline Wrapper */}
-      <div className="relative mt-6 pl-6">
-        {/* Vertical Line */}
-    {  drop_address &&    <div className="absolute left-1/2 top-[calc(100%+0.25rem)] bottom-[calc(100%-4rem)] w-[2px] bg-zinc-300 -translate-x-1/2 z-0" />}
-
-        {/* Pickup */}
-        <TimelinePoint label="Pickup">
+      {/* Timeline */}
+      <section className="relative mt-6" aria-label="Move timeline">
+        <TimelinePoint label="Pickup" showLine={hasDelivery}>
           <LocationBlock
             address={pickup_address}
             property_type={property_type}
@@ -42,8 +47,7 @@ export default function FormSidebar({ formData }) {
           />
         </TimelinePoint>
 
-        {/* Delivery */}
-        {drop_address && (
+        {hasDelivery && (
           <TimelinePoint label="Delivery">
             <LocationBlock
               address={drop_address}
@@ -54,35 +58,24 @@ export default function FormSidebar({ formData }) {
             />
           </TimelinePoint>
         )}
-      </div>
+      </section>
 
       {/* Pickup Date */}
-      {calendar?.dates?.length > 0 && (
-        <section className="mt-6 border-t border-zinc-200 pt-4">
-          <h3 className="text-lg font-medium text-zinc-700 mb-2 flex justify-between ">
-            Pickup Date   <span className=" h6 text-zinc-600 mt-1">{calendar.dates.join(", ")}</span>
-          </h3>
-        
-        </section>
+      {hasDates && (
+        <Section title="Pickup Date">
+          <span className="text-sm text-zinc-600">
+            {calendar?.dates?.join(", ")}
+          </span>
+        </Section>
       )}
 
       {/* Inventory */}
-      {Inventory.length >0 && (
-        <section className="mt-6 border-t border-zinc-200 pt-4 ">
-          <h3 className="text-lg font-medium text-zinc-700 mb-2">Inventory</h3>
-          <div className="space-y-1">
-            {Inventory.items?.map((item, i) => (
-              <div
-                key={i}
-                className="flex justify-between text-sm text-zinc-600 border-b border-dashed border-zinc-200 py-1"
-              >
-                <span>{item.name}</span>
-                <span>{item.quantity}</span>
-              </div>
-            ))}
-         
-          </div>
-        </section>
+      {hasInventory && (
+        <Section title="Inventory" scrollable>
+          {Inventory.items.map((item) => (
+            <InventoryRow key={item.name} name={item.name} quantity={item.quantity} />
+          ))}
+        </Section>
       )}
     </aside>
   );
@@ -90,58 +83,91 @@ export default function FormSidebar({ formData }) {
 
 /* ------------------------ SUBCOMPONENTS ------------------------ */
 
-function TimelinePoint({ label, children }) {
+const TimelinePoint = memo(({ label, children, showLine = false }) => {
   return (
-    <div className="relative mb-8 last:mb-0">
+    <div className="relative mb-6 pl-6">
       {/* Circle */}
-      <div className="absolute -left-[19px]  top-2 h-3 w-3 rounded-full border-2 border-zinc-700 bg-white-1" />
-      {/* Label */}
-      <h4 className="mb-2 text-md font-semibold text-zinc-700">{label}</h4>
-      {children} 
-    </div>
-  );
-}
+      <div className="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-zinc-700 bg-white z-10" />
 
-function LocationBlock({
-  address,
-  property_type,
-  bed_room,
-  place_type = [],
-  variation = [],
-  variation_meter,
-  flights,
-}) {
-  return (
-    <div className="rounded-lg bg-zinc-50 p-4 shadow-sm">
-      <p className="text-zinc-800 font-medium capitalize ">{address}</p>
-
-      {(property_type || bed_room) && (
-        <p className="text-sm text-zinc-600 mt-1">
-          {property_type && <span>{property_type}</span>}
-          {property_type && bed_room && <span className="mx-1">•</span>}
-          {bed_room && <span>{bed_room} Bedroom</span>}
-        </p>
+      {/* Vertical Line */}
+      {showLine && (
+        <div className="absolute left-[7.4px] top-[2rem] bottom-0 w-[2px] bg-zinc-300 z-0" />
       )}
 
-      <div className="mt-3 flex flex-wrap gap-2">
-        {place_type?.map((p, i) => (
-          <Tag key={i}>
-            {p === "Stairs" ? `Stairs - ${flights || 0} Flights` : p}
-          </Tag>
-        ))}
-        {variation?.map((v, i) => (
-          <Tag key={i}>{v}</Tag>
-        ))}
-        {variation_meter && <Tag>{variation_meter} m</Tag>}
+      {/* Content */}
+      <div className="relative z-10">
+        <h4 className="text-md mb-2 font-semibold text-zinc-700">{label}</h4>
+        <div className="rounded-lg bg-zinc-50 p-3 shadow-sm border border-zinc-100">
+          {children}
+        </div>
       </div>
     </div>
   );
-}
+});
 
-function Tag({ children }) {
-  return (
-    <span className="inline-block rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700">
-      {children}
-    </span>
-  );
-}
+const LocationBlock = memo(
+  ({
+    address,
+    property_type,
+    bed_room,
+    place_type = [],
+    variation = [],
+    variation_meter,
+    flights,
+  }) => {
+    const tags = [
+      ...place_type.map((p) =>
+        p === "Stairs" ? `Stairs - ${flights || 0} Flights` : p
+      ),
+      ...variation,
+      variation_meter ? `${variation_meter} m` : null,
+    ].filter(Boolean);
+
+    return (
+      <div>
+        <p className="font-medium capitalize text-zinc-800">{address}</p>
+
+        {(property_type || bed_room) && (
+          <p className="mt-1 text-sm text-zinc-600">
+            {[property_type, bed_room && `${bed_room} Bedroom`]
+              .filter(Boolean)
+              .join(" • ")}
+          </p>
+        )}
+
+        {tags.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-2 border-t border-dashed border-zinc-200 pt-2">
+            {tags.map((t) => (
+              <Tag key={t}>{t}</Tag>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+);
+
+const Tag = memo(({ children }) => (
+  <span className="inline-block rounded-md bg-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700">
+    {children}
+  </span>
+));
+
+const Section = memo(({ title, children, scrollable = false }) => (
+  <section
+    className={`mt-6 border-t border-zinc-200 pt-4 ${
+      scrollable ? "max-h-96 overflow-y-auto formsidebar-scrollbar px-4" : ""
+    }`}
+    data-lenis-prevent={scrollable || undefined}
+  >
+    <h3 className="mb-2 text-lg font-medium text-zinc-700">{title}</h3>
+    <div className="space-y-1">{children}</div>
+  </section>
+));
+
+const InventoryRow = memo(({ name, quantity }) => (
+  <div className="flex justify-between border-b border-dashed border-zinc-200 py-1 text-sm text-zinc-600">
+    <span>{name}</span>
+    <span>{quantity}</span>
+  </div>
+));
