@@ -4,7 +4,7 @@ import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink";
 export default function ServiceEditor({ params, res = [], services = {} }) {
 
   
-const ressort = res?.data.sort((a, b) =>
+const ressort = res?.data?.sort((a, b) =>
   a.title.toLowerCase().localeCompare(b.title.toLowerCase())
 );
 
