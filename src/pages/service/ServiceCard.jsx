@@ -49,7 +49,7 @@ const HomeOneFinancialCard = ({
     >
       {/* ✅ Image with safe fallback */}
     <Link  href={`/services/${slug}`} >
-      <div className="theme-transition-3 w-full h-[10rem] rounded-md overflow-hidden group-hover:bg-white-1 bg-gray-300">
+      <div className="theme-transition-3 w-full h-[12rem] rounded-md overflow-hidden group-hover:bg-white-1 bg-gray-300">
         <Image
           src={validImage}
           alt={title || "Service Image"}
@@ -71,7 +71,7 @@ const HomeOneFinancialCard = ({
      <p    className="h6 theme-transition-3 my-3 text-justify group-hover:text-white-1" >{shortDescription.trim()}</p>
       
       <div className=" bg-black-3/50 group-hover:bg-white-1 h-[.5px] w-full "></div>
-      <Link    href={`/services/${slug}`} className=" flex items-center gap-2 group-hover:text-white-1 mt-[12px] " >Read More  <MoveRight className="mt-1" /> </Link>
+      <Link    href={`/services/${slug}`} className=" text-[12px] flex items-center gap-2 group-hover:text-white-1 mt-[12px] tracking-wider " >Read More  <MoveRight className=" font-light size-[20px] " /> </Link>
     </div>
   );
 };

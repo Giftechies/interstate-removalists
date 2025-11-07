@@ -6,6 +6,7 @@ import {
   IconChevronDown,
   IconLock,
 } from "@tabler/icons-react";
+import { CircleUser, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -39,7 +40,19 @@ DeskTopNavbarTwo = ({navbar}) => {
             );
             return menuItems ? (
               <li key={`${id}`} className="group relative">
-                <Link 
+             {path =='/#'? ( <button 
+  
+                  className={cn(
+                    " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-prim hover:text-[var(--primary-hex)] hover:before:w-full",
+                    isActive && "text-[var(--primary-hex)] before:w-full before:bg-prim",
+                  )}
+                >
+                {/* <IconLock/> */}
+                <User className=" size-4 mr-1 " />
+                
+                  <span className="l-text">{menuTitle}</span>
+                  <IconChevronDown stroke="2" />
+                </button> ):  (<Link 
                 href={`${path}`}
                   className={cn(
                     " l-text theme-transition-3 relative z-10 flex cursor-pointer items-center justify-between gap-1 text-black-4 before:theme-transition-3 before:absolute before:bottom-0  before:block before:h-px before:w-0 before:bg-prim hover:text-[var(--primary-hex)] hover:before:w-full",
@@ -49,7 +62,7 @@ DeskTopNavbarTwo = ({navbar}) => {
                   {" "}
                   <span className="l-text">{menuTitle}</span>
                   <IconChevronDown stroke="2" />
-                </Link>
+                </Link>)}
 
                 <ul
                   data-lenis-prevent

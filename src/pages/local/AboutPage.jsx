@@ -17,7 +17,7 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
     >
       <div className="container  grid grid-cols-12 items-center gap-6">
         <div className="relative  col-start-1 col-end-13 grid grid-cols-1 items-center gap-6 md:grid-cols-2 xl:col-end-7 xl:grid-cols-6 xl:items-end">
-          <div className=" border xl:col-start-1  xl:col-end-5">
+          <div className=" xl:col-start-1  xl:col-end-5">
             <Image
               src={imagepath1}
               width={416}

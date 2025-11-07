@@ -1,6 +1,6 @@
 import "@/../node_modules/react-modal-video/scss/modal-video.scss";
 import "@/styles/globals.css";
-import { pop } from "@/utils/fonts";
+// import { pop } from "@/utils/fonts";
 
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
@@ -30,7 +30,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 const navBarData = await NavbarData()
-// console.log("sdfsd>>>",navBarData);
+
 
 
   return (
@@ -48,7 +48,9 @@ const navBarData = await NavbarData()
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={pop.className}>
+      <body
+      //  className={pop.className}
+       >
         <ClientWrapper>
         <NavbarContainerTwo menu={navBarData} />
           <main className="relative">{children}</main>

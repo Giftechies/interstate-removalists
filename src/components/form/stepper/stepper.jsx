@@ -14,7 +14,7 @@ export default function stepper({ step, currentStep, setCurrentStep,className=''
         const isActive = currentStep === index + 1;
         const isCompleted = currentStep > index + 1;
         return (
-          <>
+       
             <div
               key={index}
               className={`step-item flex flex-col items-center gap-4`}
@@ -32,7 +32,7 @@ export default function stepper({ step, currentStep, setCurrentStep,className=''
                 )}
               </div>
             </div>
-          </>
+         
         );
       })}
     </div>

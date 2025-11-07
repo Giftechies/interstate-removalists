@@ -3,14 +3,18 @@ import element from "@/../public/images/home-one/footer-crown.png";
 import loginImage from "@/../public/img/innerimg/localimg.png";
 import Image from "next/image";
 import Link from "next/link";
-import { Userlogin } from "@/data/formdata";
+import { fetchUserlogin } from "@/data/formdata";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { cn } from "@/lib/utils";
 import { Loader2Icon } from "lucide-react";
+import { useDispatch } from "react-redux";
+import {Userlogin} from "@/app/store/reducers/userSlice"
 
 const LoginContent =  () => {
+
+  const dispatch = useDispatch();
 
   const { register,reset,formState:{errors},handleSubmit }= useForm({
     defaultValues:{
@@ -26,7 +30,10 @@ const LoginContent =  () => {
     setloading(true)
 
     try {
-    const res = await Userlogin(data);
+    const res = await dispatch(Userlogin(data));
+    // const res = await fetchUserlogin(data);
+    console.log("userlogin in login",res);
+    
     if(res.success){
 
       toast.success("User loging Successfully")
@@ -40,7 +47,7 @@ const LoginContent =  () => {
       
     } catch (error) {
       
-      toast.error(`${error.message}`)
+      toast.error(`${error.message} `)
     }finally{
 
         setloading(false)
@@ -52,17 +59,9 @@ const LoginContent =  () => {
 
 
   return (
-    <div className="relative h-screen grid-cols-12 items-center justify-center gap-6 lg:grid xxl:overflow-hidden">
-      <div className="col-start-1 col-end-7">
-        <Image
-          src={loginImage}
-          width={948}
-          height={1080}
-          alt="Login Image"
-          className="xxl:max-h-screen"
-        />
-      </div>
-      <div className="col-start-7 col-end-12 max-lg:px-4 max-lg:py-8 xl:col-start-8 ">
+    <div className="relative container max-md:mt-12 md:pt-20  py-4 md:py-8 grid-cols-12 items-center  lg:grid xxl:overflow-hidden">
+     
+      <div className="col-span-5 ">
         <div className="items-center justify-center">
           <div>
             <h5 className="h5 mt-6 text-center font-medium">
@@ -87,7 +86,7 @@ const LoginContent =  () => {
             <div className="s-text mt-3 flex items-center justify-end hover:text-[var(--primary-hex)] gap-6 text-black-3">
               <Link href={`/#`}>Forgot Password?</Link>
             </div>
-            <button type="submit" className={cn(`h6 smb32px smt32px w-full bg-prim py-3 flex items-center justify-center gap-2 text-center text-white-1 hover:text-[var(--primary-hex)] hover:bg-white-1 border-[var(--primary-hex)] border   ${loading 
+            <button type="submit" className={cn(`h6 rounded-lg smb32px smt32px w-full bg-prim py-3 flex items-center justify-center gap-2 text-center text-white-1 hover:text-[var(--primary-hex)] hover:bg-white-1 border-[var(--primary-hex)] border   ${loading 
        ? "cursor-not-allowed opacity-60 hover:bg-prim hover:text-white-1" 
        : "hover:text-[var(--primary-hex)] hover:bg-white-1"
      } `,)}>
@@ -97,13 +96,16 @@ const LoginContent =  () => {
           </form>
         </div>
       </div>
-      <Image
-        src={element}
-        width={222}
-        height={214}
-        alt="Element"
-        className="absolute bottom-0 right-0 max-3xl:hidden"
-      />
+       <div className=" md:h-[30rem] lg:col-start-7  col-span-6 rounded-lg overflow-hidden ">
+        <Image
+          src={loginImage}
+          width={948}
+          height={1080}
+          alt="Login Image"
+          className="w-full h-full  object-cover "
+        />
+      </div>
+     
     </div>
   );
 };

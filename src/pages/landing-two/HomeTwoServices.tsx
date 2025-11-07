@@ -43,13 +43,13 @@ const HomeTwoServices = () => {
             icon={<IconUsers className="size-10" />}
             title="24/7 Service"
             text="We’re here whenever you need us — day, night, or weekend, making sure your move stays on track."
-            className="bg-accent-4 lg:bg-prim/20"
+            className="bg-accent-4 lg:bg-[#e8d5ba]"
           />
           <HomeTwoServiceCard
             icon={<IconDiscountCheck className="size-10" />}
             title="Protective Covering"
             text="Your furniture and valuables are wrapped, padded, and secured for safe transport."
-            className="bg-accent-4 lg:bg-prim/20"
+            className="bg-accent-4 lg:bg-[#e8d5ba]"
           />
           <HomeTwoServiceCard
             icon={<IconRoute className="size-10" />}

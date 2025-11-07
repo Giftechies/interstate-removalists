@@ -42,7 +42,7 @@ export default function Property({
               }`}
           >
             {/* <div className="mb-2">{property.icon}</div> */}
-            <i className={`${property.icon} text-5xl `} size={80}></i>
+            <i className={`${property.icon} text-4xl font-medium `} size={80}></i>
             <span className="text-lg font-medium">{property.name}</span>
             <input
               type="radio"

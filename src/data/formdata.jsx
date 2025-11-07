@@ -136,7 +136,8 @@ export async function BusinessRegister(data) {
     return { success: false, message: error.message }; 
   }
 }
-export async function Userlogin(data) {
+
+export async function fetchUserlogin(data) {
   try {
     const response = await fetch(`${base_url}/api/login`, {
       method: "POST",
@@ -158,18 +159,40 @@ export async function Userlogin(data) {
     }
 
     // Normalize structure
-    return {
-      success: true,
-      access_token: res.access_token,
-      token_type: res.token_type,
-      message: res.message || "Login successful",
-    };
+    return res
   } catch (error) {
     console.error("Login error:", error);
     return {
       success: false,
       message: error.message || "Unexpected error occurred",
     };
+  }
+}
+
+export async function fetchuserProfile (token){
+  try {
+    const res =  await fetch(`${base_url}/api/profile`,{
+      method:'GET',
+      headers:{
+       "Content-Type":"application/json",
+       "Authorization":`Bearer ${token}`
+      }
+
+    })
+    const data = await res.json()
+    if(!res.ok){
+      return {
+        success:false,
+        message:data?.message || `Request failed with ${res.status}`
+      }
+    }
+ return {
+ success:true,
+ data}
+    
+  } catch (error) {
+    return {success:false,message:error.message || "something went wrong while fetching user data"}
+    
   }
 }
 
@@ -183,7 +206,7 @@ export async function Orders() {
     return response
     
   } catch (error) {
-    return {seccuess:false,message:error.message || "something went wrong!!!"}
+    return {success:false,message:error.message || "something went wrong!!!"}
     
   }
   

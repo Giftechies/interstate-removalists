@@ -28,7 +28,7 @@ export default function FormSidebar({ formData }) {
   return (
     <aside
       className="sticky top-30 hidden h-fit w-full overflow-y-auto self-start 
-                 rounded-xl border bg-white p-8 shadow-md lg:block navbar-dropdown-scrollbar"
+                 rounded-lg  bg-white-1 p-8 shadow lg:block navbar-dropdown-scrollbar"
       aria-label="Move summary"
     >
       <h2 className="text-xl font-semibold text-zinc-800">Your Move</h2>

@@ -1,14 +1,20 @@
 "use client";
 
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { store } from "@/app/store/store";
 import SmoothScroll from "@/components/animations/SmoothScroll";
 import ScrollProgressButton from "@/components/shared/scroll-top/ScrollProgressButton";
 import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 
+
+
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
   const [modalOpen, setModalOpen] = useState(false);
+
+
+
+
 
   // Detect Radix Dialog state globally
   useEffect(() => {
