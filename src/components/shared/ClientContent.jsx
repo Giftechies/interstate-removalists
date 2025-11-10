@@ -1,22 +1,18 @@
 "use client";
 
-import { Provider, useDispatch } from "react-redux";
-import { store } from "@/app/store/store";
 import SmoothScroll from "@/components/animations/SmoothScroll";
 import ScrollProgressButton from "@/components/shared/scroll-top/ScrollProgressButton";
 import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { UserProfile } from "@/app/store/reducers/userSlice";
 
-
-
-export default function ClientWrapper({ children }: { children: React.ReactNode }) {
+export default function ClientContent({ children }) {
   const [modalOpen, setModalOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { user, loading } = useSelector((state) => state.user);
 
-
-
-
-
-  // Detect Radix Dialog state globally
+  // Detect open dialogs (for SmoothScroll toggle)
   useEffect(() => {
     const observer = new MutationObserver(() => {
       const isOpen = !!document.querySelector('[data-state="open"]');
@@ -27,14 +23,20 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <Provider store={store}>
-      {/* Only apply smooth scroll when no dialog is open */}
-      {!modalOpen && <SmoothScroll />}
+  // Fetch user profile on app load if token exists
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (token && !user) {
+      dispatch(UserProfile(token));
+    }
+  }, [dispatch, user]);
 
+  return (
+    <>
+      {!modalOpen && <SmoothScroll />}
       {children}
       <Toaster position="top-right" reverseOrder={false} />
       <ScrollProgressButton />
-    </Provider>
+    </>
   );
 }

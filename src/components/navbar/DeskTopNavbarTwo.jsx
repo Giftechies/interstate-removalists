@@ -10,12 +10,16 @@ import { CircleUser, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { navbarData } from "../../../public/data/navbarData";
-// import { navbar } from "../../../public/data/navbar";
+import { useSelector } from "react-redux";
+
+
 
 const 
 DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
+  const {user,loading} = useSelector((state)=>state.user)
+  console.log(user,'user at nav');
+  
 
 
   return (
@@ -59,7 +63,6 @@ DeskTopNavbarTwo = ({navbar}) => {
                     isActive && "text-[var(--primary-hex)] before:w-full before:bg-prim",
                   )}
                 >
-                  {" "}
                   <span className="l-text">{menuTitle}</span>
                   <IconChevronDown stroke="2" />
                 </Link>)}
@@ -101,16 +104,16 @@ DeskTopNavbarTwo = ({navbar}) => {
         </ul>
 
         <div className="flex gap-8">
-          {/* <Link
+          <Link
             href={`/login`}
             className={cn(
               "l-text theme-transition-3 flex items-center gap-1  hover:text-accent-3  text-black-4"
             
             )}
           >
-            <IconLock />
+            <User className=" size-4 mr-1 " />
             <span>Login</span>
-          </Link> */}
+          </Link>
           <Link
             href={`/pick-details`}
             className={cn(

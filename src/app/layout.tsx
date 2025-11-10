@@ -1,6 +1,6 @@
 import "@/../node_modules/react-modal-video/scss/modal-video.scss";
 import "@/styles/globals.css";
-// import { pop } from "@/utils/fonts";
+import { pop } from "@/utils/fonts";
 
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
@@ -49,7 +49,7 @@ const navBarData = await NavbarData()
         />
       </head>
       <body
-      //  className={pop.className}
+       className={pop.className}
        >
         <ClientWrapper>
         <NavbarContainerTwo menu={navBarData} />

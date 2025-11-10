@@ -137,39 +137,27 @@ export async function BusinessRegister(data) {
   }
 }
 
-export async function fetchUserlogin(data) {
+export async function fetchUserlogin(payload) {
   try {
-    const response = await fetch(`${base_url}/api/login`, {
+    const res = await fetch(`${base_url}/api/login`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
-
-    const res = await response.json();
-
-    // Handle HTTP status errors
-    if (!response.ok) {
-      return {
-        success: false,
-        message: res.message || "Invalid credentials",
-        status: response.status,
-      };
+    const json = await res.json();
+    if (!res.ok) {
+      return { success: false, message: json?.message || `Request failed: ${res.status}` };
     }
-
-    // Normalize structure
-    return res
-  } catch (error) {
-    console.error("Login error:", error);
-    return {
-      success: false,
-      message: error.message || "Unexpected error occurred",
-    };
+    // Keep original API structure under `data` for consistency with your backend
+    return { success: true, data: json.data || json };
+  } catch (err) {
+    return { success: false, message: err?.message || "Network error" };
   }
 }
 
+
 export async function fetchuserProfile (token){
+  console.log(token,"in api");
   try {
     const res =  await fetch(`${base_url}/api/profile`,{
       method:'GET',
@@ -179,16 +167,17 @@ export async function fetchuserProfile (token){
       }
 
     })
-    const data = await res.json()
+    
+    const response = await res.json()
     if(!res.ok){
       return {
         success:false,
-        message:data?.message || `Request failed with ${res.status}`
+        message:response?.message || `Request failed with ${res.status}`
       }
     }
  return {
  success:true,
- data}
+ data:response}
     
   } catch (error) {
     return {success:false,message:error.message || "something went wrong while fetching user data"}

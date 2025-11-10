@@ -23,38 +23,34 @@ const LoginContent =  () => {
     }
   })
   const [loading,setloading] =useState(false)
+const formHandler = async (data) => {
+  setloading(true);
 
-  const formHandler = async (data)=>{
-    console.log(data);
-    
-    setloading(true)
+  try {
+    const result = await dispatch(Userlogin(data));
+    const payload = result.payload;
 
-    try {
-    const res = await dispatch(Userlogin(data));
-    // const res = await fetchUserlogin(data);
-    console.log("userlogin in login",res);
-    
-    if(res.success){
+    if (payload?.success) {
+      toast.success("User logged in successfully!");
 
-      toast.success("User loging Successfully")
-      localStorage.setItem("token",res.access_token)
+      // ✅ Store token only on client
+      if (typeof window !== "undefined" && payload.data?.token) {
+        localStorage.setItem("authToken", payload.data.token);
+      }
 
-    }else{
-      toast.error(res.message)
+      // router.push("/dashboard"); // optional redirect
+    } else {
+      toast.error(payload?.message || "Login failed");
     }
-      
 
-      
-    } catch (error) {
-      
-      toast.error(`${error.message} `)
-    }finally{
-
-        setloading(false)
-    
-
-    }
+  } catch (error) {
+    toast.error(error.message || "Something went wrong");
+  } finally {
+    setloading(false);
   }
+};
+
+
 
 
 
