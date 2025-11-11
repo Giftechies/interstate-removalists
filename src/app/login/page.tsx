@@ -1,5 +1,7 @@
-import LoginContent from "@/pages/login/LoginContent";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const LoginContent = dynamic(()=>import("@/pages/login/LoginContent"))
 
 export const metadata: Metadata = {
   title: "Login ",
