@@ -186,9 +186,15 @@ export async function fetchuserProfile (token){
 }
 
 
-export async function Orders() {
+export async function Orders(token) {
   try {
-    const res = await fetch(`${base_url}/api/orders`,{method:'GET'})
+    const res = await fetch(`${base_url}/api/orders`,{method:'GET',
+      headers:{
+        "Content-Type":"application/json",
+        Authorization:`Bearer ${token}`
+        
+      }
+    })
 
     const response = res.json()
 

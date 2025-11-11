@@ -1,19 +1,25 @@
+'use client'
+
 import { Truck } from "lucide-react";
 import SectionTitle from "../shared/SectionTitle";
 import CancelOrder from "./CancelOrder"
 import RescheduleOrder from "./RescheduleOrder"
+import { useSelector } from "react-redux";
 
 
 
 const buttonclass =" bg-prim px-4 py-2 rounded-lg text-white-1 hover:opacity-90  "
 
-export default async function UserProfile({order}){
+export default  function UserProfile({order}){
+
+    const {user} = useSelector((state)=>state.user)
+
     return(
         <section className="spy80px" >
 
             <main className="container" >
 
-                <SectionTitle text={`welcome Alex`} />
+                <SectionTitle text={`welcome ${user?.name}`} />
                 <p>Lorem ipsum dolor sit amet consectetur. </p>
 
                 {/* orders history  */}

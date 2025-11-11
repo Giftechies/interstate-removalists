@@ -4,20 +4,20 @@ import { cn } from "@/utils/cn";
 import {
   IconArrowUpRight,
   IconChevronDown,
-  IconLock,
 } from "@tabler/icons-react";
 import { CircleUser, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
+import Userprofile from '@/components/shared/Userprofile'
 
 
 
 const 
 DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
-  const {user,loading} = useSelector((state)=>state.user)
+  const {user} = useSelector((state)=>state.user)
   console.log(user,'user at nav');
   
 
@@ -37,8 +37,16 @@ DeskTopNavbarTwo = ({navbar}) => {
           </Link>
         </div>
 
-        <ul className="flex items-center justify-between gap-10 ">
-          {navbar?.map(({ id, menuTitle, path, menuItems }) => {
+        <ul className="flex items-center justify-between gap-10  ">
+          {navbar
+  ?.filter((item) => {
+    // Hide "Login" or "Registration" if user exists
+    if (user && ["Login/Registration"].includes(item.menuTitle)) {
+      return false;
+    }
+    return true;
+  })
+  ?.map(({ id, menuTitle, path, menuItems }) => {
             let isActive = menuItems?.some(
               (path) => pathName == path.menuItemPath,
             );
@@ -51,7 +59,7 @@ DeskTopNavbarTwo = ({navbar}) => {
                     isActive && "text-[var(--primary-hex)] before:w-full before:bg-prim",
                   )}
                 >
-                {/* <IconLock/> */}
+                
                 <User className=" size-4 mr-1 " />
                 
                   <span className="l-text">{menuTitle}</span>
@@ -69,7 +77,7 @@ DeskTopNavbarTwo = ({navbar}) => {
 
                 <ul
                   data-lenis-prevent
-                  className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30 mt-1 flex max-h-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[450px] group-hover:overflow-auto group-hover:opacity-100  "
+                  className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30 mt-1 flex max-h-0 w-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[450px] group-hover:overflow-auto group-hover:opacity-100  group-hover:w-fit  "
                 >
                   {menuItems.map(({ id, title, menuItemPath }) => (
                     <li key={id}>
@@ -103,7 +111,7 @@ DeskTopNavbarTwo = ({navbar}) => {
           })}
         </ul>
 
-        <div className="flex gap-8">
+        <div className="flex gap-8  ">
           <Link
             href={`/login`}
             className={cn(
@@ -111,8 +119,9 @@ DeskTopNavbarTwo = ({navbar}) => {
             
             )}
           >
-            <User className=" size-4 mr-1 " />
-            <span>Login</span>
+    
+         {user && <Userprofile name={user?.name} email={user?.email} />}
+         
           </Link>
           <Link
             href={`/pick-details`}

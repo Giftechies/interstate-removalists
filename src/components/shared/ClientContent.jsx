@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { UserProfile } from "@/app/store/reducers/userSlice";
+import Cookies from 'js-cookie'
 
 export default function ClientContent({ children }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -24,12 +25,15 @@ export default function ClientContent({ children }) {
   }, []);
 
   // Fetch user profile on app load if token exists
-  useEffect(() => {
-    const token = localStorage.getItem("authToken");
-    if (token && !user) {
-      dispatch(UserProfile(token));
-    }
-  }, [dispatch, user]);
+ useEffect(() => {
+  const token = Cookies.get("authToken");
+ 
+  
+  if (token && !user) {
+    dispatch(UserProfile(token));
+  }
+}, [dispatch, user]);
+
 
   return (
     <>

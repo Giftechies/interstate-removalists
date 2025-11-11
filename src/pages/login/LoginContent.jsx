@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { Loader2Icon } from "lucide-react";
 import { useDispatch } from "react-redux";
 import {Userlogin} from "@/app/store/reducers/userSlice"
+import Cookies from "js-cookie"
 
 const LoginContent =  () => {
 
@@ -32,10 +33,17 @@ const formHandler = async (data) => {
 
     if (payload?.success) {
       toast.success("User logged in successfully!");
+      reset()
 
-      // ✅ Store token only on client
-      if (typeof window !== "undefined" && payload.data?.token) {
-        localStorage.setItem("authToken", payload.data.token);
+       const token = payload.data?.token;
+      // ✅ Store token securely in cookies (instead of localStorage)
+      if (token) {
+        Cookies.set("authToken", token, {
+          expires: 1, // days
+          secure: true, // requires HTTPS
+          sameSite: "Strict", // prevents CSRF from other domains
+          path: "/", // accessible site-wide
+        });
       }
 
       // router.push("/dashboard"); // optional redirect
