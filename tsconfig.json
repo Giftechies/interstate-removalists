@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/home-three/OurWorks.jsx", "src/pages/local/HomeTwoFaq.jsx", "src/pages/home-one/HomeOneFinancialPlanning.tsx", "src/components/navbar/NavbarContainerTwo.jsx", "src/components/navbar/DeskTopNavbarTwo.jsx", "src/components/navbar/MobileNavbar.jsx", "src/app/(inner-pages)/f", "src/pages/login/LoginContent.jsx", "src/components/shared/ClientWrapper.jsx", "src/components/shared/ClientContent.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/home-three/OurWorks.jsx", "src/pages/local/HomeTwoFaq.jsx", "src/pages/home-one/HomeOneFinancialPlanning.tsx", "src/components/navbar/NavbarContainerTwo.jsx", "src/components/navbar/DeskTopNavbarTwo.jsx", "src/components/navbar/MobileNavbar.jsx", "src/app/(inner-pages)/f", "src/pages/login/LoginContent.jsx", "src/components/shared/ClientWrapper.jsx", "src/components/shared/ClientContent.jsx", "src/app/login/ghge.jsx"],
   "exclude": ["node_modules"]
 }
