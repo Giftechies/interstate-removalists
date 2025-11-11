@@ -128,6 +128,26 @@ import { Loader2Icon } from "lucide-react";
 
 export default  function LoginContent(){
 
+  const {reset,register,handleSubmit,formState:{errors}} = useForm({
+    defaultValues:{
+      email:"",
+      password:'',
+    }
+  })
+  const [loading,setloading] = useState(false)
+
+
+
+
+
+
+
+  const formHandler = (data)=>{
+    console.log(data);
+    
+
+  }
+
 
   return(
      <div className="relative container max-md:mt-12 md:pt-20  py-4 md:py-8 grid-cols-12 items-center  lg:grid xxl:overflow-hidden">
