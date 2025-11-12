@@ -18,12 +18,12 @@ export default function FormSidebar({ formData }) {
     drop_variation_meter,
     drop_flights,
     calendar,
-    Inventory,
+    inventory,
   } = formData;
 
   const hasDelivery = !!drop_address;
   const hasDates = calendar?.dates?.length > 0;
-  const hasInventory = Inventory?.items?.length > 0;
+  const hasInventory = inventory?.items?.length > 0;
 
   return (
     <aside
@@ -72,7 +72,7 @@ export default function FormSidebar({ formData }) {
       {/* Inventory */}
       {hasInventory && (
         <Section title="Inventory" scrollable>
-          {Inventory.items.map((item) => (
+          {inventory.items.map((item) => (
             <InventoryRow
               key={item.name}
               name={item.name}

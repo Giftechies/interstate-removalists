@@ -5,7 +5,7 @@ import { setInventory } from "@/app/store/reducers/formSlice";
 
 const Inventory = ({ inventorydata = [] }) => {
   const dispatch = useDispatch();
-  const inventory = useSelector((state) => state.form.Inventory.items) || [];
+  const inventory = useSelector((state) => state.form.inventory.items) || [];
 
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(

@@ -42,7 +42,6 @@ export const UserlogOut = createAsyncThunk(
 )
 
 
-
 const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -52,14 +51,6 @@ const userSlice = createSlice({
     error: null,
   },
   reducers: {
-    // logOutUser: (state) => {
-    //   state.user = null;
-    //   state.token = null;
-    //   if(typeof window !== "undefined"){
-    //   localStorage.removeItem("authToken")
-    //   };
-
-    // },
     setUser: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
@@ -89,8 +80,7 @@ const userSlice = createSlice({
       })
       .addCase(UserProfile.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
+        state.user = action.payload.data;
       })
       .addCase(UserProfile.rejected, (state, action) => {
         state.loading = false;

@@ -30,12 +30,15 @@ export default function ClientContent({ children }) {
 
   console.log(token,'token');
   
+ console.log(user,"user in clietn");
  
   
   if (token && !user) {
+    console.log(token,'calling client');
+    
     dispatch(UserProfile(token));
   }
-}, [dispatch, user]);
+}, [user]);
 
 
 

@@ -21,8 +21,8 @@ const initialState = {
     dates: [],
     range: "Exact date",
   },
-  Inventory: [],
-  ElectricityFitting:'',
+  inventory: [],
+  fitting:'',
   name:"",
   email:"",
   phone:"",
@@ -77,10 +77,10 @@ const formSlice = createSlice({
       state.calendar = action.payload;
     },
     setInventory(state, action) {
-      state.Inventory = action.payload;
+      state.inventory = action.payload;
     },
     setElectricity(state,action){
-      state.ElectricityFitting = action.payload
+      state.fitting = action.payload
     },
     setName(state,action){
       state.name = action.payload

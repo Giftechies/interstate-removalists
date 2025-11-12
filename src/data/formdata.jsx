@@ -11,7 +11,7 @@ export  async function fetchPropertyData(){
         const data = await res.json()
         console.log("propert>> fetch",data);
         
-        return data
+        return data 
         
         
     } catch (error) {
@@ -26,7 +26,7 @@ export async function fetchVaritions(){
         const res = await fetch(`${base_url}/api/variations`,{
             method:"GET", cache:"no-cache"
         })
-        const data = res.json()
+        const data = await res.json()
         return data
     } catch (error) {
          console.log(error)
@@ -102,9 +102,8 @@ export async function NavbarData(){
         
     }
 }
-// formdata.jsx
 
-// Assuming base_url is defined elsewhere (e.g., const base_url = "https://checkdemo.live/movers/public";)
+
 
 export async function BusinessRegister(data) {
   const url = `${base_url}/api/register-business`;
@@ -162,7 +161,7 @@ export async function Logout(){
     const res1 = await res.json()
 
     return {
-      success:ture,
+      success:true,
       message:'User Logout successfully!'
     }
     
@@ -185,6 +184,7 @@ export async function fetchuserProfile (token){
        "Content-Type":"application/json",
        "Authorization":`Bearer ${token}`
       }
+    
 
     })
     
@@ -195,6 +195,8 @@ export async function fetchuserProfile (token){
         message:response?.message || `Request failed with ${res.status}`
       }
     }
+ 
+    
  return {
  success:true,
  data:response}
@@ -280,5 +282,33 @@ export async function OrderReschedule(orderId, reason, new_date, token) {
       success: false,
       message: error.message || "Something went wrong!",
     };
+  }
+}
+
+
+
+export async function submitOrder(data){
+  
+  try {
+    const res = await fetch(`${base_url}/api/submit-order`,{
+      method:"POST",
+      headers:{
+        'Content-Type':'application/json',
+      },
+      body:JSON.stringify(data)
+    })
+    const res1 = res.json()
+    if(!res.ok){
+      return{
+        success:false,
+        message: res1.message || 'Order not submit. Try again!'
+      }
+    }
+    return res1
+  } catch (error) {
+    return{
+      success:false,
+      message:error.message || `Something went wrong`
+    }
   }
 }

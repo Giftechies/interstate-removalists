@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { UserlogOut } from "@/app/store/reducers/userSlice";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie"
 
 export default function Userprofile({name,email}) {
 
@@ -19,8 +20,9 @@ export default function Userprofile({name,email}) {
 
   const logoutHandler = async ()=>{
    try {
-     const res = await dispatch(UserlogOut())
+    await dispatch(UserlogOut())
      toast.success('User logout successfully!')
+         Cookies.remove("authToken", { path: "/" });
      router.push('/')
     
    } catch (error) {
@@ -60,7 +62,7 @@ export default function Userprofile({name,email}) {
         {/* Menu Items */}
         <div className="flex justify-between items-center">
           <Link
-            href="/orders"
+            href="/order-history"
             className="text-primary hover:underline text-sm font-medium"
           >
             Order History

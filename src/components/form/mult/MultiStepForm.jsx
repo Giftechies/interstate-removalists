@@ -12,6 +12,7 @@ import {
   fetchPropertyData,
   fetchVaritions,
   fetchinventory,
+  submitOrder,
 } from "../../../data/formdata";
 import {
   setAddress,
@@ -121,7 +122,7 @@ export default function MultiStepForm() {
   const totalSteps = Object.keys(page).length;
   const buttonText = currentStep === totalSteps ? "Submit" : "Next";
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (currentStep === page.Address) {
       dispatch(setAddress(data.pickupAddress));
       dispatch(setDiscreetly(data.pickupAddress_discreetly));
@@ -155,6 +156,13 @@ export default function MultiStepForm() {
 
        const newFormData = store.getState().form;
   console.log("Redux updated form:", newFormData);
+  const res = await submitOrder(newFormData)
+  if(res){
+    console.log("order details>>>>",res);
+    
+  }
+  
+
     }
 
     if (currentStep < totalSteps) {
