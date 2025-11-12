@@ -46,7 +46,7 @@ export default function Electricity({getValues,setValue}){
                 {data.map((item,id)=>{
                   const  IsActive = electricityBox === item.lable
                     return(
-                        <div key={id} onClick={()=>handleElectricityData(item.lable)} className={` w-[12rem] rounded-md p-4 border hover:bg-gray-300  flex flex-col gap-2 items-center justify-center ${IsActive? " bg-[#f2d7bd] text-white-1 ":"text-black-4"} `} >
+                        <div key={id} onClick={()=>handleElectricityData(item.lable)} className={` w-[12rem] rounded-md p-4 border hover:bg-black-3 hover:text-white-1 cursor-pointer  flex flex-col gap-2 items-center justify-center ${IsActive? " bg-black-3 text-white-1 ":"text-black-4"} `} >
                             <span>{item.icon}</span>
                             <label> {item.lable} </label>
                            
