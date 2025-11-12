@@ -1,5 +1,6 @@
 import dynamicImport from "next/dynamic";
-import { Metadata } from "next";
+import LoginContent from "@/components/login-components/LoginContent"
+
 
 export const metadata = {
   title: "Login",
@@ -8,10 +9,6 @@ export const metadata = {
 
 export const dynamic = "force-dynamic"; // tells Next.js not to pre-render
 
-// ✅ Import your client component dynamically (disable SSR)
-const LoginContent = dynamicImport(() => import("@/pages/login/LoginContent"), {
-  ssr: false,
-});
 
 export default function LoginPage() {
   return <LoginContent />;

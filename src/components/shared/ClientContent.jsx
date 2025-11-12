@@ -33,6 +33,10 @@ export default function ClientContent({ children }) {
     dispatch(UserProfile(token));
   }
 }, [dispatch, user]);
+useEffect(() => {
+  console.log("Redux user state:", user);
+}, [user]);
+
 
 
   return (

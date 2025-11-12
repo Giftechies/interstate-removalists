@@ -125,8 +125,15 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Loader2Icon } from "lucide-react";
+// import { Userlogin } from "@/app/store/reducers/userSlice";
+import { useSelector } from "react-redux";
+
 
 export default  function LoginContent(){
+
+  const {user} = useSelector((state)=>state.user)
+  console.log(user,'testing');
+  
 
   const {reset,register,handleSubmit,formState:{errors}} = useForm({
     defaultValues:{

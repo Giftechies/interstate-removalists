@@ -2,6 +2,10 @@ import "@/../node_modules/react-modal-video/scss/modal-video.scss";
 import "@/styles/globals.css";
 import { pop } from "@/utils/fonts";
 
+export const dynamic = "force-dynamic";      // <== prevent pre-rendering
+export const fetchCache = "force-no-store";  // <== disable caching
+
+
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
