@@ -1,7 +1,7 @@
 
 
 import { createAsyncThunk, createSlice, } from "@reduxjs/toolkit";
-import { fetchUserlogin, fetchuserProfile } from "../../../data/formdata"
+import { fetchUserlogin, fetchuserProfile,Logout } from "../../../data/formdata"
 
 
 
@@ -27,6 +27,20 @@ export const UserProfile = createAsyncThunk("userProfile/fetch",
   }
 )
 
+export const UserlogOut = createAsyncThunk(
+  "user/logout",
+  async(_,{rejectWithValue})=>{
+    try {
+      const res = await Logout()
+      return res;
+      
+    } catch (error) {
+      return rejectWithValue('logout failed')
+      
+    }
+  }
+)
+
 
 
 const userSlice = createSlice({
@@ -38,14 +52,14 @@ const userSlice = createSlice({
     error: null,
   },
   reducers: {
-    logOutUser: (state) => {
-      state.user = null;
-      state.token = null;
-      if(typeof window !== "undefined"){
-      localStorage.removeItem("authToken")
-      };
+    // logOutUser: (state) => {
+    //   state.user = null;
+    //   state.token = null;
+    //   if(typeof window !== "undefined"){
+    //   localStorage.removeItem("authToken")
+    //   };
 
-    },
+    // },
     setUser: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
@@ -82,9 +96,22 @@ const userSlice = createSlice({
         state.loading = false;
         state.error = action.payload
       })
+      // ---- LOGOUT ----
+      .addCase(UserlogOut.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(UserlogOut.fulfilled, (state) => {
+        state.loading = false;
+        state.user = null;
+        state.token = null;
+      })
+      .addCase(UserlogOut.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
   }
 
 })
 
-export const { setUser, logOutUser } = userSlice.actions
+export const { setUser } = userSlice.actions
 export default userSlice.reducer

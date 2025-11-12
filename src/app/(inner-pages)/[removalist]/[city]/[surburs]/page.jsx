@@ -32,9 +32,9 @@ export default async function subursPage({params}){
        {/* <InnerAboutPage text1={data.description} /> */}
       <EditorData content={data?.description} />
          { sdata?.children && <Surburs suburbs={sdata?.children} removalist={removalist} city={city} />}
-         { data.show_map &&  <Map />}
-            {data.show_process && <OurWorks/>}
-            { data.show_faq && <HomeTwoFaq/>} 
+         { data?.show_map &&  <Map />}
+            {data?.show_process && <OurWorks/>}
+            { data?.show_faq && <HomeTwoFaq/>} 
             <Animations/>
        </>
     )

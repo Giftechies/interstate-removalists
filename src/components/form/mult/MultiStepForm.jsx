@@ -44,6 +44,7 @@ import Calendar from "../Calendar";
 import Inventory from "../Inventory";
 import Electricity from "../Electricity"
 import UserData from "../UserData"
+import {store} from "@/app/store/store"
 
 export default function MultiStepForm() {
   const formData = useSelector((state) => state.form);
@@ -151,7 +152,9 @@ export default function MultiStepForm() {
       dispatch(setNote(data.additional_note  || ""))
       const dd = {...data}
       console.log(data);
-      
+
+       const newFormData = store.getState().form;
+  console.log("Redux updated form:", newFormData);
     }
 
     if (currentStep < totalSteps) {
@@ -160,7 +163,7 @@ export default function MultiStepForm() {
   };
 
   useEffect(() => {
-    console.log("Form Data in Redux:", formData);
+    console.log("Form Data of Redux:", formData);
   }, [formData]);
 
   const backHandler = () => {

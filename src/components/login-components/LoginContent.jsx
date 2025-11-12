@@ -11,8 +11,10 @@ import { Loader2Icon } from "lucide-react";
 import { useDispatch } from "react-redux";
 import {Userlogin} from "@/app/store/reducers/userSlice"
 import Cookies from "js-cookie"
+import { useRouter } from "next/navigation";
 
 const LoginContent =  () => {
+  const router = useRouter()
 
   const dispatch = useDispatch();
 

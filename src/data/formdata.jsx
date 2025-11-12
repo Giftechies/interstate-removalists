@@ -155,6 +155,26 @@ export async function fetchUserlogin(payload) {
   }
 }
 
+export async function Logout(){
+  try {
+
+    const res = await fetch(`${base_url}/api/logout`)
+    const res1 = await res.json()
+
+    return {
+      success:ture,
+      message:'User Logout successfully!'
+    }
+    
+  } catch (error) {
+    return{
+      success:false,
+      message:error?.message || "logout failed!"
+    }
+    
+  }
+}
+
 
 export async function fetchuserProfile (token){
   console.log(token,"in api");

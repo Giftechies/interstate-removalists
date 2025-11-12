@@ -27,15 +27,16 @@ export default function ClientContent({ children }) {
   // Fetch user profile on app load if token exists
  useEffect(() => {
   const token = Cookies.get("authToken");
+
+  console.log(token,'token');
+  
  
   
   if (token && !user) {
     dispatch(UserProfile(token));
   }
 }, [dispatch, user]);
-useEffect(() => {
-  console.log("Redux user state:", user);
-}, [user]);
+
 
 
 

@@ -7,8 +7,27 @@ import {
 } from "@/components/ui/popover";
 import { CircleUserRound, LogOut, UserIcon } from "lucide-react";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { UserlogOut } from "@/app/store/reducers/userSlice";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function Userprofile({name,email}) {
+
+  const dispatch = useDispatch()
+  const router = useRouter()
+
+  const logoutHandler = async ()=>{
+   try {
+     const res = await dispatch(UserlogOut())
+     toast.success('User logout successfully!')
+     router.push('/')
+    
+   } catch (error) {
+    toast.error("logout failed!")
+    
+   }
+  }
 
 
     
@@ -47,7 +66,7 @@ export default function Userprofile({name,email}) {
             Order History
           </Link>
 
-          <button className="flex items-center gap-1 text-sm text-destructive hover:underline">
+          <button onClick={logoutHandler} className="flex items-center gap-1 text-sm text-destructive hover:underline">
             <LogOut size={14} />
             Logout
           </button>
