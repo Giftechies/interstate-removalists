@@ -7,9 +7,6 @@ export const metadata = {
   description: "",
 };
 
-export const dynamic = "force-dynamic"; // tells Next.js not to pre-render
-
-
 export default function LoginPage() {
   return <LoginContent />;
 
