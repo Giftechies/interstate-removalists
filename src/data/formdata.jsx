@@ -136,12 +136,12 @@ export async function BusinessRegister(data) {
   }
 }
 
-export async function fetchUserlogin(payload) {
+export async function fetchUserlogin(credentials) {
   try {
     const res = await fetch(`${base_url}/api/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(credentials),
     });
     const json = await res.json();
     if (!res.ok) {
@@ -154,16 +154,28 @@ export async function fetchUserlogin(payload) {
   }
 }
 
-export async function Logout(){
+export async function Logout(token){
   try {
 
-    const res = await fetch(`${base_url}/api/logout`)
-    const res1 = await res.json()
+    const res = await fetch(`${base_url}/api/logout`,{method:"POST",
+      headers:{
+        "content-Type":"application/json",
+        "Authorization": `Bearer ${token}`
+      },
+    },)
+    if (!res.ok) {
+      // Throw an error if the HTTP status is not 2xx
+      const errorData = await res.json();
+      throw new Error(errorData.message || `Logout failed with status ${res.status}`);
+    }
+
+    // The backend might return success message in JSON, but we assume success if res.ok is true
+    const res1 = await res.json();
 
     return {
-      success:true,
-      message:'User Logout successfully!'
-    }
+      success: true,
+      message: res1.message || 'User Logout successfully!'
+    };
     
   } catch (error) {
     return{
@@ -217,10 +229,20 @@ export async function Orders(token) {
         
       }
     })
+    const response =await res.json()
+    if(!res.ok){
+   return {
+    success:false,
+    message:response.message || "order not fetch.Please try again!"
+  }
+    }
 
-    const response = res.json()
 
-    return response
+    return {
+      success:true,
+      message:response.message || "order fetched",
+      data:response?.data
+    }
     
   } catch (error) {
     return {success:false,message:error.message || "something went wrong!!!"}

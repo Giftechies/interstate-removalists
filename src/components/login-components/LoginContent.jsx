@@ -37,7 +37,7 @@ const formHandler = async (data) => {
       reset()
 
        const token = payload.data?.token;
-      // ✅ Store token securely in cookies (instead of localStorage)
+    
       if (token) {
         Cookies.set("authToken", token, {
           expires: 1, // days

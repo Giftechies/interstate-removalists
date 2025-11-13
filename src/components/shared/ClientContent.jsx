@@ -11,7 +11,7 @@ import Cookies from 'js-cookie'
 export default function ClientContent({ children }) {
   const [modalOpen, setModalOpen] = useState(false);
   const dispatch = useDispatch();
-  const { user, loading } = useSelector((state) => state.user);
+  const { user, isAuthenticated } = useSelector((state) => state.user);
 
   // Detect open dialogs (for SmoothScroll toggle)
   useEffect(() => {
@@ -25,20 +25,21 @@ export default function ClientContent({ children }) {
   }, []);
 
   // Fetch user profile on app load if token exists
- useEffect(() => {
-  const token = Cookies.get("authToken");
 
-  console.log(token,'token');
   
- console.log(user,"user in clietn");
- 
   
-  if (token && !user) {
-    console.log(token,'calling client');
-    
+  
+
+
+useEffect(() => {
+  const token = Cookies.get("authToken");
+  if (token && !isAuthenticated) {
     dispatch(UserProfile(token));
   }
-}, [user]);
+}, [dispatch, isAuthenticated]);
+
+
+
 
 
 

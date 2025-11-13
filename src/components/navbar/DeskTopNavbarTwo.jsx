@@ -17,11 +17,8 @@ import Userprofile from '@/components/shared/Userprofile'
 const 
 DeskTopNavbarTwo = ({navbar}) => {
   const pathName = usePathname();
-  const {user} = useSelector((state)=>state.user)
-  console.log(user,'user at nav');
+  const {user,isAuthenticated} = useSelector((state)=>state.user)
   
-
-
   return (
     <div
       className={cn(" fixed  top-0 z-50 w-full theme-transition- bg-white-1 shadow-sm"
@@ -113,14 +110,14 @@ DeskTopNavbarTwo = ({navbar}) => {
 
         <div className="flex gap-8  ">
           <Link
-            href={`/login`}
+            href={`/profile`}
             className={cn(
               "l-text theme-transition-3 flex items-center gap-1  hover:text-accent-3  text-black-4"
             
             )}
           >
     
-         {user && <Userprofile name={user?.name} email={user?.email} />}
+         {user && isAuthenticated && <Userprofile name={user?.name} email={user?.email} />}
          
           </Link>
           <Link
