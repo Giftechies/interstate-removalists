@@ -125,7 +125,9 @@ body {
 @layer utilities {
  
 
-
+.profileButton{
+  @apply  bg-prim px-4 py-2 rounded-lg text-white-1 hover:opacity-90 
+}
 .formHeading{
   @apply text-[16px] leading-[120%] xs:text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[30px] mb-2;
 }

@@ -3,8 +3,6 @@ import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
 
 
 export default function EditorData ({content='',buttonText="", show_button=true}) {
-
-    console.log("editor>>>>>>>",content);
     
     return(
         <section className="Editorspy80px ">

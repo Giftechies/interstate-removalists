@@ -2,21 +2,22 @@ import { ChevronRight } from "lucide-react";
 
 export default function ProfileSidebar({ stepHandler, currentStep,user }) {
   const list = [
-    { label: "Order History", step: 0 },
-    { label: "Change Password", step: 1 },
-    { label: "Change Email", step: 2 },
+    { label: "Personal Information", step:0 },
+    { label: "Manage Address", step:1 },
+    { label: "My Orders", step:2 },
+    { label: "Manage Password", step:3 },
+   
   ];
   
 
   return (
-    <div className="px-6 shadow-sm h-fit sticky top-24">
+    <div className="px-6 shadow-md h-fit sticky top-24">
       {/* Header */}
       <aside className="w-full flex flex-col items-center justify-center gap-1">
-        <div className="px-4 py-2 rounded-full text-[18px] font-medium border">
-          N
+        <div className="size-24 flex items-center justify-center text-4xl rounded-full font-medium border bg-prim text-white-1 ">
+          {user?.name.charAt(0)}
         </div>
         <h2 className="font-semibold text-gray-800">{user?.name}</h2>
-        <h4 className="text-sm text-gray-500">{user?.mobile}</h4>
         <h3 className="text-sm text-gray-500">{user?.email}</h3>
       </aside>
 
@@ -28,9 +29,9 @@ export default function ProfileSidebar({ stepHandler, currentStep,user }) {
           <li
             key={item.step}
             onClick={() => stepHandler(item.step)}
-            className={`flex items-center gap-2 cursor-pointer rounded-md px-2 py-1 transition-colors 
+            className={`flex items-center gap-2 cursor-pointer rounded-md px-3 py-3 transition-colors 
               ${currentStep === item.step 
-                ? "bg-black text-white font-medium"
+                ? "bg-prim text-white-1 font-normal"
                 : "hover:bg-gray-100 text-gray-700"}`}
           >
             <ChevronRight

@@ -28,7 +28,7 @@ export default function Userprofile({ name, email }) {
         toast.success("User logged out successfully!");
         Cookies.remove("authToken", { path: "/" });
         setOpen(false);
-        // router.push('/');
+        router.push('/profile');
       } else {
         toast.error(res.payload || "Logout failed");
       }
@@ -40,13 +40,14 @@ export default function Userprofile({ name, email }) {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <button
+        <Link
+        href={'/profile'}
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
           className="py-3 spx24px text-[20px] rounded-full border l-text flex gap-1 items-center"
         >
           <UserIcon size={15} /> Hi, {name?.split(" ")[0]}
-        </button>
+        </Link>
       </PopoverTrigger>
 
       <PopoverContent

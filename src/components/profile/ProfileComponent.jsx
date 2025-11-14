@@ -7,16 +7,19 @@ import { useSelector } from "react-redux";
 import { Orders } from "@/data/formdata";
 import Cookies from 'js-cookie'
 import toast from "react-hot-toast";
+import ChangeEmail from './ChangeEmail'
+import PersonalInfo from './PersonalInfo'
 
 export default function ProfileComponent() {
     const {user} = useSelector((state)=>state.user)
-  
-    
     const [step, setStep] = useState(0)
-    const component = [OrderHistory, ChangePassword]
+    const component = [PersonalInfo,OrderHistory, ChangePassword,ChangeEmail]
     const CurrentComponent = component[step]
     const [order,setOrder] = useState([])
     const token = Cookies.get('authToken')
+    
+
+    // functions
     const fetchOrder = useCallback( async ()=>{
         try {
                const res = await Orders(token)
@@ -33,29 +36,29 @@ export default function ProfileComponent() {
         }
      
     },[token])
+
     useEffect(()=>{
         if(token) fetchOrder()
     },[token,fetchOrder])
 
     const stepHandler = (step)=>{
-        setStep(step)
-        
-
+        setStep(step)    
     }
 
+console.log(order);
 
     return (
         <section className=" pt-8 pb-10 " >
-            <div className="container grid grid-cols-12 gap-4 "  >
+            <div className="container grid grid-cols-12 gap-12 "  >
                 {/* slidebar */}
                 <aside className=" col-span-3 " >
                     <ProfileSidebar stepHandler={stepHandler} currentStep={step} user={user} />
                 </aside>
-                <main className="col-span-9">
-                    <CurrentComponent order={order}  />
+                {/* main content */}
+                <main className=" col-start-4 col-span-8">
+                    <CurrentComponent order={order} user={user}  />
                 </main>
 
-                {/* main content */}
 
             </div>
 

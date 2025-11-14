@@ -14,46 +14,44 @@ import {
 import { OrderCancel } from "@/data/formdata"
 import toast from "react-hot-toast"
 import { Loader2 } from "lucide-react"
+import Cookies from 'js-cookie'
 
 export default function CancelOrder({ buttonclass, OrderId }) {
 
     const [loading, setloading] = useState(false)
-    const [reason, setresion] = useState()
-  
+    const [reason, setreason] = useState()
 
-    const CancelHandle = async ()=>{
-       if (!reason?.trim()) {
-  toast.error("Please enter a reason before cancelling.");
-  return;
-}
-  const token = localStorage.getItem("token");
-    if (!token) {
-      toast.error("You must be logged in to cancel this order.");
-      return;
-    }
+
+    const CancelHandle = async () => {
+        if (!reason?.trim()) {
+            toast.error("Please enter a reason.");
+            return;
+        }
+        const token = Cookies.get("authToken");
+        if (!token) {
+            toast.error("You must be logged in to cancel the order.");
+            return;
+        }
 
         setloading(true)
         try {
-            console.log("cancel",OrderId);
+            console.log("cancel", OrderId);
 
-            const res = await OrderCancel(OrderId,reason,token)
-        
-                  if (res?.success) {
-        toast.success("Move cancelled successfully!");
-        // Optional: trigger revalidation or refresh
-      } else {
-        toast.error(res?.message || "Failed to cancel the move.");
-      }
-    
+            const res = await OrderCancel(OrderId, reason, token)
+
+            if (res?.success) {
+                toast.success("Move cancelled successfully!");
+                // Optional: trigger revalidation or refresh
+            } else {
+                toast.error(res?.message || "Failed to cancel the move.");
+            }
+
         } catch (error) {
-            
-        }finally{
+
+        } finally {
             setloading(false)
         }
     }
-    
-
-
 
 
     return (
@@ -64,7 +62,7 @@ export default function CancelOrder({ buttonclass, OrderId }) {
                 </button>
 
             </DialogTrigger>
-              <DialogOverlay className="fixed inset-0 bg-black-4/40 backdrop-blur-sm transition-all duration-300" />
+            <DialogOverlay className="fixed inset-0 bg-black-4/40 backdrop-blur-sm transition-all duration-300" />
             <DialogContent  >
                 <DialogHeader>
 
@@ -75,20 +73,20 @@ export default function CancelOrder({ buttonclass, OrderId }) {
                     </DialogDescription>
                 </DialogHeader>
                 <div>
-                    <input onChange={(e) => setresion(e.target.value)} type="text" name="reason" className="formInput" placeholder="Please enter your reason." />
-                    
+                    <input onChange={(e) => setreason(e.target.value)} type="text" name="reason" className="formInput" placeholder="Please enter your reason." />
+
                 </div>
 
 
                 {/* buttons */}
                 <DialogFooter>
-                    
+
 
 
                     <div className="flex gap-3" >
-                        <button onClick={() =>{CancelHandle()}} className={` ${loading?"cursor-not-allowed opacity-70 ":`${buttonclass}`} `}  >{loading?Confirm:(<> <Loader2 className="animation-spin" />  </>)}</button>
-                        <DialogClose asChild >
-                            <button type="button" className={`${buttonclass}`}  >Cancel</button>
+                        <button onClick={CancelHandle} className={`${buttonclass} ${loading ? "cursor-not-allowed opacity-70 " : ''} `}  >{loading?  (<> <Loader2 className="animate-spin" />  </>):"Confirm" }</button>
+                        <DialogClose asChild disabled={loading} >
+                            <button disabled={loading}  type="button" className={`${buttonclass}`}  >Cancel</button>
                         </DialogClose>
                     </div>
                 </DialogFooter>

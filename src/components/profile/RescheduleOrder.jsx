@@ -16,6 +16,7 @@ import { Calendar } from "@/components/ui/calendar";
 import toast from "react-hot-toast";
 import dayjs from "dayjs";
 import { OrderReschedule } from "@/data/formdata";
+import Cookies from 'js-cookie'
 
 export default function RescheduleOrder({ buttonclass, OrderId }) {
   const [loading, setLoading] = useState(false);
@@ -26,12 +27,16 @@ export default function RescheduleOrder({ buttonclass, OrderId }) {
     if (!reason.trim()) return toast.error("Please enter a reason.");
     if (!newDate) return toast.error("Please select a new date.");
 
-    const token = localStorage.getItem("token");
+    const token = Cookies.get("authToken");
+    console.log(token,'rescheduleorder');
+    
     if (!token) return toast.error("Please login first.");
 
     setLoading(true);
     try {
-      const formattedDate = dayjs(newDate).format("YYYY-MM-DD HH:mm:ss");
+      const formattedDate = dayjs(newDate).format("YYYY-MM-DD");
+      console.log(formattedDate);
+      
       const res = await OrderReschedule(OrderId, reason, formattedDate, token);
 
       if (res?.success) {
@@ -50,7 +55,7 @@ export default function RescheduleOrder({ buttonclass, OrderId }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className={buttonclass}>Reschedule</button>
+        <button className={`profileButton`}>Reschedule</button>
       </DialogTrigger>
                     <DialogOverlay className="fixed inset-0 bg-black-4/40 backdrop-blur-sm transition-all duration-300" />
       <DialogContent className="w-[90vw] max-w-sm rounded-xl p-4 sm:p-6 shadow-md">

@@ -35,6 +35,7 @@ const formHandler = async (data) => {
     if (payload?.success) {
       toast.success("User logged in successfully!");
       reset()
+      router.push('/profile')
 
        const token = payload.data?.token;
     

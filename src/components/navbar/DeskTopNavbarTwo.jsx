@@ -38,7 +38,7 @@ DeskTopNavbarTwo = ({navbar}) => {
           {navbar
   ?.filter((item) => {
     // Hide "Login" or "Registration" if user exists
-    if (user && ["Login/Registration"].includes(item.menuTitle)) {
+    if (user && isAuthenticated &&  ["Login/Registration"].includes(item.menuTitle)) {
       return false;
     }
     return true;
@@ -109,17 +109,15 @@ DeskTopNavbarTwo = ({navbar}) => {
         </ul>
 
         <div className="flex gap-8  ">
-          <Link
-            href={`/profile`}
+          <button
             className={cn(
               "l-text theme-transition-3 flex items-center gap-1  hover:text-accent-3  text-black-4"
-            
             )}
           >
     
          {user && isAuthenticated && <Userprofile name={user?.name} email={user?.email} />}
          
-          </Link>
+          </button>
           <Link
             href={`/pick-details`}
             className={cn(

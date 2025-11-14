@@ -222,7 +222,8 @@ export async function fetchuserProfile (token){
 
 export async function Orders(token) {
   try {
-    const res = await fetch(`${base_url}/api/orders`,{method:'GET',
+    
+    const res = await fetch(`${base_url}/api/orders/user`,{method:'GET',
       headers:{
         "Content-Type":"application/json",
         Authorization:`Bearer ${token}`
@@ -259,7 +260,7 @@ export async function OrderCancel(orderId,reason,token){
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`,
         },
-        body:JSON.stringify(reason)
+        body:JSON.stringify({reason})
     })
     
   } catch (error) {
@@ -276,10 +277,10 @@ export async function OrderReschedule(orderId, reason, new_date, token) {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`,
       },
-      body: JSON.stringify({
-        reason,
-        new_date,
-      }),
+      body: JSON.stringify(
+        {reason,
+        new_date,}
+      ),
     });
 
     const data = await res.json();
@@ -334,3 +335,48 @@ export async function submitOrder(data){
     }
   }
 }
+
+export async function changePasswordApi(new_password,current_password){
+  try {
+    const res1 = dfd
+    
+  } catch (error) {
+    
+  }
+}
+export async function updateProfile(name,mobile,email,token){
+  try {
+    const res1 = await fetch(`${base_url}/api/profile/update`,{
+      method:"POST",
+        headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify(
+        {name,email,mobile}
+      ),
+    });
+
+    const res = await res1.json()
+    if(!res1.ok){
+      return{
+        success:false,
+        message:res.messsage || " Profile update fail. Please try again!"
+      }
+    }
+
+    return {
+      success:true,
+      message: res.message || "Profile updated successfully!",
+      data:res
+    }
+    
+  } catch (error) {
+      return{
+        success:false,
+        message:error.messsage || " Profile update fail. Please try again!"
+      }
+    
+  }
+}
+
