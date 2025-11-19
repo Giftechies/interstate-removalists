@@ -7,13 +7,12 @@ import { useSelector } from "react-redux";
 import { Orders } from "@/data/formdata";
 import Cookies from 'js-cookie'
 import toast from "react-hot-toast";
-import ChangeEmail from './ChangeEmail'
 import PersonalInfo from './PersonalInfo'
 
 export default function ProfileComponent() {
     const {user} = useSelector((state)=>state.user)
     const [step, setStep] = useState(0)
-    const component = [PersonalInfo,OrderHistory, ChangePassword,ChangeEmail]
+    const component = [PersonalInfo,ChangePassword,OrderHistory]
     const CurrentComponent = component[step]
     const [order,setOrder] = useState([])
     const token = Cookies.get('authToken')

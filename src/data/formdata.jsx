@@ -336,15 +336,31 @@ export async function submitOrder(data){
   }
 }
 
-export async function changePasswordApi(new_password,current_password){
+export async function changePasswordApi(current_password,new_password,token){
   try {
-    const res1 = dfd
+    const res1 = await fetch(`${base_url}/api/change-password`,{
+      method:"POST",
+      headers:{
+        'Content-Type':'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body:JSON.stringify({current_password,new_password,})
+    })
+    const res = await res1.json()
+    if(!res1.ok)return { success:false,message:res.message || 'Password Change failed!' }
+
+    return{
+      success:true,
+      message:res.message || 'Password Changed successfully!'
+    }
+    
     
   } catch (error) {
+    return { success:false,message:error.message || 'Password Change failed!' }
     
   }
 }
-export async function updateProfile(name,mobile,email,token){
+export async function updateProfile(name, mobile, email,token){
   try {
     const res1 = await fetch(`${base_url}/api/profile/update`,{
       method:"POST",

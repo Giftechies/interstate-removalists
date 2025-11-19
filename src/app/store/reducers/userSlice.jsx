@@ -1,7 +1,7 @@
 
 
 import { createAsyncThunk, createSlice, } from "@reduxjs/toolkit";
-import { fetchUserlogin, fetchuserProfile,Logout } from "../../../data/formdata"
+import { fetchUserlogin, fetchuserProfile,Logout, updateProfile } from "../../../data/formdata"
 import Cookies from 'js-cookie'
 
 
@@ -42,6 +42,22 @@ export const UserlogOut = createAsyncThunk(
   }
 )
 
+export const updateProfileSlice = createAsyncThunk(
+  "userProfile/update",
+  async({name, mobile, email,token},{rejectWithValue})=>{
+    try {
+      
+      const res = await updateProfile(name, mobile, email,token);
+      if(!res.success) return rejectWithValue (res.message || "Update failed!. Please try again.")
+        return res
+      
+    } catch (error) {
+      return rejectWithValue (error.message || "update failed!")
+      
+    }
+  }
+)
+
 
 const userSlice = createSlice({
   name: 'user',
@@ -49,7 +65,7 @@ const userSlice = createSlice({
     user: null,
     loading: false,
     error: null,
-     isAuthenticated: false
+    isAuthenticated: false
   },
   reducers: {
 
@@ -104,7 +120,20 @@ const userSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
             state.isAuthenticated =false
-      });
+      })
+      .addCase(updateProfileSlice.pending,(state,action)=>{
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateProfileSlice.fulfilled,(state,action)=>{
+        state.loading = false;
+        state.user =action.payload.data.data;
+        state.isAuthenticated = true;
+      })
+      .addCase(updateProfileSlice.rejected,(state,action)=>{
+        state.loading = false;
+      
+      })
   }
 
 })

@@ -18,7 +18,7 @@ export default function OrderHistory({ order }) {
         <main className="" >
 
             <SectionTitle text={`welcome ${user?.name}`} />
-            <p>Lorem ipsum dolor sit amet consectetur. </p>
+        
 
             {/* orders history  */}
             <div className="flex flex-col gap-4 mt-4" >
