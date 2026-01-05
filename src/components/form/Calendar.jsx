@@ -147,7 +147,7 @@ export default function Calendar({ setValue }) {
   const numberOfMonths = isBetweenMode ? 2 : 1;
 
   return (
-    <div className="w-full">
+    <div className="w-full  ">
       <h2 className="text-2xl font-semibold text-gray-800 mb-2">
         When is your move?
       </h2>
@@ -178,7 +178,7 @@ export default function Calendar({ setValue }) {
       {mode === "I'm unsure" ? (
         <UnsureOptions range={range} setRange={setRange} />
       ) : (
-        <div className="w-fit rounded-xl border border-gray-200 p-4 shadow-sm bg-white-1">
+        <div className="w-full rounded-xl border border-gray-200 p-4 shadow-sm bg-white-1">
           <div
             className={`w-fit mx-auto ${
               isBetweenMode ? "overflow-x-auto md:overflow-x-visible" : ""

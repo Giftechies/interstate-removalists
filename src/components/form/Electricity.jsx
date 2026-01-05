@@ -42,11 +42,11 @@ export default function Electricity({getValues,setValue}){
      <div>
               <p className=" formHeading " >Connect electricity, gas or internet in your new home</p>
               <span className="text-black-3 h6 " >When would you like to be contacted to organise connection of your electricity, gas and/or internet at your new address?</span>
-              <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6 mt-8 " >
+              <div className=" w-full  grid grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-4  gap-6 mt-8 " >
                 {data.map((item,id)=>{
                   const  IsActive = electricityBox === item.lable
                     return(
-                        <div key={id} onClick={()=>handleElectricityData(item.lable)} className={` w-[12rem] rounded-md p-4 border hover:bg-black-3 hover:text-white-1 cursor-pointer  flex flex-col gap-2 items-center justify-center ${IsActive? " bg-black-3 text-white-1 ":"text-black-4"} `} >
+                        <div key={id} onClick={()=>handleElectricityData(item.lable)} className={` rounded-md p-4 border hover:bg-black-3 hover:text-white-1 cursor-pointer  flex flex-col gap-2 items-center justify-center ${IsActive? " bg-black-3 text-white-1 ":"text-black-4"} `} >
                             <span>{item.icon}</span>
                             <label> {item.lable} </label>
                            

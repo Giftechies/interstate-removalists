@@ -12,6 +12,16 @@ const Map = dynamic(() => import("@/components/localcomponents/map"), {
   ssr: false,
 });
 
+export const revalidate = 3600;
+export const dynamicParams = true;
+export async function generateStaticParams() {
+
+  return[
+    {removalist: "local-removalists"},
+    {removalist:"interstate-removalists"}
+  ]
+}
+
 export default async function localRemovalists({params}) {
   const {removalist} = params;
   const res = await  pagesData(removalist)
