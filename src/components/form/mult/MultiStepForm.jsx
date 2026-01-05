@@ -1,5 +1,4 @@
 "use client";
-import "./multi.css";
 import FormSidebar from "./FormSidebar"
 import { useForm } from "react-hook-form";
 // import { button } from "@/components/ui/button";
@@ -54,17 +53,39 @@ export default function MultiStepForm() {
   const [variations, setvariations] = useState();
   const [inventory, setInventory] = useState();
 
-  useEffect(() => {
-    ;(async () => {
-      const propertydata = await fetchPropertyData();
-      const variationdata = await fetchVaritions();
-      const inventorydata = await fetchinventory();
+
+
+useEffect(() => {
+  let isMounted = true;
+
+  const loadData = async () => {
+    try {
+      const [
+        propertydata,
+        variationdata,
+        inventorydata,
+      ] = await Promise.all([
+        fetchPropertyData(),
+        fetchVaritions(),
+        fetchinventory(),
+      ]);
+
+      if (!isMounted) return;
 
       setvariations(variationdata);
       setpropertyOptions(propertydata);
       setInventory(inventorydata);
-    })();
-  }, []);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  loadData();
+
+  return () => {
+    isMounted = false;
+  };
+}, []);
+
 
   const {
     register,
@@ -99,7 +120,8 @@ export default function MultiStepForm() {
     "UserData",
   ];
 
-  const [currentStep, setCurrentStep] = useState(page.Address);
+  // const [currentStep, setCurrentStep] = useState(page.Address);
+  const [currentStep, setCurrentStep] = useState(8);
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -182,9 +204,9 @@ export default function MultiStepForm() {
 
   return (
     <>
-      <div className=" w-full  p-4 lg:p-20 ">
-        <div className="container  mt-20  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between">
-          <main className="multi-step-form shadow-lg  relative  rounded-md p-6 col-span-8  ">
+      <div className=" w-full lg:p-20 ">
+        <div className="container  mt-20 overflow-hidden  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between">
+          <main className="multi-step-form lg:shadow-lg relative  rounded-md py-6 lg:p-6 md:col-span-12  lg:col-span-8  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}
@@ -214,12 +236,7 @@ export default function MultiStepForm() {
               </div>
             </form>
           </main>
-          <div className=" col-span-4  " >
-
-          <FormSidebar formData = {formData}/>
-          </div>
-
-        
+          <FormSidebar className="col-span-4" formData = {formData}/>        
         </div>
       </div>
     </>

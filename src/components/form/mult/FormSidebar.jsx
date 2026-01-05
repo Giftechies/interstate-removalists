@@ -1,7 +1,8 @@
 "use client";
+import { cn } from "@/utils/cn";
 import { memo } from "react";
 
-export default function FormSidebar({ formData }) {
+export default function FormSidebar({ formData,className="" }) {
   if (!formData?.pickup_address) return null;
 
   const {
@@ -27,8 +28,7 @@ export default function FormSidebar({ formData }) {
 
   return (
     <aside
-      className="sticky top-30 hidden h-fit w-full overflow-y-auto self-start 
-                 rounded-lg  bg-white-1 p-8 shadow lg:block navbar-dropdown-scrollbar"
+      className={cn("sticky top-30 hidden h-fit w-full overflow-y-auto self-start rounded-lg  bg-white-1 p-8 shadow lg:block navbar-dropdown-scrollbar",className)}
       aria-label="Move summary"
     >
       <h2 className="text-xl font-semibold text-zinc-800">Your Move</h2>

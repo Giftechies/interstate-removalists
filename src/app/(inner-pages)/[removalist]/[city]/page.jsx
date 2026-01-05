@@ -1,17 +1,33 @@
 import Animations from "@/components/animations/Animations";
 import Banner from "@/components/ui/InnerBanner";
-import DetailAbout from "@/components/detailspage/DetailAbout"
 import OurWorks from "@/pages/home-three/OurWorks";
-import HomeOneTestimonials from "@/pages/home-one/HomeOneTestimonials";
 import dynamic from "next/dynamic";
 import HomeTwoFaq from "@/pages/local/HomeTwoFaq";
-import InnerAboutPage from "@/pages/local/InnerAboutPage";
-import Separater from "@/pages/local/Separater";
 import Suburbs from  "@/pages/local/Suburbs"
 import { pagesData } from "@/data/formdata";
 import EditorData from "@/components/ui/EditorData";
 
 const Map = dynamic(()=>import("@/components/localcomponents/map"),{ssr:false,})
+
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+
+ const getcities = async (removalist)=>{
+   const res = await pagesData(removalist);
+  const data = res?.data
+  const suburbs = data?.children;
+ return suburbs.map((e)=>({
+    removalist:'local-removalists',
+    city:e.slug
+  }))
+ }
+
+ const local = await getcities('local-removalists')
+ const interstate = await getcities('interstate-removalists');
+ return [...local,...interstate];
+}
+
 export default async  function city( {params} ){
     const markers = [
     { id: 1, position: [-33.8688, 151.2093], name: "Sydney", color: "#ff5733" }, 

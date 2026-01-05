@@ -72,8 +72,7 @@ export async function pagesData(id) {
     } catch (error) {
         console.log(error);
        const data={data:"Something went wrong!! Please try again later.",success:false}
-        return data 
-        
+        return data      
     }
     
 }

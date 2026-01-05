@@ -100,9 +100,9 @@ const Inventory = ({ inventorydata = [] }) => {
         className="w-full rounded-lg border p-2 text-[16px]"
       />
 
-      <div className="mt-6 flex gap-6">
+      <div className="mt-6 md:flex gap-6">
         {/* 🧭 Sidebar */}
-        <div className="sticky top-24 h-[400px] w-1/4 overflow-y-auto border-r pr-4">
+        <div className="sticky max-md:hidden top-24 h-[400px] w-1/4 overflow-y-auto border-r pr-4">
           {!searchTerm &&
             categories.map((cat) => (
               <div
@@ -121,6 +121,21 @@ const Inventory = ({ inventorydata = [] }) => {
             <p className="italic text-gray-500">Searching all items...</p>
           )}
         </div>
+     {/* 📱 Mobile Category Dropdown */}
+<div className="mt-4 block md:hidden">
+  <select
+    value={activeCategory}
+    onChange={(e) => setActiveCategory(e.target.value)}
+    className="w-full rounded-lg border p-2 text-[16px]"
+  >
+    {categories.map((cat) => (
+      <option key={cat.name} value={cat.name}>
+        {cat.name} {cat.count > 0 ? `(${cat.count})` : ""}
+      </option>
+    ))}
+  </select>
+</div>
+
 
         {/*  Item List */}
         <div className="flex-1">

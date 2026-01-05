@@ -9,9 +9,34 @@ import Surburs from "@/pages/local/Suburbs"
 import  {pagesData} from "@/data/formdata"
 const Map = dynamic(()=> import("@/components/localcomponents/map"),{ssr:false} )
 
+export const revalidate = 3600;
+export async function generateStaticParams() {
+  const removalists = ["local-removalists", "interstate-removalists"]
 
+  const params= []
 
+  for (const removalist of removalists) {
+    // 1️⃣ Get cities
+    const cityRes = await pagesData(removalist)
+    const cities = cityRes?.data?.children || []
 
+    for (const city of cities) {
+      // 2️⃣ Get suburbs
+      const suburbRes = await pagesData(city.slug)
+      const suburbs = suburbRes?.data?.children || []
+
+      for (const suburb of suburbs) {
+        params.push({
+          removalist:removalist,
+          city: city.slug,
+          surburs: suburb.slug,
+        })
+      }
+    }
+  }
+
+  return params
+}
 
 export default async function subursPage({params}){
     const {removalist, city,surburs} = params
@@ -22,10 +47,6 @@ export default async function subursPage({params}){
     const sdata = sres.data
 
 
-    
-    const htmlContent = `<div><h1>${surburs}</h1><p>Welcome to the page for ${surburs}.</p>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, perferendis porro eligendi iusto, et corporis fugit nihil tempora inventore modi nesciunt. Veritatis neque, quod itaque voluptate labore distinctio eaque esse aspernatur praesentium facere nemo iure!</p>
-    </div>`;
     return(
        <>
        <Banner pagename={data?.title} />
