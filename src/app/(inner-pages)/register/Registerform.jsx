@@ -49,10 +49,10 @@ export default function RegisterForm() {
 
   return (
     <section className="sp32px">
-      <main className="container grid grid-cols-12 justify-between  ">
+      <main className="container grid grid-cols-12 gap-4   justify-between  ">
         <form
           onSubmit={handleSubmit(formHandler)}
-          className="col-span-6 space-y-6  "
+          className=" col-span-full md:col-span-7 space-y-6  "
         >
           <h3 className="h4">Register Your Company</h3>
           <p className="h6 text-black-3 mt-2">
@@ -232,8 +232,8 @@ export default function RegisterForm() {
         </form>
 
         {/* image */}
-        <div className=" h-full sticky top-9 col-span-5 col-start-8 rounded-lg overflow-hidden  " >
-          <Image width={250} height={250} className="rounded-lg overflow-hidden w-full h-[80%] object-cover sticky top-30 mx-auto " src='https://plus.unsplash.com/premium_photo-1661772661721-b16346fe5b0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzc2luZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600' alt="Registeration image" />
+        <div className=" md:h-[70%]  md:sticky md:top-20 col-span-full md:col-span-4 md:col-start-9 rounded-lg overflow-hidden  " >
+          <Image width={250} height={250} className="rounded-lg overflow-hidden w-full h-full  object-cover  " src='https://plus.unsplash.com/premium_photo-1661772661721-b16346fe5b0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzc2luZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600' alt="Registeration image" />
         </div>
       </main>
     </section>
