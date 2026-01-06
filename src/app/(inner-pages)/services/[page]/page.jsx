@@ -3,7 +3,7 @@ import  InnerBanner from '@/components/ui/InnerBanner'
 import {  serviceData } from '@/data/formdata'
 import ServiceEditor from "@/pages/service/SeviceEditor"
 
-export const revaildate = 3600;
+export const revalidate = 3600;
 export async function generateStaticParams(){
     const res = await serviceData()
     return res?.data?.map((item)=>({
