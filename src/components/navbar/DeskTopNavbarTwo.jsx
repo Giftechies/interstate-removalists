@@ -72,7 +72,7 @@ const
 
                     <ul
                       data-lenis-prevent
-                      className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30 mt-1 flex max-h-0 w-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[450px] group-hover:overflow-auto group-hover:opacity-100  group-hover:w-fit  "
+                      className="rounded-tl-0 navbar-dropdown-scrollbar duration-400 theme-transition-3 fixed z-30  flex max-h-0 w-0 flex-col overflow-hidden rounded-md bg-black-1 py-1 text-white-1 opacity-0 shadow-2xl group-hover:max-h-[450px] group-hover:overflow-auto group-hover:opacity-100  group-hover:w-fit  "
                     >
                       {menuItems.map(({ id, title, menuItemPath }) => (
                         <li key={id}>
