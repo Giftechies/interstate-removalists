@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServiceIcon from "@/components/Icons/service"
 
 
 
@@ -27,18 +28,23 @@ const ressort = res?.data?.sort((a, b) =>
             </h3>
             <div
               data-lenis-prevent
-              className=" flex flex-col  gap-3   "
+              className="navbar-dropdown-scrollbar overflow-auto h-120 flex flex-col  gap-3   "
             >
               {ressort?.map((item) => {
                 const IsActive = item?.slug === params?.page;
                 return (
-                  <Link
-                    key={item.id}
+                 <div    key={item.id} 
+                  className={` tracking-wider flex  items-center gap-2 ${IsActive ? "font-medium  text-[var(--primary-hex)]" : "text-gray-700"}  hover:text-[var(--primary-hex)]   `} >
+                  <ServiceIcon className='w-8 h-8 ' />
+                  
+                   <Link
+                 
                     href={`/services/${item.slug}`}
-                    className={`  ${IsActive ? "font-medium  text-[var(--primary-hex)]" : "text-gray-700"}  hover:text-[var(--primary-hex)]   `}
+                   
                   >
                     {item?.title}
                   </Link>
+                 </div>
                 );
               })}
             </div>

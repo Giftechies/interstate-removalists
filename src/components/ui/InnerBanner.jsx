@@ -5,15 +5,25 @@ import Breadcrumb from "../shared/Breadcrumbs";
 import SectionText from "../shared/SectionText";
 import SubTitleAnimations from "../animations/SubTitleAnimations";
 import SectionSubTitle from "../shared/SectionSubTitle";
+import Image from "next/image";
 
 
 
 export default function Banner({imgpath="/img/banner-img/movers-inside-banner.jpg",pagename,}){
+  console.log(imgpath,'dsfs');
+  
     return(
           <section
-          style={{backgroundImage:`url(${imgpath})`}}
+         
           
           className="fade-wrapper  homebanner relative overflow-hidden   bg-cover bg-center  object-cover md:p-[20px] md:m-5  md:mt-25 md:rounded-3xl before:absolute before:inset-0 before:bg-black-1/60  xxl:mx-10">
+            <Image
+            src={imgpath}
+            width={650}
+            height={850}
+            alt={pagename|| 'Banner Image'}
+            className="object-cover -z-10 inset-0 object-center absolute w-full h-full"
+            />
       <div className="container overflow-hidden relative py-20 md:p-20 text-white-1 sm:pt-25  ">
          
         <div className=" place-items-center  ">
