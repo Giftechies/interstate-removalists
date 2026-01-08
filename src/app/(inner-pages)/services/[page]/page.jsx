@@ -4,13 +4,13 @@ import {  serviceData } from '@/data/formdata'
 import ServiceEditor from "@/pages/service/SeviceEditor"
 
 // export const revalidate = 3600;
-export async function generateStaticParams(){
-    const res = await serviceData()
-    return res?.data?.map((item)=>({
-        page:item.slug,
-    }))
+// export async function generateStaticParams(){
+//     const res = await serviceData()
+//     return res?.data?.map((item)=>({
+//         page:item.slug,
+//     }))
     
-}
+// }
 
 
 
