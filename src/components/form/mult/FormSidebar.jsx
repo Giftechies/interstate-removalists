@@ -28,7 +28,7 @@ export default function FormSidebar({ formData,className="" }) {
 
   return (
     <aside
-      className={cn("sticky top-30 hidden h-fit w-full overflow-y-auto self-start rounded-lg  bg-white-1 p-8 shadow lg:block navbar-dropdown-scrollbar",className)}
+      className={cn("sticky  hidden h-fit w-full overflow-y-auto self-start rounded-lg  bg-white-1 p-8 shadow lg:block navbar-dropdown-scrollbar",className)}
       aria-label="Move summary"
     >
       <h2 className="text-xl font-semibold text-zinc-800">Your Move</h2>
