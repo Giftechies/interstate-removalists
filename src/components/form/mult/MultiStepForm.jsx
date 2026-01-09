@@ -121,7 +121,8 @@ useEffect(() => {
   ];
 
   // const [currentStep, setCurrentStep] = useState(page.Address);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(1);
+  
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
