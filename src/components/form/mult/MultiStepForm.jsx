@@ -205,9 +205,9 @@ useEffect(() => {
 
   return (
     <>
-      <div className=" w-full lg:p-20 ">
-        <div className="container  mt-20 overflow-hidden  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between">
-          <main className="multi-step-form lg:shadow-lg relative  rounded-md py-6 lg:p-6 md:col-span-12  lg:col-span-8  ">
+      <div className=" w-full lg:p-20  bg-primary/5 ">
+        <div className="container  mt-20 overflow-hidden  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between  ">
+          <main className="multi-step-form shadow bg-white-1 relative  rounded-md py-6 lg:p-6 md:col-span-12  lg:col-span-8  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}
@@ -218,7 +218,7 @@ useEffect(() => {
             </header>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="space-y-6 lg:mt-[6rem]  "
+              className="space-y-6 lg:mt-[6rem] form-border  "
             >
               <CurrentComponent
                 register={register}
@@ -237,7 +237,7 @@ useEffect(() => {
               </div>
             </form>
           </main>
-          <FormSidebar className="col-span-4" formData = {formData}/>        
+          <FormSidebar className="col-span-4 bg-white-1 " formData = {formData}/>        
         </div>
       </div>
     </>

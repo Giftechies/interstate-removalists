@@ -129,7 +129,7 @@ body {
   @apply  bg-prim px-4 py-2 rounded-lg text-white-1 hover:opacity-90 
 }
 .formHeading{
-  @apply text-[16px] leading-[120%] xs:text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[30px] mb-2;
+  @apply text-[16px] leading-[120%] xs:text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[25px] xxl:text-[25px] mb-2;
 }
   .Editorspy80px {
     @apply py-8 md:py-10 xl:py-16 xxl:pt-[2rem] xxl:pb-[4rem] ;
@@ -771,5 +771,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .form-border .border{
+    @apply border-gray-400/50
   }
 }

@@ -11,7 +11,7 @@ export default function Electricity({getValues,setValue}){
         {lable:"Tommorrow",
          icon:<Timer/>
         },
-        {lable:"I few day",
+        {lable:"In few day",
          icon:<Timer/>
         },
         {lable:"Next week",

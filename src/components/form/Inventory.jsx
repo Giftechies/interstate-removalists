@@ -138,7 +138,7 @@ const Inventory = ({ inventorydata = [] }) => {
 
 
         {/*  Item List */}
-        <div className="flex-1">
+        <div className="flex-1 !capitalize ">
           {filteredItems.length === 0 ? (
             <p className="text-gray-500">No items found.</p>
           ) : (

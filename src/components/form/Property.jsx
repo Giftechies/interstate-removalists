@@ -27,14 +27,14 @@ export default function Property({
 
   return (
     <div className="property-form w-full">
-      <h2 className="formHeading col-span-4 mb-4">Choose the property</h2>
+      <h3 className="formHeading col-span-4 mb-4">Choose the property</h3>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {propertyOptions?.map((property, index) => (
           <label
             key={index}
             onClick={() => handleSelect(property.name)}
-            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border p-4
+            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border border-gray-400/50 p-4
               ${
                 selected === property.name
                   ? "border-gray-600 bg-gray-500 text-white-1"
@@ -42,7 +42,7 @@ export default function Property({
               }`}
           >
             {/* <div className="mb-2">{property.icon}</div> */}
-            <i className={`${property.icon} text-4xl font-medium `} size={80}></i>
+            <i className={`${property.icon} text-2xl font-light `} size={80}></i>
             <span className="text-lg font-medium">{property.name}</span>
             <input
               type="radio"

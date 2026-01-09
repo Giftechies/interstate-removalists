@@ -25,6 +25,7 @@ export default function FormSidebar({ formData,className="" }) {
   const hasDelivery = !!drop_address;
   const hasDates = calendar?.dates?.length > 0;
   const hasInventory = inventory?.items?.length > 0;
+  
 
   return (
     <aside
