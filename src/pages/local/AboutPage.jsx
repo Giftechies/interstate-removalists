@@ -9,7 +9,7 @@ import HomeThreeBannerLink from "../home-three/HomeThreeBannerLink";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 
 
-const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1,text2,buttonText,stepText1,stepText2,stepText3,subheading}) => {
+const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1,text2,buttonText='',stepText1,stepText2,stepText3,subheading}) => {
   return (
     <section
       className="spt80px fade-wrapper spb120px relative overflow-hidden"
@@ -65,7 +65,11 @@ const AboutLocal = ({imagepath1,imagepath2,counterNumber,counterText,title,text1
               <IconCheckbox /> <span>{stepText3? stepText3:"Strong foundations make your moving journey stress-free."}</span>
             </div>
           </div>
-           <HomeThreeBannerLink href="/#" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-[var(--primary-hex)]  hover:border-[var(--primary-hex)] w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
+        {
+          buttonText &&(
+               <HomeThreeBannerLink href="/#" className=" bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-[var(--primary-hex)]  hover:border-[var(--primary-hex)] w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>  
+          )
+        }
         </div>
       </div>
     </section>

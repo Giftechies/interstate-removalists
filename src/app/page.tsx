@@ -36,7 +36,7 @@ export default async function Home() {
         text2={
           "Got a move coming up? You can find your interstate or local removalist in Sydney, Brisbane, Canberra, or nearby areas, right here on Interstate Removalists. Here’s what to expect:"
         }
-        buttonText={"Know More"}
+        // buttonText={"Know More"}
         stepText1={"National coverage — find trusted movers across Australia."}
         stepText2={"Straightforward quotes — no hidden costs, ever."}
         stepText3={"Strong foundations make your moving journey stress-free."}
