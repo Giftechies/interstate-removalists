@@ -34,7 +34,7 @@ export default function Property({
           <label
             key={index}
             onClick={() => handleSelect(property.name)}
-            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border border-gray-400/50 p-4
+            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border border-gray-400/50 p-4 py-6
               ${
                 selected === property.name
                   ? "border-gray-600 bg-gray-500 text-white-1"
@@ -43,7 +43,7 @@ export default function Property({
           >
             {/* <div className="mb-2">{property.icon}</div> */}
             <i className={`${property.icon} text-2xl font-light `} size={80}></i>
-            <span className="text-lg font-medium">{property.name}</span>
+            <span className="text-sm tracking-widest mt-1 font-medium">{property.name}</span>
             <input
               type="radio"
               value={property.name}
