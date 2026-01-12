@@ -45,6 +45,7 @@ import Inventory from "../Inventory";
 import Electricity from "../Electricity"
 import UserData from "../UserData"
 import {store} from "@/app/store/store"
+import { MoveLeft, MoveRight } from "lucide-react";
 
 export default function MultiStepForm() {
   const formData = useSelector((state) => state.form);
@@ -205,9 +206,9 @@ useEffect(() => {
 
   return (
     <>
-      <div className=" w-full lg:p-20  bg-primary/5 ">
+      <div className=" w-full lg:p-20  md:bg-primary/5 ">
         <div className="container  mt-20 overflow-hidden  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between  ">
-          <main className="multi-step-form shadow bg-white-1 relative  rounded-md py-6 lg:p-6 md:col-span-12  lg:col-span-8  ">
+          <main className="multi-step-form   md:shadow bg-white-1 relative  rounded-md py-6 lg:p-6  col-span-12  lg:col-span-8  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}
@@ -231,9 +232,15 @@ useEffect(() => {
               />
               <div className=" flex gap-8">
                 {currentStep > page.Address && (
-                  <Backbutton text="Back" type="button" onClick={backHandler} />
+                  // <Backbutton text="Back" type="button"  onClick={backHandler} />
+                    <button type="button" onClick={backHandler}  className=" py-3 px-6 bg-prim hover:bg-prim/80 text-white-1 flex gap-2 items-center rounded-full " >
+                 <MoveLeft size={20} /> Back
+                </button>
                 )}
-                <Button type="submit" text={`${buttonText}`} />
+                {/* <Button type="submit" className=" rounded-full  " text={`${buttonText}`} /> */}
+                <button className=" py-3 px-6 bg-prim hover:bg-prim/80 text-white-1 flex gap-2 items-center rounded-full  " >
+                  {buttonText} <MoveRight size={20} />
+                </button>
               </div>
             </form>
           </main>

@@ -10,7 +10,7 @@
 */
 :root {
   /* Your Original Hex Variables (Renamed for clarity/safety) */
-  --primary-hex: #F39740;
+  --primary-rgb: 243 151 64;
   --secondary-hex: #09307B;
   --secondary-light: #8eafed;
   --primary-light: #f9d0aa;
@@ -188,9 +188,7 @@ body {
   .container {
     @apply mx-auto max-w-[540px] max-sm:px-4 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px];
   }
-  .bg-prim {
-    @apply bg-[var(--primary-hex)]; /* Use your original hex var */
-  }
+ 
   .bg-sec {
     @apply bg-[var(--secondary-hex)]; /* Use your original hex var */
   }
