@@ -208,7 +208,7 @@ useEffect(() => {
     <>
       <div className=" w-full lg:p-20  md:bg-primary/5 ">
         <div className="container  mt-20 overflow-hidden  grid grid-cols-1  gap-10 md:grid-cols-12 justify-between  ">
-          <main className="multi-step-form   md:shadow bg-white-1 relative  rounded-md py-6 lg:p-6  col-span-12  lg:col-span-8  ">
+          <main className="multi-step-form   md:shadow bg-white-1 relative  rounded-md py-6 md:p-6  col-span-12  lg:col-span-8  ">
             <header className="absolute top-10">
               <Stepper
                 step={step}

@@ -76,7 +76,7 @@ export default function MobileNavbar({ navbarData }) {
         >
           <span
             className={cn(
-              "block h-1 w-8 rounded bg-[var(--primary-hex)] transition-all",
+              "block h-1 w-8 rounded bg-prim transition-all",
               isOpen && "translate-y-1.5 rotate-45"
             )}
           />
