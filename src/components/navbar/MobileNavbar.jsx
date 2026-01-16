@@ -117,7 +117,7 @@ export default function MobileNavbar({ navbarData }) {
                     <div
                       className={cn(
                         "flex items-center justify-between rounded-md px-4 py-3 text-left font-medium transition-colors hover:bg-gray-100",
-                        activeDropdown === id && "text-[var(--primary-hex)] font-medium"
+                        activeDropdown === id && "text-prim font-medium"
                       )}
                     >
                       {/* Parent link now navigates like desktop */}
@@ -157,7 +157,7 @@ export default function MobileNavbar({ navbarData }) {
                               className={cn(
                                 "block rounded-md px-4 py-2 text-sm transition-colors hover:bg-gray-100",
                                 pathName === menuItemPath &&
-                                "text-[var(--primary-hex)] font-medium"
+                                "text-prim font-medium"
                               )}
                             >
                               {title}
@@ -174,7 +174,7 @@ export default function MobileNavbar({ navbarData }) {
                   onClick={() => setIsOpen(false)} // closes menu
                   className={cn(
                     "block rounded-md px-4 py-3 font-medium transition-colors hover:bg-gray-100",
-                    pathName === path && "text-[var(--primary-hex)]"
+                    pathName === path && "text-prim"
                   )}
                 >
                   {menuTitle}

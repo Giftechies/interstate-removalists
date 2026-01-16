@@ -73,7 +73,7 @@ const SignUp = () => {
           </div>
           <p className="s-text smt40px text-center text-black-1">
             Have an account?{" "}
-            <Link href={"/signup"} className="!text-[var(--primary-hex)]">
+            <Link href={"/signup"} className="!text-prim">
               {" "}
               Login Here
             </Link>

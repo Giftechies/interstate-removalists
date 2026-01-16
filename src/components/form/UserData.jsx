@@ -88,7 +88,7 @@ setValue("additional_note",data)
           <div className="flex-1 mt-2 " >
             {/* additional message */}
          <div>
-              { OpenNote ? (<p onClick={()=>setOpenNote(false)} className="  cursor-pointer text-[var(--primary-hex)] font-medium underline "  >Add additional note for your move+ </p>) :
+              { OpenNote ? (<p onClick={()=>setOpenNote(false)} className="  cursor-pointer text-prim font-medium underline "  >Add additional note for your move+ </p>) :
             (    <textarea
               {...register("adidition_message", {
                 required: "Please enter your message.",

@@ -25,7 +25,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="View Details"
                   link="/education-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Education Loan</p>
               </div>
@@ -41,7 +41,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="View Details"
                   link="/business-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Business Loan</p>
               </div>
@@ -59,7 +59,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="View Details"
                   link="/car-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Car Loan</p>
               </div>
@@ -75,7 +75,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="View Details"
                   link="/home-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Home Loan</p>
               </div>
@@ -93,7 +93,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="View Details"
                   link="/personal-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Personal Loan</p>
               </div>
@@ -109,7 +109,7 @@ const LoanContent = () => {
                 <RoundedLink
                   buttonText="Contact"
                   link="/business-loan"
-                  className="border-[var(--primary-hex)] bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent  hover:text-black-4"
+                  className="border-prim bg-prim text-white-1 hover:border-accent-3 hover:bg-transparent  hover:text-black-4"
                 />
                 <p className="h3 font-medium text-white-1">Business Loan</p>
               </div>

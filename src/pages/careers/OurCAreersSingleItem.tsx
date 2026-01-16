@@ -22,10 +22,10 @@ const OurCAreersSingleItem = ({
         <div className="hidden h-16 w-px bg-white-3/80 md:block"></div>
         <div className="flex flex-col gap-4">
           <div className="m-text flex items-center gap-3 text-black-3">
-            <IconMapPin className="text-[var(--primary-hex)]" /> <p>Manhattan, New York</p>
+            <IconMapPin className="text-prim" /> <p>Manhattan, New York</p>
           </div>
           <div className="m-text flex items-center gap-3 text-black-3">
-            <IconCalendarTime className="text-[var(--primary-hex)]" /> <p>21th July, 2023</p>
+            <IconCalendarTime className="text-prim" /> <p>21th July, 2023</p>
           </div>
         </div>
       </div>

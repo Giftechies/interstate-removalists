@@ -16,7 +16,7 @@ const HomeOneFinancialPlanning = ({ data = [],className='spt120px ', show=true }
     setIsHover(index);
   };
 
-  console.log("data in financial planning",data);
+
   
 
   return (

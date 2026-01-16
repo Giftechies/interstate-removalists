@@ -5,8 +5,8 @@ const Pagination = () => {
   return (
     <div className="smt60px mx-auto flex w-fit items-center xs:gap-8 gap-3 rounded-xl px-3 xs:px-5 py-3 shadow-custom3">
           <button className="flex items-center gap-2">
-            <IconChevronLeft size={20} className="text-[var(--primary-hex)]" />{" "}
-            <span className="h6 theme-transition-3 font-medium hover:text-[var(--primary-hex)]">
+            <IconChevronLeft size={20} className="text-prim" />{" "}
+            <span className="h6 theme-transition-3 font-medium hover:text-prim">
               Prev
             </span>
           </button>
@@ -25,10 +25,10 @@ const Pagination = () => {
             </button>
           </div>
           <button className="flex items-center gap-2">
-            <span className="h6 theme-transition-3 font-medium hover:text-[var(--primary-hex)]">
+            <span className="h6 theme-transition-3 font-medium hover:text-prim">
               Next
             </span>
-            <IconChevronRight size={20} className="text-[var(--primary-hex)]" />
+            <IconChevronRight size={20} className="text-prim" />
           </button>
         </div>
   )

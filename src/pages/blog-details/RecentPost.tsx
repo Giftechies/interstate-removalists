@@ -23,7 +23,7 @@ const RecentPost = () => {
             />
           </div>
           <Link href={`/blogs`} className="flex flex-col gap-3">
-            <h6 className="h5 theme-transition-3 font-medium hover:text-[var(--primary-hex)] ">
+            <h6 className="h5 theme-transition-3 font-medium hover:text-prim ">
               The Journey of a Determined
             </h6>
             <p className="m-text text-black-3">July 28, 2023</p>
@@ -42,7 +42,7 @@ const RecentPost = () => {
             />
           </div>
           <Link href={`/blogs`} className="flex flex-col gap-3">
-            <h6 className="h5 theme-transition-3 font-medium hover:text-[var(--primary-hex)] ">
+            <h6 className="h5 theme-transition-3 font-medium hover:text-prim ">
               A Team&apos;s Mountain Odyssey
             </h6>
             <p className="m-text text-black-3">July 28, 2023</p>
@@ -60,7 +60,7 @@ const RecentPost = () => {
             />
           </div>
           <Link href={`/blogs`} className="flex flex-col gap-3">
-            <h6 className="h5 theme-transition-3 font-medium hover:text-[var(--primary-hex)] ">
+            <h6 className="h5 theme-transition-3 font-medium hover:text-prim ">
               The Art of Moving Mountains
             </h6>
             <p className="m-text text-black-3">July 28, 2023</p>

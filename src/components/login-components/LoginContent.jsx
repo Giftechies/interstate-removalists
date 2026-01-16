@@ -89,12 +89,12 @@ const formHandler = async (data) => {
                 {...register('password',{required:"Please enter your password"})}
             />
             {errors.password && <p className="text-red-500 h6" >{errors.password.message}</p> }
-            <div className="s-text mt-3 flex items-center justify-end hover:text-[var(--primary-hex)] gap-6 text-black-3">
+            <div className="s-text mt-3 flex items-center justify-end hover:text-prim gap-6 text-black-3">
               <Link href={`/#`}>Forgot Password?</Link>
             </div>
-            <button type="submit" className={cn(`h6 rounded-lg smb32px smt32px w-full bg-prim py-3 flex items-center justify-center gap-2 text-center text-white-1 hover:text-[var(--primary-hex)] hover:bg-white-1 border-[var(--primary-hex)] border   ${loading 
+            <button type="submit" className={cn(`h6 rounded-lg smb32px smt32px w-full bg-prim py-3 flex items-center justify-center gap-2 text-center text-white-1 hover:text-prim hover:bg-white-1 border-prim border   ${loading 
        ? "cursor-not-allowed opacity-60 hover:bg-prim hover:text-white-1" 
-       : "hover:text-[var(--primary-hex)] hover:bg-white-1"
+       : "hover:text-prim hover:bg-white-1"
      } `,)}>
             {loading? (<><Loader2Icon className=" animate-spin w-5 h-5 " /> loging...</>):('login')}
             </button>

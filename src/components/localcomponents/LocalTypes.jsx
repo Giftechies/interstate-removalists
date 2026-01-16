@@ -61,10 +61,10 @@ const LocalType = ({localCard, path, title,subtitle,text,buttontext,buttonlink})
           })}
           </Swiper>
             <div className={"smt60px z-10 mx-auto flex w-fit items-center gap-4"}>
-                      <button className="customerSliderPrev theme-transition-3 flex items-center justify-center rounded-full border border-[var(--primary-hex)] bg-transparent p-3 font-semibold text-[var(--primary-hex)] hover:bg-prim hover:text-white-1">
+                      <button className="customerSliderPrev theme-transition-3 flex items-center justify-center rounded-full border border-prim bg-transparent p-3 font-semibold text-prim hover:bg-prim hover:text-white-1">
                         <IconArrowLeft size={24} />
                       </button>
-                      <button className="customerSliderNext theme-transition-3 flex items-center justify-center rounded-full border border-[var(--primary-hex)] bg-transparent p-3 font-semibold text-[var(--primary-hex)] hover:bg-prim hover:text-white-1">
+                      <button className="customerSliderNext theme-transition-3 flex items-center justify-center rounded-full border border-prim bg-transparent p-3 font-semibold text-prim hover:bg-prim hover:text-white-1">
                         <IconArrowRight size={24} />
                       </button>
                     </div>

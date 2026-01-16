@@ -18,7 +18,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
   return (
     <div className="address-form w-full">
       <h2 className="formHeading ">Where are you moving {moving} ?</h2>
-      <p className=" h6 text-zinc-500">
+      <p className=" textSm text-zinc-500">
         Please tell us the exact address you&apos;re moving {moving}
       </p>
       <div className="flex flex-col items-start gap-2 mt-6 ">
@@ -45,7 +45,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
         <label htmlFor="toggle_check">
             <span
               className={cn(
-                `  theme-transition-3 relative mr-3 rounded-full bg-gray-400 px-6 py-[.08rem] `,
+                `  theme-transition-3 relative mr-3 rounded-full bg-gray-400 px-6 py-[.08rem] cursor-pointer `,
                 istoggle ? "bg-prim" : "",
               )}
             >
@@ -58,11 +58,11 @@ export default function Address({ register, errors, moving,setValue,getValues })
             </span>
           </label>
 
-          <span>
+          <span className="textSm" >
             I require this move to be handled discreetly.
-            <span className="group relative cursor-pointer text-[var(--primary-hex)] ">
+            <span className="group relative cursor-pointer text-prim ">
               What does this mean?
-              <p className=" absolute -right-[180%] text-[12px] top-1/2  mt-2 hidden w-[16rem] -translate-y-1/2 bg-gray-200 p-4 text-black-3 group-hover:block ">
+              <p className=" absolute left-full ml-2 text-[12px] top-1/2  mt-2 hidden w-[16rem] -translate-y-1/2 bg-gray-200 p-4 text-black-3 group-hover:block ">
                 Please enable this option if your move involves a domestic
                 violence situation and you need contact with you to be handled
                 in a sensitive manner.
@@ -71,7 +71,7 @@ export default function Address({ register, errors, moving,setValue,getValues })
           </span>
 
           {istoggle &&  (
-            <p className=" mt-2 text-red-500 text-[12px] ">
+            <p className=" mt-2 text-red-500 textSm ">
             Please only enable this option if your move involves a domestic
             violence situation and you need contact to be handled in a
             sensitive manner.

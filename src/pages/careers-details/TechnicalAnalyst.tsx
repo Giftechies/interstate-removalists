@@ -34,12 +34,12 @@ const TechnicalAnalyst = () => {
               className="spt32px fade-top"
             />
             <div className="spt32px">
-              <div className="h4 flex items-center justify-around border-[var(--primary-hex)]/60 font-medium max-sm:flex-wrap sm:border-b">
+              <div className="h4 flex items-center justify-around border-prim/60 font-medium max-sm:flex-wrap sm:border-b">
                 <button
                   onClick={() => handleTab("description")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-[var(--primary-hex)] hover:text-[var(--primary-hex)] max-sm:mb-2 max-sm:after:absolute",
-                    { "border-[var(--primary-hex)]": tabText === "description" },
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-prim hover:text-prim max-sm:mb-2 max-sm:after:absolute",
+                    { "border-prim": tabText === "description" },
                   )}
                 >
                   Job Description
@@ -47,8 +47,8 @@ const TechnicalAnalyst = () => {
                 <button
                   onClick={() => handleTab("overview")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-[var(--primary-hex)] hover:text-[var(--primary-hex)] max-sm:mb-2 max-sm:after:absolute",
-                    { "border-[var(--primary-hex)]": tabText === "overview" },
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-prim hover:text-prim max-sm:mb-2 max-sm:after:absolute",
+                    { "border-prim": tabText === "overview" },
                   )}
                 >
                   Job Overview
@@ -56,8 +56,8 @@ const TechnicalAnalyst = () => {
                 <button
                   onClick={() => handleTab("requirements")}
                   className={cn(
-                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-[var(--primary-hex)] hover:text-[var(--primary-hex)] max-sm:mb-2 max-sm:after:absolute",
-                    { "border-[var(--primary-hex)]": tabText === "requirements" },
+                    "theme-transition-3 relative w-full border-b-2 border-transparent pb-4 after:bottom-0 after:left-0 after:h-px after:w-full after:bg-prim/30 hover:border-prim hover:text-prim max-sm:mb-2 max-sm:after:absolute",
+                    { "border-prim": tabText === "requirements" },
                   )}
                 >
                   Job Requirements

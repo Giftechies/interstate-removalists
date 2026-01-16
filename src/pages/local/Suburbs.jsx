@@ -62,7 +62,7 @@ export default function Suburbs({ suburbs = [], removalist = "", city = "" }) {
           before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0
           before:bg-prim before:transition-all before:duration-300
           before:content-[''] hover:before:w-full
-          ${isActive ? "font-semibold text-[var(--primary-hex)] before:w-full" : "hover:text-[var(--primary-hex)]"}
+          ${isActive ? "font-semibold text-prim before:w-full" : "hover:text-prim"}
         `}
               >
                 {item}
@@ -109,7 +109,7 @@ export default function Suburbs({ suburbs = [], removalist = "", city = "" }) {
               "
             >
               {/* <span className=" bg-black-3 text-white-1  p-[.10rem] rounded-full " > */}
-              <MapPin className=" size-4 text-[var(--primary-hex)] " />
+              <MapPin className=" size-4 text-prim " />
               {/* </span> */}
               {item.title}
          

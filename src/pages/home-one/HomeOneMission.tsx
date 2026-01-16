@@ -58,7 +58,7 @@ const HomeOneMission = () => {
           </div>
           <div className="col-start-1  col-end-7 sm:col-start-5">
             <div className="absolute top-8 max-sm:rounded-md max-sm:border max-sm:border-white-2 max-sm:bg-white-1 max-sm:p-5 max-sm:shadow-md sm:right-0 sm:top-20 md:right-32 md:top-6 lg:right-0 xl:top-20">
-              <div className="d1 font-semibold text-[var(--primary-hex)]">
+              <div className="d1 font-semibold text-prim">
                 <Counter value={25} />+
               </div>
               <p className="xl-text max-w-[150px] text-black-1">

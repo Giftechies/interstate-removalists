@@ -18,7 +18,7 @@ export default function Breadcrumb() {
 
   return (
     <nav aria-label="breadcrumb" className="flex  mt-1 items-center tracking-wider  max-sm:!text-[10px] !text-[14px]  ">
-      <Link href="/" className="text-white-1  hover:text-[var(--primary-hex)]  ">
+      <Link href="/" className="text-white-1  hover:text-prim  ">
         Home
       </Link>
       {crumbs?.map((crumb, index) => (
@@ -29,7 +29,7 @@ export default function Breadcrumb() {
           ) : (
             <Link
               href={crumb.href}
-              className=" hover:text-[var(--primary-hex)] transition-colors capitalize "
+              className=" hover:text-prim transition-colors capitalize "
             >
               {crumb.label}
             </Link>

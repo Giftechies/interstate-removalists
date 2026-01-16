@@ -23,7 +23,7 @@ const ressort = res?.data?.sort((a, b) =>
         <div className=" max-md:hidden relative md:col-span-4 lg:col-span-3 md:sticky top-20 md:h-fit ">
 
           <div className="  h-fit w-full rounded-lg  bg-gray-100 p-6  ">
-            <h3 className=" mb-4  h4 font-medium text-[var(--primary-hex)] ">
+            <h3 className=" mb-4  h4 font-medium text-prim ">
               Other Services
             </h3>
             <div
@@ -34,7 +34,7 @@ const ressort = res?.data?.sort((a, b) =>
                 const IsActive = item?.slug === params?.page;
                 return (
                  <div    key={item.id} 
-                  className={` tracking-wider flex  items-center gap-2 ${IsActive ? "font-medium  text-[var(--primary-hex)]" : "text-gray-700"}  hover:text-[var(--primary-hex)]   `} >
+                  className={` tracking-wider flex  items-center gap-2 ${IsActive ? "font-medium  text-prim" : "text-gray-700"}  hover:text-prim   `} >
                   <ServiceIcon className='w-8 h-8 ' />
                   
                    <Link

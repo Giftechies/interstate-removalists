@@ -128,9 +128,10 @@ body {
 .profileButton{
   @apply  bg-prim px-4 py-2 rounded-lg text-white-1 hover:opacity-90 
 }
-.formHeading{
-  @apply text-[16px] leading-[120%] xs:text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[25px] xxl:text-[25px] mb-2;
+.formHeading {
+  @apply text-[clamp(1.1rem,2vw,1.2625rem)] leading-[1.2] mb-2;
 }
+
   .Editorspy80px {
     @apply py-8 md:py-10 xl:py-16 xxl:pt-[2rem] xxl:pb-[4rem] ;
   }
@@ -229,7 +230,10 @@ body {
     @apply  text-[14px]  xl:text-[16px] ;
   }
   .h6 {
-    @apply text-[14px] leading-[130%] tracking-[1px] xxl:text-[15px];
+    @apply text-[14px] leading-[20px] tracking-[1px] xxl:text-[16px];
+  }
+  .textSm{
+    @apply tracking-wider text-sm
   }
   .lead-text {
     @apply text-[16px] leading-[150%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];

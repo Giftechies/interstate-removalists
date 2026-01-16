@@ -30,11 +30,11 @@ import {
   setCalendar,
   setInventory,
   setElectricity,
-   setPhone,
-    setEmail,
-    setName,
-    setNote,
-    setMsg
+  setPhone,
+  setEmail,
+  setName,
+  setNote,
+  setMsg
 } from "../../../app/store/reducers/formSlice";
 import Property from "../Property";
 import Address from "../Address";
@@ -44,7 +44,7 @@ import Calendar from "../Calendar";
 import Inventory from "../Inventory";
 import Electricity from "../Electricity"
 import UserData from "../UserData"
-import {store} from "@/app/store/store"
+import { store } from "@/app/store/store"
 import { MoveLeft, MoveRight } from "lucide-react";
 
 export default function MultiStepForm() {
@@ -56,36 +56,27 @@ export default function MultiStepForm() {
 
 
 
-useEffect(() => {
-  let isMounted = true;
-
-  const loadData = async () => {
-    try {
-      const [
-        propertydata,
-        variationdata,
-        inventorydata,
-      ] = await Promise.all([
-        fetchPropertyData(),
-        fetchVaritions(),
-        fetchinventory(),
-      ]);
-
-      if (!isMounted) return;
-
-      setvariations(variationdata);
-      setpropertyOptions(propertydata);
-      setInventory(inventorydata);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  loadData();
-
-  return () => {
-    isMounted = false;
-  };
-}, []);
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const [
+          propertydata,
+          variationdata,
+          inventorydata,
+        ] = await Promise.all([
+          fetchPropertyData(),
+          fetchVaritions(),
+          fetchinventory(),
+        ]);
+        setvariations(variationdata);
+        setpropertyOptions(propertydata);
+        setInventory(inventorydata);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    loadData();
+  }, []);
 
 
   const {
@@ -121,9 +112,9 @@ useEffect(() => {
     "UserData",
   ];
 
-  // const [currentStep, setCurrentStep] = useState(page.Address);
-  const [currentStep, setCurrentStep] = useState(1);
-  
+  const [currentStep, setCurrentStep] = useState(page.Address);
+  // const [currentStep, setCurrentStep] = useState(7);
+
 
   const componentMap = {
     [page.Address]: (prop) => <Address moving="from" {...prop} />,
@@ -168,24 +159,25 @@ useEffect(() => {
       dispatch(setdrop_variation(data.movingPlaceDescription.street));
       dispatch(setdrop_variation_meter(data.movingPlaceDescription.street_distance));
     } else if (currentStep === page.Calendar) {
-      console.log("Form Data in Redux:", formData);
-    }else if(currentStep === page.UserData){
+      console.log("Form Data in Redux:", formData,data);
+
+    } else if (currentStep === page.UserData) {
       dispatch(setName(data.name))
       dispatch(setEmail(data.email))
       dispatch(setPhone(data.ph_no))
-      dispatch(setMsg(data.adidition_message|| ''))
-      dispatch(setNote(data.additional_note  || ""))
-      const dd = {...data}
+      dispatch(setMsg(data.adidition_message || ''))
+      dispatch(setNote(data.additional_note || ""))
+      const dd = { ...data }
       console.log(data);
 
-       const newFormData = store.getState().form;
-  console.log("Redux updated form:", newFormData);
-  const res = await submitOrder(newFormData)
-  if(res){
-    console.log("order details>>>>",res);
-    
-  }
-  
+      const newFormData = store.getState().form;
+      console.log("Redux updated form:", newFormData);
+      const res = await submitOrder(newFormData)
+      if (res) {
+        console.log("order details>>>>", res);
+
+      }
+
 
     }
 
@@ -194,9 +186,6 @@ useEffect(() => {
     }
   };
 
-  useEffect(() => {
-    console.log("Form Data of Redux:", formData);
-  }, [formData]);
 
   const backHandler = () => {
     if (currentStep > page.Address) {
@@ -232,10 +221,12 @@ useEffect(() => {
               />
               <div className=" flex gap-8">
                 {currentStep > page.Address && (
-                  // <Backbutton text="Back" type="button"  onClick={backHandler} />
-                    <button className=" py-3 px-6 bg-prim text-white-1 flex gap-2 items-center rounded-full " >
-                 <MoveLeft size={20} /> Back
-                </button>
+                  <>
+
+                    {/* <Backbutton text="Back" type="button"  onClick={backHandler} /> */}
+                    <button type="button" onClick={backHandler} className=" py-3 px-6 bg-prim text-white-1 flex gap-2 items-center rounded-full " >
+                      <MoveLeft size={20} /> Back
+                    </button></>
                 )}
                 {/* <Button type="submit" className=" rounded-full  " text={`${buttonText}`} /> */}
                 <button className=" py-3 px-6 bg-prim hover:bg-pri text-white-1 flex gap-2 items-center rounded-full  " >
@@ -244,7 +235,7 @@ useEffect(() => {
               </div>
             </form>
           </main>
-          <FormSidebar className="col-span-4 bg-white-1 " formData = {formData}/>        
+          <FormSidebar className="col-span-4 bg-white-1 " formData={formData} />
         </div>
       </div>
     </>

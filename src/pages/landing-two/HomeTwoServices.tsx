@@ -1,5 +1,5 @@
-import serviceAnimal from "@/../public/images/home-two/service-animale.png";
-import serviceCoin from "@/../public/images/home-two/service-coins.png";
+
+
 import LInkArrowTwo from "@/components/link/LInkArrowTwo";
 import SectionSubTitle from "@/components/shared/SectionSubTitle";
 import SectionText from "@/components/shared/SectionText";
@@ -60,11 +60,11 @@ const HomeTwoServices = () => {
         </div>
       </div>
       <Image
-        src={serviceAnimal}
-        width={220}
+        src={'/img/logo/truck.png'}
+        width={250}
         height={212}
         alt="Service animal"
-        className="absolute bottom-0 left-0 max-3xl:w-30 max-sm:hidden"
+        className="absolute bottom-0 left-0 max-3xl:w-[11rem] max-sm:hidden"
       />
      
     </section>

@@ -9,7 +9,7 @@ export default function Separater({title="Ready to Get Your Move Sorted?",conten
     <SectionTitle text={title} />
     <SectionText className="mt-4 text-white-1 "  text={content} />
 
-     <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-[var(--primary-hex)]  hover:border-[var(--primary-hex)] w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>
+     <HomeThreeBannerLink href="/pick-details" className="  mx-auto bg-prim rounded-full text-white-1    hover:bg-transparent hover:text-prim  hover:border-prim w-fit mt-6 " >{buttonText?  buttonText:"Get Instant Quote"}</HomeThreeBannerLink>
 
 </div>
     </section>

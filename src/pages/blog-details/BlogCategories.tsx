@@ -8,31 +8,31 @@ const BlogCategories = () => {
     <div className="smt32px flex flex-col gap-3">
       <Link
         href={`/blogs`}
-        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-[var(--primary-hex)] hover:tracking-wide pb-3 text-black-3 last:border-none"
+        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-prim hover:tracking-wide pb-3 text-black-3 last:border-none"
       >
         City New
       </Link>
       <Link
         href={`/blogs`}
-        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-[var(--primary-hex)] hover:tracking-wide pb-3 text-black-3 last:border-none"
+        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-prim hover:tracking-wide pb-3 text-black-3 last:border-none"
       >
         Government
       </Link>
       <Link
         href={`/blogs`}
-        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-[var(--primary-hex)] hover:tracking-wide pb-3 text-black-3 last:border-none"
+        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-prim hover:tracking-wide pb-3 text-black-3 last:border-none"
       >
         Development
       </Link>
       <Link
         href={`/blogs`}
-        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-[var(--primary-hex)] hover:tracking-wide pb-3 text-black-3 last:border-none"
+        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-prim hover:tracking-wide pb-3 text-black-3 last:border-none"
       >
         Tourism
       </Link>
       <Link
         href={`/blogs`}
-        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-[var(--primary-hex)] hover:tracking-wide pb-3 text-black-3 last:border-none"
+        className="m-text-accent-2 border-b border-white-3 theme-transition-3 hover:text-prim hover:tracking-wide pb-3 text-black-3 last:border-none"
       >
         Culture
       </Link>

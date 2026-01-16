@@ -35,7 +35,7 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
       <div className="relative shrink-0 ">
       <span className={` ${randomColor}  rounded-full w-[150px] aspect-square flex items-center justify-center d3 font-serif`} >{name?.trim().charAt(0)}</span>
         <div className="absolute -right-8 top-0 flex size-15 items-center justify-center rounded-full border-[6px] border-zinc-100 bg-accent-4">
-          <IconQuote size={25} className="text-[var(--primary-hex)]" />
+          <IconQuote size={25} className="text-prim" />
         </div>
       </div>
       <div className="w-full">

@@ -21,7 +21,7 @@ export default function Card({title,summary,imagepath='' ,slug,path}){
               className=" w-full z-0 h-full object-cover group-hover:scale-[1.1] theme-transition-6 object-center "
             />
          </div>
-            <p className=" text-center mt-4 h5 font-medium text-[var(--primary-hex)] group-hover:text-white-1  theme-transition-3 ">{title}</p>
+            <p className=" text-center mt-4 h5 font-medium text-prim group-hover:text-white-1  theme-transition-3 ">{title}</p>
            <p className=" text-black-3 h6 mt-1 group-hover:text-white-1  theme-transition-3 text-justify " >{summary} </p>
           
             
