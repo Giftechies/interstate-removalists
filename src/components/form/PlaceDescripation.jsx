@@ -1,10 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function PlaceDescription({
-  register,
-  errors,
   setValue,
   getValues,
   moving,
@@ -41,6 +40,7 @@ export default function PlaceDescription({
   const [streetDistance, setStreetDistance] = useState(
     defaultValues.street_distance || "",
   );
+
   // Update form immediately on state change
   const updateForm = (newPlace, newStreet, newStairs, newStreetDistance) => {
     const formData = {
@@ -51,6 +51,14 @@ export default function PlaceDescription({
     };
     setValue(currentKey, formData, { shouldValidate: true });
   };
+  const [images,setImages] =useState({
+    'Ground Floor':'/img/logo/ground.jpg',
+    'Stairs':'/img/logo/stair.jpg',
+    'Elevator':'/img/logo/elevator.jpg'
+
+  })
+
+  const SelectImage = images[selectedPlace.includes('Elevator')? "Elevator":selectedPlace];
 
   const handlePlaceClick = (title) => {
     let newSelected = [...selectedPlace]; // Start with a copy of the current state
@@ -104,8 +112,9 @@ export default function PlaceDescription({
       </p>
 
       {/* PLACE SECTION */}
-      <section className="place mt-4">
-        <span className="h6 font-medium">Your place</span>
+      <section className="place mt-4  flex  gap-8 ">
+       <div className="" >
+         <span className="h6 font-medium">Your place</span>
         <div className="mt-2 flex flex-wrap gap-4">
           {place?.map((item, index) => (
             <div
@@ -122,6 +131,21 @@ export default function PlaceDescription({
             </div>
           ))}
         </div>
+
+        {/* image and flight input */}
+       <div className="flex gap-10 mt-6" >
+        {/* image */}
+        {
+        SelectImage &&   <div className=" h-40 w-60  rounded overflow-hidden  flex-shrink-0 ">
+       <Image
+       src={SelectImage}
+       width={250}
+       height={250}
+       alt="place image"
+       className="h-full w-full object-cover object-center "
+       />
+       </div>
+        }
 
         {/* STAIRS INPUT */}
         {selectedPlace.includes("Stairs") && (
@@ -160,6 +184,9 @@ export default function PlaceDescription({
             </span>
           </div>
         )}
+       </div>
+       </div>
+      
       </section>
 
       {/* STREET SECTION */}

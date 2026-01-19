@@ -28,7 +28,7 @@ useEffect(() => {
 
 
   return (
-    <div className="place-form">
+    <div className="place-form  ">
       <h4 className="formHeading ">Tell us a bit about your place</h4>
       <p className="textSm text-gray-400 mt-2">This helps us estimate your move size.</p>
       {place.trim().toLowerCase() =="storage"  ?
