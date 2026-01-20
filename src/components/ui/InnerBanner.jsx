@@ -1,10 +1,6 @@
 import Link from "next/link";
-import { IconArrowDown, IconChevronsRight } from "@tabler/icons-react";
-import HomeThreeBannerLink from "@/pages/home-three/HomeThreeBannerLink";
+
 import Breadcrumb from "../shared/Breadcrumbs";
-import SectionText from "../shared/SectionText";
-import SubTitleAnimations from "../animations/SubTitleAnimations";
-import SectionSubTitle from "../shared/SectionSubTitle";
 import Image from "next/image";
 
 
@@ -31,11 +27,7 @@ export default function Banner({imgpath="/img/banner-img/movers-inside-banner.jp
             <h1 className="h2  mt-3 font-medium capitalize ">
            {pagename}
             </h1> 
-      
-          
               <Breadcrumb/>
-           
-            
           </div>
         </div>
       
